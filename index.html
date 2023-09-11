@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>OpenProfile 5 Preview</title>
+  <link rel="icon" href="media/images/openprofile/preview/op_preview_favicon.png" type="image/x-icon">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+  <!-- Discord-specific meta tags -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="OpenProfile 5 Preview" />
+  <meta property="og:description" content="OpenProfile is the most advanced character profile template in the world and a GNU open source project. Created freely for writers by writers!" />
+  <meta property="og:image" content="https://raw.githubusercontent.com/OpenProfileDevs/OP5/main/images/openprofile_ruby_jpeg.jpeg" />
+  <meta property="og:url" content="https://openprofiledevs.github.io/OP5-Preview/" />
+  <meta property="theme-color" content="#5e467f" />
+  <!-- Page styles -->
+  <link rel="stylesheet" type="text/css" href="desktop_styles.css">
+  <link rel="stylesheet" type="text/css" href="mobile_styles.css">
+</head>
+<body>
+  <!-- Base scripts -->
+  <script src="scripts/loader.js"></script>
+  <script src="scripts/save_load.js"></script>
+  <script src="scripts/popup.js"></script>
+  <script src="scripts/onload.js"></script>
+  
+  <div class="loader_outer">
+    <div class="loader_inner"></div>
+  </div>
+
+  <!-- Page elements -->
+  <div class="left">
+    <div class="label_text" id="left" style="width: 375px; font-size: 45px; transform: translateY(375px)translateX(40px);">Coming soon</div>
+    <div class="label_text" id="left" style="width: 375px; font-size: 25px; transform: translateY(435px)translateX(60px);">(management panel)</div>
+  </div>
+
+  <div class="center">
+    <div class="outer">
+      <div class="inner">
+
+        <div class="row" style="top: -8px; left: 17px;">
+          <!-- /////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+          <!-- /////////////////|| PAGE AUTHOR ||\\\\\\\\\\\\\\\\\ -->
+          <!-- /////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+          <div class="group" id="page_author_1_group" style="top: 0px; left: -1px;">
+            <div class="label_tab" id="page_author_label_tab" style="width: 51px; top: 29px; border-radius: 0px 0px 5px 0px">
+              <div class="label_text" id="page_author_label_text" style="width: 46px; top: 1.25px;">Page Author</div>
+            </div>
+            <div><input type="text" class="input_text" id="page_author_1" style="width: 175px; border-radius: 5px 0px 5px 0px;" autocomplete="off" autocorrect="off" placeholder="Who is the page's author?"></div>
+            <script src="scripts/emojis/page1/page_author_1_emojis.js"></script>
+          </div>
+
+          <!-- /////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+          <!-- //////////////|| NAME INFORMATION ||\\\\\\\\\\\\\\\ -->
+          <!-- /////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+          <div class="group" id="name_information_group" style="top: 0px; left: 249px;">
+            <div><input type="text" class="input_text" id="seperator" style="width: 175px; height: 28px; top: 9px; border-radius: 0px 0px 5px 5px; justify-content: center; text-align: center; font-size: 14px; background-color: #1b1f28; color: #ffffff; border-color: #1b1f28;" autocomplete="off" autocorrect="off" value="Name Information" tabindex="-1" readonly></div>
+          </div>
+
+          <!-- /////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+          <!-- ////////////////|| WRITTEN DATE ||\\\\\\\\\\\\\\\\\ -->
+          <!-- /////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+          <div class="group" id="written_date_1_group" style="top: 0px; left: 498px;">
+            <div class="label_tab" id="written_date_label_tab" style="width: 52px; top: 29px; left: 132px; border-radius: 0px 0px 0px 5px">
+              <div class="label_text" id="written_date_label_text" style="width: 46px; top: 1.25px;">Written Date</div>
+            </div>
+            <div><input type="text" class="input_text" id="written_date_1" style="width: 175px; border-radius: 0px 5px 0px 5px; text-align: right;" autocomplete="off" autocorrect="off" placeholder="When was this page written?"></div>
+          </div>
+          <script src="scripts/emojis/page1/written_date_1_emojis.js"></script>
+        </div>
+
+        <div class="row" style="top: 50px; left: 36px;">
+          <!-- /////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+          <!-- //////////////////|| FULL NAME ||\\\\\\\\\\\\\\\\\\ -->
+          <!-- /////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+          <div class="group" id="full_name_group" style="top: 0px; left: 0px">
+            <div class="label_tab" id="full_name_label_tab" style="width: 44px;">
+              <div class="label_text" id="full_name_label_text" style="width: 46px;">Full Name</div>
+            </div>
+            <div class="comment_group" id="full_name_comment_group" style="left: 5px;">
+              <div class="comment_tab">
+                <div class="comment_dot"></div>
+              </div>
+            </div>
+            <div class="verified_source_group" id="full_name_verified_source_group" style="left: 46px;">
+              <div class="verified_source_tab" id="full_name_verified_source_tab">
+                <a class="verified_source_icon" id="full_name_verified_source_icon" href="https://www.github.com/OpenProfileDevs" target="_blank" tabindex="-1">
+                  <img class="verified_source_favicon" id="full_name_verified_source_favicon" src=""></img>
+                </a>
+              </div>
+            </div>
+            <div><input type="text" class="input_text" id="full_name" style="width: 559px;" autocomplete="off" autocorrect="off" placeholder="What is the oc's full name?"></div>
+            <div class="history_group" id="full_name_history_group">
+              <div class="history_tab" id="full_name_history_tab" style="left: 433.5px;">
+                <div class="last_modified_text" id="full_name_time"></div>
+                <div class="history_dot" id="full_name_history_dot"></div>
+              </div>
+            </div>
+            <script src="scripts/emojis/page1/full_name_emojis.js"></script>
+            <script src="scripts/source/full_name_source_icon.js"></script>
+            <script src="scripts/history/page1/full_name_time.js"></script>
+          </div>
+        </div>
+
+        <div class="row" style="top: 96px; left: 36px;">
+          <!-- /////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+          <!-- /////////////////|| FIRST NAME ||\\\\\\\\\\\\\\\\\\ -->
+          <!-- /////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+          <div class="group" id="first_name_group" style="top: 0px; left: 0px;">
+            <div class="label_tab" id="first_name_label_tab" style="width: 46px;">
+              <div class="label_text" id="first_name_label_text" style="width: 46px;">First Name</div>
+            </div>
+            <div class="comment_group" id="first_name_comment_group" style="left: 5px;">
+              <div class="comment_tab">
+                <div class="comment_dot"></div>
+              </div>
+            </div>
+            <div class="verified_source_group" id="first_name_verified_source_group" style="left: 46px;">
+              <div class="verified_source_tab" id="first_name_verified_source_tab">
+                <a class="verified_source_icon" id="first_name_verified_source_icon" href="https://www.github.com/OpenProfileDevs" target="_blank" tabindex="-1">
+                  <img class="verified_source_favicon" id="first_name_verified_source_favicon" src=""></img>
+                </a>
+              </div>
+            </div>
+            <div><input type="text" class="input_text" id="first_name" style="width: 175px;" autocomplete="off" autocorrect="off" placeholder="What is the oc's first name?"></div>
+            <div class="history_group" id="first_name_history_group">
+              <div class="history_tab" id="first_name_history_tab">
+                <div class="last_modified_text" id="first_name_time"></div>
+                <div class="history_dot" id="first_name_history_dot"></div>
+              </div>
+            </div>
+            <script src="scripts/emojis/page1/first_name_emojis.js"></script>
+            <script src="scripts/source/first_name_source_icon.js"></script>
+            <script src="scripts/history/page1/first_name_time.js"></script>
+            <script src="scripts/generations/page1/generate_first_name.js"></script>
+          </div>
+
+          <!-- /////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+          <!-- /////////////////|| MIDDLE NAME ||\\\\\\\\\\\\\\\\\ -->
+          <!-- /////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+          <div class="group" id="middle_name_group" style="top: 0px; left: 230px;">
+            <div class="label_tab" id="middle_name_label_tab" style="width: 55px;">
+              <div class="label_text" id="middle_name_label_text" style="width: 46px;">Middle Name</div>
+            </div>
+            <div class="comment_group" id="middle_name_comment_group" style="left: 5px;">
+              <div class="comment_tab">
+                <div class="comment_dot"></div>
+              </div>
+            </div>
+            <div class="verified_source_group" id="middle_name_verified_source_group" style="left: 46px;">
+              <div class="verified_source_tab" id="middle_name_verified_source_tab">
+                <a class="verified_source_icon" id="middle_name_verified_source_icon" href="https://www.github.com/OpenProfileDevs" target="_blank" tabindex="-1">
+                  <img class="verified_source_favicon" id="middle_name_verified_source_favicon" src=""></img>
+                </a>
+              </div>
+            </div>
+            <div><input type="text" class="input_text" id="middle_name" style="width: 175px;" autocomplete="off" autocorrect="off" placeholder="What is the oc's middle name?"></div>
+            <div class="history_group" id="middle_name_history_group">
+              <div class="history_tab" id="middle_name_history_tab">
+                <div class="last_modified_text" id="middle_name_time"></div>
+                <div class="history_dot" id="middle_name_history_dot"></div>
+              </div>
+            </div>
+            <script src="scripts/emojis/page1/middle_name_emojis.js"></script>
+            <script src="scripts/source/middle_name_source_icon.js"></script>
+            <script src="scripts/history/page1/middle_name_time.js"></script>
+            <script src="scripts/generations/page1/generate_middle_name.js"></script>
+          </div>
+
+          <!-- /////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+          <!-- //////////////////|| LAST NAME ||\\\\\\\\\\\\\\\\\\ -->
+          <!-- /////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+          <div class="group" id="last_name_group" style="top: 0px; left: 460px;">
+            <div class="label_tab" id="last_name_label_tab" style="width: 46px;">
+              <div class="label_text" id="last_name_label_text" style="width: 46px;">Last Name</div>
+            </div>
+            <div class="comment_group" id="last_name_comment_group" style="left: 5px;">
+              <div class="comment_tab">
+                <div class="comment_dot"></div>
+              </div>
+            </div>
+            <div class="verified_source_group" id="last_name_verified_source_group" style="left: 46px;">
+              <div class="verified_source_tab" id="last_name_verified_source_tab">
+                <a class="verified_source_icon" id="last_name_verified_source_icon" href="https://www.github.com/OpenProfileDevs" target="_blank" tabindex="-1">
+                  <img class="verified_source_favicon" id="last_name_verified_source_favicon" src=""></img>
+                </a>
+              </div>
+            </div>
+            <div><input type="text" class="input_text" id="last_name" style="width: 175px;" autocomplete="off" autocorrect="off" placeholder="What is the oc's last name?"></div>
+            <div class="history_group" id="last_name_history_group">
+              <div class="history_tab" id="last_name_history_tab">
+                <div class="last_modified_text" id="last_name_time"></div>
+                <div class="history_dot" id="last_name_history_dot"></div>
+              </div>
+            </div>
+            <script src="scripts/emojis/page1/last_name_emojis.js"></script>
+            <script src="scripts/source/last_name_source_icon.js"></script>
+            <script src="scripts/history/page1/last_name_time.js"></script>
+            <script src="scripts/generations/page1/generate_last_name.js"></script>
+          </div>
+        </div>
+
+        <div class="row" style="top: 142px; left: 36px;">
+          <!-- /////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+          <!-- //////////////////|| NICKNAME ||\\\\\\\\\\\\\\\\\\\ -->
+          <!-- /////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+          <div class="group" id="nickname_group" style="top: 0px; left: 0px">
+            <div class="label_tab" id="nickname_label_tab" style="width: 44px;">
+              <div class="label_text" id="nickname_label_text" style="width: 43px;">Nickname</div>
+            </div>
+            <div class="comment_group" id="nickname_comment_group" style="left: 5px;">
+              <div class="comment_tab">
+                <div class="comment_dot"></div>
+              </div>
+            </div>
+            <div class="verified_source_group" id="nickname_verified_source_group" style="left: 46px;">
+              <div class="verified_source_tab" id="nickname_verified_source_tab">
+                <a class="verified_source_icon" id="nickname_verified_source_icon" href="https://www.github.com/OpenProfileDevs" target="_blank" tabindex="-1">
+                  <img class="verified_source_favicon" id="nickname_verified_source_favicon" src=""></img>
+                </a>
+              </div>
+            </div>
+            <div><input type="text" class="input_text" id="nickname" style="width: 559px;" autocomplete="off" autocorrect="off" placeholder="What is the oc's nickname?"></div>
+            <div class="history_group" id="nickname_history_group">
+              <div class="history_tab" id="nickname_history_tab" style="left: 433.5px;">
+                <div class="last_modified_text" id="nickname_time"></div>
+                <div class="history_dot" id="nickname_history_dot"></div>
+              </div>
+            </div>
+            <script src="scripts/emojis/page1/nickname_emojis.js"></script>
+            <script src="scripts/source/nickname_source_icon.js"></script>
+            <script src="scripts/history/page1/nickname_time.js"></script>
+            <script src="scripts/generations/page1/generate_nickname.js"></script>
+          </div>
+        </div>
+
+        <div class="row" style="top: 188px; left: 36px;">
+          <!-- /////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+          <!-- ////////////////////|| ALIAS ||\\\\\\\\\\\\\\\\\\\\ -->
+          <!-- /////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+          <div class="group" id="alias_group" style="top: 0px; left: 0px">
+            <div class="label_tab" id="alias_label_tab" style="width: 26px;">
+              <div class="label_text" id="alias_label_text" style="width: 43px;">Alias</div>
+            </div>
+            <div class="comment_group" id="alias_comment_group" style="left: 5px;">
+              <div class="comment_tab">
+                <div class="comment_dot"></div>
+              </div>
+            </div>
+            <div class="verified_source_group" id="alias_verified_source_group" style="left: 46px;">
+              <div class="verified_source_tab" id="alias_verified_source_tab">
+                <a class="verified_source_icon" id="alias_verified_source_icon" href="https://www.github.com/OpenProfileDevs" target="_blank" tabindex="-1">
+                  <img class="verified_source_favicon" id="alias_verified_source_favicon" src=""></img>
+                </a>
+              </div>
+            </div>
+            <div><input type="text" class="input_text" id="alias" style="width: 559px;" autocomplete="off" autocorrect="off" placeholder="What is the oc's alias?"></div>
+            <div class="history_group" id="alias_history_group">
+              <div class="history_tab" id="alias_history_tab" style="left: 433.5px;">
+                <div class="last_modified_text" id="alias_time"></div>
+                <div class="history_dot" id="alias_history_dot"></div>
+              </div>
+            </div>
+            <script src="scripts/emojis/page1/alias_emojis.js"></script>
+            <script src="scripts/source/alias_source_icon.js"></script>
+            <script src="scripts/history/page1/alias_time.js"></script>
+            <script src="scripts/generations/page1/generate_alias.js"></script>
+          </div>
+        </div>
+
+        <div class="row" style="top: 234px; left: 36px;">
+          <!-- /////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+          <!-- //////////////////|| ALTER EGO ||\\\\\\\\\\\\\\\\\\ -->
+          <!-- /////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+          <div class="group" id="alter_ego_group" style="top: 0px; left: 0px">
+            <div class="label_tab" id="alter_ego_label_tab" style="width: 40px;">
+              <div class="label_text" id="alter_ego_label_text" style="width: 43px;">Alter Ego</div>
+            </div>
+            <div class="comment_group" id="alter_ego_comment_group" style="left: 5px;">
+              <div class="comment_tab">
+                <div class="comment_dot"></div>
+              </div>
+            </div>
+            <div class="verified_source_group" id="alter_ego_verified_source_group" style="left: 46px;">
+              <div class="verified_source_tab" id="alter_ego_verified_source_tab">
+                <a class="verified_source_icon" id="alter_ego_verified_source_icon" href="https://www.github.com/OpenProfileDevs" target="_blank" tabindex="-1">
+                  <img class="verified_source_favicon" id="alter_ego_verified_source_favicon" src=""></img>
+                </a>
+              </div>
+            </div>
+            <div><input type="text" class="input_text" id="alter_ego" style="width: 559px;" autocomplete="off" autocorrect="off" placeholder="What is the oc's alter ego?"></div>
+            <div class="history_group" id="alter_ego_history_group">
+              <div class="history_tab" id="alter_ego_history_tab" style="left: 433.5px;">
+                <div class="last_modified_text" id="alter_ego_time"></div>
+                <div class="history_dot" id="alter_ego_history_dot"></div>
+              </div>
+            </div>
+            <script src="scripts/emojis/page1/alter_ego_emojis.js"></script>
+            <script src="scripts/source/alter_ego_source_icon.js"></script>
+            <script src="scripts/history/page1/alter_ego_time.js"></script>
+            <script src="scripts/generations/page1/generate_alter_ego.js"></script>
+          </div>
+        </div>
+
+        <div class="row" style="top: 280px; left: 36px;">
+          <!-- /////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+          <!-- ///////////////////|| PREFIX ||\\\\\\\\\\\\\\\\\\\\ -->
+          <!-- /////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+          <div class="group" id="prefix_group" style="top: 0px; left: 0px">
+            <div class="label_tab" id="prefix_label_tab" style="width: 29px;">
+              <div class="label_text" id="prefix_label_text" style="width: 43px;">Prefix</div>
+            </div>
+            <div class="comment_group" id="prefix_comment_group" style="left: 5px;">
+              <div class="comment_tab">
+                <div class="comment_dot"></div>
+              </div>
+            </div>
+            <div class="verified_source_group" id="prefix_verified_source_group" style="left: 46px;">
+              <div class="verified_source_tab" id="prefix_verified_source_tab">
+                <a class="verified_source_icon" id="prefix_verified_source_icon" href="https://www.github.com/OpenProfileDevs" target="_blank" tabindex="-1">
+                  <img class="verified_source_favicon" id="prefix_verified_source_favicon" src=""></img>
+                </a>
+              </div>
+            </div>
+            <div><input type="text" class="input_text" id="prefix" style="width: 367.5px;" autocomplete="off" autocorrect="off" placeholder="What is the oc's prefix?"></div>
+            <div class="history_group" id="prefix_history_group">
+              <div class="history_tab" id="prefix_history_tab" style="left: 242px;">
+                <div class="last_modified_text" id="prefix_time"></div>
+                <div class="history_dot" id="prefix_history_dot"></div>
+              </div>
+            </div>
+            <script src="scripts/emojis/page1/prefix_emojis.js"></script>
+            <script src="scripts/source/prefix_source_icon.js"></script>
+            <script src="scripts/history/page1/prefix_time.js"></script>
+            <script src="scripts/generations/page1/generate_prefix.js"></script>
+          </div>
+
+          <!-- /////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+          <!-- ///////////////////|| SUFFIX ||\\\\\\\\\\\\\\\\\\\\ -->
+          <!-- /////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+          <div class="group" id="suffix_group" style="top: 0px; left: 460px;">
+            <div class="label_tab" id="suffix_label_tab" style="width: 29px;">
+              <div class="label_text" id="suffix_label_text" style="width: 46px;">Suffix</div>
+            </div>
+            <div class="comment_group" id="suffix_comment_group" style="left: 5px;">
+              <div class="comment_tab">
+                <div class="comment_dot"></div>
+              </div>
+            </div>
+            <div class="verified_source_group" id="suffix_verified_source_group" style="left: 46px;">
+              <div class="verified_source_tab" id="suffix_verified_source_tab">
+                <a class="verified_source_icon" id="suffix_verified_source_icon" href="https://www.github.com/OpenProfileDevs" target="_blank" tabindex="-1">
+                  <img class="verified_source_favicon" id="suffix_verified_source_favicon" src=""></img>
+                </a>
+              </div>
+            </div>
+            <div><input type="text" class="input_text" id="suffix" style="width: 175px;" autocomplete="off" autocorrect="off" placeholder="What is the oc's suffix?"></div>
+            <div class="history_group" id="suffix_history_group">
+              <div class="history_tab" id="suffix_history_tab">
+                <div class="last_modified_text" id="suffix_time"></div>
+                <div class="history_dot" id="suffix_history_dot"></div>
+              </div>
+            </div>
+            <script src="scripts/emojis/page1/suffix_emojis.js"></script>
+            <script src="scripts/source/suffix_source_icon.js"></script>
+            <script src="scripts/history/page1/suffix_time.js"></script>
+            <script src="scripts/generations/page1/generate_suffix.js"></script>
+          </div>
+        </div>
+
+        <div class="row" style="top: 326px; left: 36px;">
+          <!-- /////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+          <!-- /////////////////|| FORMER NAME ||\\\\\\\\\\\\\\\\\ -->
+          <!-- /////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+          <div class="group" id="former_name_group" style="top: 0px; left: 0px">
+            <div class="label_tab" id="former_name_label_tab" style="width: 56px;">
+              <div class="label_text" id="former_name_label_text" style="width: 56px;">Former Name</div>
+            </div>
+            <div class="comment_group" id="former_name_comment_group" style="left: 5px;">
+              <div class="comment_tab">
+                <div class="comment_dot"></div>
+              </div>
+            </div>
+            <div class="verified_source_group" id="former_name_verified_source_group" style="left: 46px;">
+              <div class="verified_source_tab" id="former_name_verified_source_tab">
+                <a class="verified_source_icon" id="former_name_verified_source_icon" href="https://www.github.com/OpenProfileDevs" target="_blank" tabindex="-1">
+                  <img class="verified_source_favicon" id="former_name_verified_source_favicon" src=""></img>
+                </a>
+              </div>
+            </div>
+            <div><input type="text" class="input_text" id="former_name" style="width: 559px;" autocomplete="off" autocorrect="off" placeholder="What is the oc's former name?"></div>
+            <div class="history_group" id="former_name_history_group">
+              <div class="history_tab" id="former_name_history_tab" style="left: 433.5px;">
+                <div class="last_modified_text" id="former_name_time"></div>
+                <div class="history_dot" id="former_name_history_dot"></div>
+              </div>
+            </div>
+            <script src="scripts/emojis/page1/former_name_emojis.js"></script>
+            <script src="scripts/source/former_name_source_icon.js"></script>
+            <script src="scripts/history/page1/former_name_time.js"></script>
+            <script src="scripts/generations/page1/generate_former_name.js"></script>
+          </div>
+        </div>
+
+        <div class="row" style="top: 372px; left: 36px;">
+          <!-- /////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+          <!-- /////////////////|| NAME ORIGIN ||\\\\\\\\\\\\\\\\\ -->
+          <!-- /////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+          <div class="group" id="name_origin_group" style="top: 0px; left: 0px">
+            <div class="label_tab" id="name_origin_label_tab" style="width: 52px;">
+              <div class="label_text" id="name_origin_label_text" style="width: 52px;">Name Origin</div>
+            </div>
+            <div class="comment_group" id="name_origin_comment_group" style="left: 5px;">
+              <div class="comment_tab">
+                <div class="comment_dot"></div>
+              </div>
+            </div>
+            <div class="verified_source_group" id="name_origin_verified_source_group" style="left: 46px;">
+              <div class="verified_source_tab" id="name_origin_verified_source_tab">
+                <a class="verified_source_icon" id="name_origin_verified_source_icon" href="https://www.github.com/OpenProfileDevs" target="_blank" tabindex="-1">
+                  <img class="verified_source_favicon" id="name_origin_verified_source_favicon" src=""></img>
+                </a>
+              </div>
+            </div>
+            <textarea id="name_origin" style="width: 559px; height: 252px;" autocomplete="off" autocorrect="off" placeholder="What is the origin behind the oc's name?"></textarea>
+            <div class="history_group" id="name_origin_history_group">
+              <div class="history_tab" id="name_origin_history_tab" style="left: 433.5px; top: 240px;">
+                <div class="last_modified_text" id="name_origin_time"></div>
+                <div class="history_dot" id="name_origin_history_dot"></div>
+              </div>
+            </div>
+            <script src="scripts/emojis/page1/name_origin_emojis.js"></script>
+            <script src="scripts/source/name_origin_source_icon.js"></script>
+            <script src="scripts/history/page1/name_origin_time.js"></script>
+            <script src="scripts/generations/page1/generate_name_origin.js"></script>
+          </div>
+        </div>
+
+        <div class="row" style="top: 706px; left: 36px;">
+          <!-- /////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+          <!-- //////////////|| PERSONAL THOUGHTS ||\\\\\\\\\\\\\\ -->
+          <!-- /////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+          <div class="group" id="personal_thoughts_name_group" style="top: 0px; left: 0px">
+            <div class="label_tab" id="personal_thoughts_name_label_tab" style="width: 72px;">
+              <div class="label_text" id="personal_thoughts_name_label_text" style="width: 72px;">Personal Thoughts</div>
+            </div>
+            <div class="comment_group" id="personal_thoughts_name_comment_group" style="left: 5px;">
+              <div class="comment_tab">
+                <div class="comment_dot"></div>
+              </div>
+            </div>
+            <div class="verified_source_group" id="personal_thoughts_name_verified_source_group" style="left: 46px;">
+              <div class="verified_source_tab" id="personal_thoughts_name_verified_source_tab">
+                <a class="verified_source_icon" id="personal_thoughts_name_verified_source_icon" href="https://www.github.com/OpenProfileDevs" target="_blank" tabindex="-1">
+                  <img class="verified_source_favicon" id="personal_thoughts_name_verified_source_favicon" src=""></img>
+                </a>
+              </div>
+            </div>
+            <textarea id="personal_thoughts_name" style="width: 559px; height: 252px;" autocomplete="off" autocorrect="off" placeholder="What are the oc's thoughts towards their name?"></textarea>
+            <div class="history_group" id="personal_thoughts_name_history_group">
+              <div class="history_tab" id="personal_thoughts_name_history_tab" style="left: 433.5px; top: 240px;"">
+                <div class="last_modified_text" id="personal_thoughts_name_time"></div>
+                <div class="history_dot" id="personal_thoughts_name_history_dot"></div>
+              </div>
+            </div>
+            <script src="scripts/emojis/page1/personal_thoughts_name_emojis.js"></script>
+            <script src="scripts/source/personal_thoughts_name_source_icon.js"></script>
+            <script src="scripts/history/page1/personal_thoughts_name_time.js"></script>
+            <script src="scripts/generations/page1/generate_personal_thoughts_name.js"></script>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="right"></div>
+
+
+  <!-- /////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+  <!-- //////////////|| RIGHT CLICK MENU ||\\\\\\\\\\\\\\\ -->
+  <!-- /////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+  <script src="scripts/menus/right_click_menu.js"></script>
+  <div id="contextMenu" class="context-menu">
+    <ul>
+      <li id="generate_option">🖊️ Generate Content</button>
+        <script src="scripts/menus/options/generate_option.js"></script>
+      <li id="color_option">🟡 Highlight Textbox</button>
+        <script src="scripts/menus/options/color_option.js"></script>
+      <li id="color_option" style="opacity: 0.35;">💬 Disable Comments</button>
+      <li id="color_option" style="opacity: 0.35;">🔗 Link Source</button>
+      <li id="color_option" style="opacity: 0.35;">📅 Hide History</button>
+      <li id="lock_option">🔒 Lock Textbox</li>
+        <script src="scripts/menus/options/lock_option.js"></script>
+      <li id="disable_option">❌ Disable Textbox</li>
+        <script src="scripts/menus/options/disable_option.js"></script>
+      <li id="languageOption" style="opacity: 0.35;">🌐 Change Language ></li>
+      <li id="version_option">⚙️ Version: 022 Preview</li>
+    </ul>
+  </div>
+
+  <!-- /////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+  <!-- ///////////////////|| POP UPS ||\\\\\\\\\\\\\\\\\\\ -->
+  <!-- /////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+  <div class="popup" id="popup_0">
+    <div class="popup_text">
+      <p id="seperator">Preview versions are basically nightly updates with rough edges! Not recommended for production work.</p>
+      <br id="seperator">
+      <p style="font-size: 14px;" id="seperator">(click anywhere to dismiss)</p>
+      <br id="seperator">
+      <p style="font-size: 12px;" id="seperator">💡 Did you know there is currently over 4,000 lines of active code in the OP5?</p>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+  <!-- /////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+  <!-- //////////////////|| DEVELOPER ||\\\\\\\\\\\\\\\\\\ -->
+  <!-- /////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+  <!-- <button onclick="saveData()" id="saveButton" class="sidebar-button sidebar-download-button" style="height: 25px; padding: 15px; border-radius: 5px; transform: translateX(102.5px)translateY(30px);">Download Profile</button> -->
+  <!-- <input type="file" id="loadFileInput" accept=".op5" style="text-align: center;" class="sidebar-file-input" onchange="loadData()"> -->
+  <!-- <div><input type="text" class="input_text" id="written_date" style="width: 170.67px;" autocomplete="off" autocorrect="off" placeholder="What is the OC's first name?"></div> -->
+
+  <div class="history-popup">
+    <!-- History content will be added here -->
+  </div>
+
+  <div id="bodyContext" class="context-menu">
+    <ul>
+      <!-- <li id="languageOption">🌐 Change Language ></li>-->
+    <!-- History content will be added here -->
+    <!--   <li id="languageSubMenu" class="hidden">
+        <ul>
+          <li data-lang="en" id="english">🦅 English</li>
+          <li data-lang="ens" id="s_english">🤪 Special</li>
+          <li data-lang="in" id="indo">🌋 Indonesian</li>
+          <li data-lang="jp" id="japan">🌸 Japanese</li>
+        </ul>
+      </li> -->
+      <li id="version">⚙️ Version: 022 Preview</li>
+    </ul>
+  </div>
+
+  <script src="scripts/translations/english.js"></script>
+  <script src="scripts/translations/S_english.js"></script>
+  <script src="scripts/translations/indonesian.js"></script>
+  <script src="scripts/translations/japan.js"></script>
+
+</body>
+</html>
