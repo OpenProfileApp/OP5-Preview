@@ -12,7 +12,7 @@ function generate_former_name() {
     .then(data => {
       const firstNamesArray = data.split('; ').map(name => name.trim());
 
-      fetch('databases/last_name_database.txt')
+      return fetch('databases/last_name_database.txt')
         .then(response => response.text())
         .then(data => {
           const lastNamesArray = data.split('; ').map(name => name.trim());
