@@ -7,7 +7,7 @@ function getRandomName(namesArray) {
 // Function to populate the "alias" input with a random full name
 function generate_former_name() {
   // Fetch the names from a text file (replace 'names.txt' with your file path)
-  fetch('scripts/generations/page1/databases/first_name_database.txt')
+  fetch('databases/first_name_database.txt')
     .then(response => response.text())
     .then(data => {
       const firstNamesArray = data.split('; ').map(name => name.trim());

@@ -7,7 +7,7 @@ function getRandomName(namesArray) {
   // Function to populate the "first_name" input with a random name
   function generate_middle_name() {
     // Fetch the names from a text file (replace 'names.txt' with your file path)
-    fetch('scripts/generations/page1/databases/middle_name_database.txt')
+    fetch('databases/middle_name_database.txt')
       .then(response => response.text())
       .then(data => {
         const namesArray = data.split('; '); // Split names by semicolon
