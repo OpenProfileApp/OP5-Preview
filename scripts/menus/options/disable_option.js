@@ -14,6 +14,9 @@ function disable_option() {
     const lockOption = document.querySelector("#lock_option");
     const generateOption = document.querySelector("#generate_option");
     const colorOption = document.querySelector("#color_option");
+    const source_group = document.getElementById(`${groupId}_verified_source_group`);
+    const source_icon = document.getElementById(`${groupId}_verified_source_icon`);
+    const source_option = document.querySelector("#source_option");
 
     if (textBox) {
       // Toggle the disabled property based on the current state
@@ -34,6 +37,9 @@ function disable_option() {
         lockOption.style.pointerEvents = "none"; // Disable pointer events
         textBox.value = " "; // Set a space as the value
         textBox.highlighted = false;
+        source_option.textContent = "🔗 Link Source";
+        source_group.style.top = "20px";
+        source_group.style.opacity = "0";
       } else {
         disableOption.textContent = "❌ Disable Textbox";
         group.style.opacity = "1"; // Update the group's opacity
@@ -44,6 +50,11 @@ function disable_option() {
         lockOption.style.opacity = "1"; // Restore lock option opacity
         lockOption.style.pointerEvents = "auto"; // Enable pointer events
         textBox.value = ""; // Clear the value
+        textBox.highlighted = false;
+        source_icon.href = " "; // Clear the href
+        source_option.textContent = "🔗 Link Source";
+        source_group.style.top = "20px";
+        source_group.style.opacity = "0";
       }
     }
     console.log("Disabled/Enabled Group ID:", groupId);

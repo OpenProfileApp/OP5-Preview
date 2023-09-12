@@ -317,10 +317,10 @@
   /*/////////////////////////*/
   .verified_source_group {
     position: absolute;
-    top: 10px;
+    top: 20px;
     width: 15px;
     height: 11px;
-    opacity: 0; /*/DISABLED FOR NOW/*/
+    opacity: 0;
     transition: 0.3s ease-in-out;
     z-index: 4;
   }

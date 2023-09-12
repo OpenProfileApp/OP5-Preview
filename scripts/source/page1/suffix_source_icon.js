@@ -1,7 +1,7 @@
 // Function to fetch and display the favicon as an image
-function displayFavicon() {
-    const faviconElement = document.getElementById('middle_name_verified_source_favicon');
-    const linkElement = document.getElementById('middle_name_verified_source_icon');
+function displayFaviconsuffix() {
+    const faviconElement = document.getElementById('suffix_verified_source_favicon');
+    const linkElement = document.getElementById('suffix_verified_source_icon');
     const url = linkElement.getAttribute('href'); // Get the URL from the href attribute
 
     // Generate the favicon URL using favicon.io
@@ -17,4 +17,4 @@ function displayFavicon() {
 }
 
 // Call the function to display the favicon and set up the click event
-displayFavicon();
+displayFaviconsuffix();

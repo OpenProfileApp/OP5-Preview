@@ -23,11 +23,9 @@ function color_option() {
         if (textBox.highlighted) {
           colorOption.textContent = "⚪ Unhighlight Textbox";
           textBox.style.backgroundColor = "#ffee93";
-          textBox.style.border = "2px solid #ffee93"
         } else {
           colorOption.textContent = "🟡 Highlight Textbox";
           textBox.style.backgroundColor = "#ffffff";
-          textBox.style.border = "2px solid #ffffff"
         }
       } else {
         colorOption.style.opacity = "0.35"; // Fade the color option
