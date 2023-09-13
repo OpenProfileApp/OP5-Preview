@@ -40,12 +40,30 @@
     user-zoom: 100%;
   }
 
+  .top {
+    background-color: #1b1f28;
+    position: fixed;
+    width: 100vw;
+    height: 35px;
+    top: 0;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s ease-in-out;
+    animation: load_in_slide_left  0.3s forwards;
+    box-shadow:
+    0px 0px 10px #00000050, /* Top shadow */
+    0px 0px 10px #00000050, /* Right shadow */
+    0px 0px 10px #00000050, /* Bottom shadow */
+    0px 0px 10px #00000050; /* Left shadow */
+    z-index: 6;
+  }
+
   .center {
     width: 8.3in;
     height: 11.7in;
     scale: 1.25;
     left: 365px;
-    top: 70px;
+    top: 95px;
     bottom: 0px;
     position: absolute;
     transform-origin: top center;
