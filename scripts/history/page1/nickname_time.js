@@ -2,18 +2,11 @@ document.addEventListener('DOMContentLoaded', function() {
   const textInput = document.getElementById('nickname');
   const writtenDateInput = document.getElementById('written_date_1');
   const lastModified = document.getElementById('nickname_time');
-  const targetElement = document.getElementById('nickname_history_tab'); // Change 'target_element' to the actual ID of the element you want to modify
+  const targetElement = document.getElementById('nickname_history_tab');
   const currentDate = new Date();
   let previousInputValueOld = '';
   let previousInputValueNew = '';
   let isTextInputFocused = false;
-
-  textInput.addEventListener('input', updateLastModified);
-  textInput.addEventListener('focus', () => isTextInputFocused = true);
-  textInput.addEventListener('blur', () => {
-    isTextInputFocused = false;
-    updateInput();
-  });
 
   function updateLastModified() {
     const enteredText = textInput.value;
@@ -26,10 +19,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const loggedDate = new Date(writtenDateInput.value);
     const isLoggedDateEqualToLocal = isDateEqualToLocal(loggedDate);
 
-    if (!isLoggedDateEqualToLocal && enteredText !== previousInputValueOld) {
+    if ((!isLoggedDateEqualToLocal && enteredText !== previousInputValueOld) && enteredText !== '') {
       setTimeout(() => {
         lastModified.textContent = `${formattedDate}`;
-    }, 150);
+      }, 150);
       previousInputValueNew = enteredText; // Update the new value
       lastModified.style.opacity = '1';
       targetElement.style.height = '15px';
@@ -55,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     return formattedLoggedDates.some(format => format === currentDate.toLocaleDateString('en-US'));
   }
-  
+
   function updateInput() {
     if (!isTextInputFocused) {
       const loggedDate = new Date(writtenDateInput.value);
@@ -70,4 +63,29 @@ document.addEventListener('DOMContentLoaded', function() {
   function updateConsoleLog(enteredText) {
     consoleLog.textContent = `Entered Text: ${enteredText}\nPrevious Input Old: ${previousInputValueOld}\nPrevious Input New: ${previousInputValueNew}`;
   }
+
+  // Add an event listener to the "Generate" option button
+  const generateOptionButton = document.querySelector("#generate_option");
+  if (generateOptionButton) {
+    generateOptionButton.addEventListener("click", () => {
+      updateLastModified(); // Call the updateLastModified function when "Generate" is clicked
+    });
+  }
+
+  // Add an input event listener to update the date whenever text is entered
+  textInput.addEventListener('input', () => {
+    updateLastModified();
+  });
+
+  // Add focus and blur event listeners to track input focus
+  textInput.addEventListener('focus', () => isTextInputFocused = true);
+  textInput.addEventListener('blur', () => {
+    isTextInputFocused = false;
+    updateInput();
+  });
+
+  // Add an event listener for changes in the writtenDateInput
+  writtenDateInput.addEventListener('input', () => {
+    updateLastModified();
+  });
 });
