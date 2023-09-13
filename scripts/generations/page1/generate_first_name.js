@@ -8,11 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
   let previousInputValueNew = '';
   let isTextInputFocused = false;
 
-  function getRandomName(namesArray) {
-      const randomIndex = Math.floor(Math.random() * namesArray.length);
-      return namesArray[randomIndex];
-  }
-
+  // Function to set a random name in the input field
   function generate_first_name() {
       // Fetch the names from a text file (replace 'names.txt' with your file path)
       fetch('databases/first_name_database.txt')
@@ -23,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
               if (namesArray.length > 0) {
                   const randomName = getRandomName(namesArray);
                   textInput.value = randomName;
-                  updateLastModified(); // Call updateLastModified after generating the name
+                  updateLastModified(); // Call updateLastModified after setting the name
               } else {
                   alert('No names found in the file.');
               }
@@ -33,10 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
           });
   }
 
-  // Add an event listener to the "Generate Name" button
-  const generateButton = document.getElementById('generate_button');
-  generateButton.addEventListener('click', generate_first_name);
-
+  // Function to update last modified time
   function updateLastModified() {
       const formattedDate = currentDate.toLocaleDateString('en-US', {
           year: 'numeric',
@@ -77,5 +70,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
   function updateConsoleLog(enteredText) {
       consoleLog.textContent = `Entered Text: ${enteredText}\nPrevious Input Old: ${previousInputValueOld}\nPrevious Input New: ${previousInputValueNew}`;
+  }
+
+  // Add an event listener to the "Generate Name" button (if you have one)
+  const generateButton = document.getElementById('generate_button');
+  if (generateButton) {
+      generateButton.addEventListener('click', generate_first_name);
   }
 });
