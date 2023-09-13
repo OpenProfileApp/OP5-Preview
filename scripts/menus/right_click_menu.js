@@ -25,10 +25,8 @@ document.addEventListener("contextmenu", (e) => {
         contextMenu.style.display = "block";
         bodyContext.classList.remove("show");
 
-        // Use the ID to target the associated text box
-        const textBox = document.getElementById(groupId);
-
         // Check if the textbox is disabled and update the context menu accordingly
+            const textBox = document.getElementById(`${groupId}`);
             const disableOption = document.querySelector("#disable_option");
             const lockOption = document.querySelector("#lock_option");
             const generateOption = document.querySelector("#generate_option");

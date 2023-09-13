@@ -15,7 +15,6 @@ function source_option() {
 
     if (textBox) {
       if (!textBox.readOnly) {
-        // Check if the textbox is already linked to a source
         if (!textBoxStatesSource[textBox.id]) {
           // Prompt the user for a link
           const link = prompt("Enter the link:");
@@ -24,39 +23,30 @@ function source_option() {
           if (isValidLink(link)) {
             // Link the source to the href attribute
             source_icon.href = link;
+            source_icon.target = "_blank"
             source_icons_page1();
 
             // Update the state for this textbox
-            textBoxStatesSource[textBox.id] = true;
+            textBoxStatesSource[textBox.id] = textBox.linked = true;
 
-            if (textBoxStatesSource[textBox.id]) {
-              source_option.textContent = "🔗 Unlink Source";
-              source_group.style.top = "10px";
-              source_group.style.opacity = "1";
-            } else {
-              source_icon.href = " "; // Clear the href
-              source_option.textContent = "🔗 Link Source";
-              source_group.style.top = "20px";
-              source_group.style.opacity = "0";
-            }
+            // Update the text and lock option accordingly
+            source_option.textContent = "🔗 Unlink Source";
+            source_group.style.top = "10px";
+            source_group.style.opacity = "1";
           } else {
             alert("Invalid link. Please enter a valid URL.");
           }
         } else {
           // Toggle the link state
-          textBoxStatesSource[textBox.id] = !textBoxStatesSource[textBox.id];
+          textBoxStatesSource[textBox.id] = textBox.linked = false;
+
+          // Clear the href
+          source_icon.href = "";
 
           // Update the text and lock option accordingly
-          if (textBoxStatesSource[textBox.id]) {
-            source_option.textContent = "🔗 Unlink Source";
-            source_group.style.top = "10px";
-            source_group.style.opacity = "1";
-          } else {
-            source_icon.href = " "; // Clear the href
-            source_option.textContent = "🔗 Link Source";
-            source_group.style.top = "20px";
-            source_group.style.opacity = "0";
-          }
+          source_option.textContent = "🔗 Link Source";
+          source_group.style.top = "20px";
+          source_group.style.opacity = "0";
         }
       } else {
         source_option.style.opacity = "0.35"; // Fade the color option

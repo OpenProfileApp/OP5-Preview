@@ -336,7 +336,7 @@
 
   .verified_source_tab {
     position: absolute;
-    left: 15px;
+    left: 9px;
     width: 15px;
     height: 11px;
     border-radius: 5px 5px 0px 0px;
@@ -361,6 +361,8 @@
     display: flex;
     align-items: center;
     text-decoration: none;
+    opacity: 1;
+    transition: 0.3s ease-in-out;
     z-index: 7;
   }
 
@@ -369,6 +371,14 @@
     max-height: 10px;
     border-radius: 2px 2px 0px 0px;
     z-index: 8;
+  }
+
+  .verified_source_icon:hover {
+    -webkit-transform-origin: center center;
+    -ms-transform-origin: center center;
+    transform-origin: center center;
+    scale: 1.215;
+    top: 3px;
   }
 
   .verified_source_favicon::selection {
