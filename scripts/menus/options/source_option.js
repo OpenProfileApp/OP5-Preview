@@ -11,6 +11,7 @@ function source_option() {
     const textBox = document.getElementById(`${groupId}`);
     const source_group = document.getElementById(`${groupId}_verified_source_group`);
     const source_icon = document.getElementById(`${groupId}_verified_source_icon`);
+    const source_tab = document.getElementById(`${groupId}_verified_source_tab`);
     const source_option = document.querySelector("#source_option");
 
     if (textBox) {
@@ -31,8 +32,10 @@ function source_option() {
 
             // Update the text and lock option accordingly
             source_option.textContent = "🔗 Unlink Source";
-            source_group.style.top = "10px";
+            source_group.style.top = "6px";
+            source_icon.style.top = "4.5px";
             source_group.style.opacity = "1";
+            source_tab.style.height = "15px";
           } else {
             alert("Invalid link. Please enter a valid URL.");
           }
@@ -45,8 +48,10 @@ function source_option() {
 
           // Update the text and lock option accordingly
           source_option.textContent = "🔗 Link Source";
-          source_group.style.top = "20px";
+          source_group.style.top = "18px";
+          source_icon.style.top = "2.5px";
           source_group.style.opacity = "0";
+          source_tab.style.height = "11px"
         }
       } else {
         source_option.style.opacity = "0.35"; // Fade the color option

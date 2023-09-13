@@ -1,5 +1,7 @@
-function getRandomEmoji() {
-    var emojis = ['😀', '😄', '😊', '😎', '😍', '🤔', '🙄', '😴']; // Add more emojis if desired
+function getRandomEmojinickname() {
+  var emojis = ['😀', '😁', '😄', '😉', '😊', '😋', '😎', '😍', '🥰', '🙂', '🤩', '🤔', '🤨', '😐', '😶'
+  , '😶', '😏', '😮', '😯', '😌', '🙃', '🫠', '😲', '🤯', '😬', '😮', '🥶', '😳', '😇', '🥳', '🥸'
+  , '🥺', '🤠', '🤡', '🫨', '🤫', '🤭', '🫣', '🧐', '🤓', '😈']; // Add more emojis if desired
     var randomIndex = Math.floor(Math.random() * emojis.length);
     return emojis[randomIndex];
   }
@@ -7,6 +9,6 @@ function getRandomEmoji() {
   function nickname_emojis() {
     var inputElement = document.getElementById('nickname');
     var currentPlaceholder = inputElement.getAttribute('placeholder');
-    var emoji = getRandomEmoji();
+    var emoji = getRandomEmojinickname();
     inputElement.setAttribute('placeholder', currentPlaceholder + ' ' + emoji);
   }

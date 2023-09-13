@@ -326,7 +326,7 @@
   /*/////////////////////////*/
   .verified_source_group {
     position: absolute;
-    top: 20px;
+    top: 18px;
     width: 15px;
     height: 11px;
     opacity: 0;
@@ -482,6 +482,13 @@
     z-index: 10;
   }
 
+  .input_text::placeholder {
+    color: #808080;
+    font-size: 11px;
+    opacity: 1;
+    transition: 0.3s ease-in-out;
+  }
+
   textarea {
     position: absolute;
     left: 0px;
@@ -500,6 +507,13 @@
     transition: 0.3s ease-in-out;
     resize: none;
     z-index: 10;
+  }
+
+  textarea::placeholder {
+    color: #808080;
+    font-size: 11px;
+    opacity: 1;
+    transition: 0.3s ease-in-out;
   }
 
   @keyframes scrollText {
