@@ -85,11 +85,50 @@ function saveAndDownloadData() {
 
 // Function to generate .op5 file contents
 function generateOp5FileContent(data) {
-  const op5Content = `; OpenProfile 5 Preview
-firstName: ${escapeNewlines(data.firstName) || ""}
-firstNameTime: ${escapeNewlines(data.firstNameTime) || ""}
-firstNameLink: ${escapeNewlines(data.firstNameLink) || ""}`;
+  const op5Content = 
+`———————————————————————————————————————————————————————   
+  ___                 ___          __ _ _       ___ 
+ / _ \ _ __  ___ _ _ | _ \_ _ ___ / _(_) |___  | __|
+| (_) | '_ \/ -_) ' \|  _/ '_/ _ \  _| | / -_) |__ \
+ \___/| .__/\___|_||_|_| |_| \___/_| |_|_\___| |___/
+      |_|                                              
+        ->  https://op5.avatarkage.com  <-
 
+———————————————[ OPENPROFILE-CHARACTER ]———————————————
+app_version: v5.0.026
+profile_version: v1.0.0
+theme: openprofile_preview
+CREDITS {
+ AvatarKage (developer)
+}
+
+————————————————————[ FIRST-NAME ]—————————————————————
+FIRST-NAME-DATA {
+ first_name: ${escapeNewlines(data.firstName) || ""}
+ first_name_source_url: ${escapeNewlines(data.firstNameLink) || ""}
+ first_name_source_icon: N/A
+ first_name_time: ${escapeNewlines(data.firstNameTime) || ""}
+}
+
+FIRST-NAME-GROUP {
+ first_name-highlighted: false
+ first_name-linked: false
+ first_name-locked: false
+ first_name-disabled: false
+ first_name-comments: false
+ first_name-history: true
+ first_name-history_vis: true
+}
+
+FIRST-NAME-COMMENTS {
+ N/A
+}
+
+FIRST-NAME-HISTORY {
+ N/A
+}
+
+————————————————————[ MIDDLE-NAME ]————————————————————`;
   return op5Content;
 }
 
@@ -123,7 +162,7 @@ function populateFormFields(data) {
   const parsedData = {};
 
   for (const line of lines) {
-    const parts = line.split(':');
+    const parts = line.split(': ');
     if (parts.length >= 2) {
       const key = parts[0].trim();
       const value = parts.slice(1).join(':').trim();
@@ -131,10 +170,10 @@ function populateFormFields(data) {
     }
   }
 
-  firstNameInput.value = unescapeNewlines(parsedData.firstName) || "";
-  firstNameTime.textContent = unescapeNewlines(parsedData.firstNameTime) || "";
+  firstNameInput.value = unescapeNewlines(parsedData.first_name) || "";
+  firstNameTime.textContent = unescapeNewlines(parsedData.first_name_time) || "";
   applyStyleBasedOnContent(); // Apply style when loaded data changes the content
-  firstNameLink.href = unescapeNewlines(parsedData.firstNameLink) || "";
+  firstNameLink.href = unescapeNewlines(parsedData.first_name_source_url) || "";
   applyStyleBasedOnContent2();
   displayFavicon();
 }

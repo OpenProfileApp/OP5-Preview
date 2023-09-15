@@ -13,6 +13,7 @@ function lock_option() {
     const lockOption = document.querySelector("#lock_option");
     const generateOption = document.querySelector("#generate_option");
     const colorOption = document.querySelector("#color_option");
+    const source_history = document.querySelector("#history_option");
 
     if (textBox) {
       // Toggle the readOnly property based on the current state
@@ -32,6 +33,8 @@ function lock_option() {
         colorOption.style.pointerEvents = "none"; // Disable pointer events
         disableOption.style.opacity = "0.35"; // Fade the lock option
         disableOption.style.pointerEvents = "none"; // Disable pointer events
+        source_history.style.opacity = "0.35"; // Fade the color option
+        source_history.style.pointerEvents = "none"; // Disable pointer events
       } else {
         lockOption.textContent = "🔒 Lock Textbox";
         textBox.value = savedvalue
@@ -41,6 +44,8 @@ function lock_option() {
         colorOption.style.pointerEvents = "auto"; // Enable pointer events
         disableOption.style.opacity = "1"; // Restore lock option opacity
         disableOption.style.pointerEvents = "auto"; // Enable pointer events
+        source_history.style.opacity = "1"; // Fade the color option
+        source_history.style.pointerEvents = "auto"; // Disable pointer events
       }
     }
     console.log("Locked/Unlocked Group ID:", groupId);

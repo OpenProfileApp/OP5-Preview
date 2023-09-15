@@ -1,0 +1,43 @@
+———————————————————————————————————————————————————————   
+   ___                 ___          __ _ _       ___ 
+  / _ \ _ __  ___ _ _ | _ \_ _ ___ / _(_) |___  | __|
+ | (_) | '_ \/ -_) ' \|  _/ '_/ _ \  _| | / -_) |__ \
+  \___/| .__/\___|_||_|_| |_| \___/_| |_|_\___| |___/
+       |_|                                              
+           ->  https://op5.avatarkage.com  <-
+
+———————————————[ OPENPROFILE-CHARACTER ]———————————————
+app_version:
+profile_version:
+theme:
+CREDITS {
+    AvatarKage (developer)
+}
+
+————————————————————[ FIRST-NAME ]—————————————————————
+FIRST-NAME-DATA {
+    first_name:
+    first_name_source_url:
+    first_name_source_icon:
+    first_name_time:
+}
+
+FIRST-NAME-GROUP {
+    first_name-highlighted: false
+    first_name-linked: false
+    first_name-locked: false
+    first_name-disabled: false
+    first_name-comments: false
+    first_name-history: true
+    first_name-history_vis: true
+}
+
+FIRST-NAME-COMMENTS {
+    N/A
+}
+
+FIRST-NAME-HISTORY {
+    N/A
+}
+
+————————————————————[ MIDDLE-NAME ]————————————————————

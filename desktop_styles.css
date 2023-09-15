@@ -55,7 +55,7 @@
     0px 0px 10px #00000050, /* Right shadow */
     0px 0px 10px #00000050, /* Bottom shadow */
     0px 0px 10px #00000050; /* Left shadow */
-    z-index: 6;
+    z-index: 60;
   }
 
   .center {
@@ -88,7 +88,7 @@
     0px 0px 10px #00000050, /* Right shadow */
     0px 0px 10px #00000050, /* Bottom shadow */
     0px 0px 10px #00000050; /* Left shadow */
-    z-index: 5;
+    z-index: 50;
   }
 
   #left::selection {
@@ -113,7 +113,7 @@
     0px 0px 10px #00000050, /* Right shadow */
     0px 0px 10px #00000050, /* Bottom shadow */
     0px 0px 10px #00000050; /* Left shadow */
-    z-index: 5;
+    z-index: 50;
   }
 
   .outer {
@@ -796,5 +796,15 @@
   @keyframes spin {
       0% { transform: rotate(0deg); }
       100% { transform: rotate(360deg); }
+  }
+
+  #page_0 {
+    opacity: 1;
+    transition: 0.3s ease-in-out;
+  }
+
+  #page_1 {
+    opacity: 0;
+    transition: 0.3s ease-in-out;
   }
 }

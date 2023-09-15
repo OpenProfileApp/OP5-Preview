@@ -1,26 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- —————————————————[ PAGE-INFORMATION ]—————————————————— -->
   <title>OpenProfile 5 Preview</title>
   <link rel="icon" href="media/images/openprofile/preview/op_preview_favicon.png" type="image/x-icon">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
-  <!-- Discord-specific meta tags -->
+  <!-- —————————————————————[ META-TAGS ]————————————————————— -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="OpenProfile 5 Preview" />
+  <meta property="twitter:creator" content="@OpenProfileDevs" />
   <meta property="og:description" content="OpenProfile is the most advanced character profile template in the world and a GNU open source project. Created freely for writers by writers!" />
   <meta property="og:image" content="https://raw.githubusercontent.com/OpenProfileDevs/OP5-Preview/web/media/images/openprofile/preview/op_preview_512.jpeg" />
   <meta property="og:url" content="https://openprofiledevs.github.io/OP5-Preview/" />
   <meta property="theme-color" content="#5e467f" />
-  <!-- Page styles -->
+  <!-- ————————————————————[ STYLESHEETS ]————————————————————— -->
   <link rel="stylesheet" type="text/css" href="desktop_styles.css">
   <link rel="stylesheet" type="text/css" href="mobile_styles.css">
 </head>
 <body>
-  <!-- Base scripts -->
+  <!-- ————————————————————[ BASE-SCRIPTS ]———————————————————— -->
   <script src="scripts/clear_cache.js"></script>
   <script src="scripts/loader.js"></script>
-  <script src="scripts/save_load.js"></script>
   <script src="scripts/popup.js"></script>
   <script src="scripts/onload.js"></script>
   
@@ -29,16 +30,14 @@
   </div>
 
   <!-- Page elements -->
-  <div class="top">
-    <!-- Buttons here -->
-  </div>
+  <div class="top"></div>
 
   <div class="left">
     <div class="label_text" id="left" style="width: 375px; font-size: 45px; transform: translateY(375px)translateX(40px);">Coming soon</div>
     <div class="label_text" id="left" style="width: 375px; font-size: 25px; transform: translateY(435px)translateX(60px);">(management panel)</div>
   </div>
 
-  <div class="center">
+  <div class="center" id="page_0" style="z-index: 11;">
     <div class="outer">
       <div class="inner">
 
@@ -492,7 +491,6 @@
 
   <div class="right"></div>
 
-
   <!-- /////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
   <!-- //////////////|| RIGHT CLICK MENU ||\\\\\\\\\\\\\\\ -->
   <!-- /////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
@@ -507,7 +505,8 @@
       <li id="source_option">🔗 Link Source</button>
         <script src="scripts/menus/options/source_option.js"></script>
         <script src="scripts/source/source_icons_page1.js"></script>
-      <li id="history_option" style="opacity: 0.35;">📅 Hide History</button>
+      <li id="history_option">📅 Hide History</button>
+        <script src="scripts/menus/options/history_option.js"></script>
       <li id="lock_option">🔒 Lock Textbox</li>
         <script src="scripts/menus/options/lock_option.js"></script>
       <li id="disable_option">❌ Disable Textbox</li>
@@ -522,29 +521,32 @@
   <!-- /////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
   <div class="popup" id="popup_0">
     <div class="popup_text">
-      <a style="font-size: 26px; color: #5e467f;" href="https://www.github.com/OpenProfileDevs/OP5-Preview" target="_blank" >OpenProfile v5.0.025 Preview</a>
+      <a style="font-size: 26px; color: #5e467f;" href="https://www.github.com/OpenProfileDevs/OP5-Preview" target="_blank" >OpenProfile v5.0.026 Preview</a>
       <p id="seperator">Preview versions are basically nightly updates with rough edges! Not recommended for production work.</p>
       <br id="seperator">
       <p style="font-size: 14px;" id="seperator">(click anywhere to dismiss)</p>
       <br id="seperator">
-      <p style="font-size: 12px;" id="seperator">💡 Did you know there is currently over 4,500 lines of active code in the OP5?</p>
+      <p style="font-size: 12px;" id="seperator">💡 Did you know there is currently over 5,200 lines of active code in the OP5?</p>
     </div>
   </div>
-
-
-
-
-
-
-
-
 
   <!-- /////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
   <!-- //////////////////|| DEVELOPER ||\\\\\\\\\\\\\\\\\\ -->
   <!-- /////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+  <script src="scripts/pages/switch_page.js"></script>
+  
+  <!-- Larger scripts -->
+  <!--  <script src="scripts/save_load.js"></script> -->
+  <!-- <button id="saveButton" onclick="saveAndDownloadData()" >Save</button> -->
+  <!-- <input type="file" id="loadFileInput" onchange="loadData()" accept=".op5">Load</button> -->
+
+
   <!-- <button onclick="saveData()" id="saveButton" class="sidebar-button sidebar-download-button" style="height: 25px; padding: 15px; border-radius: 5px; transform: translateX(102.5px)translateY(30px);">Download Profile</button> -->
   <!-- <input type="file" id="loadFileInput" accept=".op5" style="text-align: center;" class="sidebar-file-input" onchange="loadData()"> -->
-  <!-- <div><input type="text" class="input_text" id="written_date" style="width: 170.67px;" autocomplete="off" autocorrect="off" placeholder="What is the OC's first name?"></div> -->
+  <!-- <button id="page_switcher" style="z-index: 15; transform: translateY(300px)translateX(40px);">Swipe ></button>
+    <button id="page_switcher2" style="z-index: 15; transform: translateY(325px)translateX(40px);">Swipe <</button>
+    <div><input type="text" class="input_text" id="written_date" style="width: 170.67px;" autocomplete="off" autocorrect="off" placeholder="What is the OC's first name?"></div> -->
 
   <div class="history-popup">
     <!-- History content will be added here -->

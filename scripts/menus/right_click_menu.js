@@ -32,6 +32,7 @@ document.addEventListener("contextmenu", (e) => {
             const generateOption = document.querySelector("#generate_option");
             const colorOption = document.querySelector("#color_option");
             const source_option = document.querySelector("#source_option");
+            const source_history = document.querySelector("#history_option");
 
             if (textBox.highlighted) {
                 colorOption.textContent = "⚪ Unhighlight Textbox";
@@ -49,6 +50,8 @@ document.addEventListener("contextmenu", (e) => {
                 disableOption.style.pointerEvents = "none"; // Disable pointer events
                 source_option.style.opacity = "0.35"; // Fade the color option
                 source_option.style.pointerEvents = "none"; // Disable pointer events
+                source_history.style.opacity = "0.35"; // Fade the color option
+                source_history.style.pointerEvents = "none"; // Disable pointer events
             } else {
                 lockOption.textContent = "🔒 Lock Textbox";
                 generateOption.style.opacity = "1"; // Restore generate option opacity
@@ -59,6 +62,8 @@ document.addEventListener("contextmenu", (e) => {
                 disableOption.style.pointerEvents = "auto"; // Enable pointer events
                 source_option.style.opacity = "1"; // Fade the color option
                 source_option.style.pointerEvents = "auto"; // Disable pointer events
+                source_history.style.opacity = "1"; // Fade the color option
+                source_history.style.pointerEvents = "auto"; // Disable pointer events
             }
             
             if (textBox.disabled) {
@@ -71,6 +76,8 @@ document.addEventListener("contextmenu", (e) => {
                 lockOption.style.pointerEvents = "none"; // Disable pointer events
                 source_option.style.opacity = "0.35"; // Fade the color option
                 source_option.style.pointerEvents = "none"; // Disable pointer events
+                source_history.style.opacity = "0.35"; // Fade the color option
+                source_history.style.pointerEvents = "none"; // Disable pointer events
             } else {
                 disableOption.textContent = "❌ Disable Textbox";
                 generateOption.style.opacity = "1"; // Restore generate option opacity
@@ -81,6 +88,8 @@ document.addEventListener("contextmenu", (e) => {
                 lockOption.style.pointerEvents = "auto"; // Enable pointer events
                 source_option.style.opacity = "1"; // Fade the color option
                 source_option.style.pointerEvents = "auto"; // Disable pointer events
+                source_history.style.opacity = "1"; // Fade the color option
+                source_history.style.pointerEvents = "auto"; // Disable pointer events
             }
 
             if (textBox.readOnly) {
@@ -92,12 +101,20 @@ document.addEventListener("contextmenu", (e) => {
                 disableOption.style.pointerEvents = "none"; // Disable pointer events
                 source_option.style.opacity = "0.35"; // Fade the color option
                 source_option.style.pointerEvents = "none"; // Disable pointer events
+                source_history.style.opacity = "0.35"; // Fade the color option
+                source_history.style.pointerEvents = "none"; // Disable pointer events
             }
 
             if (textBox.linked) {
                 source_option.textContent = "🔗 Unlink Source";
               } else {
                 source_option.textContent = "🔗 Link Source";
+              }
+
+            if (textBox.history) {
+                source_history.textContent = "📅 Show History";
+              } else {
+                source_history.textContent = "📅 Hide History";
               }
         
         console.log("disabledGroupIDs:", disabledGroupIDs);
