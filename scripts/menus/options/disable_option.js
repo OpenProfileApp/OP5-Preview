@@ -53,7 +53,7 @@ function disable_option() {
         timestamp.textContent = "";
         timetab.style.width = "15px";
         timetab.style.height = "11px";
-        timetab.style.left = (parseInt(timetab.style.left, 10) + 44) + "px";
+        history_group.style.left = (109.5 - 44) + "px";
       } else {
         disableOption.textContent = "❌ Disable Textbox";
         group.style.opacity = "1"; // Update the group's opacity
@@ -72,6 +72,7 @@ function disable_option() {
         history_group.style.opacity = "1"
         source_group.style.top = "18px";
         source_group.style.opacity = "0";
+        history_group.style.left = '109.5px';
       }
     }
     console.log("Disabled/Enabled Group ID:", groupId);

@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', function() {
             history_group.style.left = '109.5px';
         }
 
-        updateConsoleLog(enteredText);
+        updateConsoleLog2(enteredText);
         }
 
         function isDateEqualToLocal(date) {
