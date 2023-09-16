@@ -3,6 +3,7 @@ let currentClickedElement = null; // Store the currently clicked group
 
 // List of disabled group IDs
 const disabledGroupIDs = ["page_author_1", "name_information", "written_date_1"]; // Add the IDs of groups you want to disable here
+const consoleLog = document.getElementById("console_log");
 
 // Add a context menu event listener to the entire page
 document.addEventListener("contextmenu", (e) => {
@@ -117,8 +118,15 @@ document.addEventListener("contextmenu", (e) => {
                 source_history.textContent = "📅 Hide History";
               }
         
+        const current_log = consoleLog.textContent
         console.log("disabledGroupIDs:", disabledGroupIDs);
-        console.log("Clicked Group ID:", groupId);
+        // Create a new <div> element for the log entry
+        const logEntry = document.createElement("div");
+        logEntry.textContent = "Clicked Group ID: " + groupId;
+
+        // Append the log entry to the consoleLog element
+        consoleLog.appendChild(logEntry);
+
         console.log("Associated TextBox:", textBox);
         console.log("textBox.readOnly:", textBox.readOnly);
         console.log("textBox.disabled:", textBox.disabled);

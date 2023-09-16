@@ -58,8 +58,8 @@ function source_option() {
         source_option.style.pointerEvents = "none"; // Disable pointer events
       }
 
-      console.log("Color Group ID:", groupId);
-      console.log("Color TextBox:", textBoxStatesSource[textBox.id]);
+      console.log("Group ID:", groupId);
+      console.log("Text Box Linked:", textBoxStatesSource[textBox.id]);
 
       closeContextMenu();
     }

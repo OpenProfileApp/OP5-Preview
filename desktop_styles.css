@@ -807,4 +807,63 @@
     opacity: 0;
     transition: 0.3s ease-in-out;
   }
+
+  .top_button {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 11px;
+    border-radius: 0px 0px 5px 5px;
+    background: #1b1f28;
+    background-blend-mode: normal;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+    z-index: 6;
+  }
+
+  .top_button:hover {
+    position: absolute;
+    background-color: #bd9335;
+    transition: 0.3s ease-in-out;
+  }
+
+  .console {
+    position: absolute;
+    background-color: #1b1f28;
+    color: black;
+    border-radius: 5px;
+    top: 36px;
+    height: 300px;
+    width: 690px;
+    display: none;
+    border: 5px solid white;
+    opacity: 1;
+    z-index: 59;
+    overflow: auto;
+    box-shadow:
+      0px 0px 10px #00000050, /* Top shadow */
+      0px 0px 10px #00000050, /* Right shadow */
+      0px 0px 10px #00000050, /* Bottom shadow */
+      0px 0px 10px #00000050; /* Left shadow */
+  }
+
+  /* Style for log entries */
+  .log_entry {
+    margin: 5px;
+    padding: 5px;
+    color: #b4b4b4;
+}
+
+/* Style for error log entries */
+.error {
+    color: red;
+}
+
+/* Style for warning log entries */
+.warning {
+    color: orange;
+}
 }

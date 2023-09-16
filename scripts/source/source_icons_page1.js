@@ -10,7 +10,7 @@ function source_icons_page1() {
     displayFaviconprefix()
     displayFaviconsuffix()
     displayFaviconformer_name()
-    //displayFaviconorigin_name() [GLITCHED]
-    //displayFaviconpersonal_thoughts_name() [GLITCHED]
+    //displayFaviconorigin_name()//
+    //displayFaviconpersonal_thoughts_name()//
     //END OF PAGE 1//
 }
