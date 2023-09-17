@@ -1,6 +1,10 @@
 function updateVerifiedSourcePosition() {
-    const firstNameGroup = document.getElementById('alias_label_tab');
-    const firstNameVerifiedSourceGroup = document.getElementById('alias_verified_source_group');
+    // Get the ID of the clicked group (remove "group" from the ID)
+    const groupId = currentClickedElement.id.replace("_group", "");
+
+    // Use the ID to target the associated text box and group
+    const firstNameGroup = document.getElementById(`${groupId}_tab`);
+    const firstNameVerifiedSourceGroup = document.getElementById(`${groupId}_verified_source_group`);
     
     if (firstNameGroup && firstNameVerifiedSourceGroup) {
       const labelWidth = firstNameGroup.offsetWidth; // Get the width of the label

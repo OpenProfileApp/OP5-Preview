@@ -118,13 +118,11 @@ document.addEventListener("contextmenu", (e) => {
                 source_history.textContent = "📅 Hide History";
               }
         
-        const current_log = consoleLog.textContent
         console.log("disabledGroupIDs:", disabledGroupIDs);
         // Create a new <div> element for the log entry
         const logEntry = document.createElement("div");
-        logEntry.textContent = "Clicked Group ID: " + groupId;
-
-        // Append the log entry to the consoleLog element
+        logEntry.textContent = "[RMenu] Selected: " + groupId;
+        logEntry.style.color = "#ffffff"
         consoleLog.appendChild(logEntry);
 
         console.log("Associated TextBox:", textBox);
@@ -143,8 +141,14 @@ document.addEventListener("keydown", (e) => {
 document.addEventListener("click", (e) => {
     const contextMenu = document.querySelector("#contextMenu");
     if (contextMenu.style.display === "block" && !contextMenu.contains(e.target)) {
+        e.preventDefault();
         closeContextMenu();
     }
+});
+
+    // Event listener to close the context menu when scrolling
+window.addEventListener("scroll", () => {
+    closeContextMenu();
 });
 
 // Helper function to close the context menu

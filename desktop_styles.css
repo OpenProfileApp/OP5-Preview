@@ -14,6 +14,14 @@
     font-style: normal;
   }
 
+  @font-face {
+    font-family: 'Inconsolata';
+    src: local('Inconsolata'), local('Inconsolata'), 
+        url('fonts/inconsolata.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
+
   /*/////////////////////////*/
   /*//////PAGE ELEMENTS//////*/
   /*/////////////////////////*/
@@ -89,6 +97,24 @@
     0px 0px 10px #00000050, /* Bottom shadow */
     0px 0px 10px #00000050; /* Left shadow */
     z-index: 50;
+  }
+
+  .bottom {
+    background-color: #1b1f28;
+    position: fixed;
+    width: 100vw;
+    height: 20px;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s ease-in-out;
+    animation: load_in_slide_left  0.3s forwards;
+    box-shadow:
+    0px 0px 10px #00000050, /* Top shadow */
+    0px 0px 10px #00000050, /* Right shadow */
+    0px 0px 10px #00000050, /* Bottom shadow */
+    0px 0px 10px #00000050; /* Left shadow */
+    z-index: 60;
   }
 
   #left::selection {
@@ -850,20 +876,20 @@
       0px 0px 10px #00000050; /* Left shadow */
   }
 
-  /* Style for log entries */
-  .log_entry {
-    margin: 5px;
-    padding: 5px;
-    color: #b4b4b4;
-}
+    /* Style for log entries */
+    .log_entry {
+      margin: 5px;
+      padding: 5px;
+      font-family: 'Inconsolata';
+  }
 
-/* Style for error log entries */
-.error {
-    color: red;
-}
+  /* Style for error log entries */
+  .error {
+      color: red;
+  }
 
-/* Style for warning log entries */
-.warning {
-    color: orange;
-}
+  /* Style for warning log entries */
+  .warning {
+      color: orange;
+  }
 }

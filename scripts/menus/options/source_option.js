@@ -25,7 +25,7 @@ function source_option() {
             // Link the source to the href attribute
             source_icon.href = link;
             source_icon.target = "_blank"
-            source_icons_page1();
+            displayFavicon();
 
             // Update the state for this textbox
             textBoxStatesSource[textBox.id] = textBox.linked = true;
