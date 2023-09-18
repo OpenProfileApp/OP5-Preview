@@ -72,6 +72,7 @@ function translateTo(language) {
 // Get a reference to the language buttons by their IDs
 const EnUsButton = document.getElementById('en-us');
 const Button = document.getElementById('coming-soon');
+const deDeButton = document.getElementById("de-de");
 
 // Add click event listeners to the language buttons to trigger translation
 if (EnUsButton) {
@@ -83,6 +84,14 @@ if (EnUsButton) {
 }, 300); // Adjust the duration as needed
     });
 }
+//I dont see a need for a if statement soooo yaa.
+deDeButton.addEventListener('click', () => {
+    translateTo("de-de");
+    setTimeout(() => {
+        onLoadEmojis();
+    }, 300) //This actually is great, good job ava. This reduces much loading time/lag (something like that!!!)
+})
+
 
 if (Button) {
     Button.addEventListener('click', () => translateTo('coming-soon'));
