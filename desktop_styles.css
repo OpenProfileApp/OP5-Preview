@@ -282,14 +282,14 @@
   /*//////ELEMENT LABELS/////*/
   /*/////////////////////////*/
   .label_tab {
-    position: absolute;
+    position: relative;
     left: 0px;
     top: 0px;
     height: 11px;
     border-radius: 5px 5px 0px 0px;
     background: #1b1f28;
     background-blend-mode: normal;
-    align-items: center;
+    align-items: left;
     justify-content: center;
     opacity: 1;
     transition: 0.3s ease-in-out;
@@ -304,10 +304,11 @@
     color: #ffffff;
     font-family: "Open Sans";
     font-size: 7px;
-    text-align: center;
-    display: flex;
+    text-align: left;
     z-index: 7;
     opacity: 1;
+    display: inline-block;
+    white-space: nowrap;
     transition: 0.3s ease-in-out;
   }
 
@@ -706,50 +707,6 @@
   .disable-animations {
     transition: none !important; /* Disable transitions */
     animation: none !important; /* Disable animations */
-  }
-
-  #languageSubMenu {
-    position: absolute;
-    font-family: "Open Sans";
-    color: #ffffff;
-    font-size: 10px;
-    background-color: #1b1f28;
-    border: 0px;
-    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
-    z-index: 900;
-    opacity: 0;
-    transform-origin: top left;
-    transform: scale(0.5);
-    animation: scaleUp 0.2s ease forwards, fadeIn 0.2s ease forwards;
-    left: 100%;
-    top: 0;
-    width: 100%;
-  }
-
-  #languageSubMenu ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    border: none;
-  }
-
-  #languageSubMenu li {
-    padding: 5px;
-    cursor: pointer;
-    transition: background-color 0.2s;
-    text-align: left;
-    border: none;
-    width: 100px;
-  }
-
-  #languageSubMenu li:hover {
-    background: #bd9335;
-  }
-
-  #languageSubMenu::selection {
-    background-color: #bd9335;
-    border-radius: 5px;
-    color: #ffffff;
   }
 
   .popup {

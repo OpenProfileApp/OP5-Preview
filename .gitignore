@@ -399,3 +399,5 @@ FodyWeavers.xsd
 
 # Custom Files
 server.js
+package.json
+package-lock.json

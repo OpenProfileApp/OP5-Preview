@@ -1,0 +1,165 @@
+{
+"language": "en-us / English (US)",
+
+    "0": "—————————————————[ PAGE-AUTHOR-1 ]——————————————————",
+    "page_author_1_label_text": {
+        "ORIGINAL-VERSION": "Page Author",
+        "translation": "Page Author"
+    },
+
+    "page_author_1": {
+        "ORIGINAL-VERSION": "Who is the page's author?",
+        "translation": "Who is the page's author?"
+    },
+
+
+    "1": "—————————————————[ NAME-INFORMATION ]——————————————————",
+    "name_information": {
+        "ORIGINAL-VERSION": "Name Information",
+        "translation": "Name I7nformation"
+    },
+
+    "2": "—————————————————[ WRITTEN-DATE-1 ]——————————————————",
+    "written_date_1_label_text": {
+        "ORIGINAL-VERSION": "Written Date",
+        "translation": "Written Date"
+    },
+
+    "written_date_1": {
+        "ORIGINAL-VERSION": "When was this page written?",
+        "translation": "When was this page written?"
+    },
+
+    "3": "—————————————————[ FULL-NAME ]——————————————————",
+    "full_name_label_text": {
+        "ORIGINAL-VERSION": "Full Name",
+        "translation": "Full Name"
+    },
+
+    "full_name": {
+        "ORIGINAL-VERSION": "What is the OC's full name?",
+        "translation": "What is the OC's full name?"
+    },
+
+    
+    "4": "—————————————————[ FIRST-NAME ]——————————————————",
+    "first_name_label_text": {
+        "ORIGINAL-VERSION": "First Name",
+        "translation": "First Name"
+    },
+
+    "first_name": {
+        "ORIGINAL-VERSION": "What is the OC's first name?",
+        "translation": "What is the OC's first name?"
+    },
+
+    "5": "—————————————————[ MIDDLE-NAME ]——————————————————",
+    "middle_name_label_text": {
+        "ORIGINAL-VERSION": "Middle Name",
+        "translation": "Middle Name"
+    },
+
+    "middle_name": {
+        "ORIGINAL-VERSION": "What is the OC's middle name?",
+        "translation": "What is the OC's middle name?"
+    },
+
+    "6": "—————————————————[ LAST-NAME ]———————————————————",
+    "last_name_label_text": {
+        "ORIGINAL-VERSION": "Last Name",
+        "translation": "Last Name"
+    },
+
+    "last_name": {
+        "ORIGINAL-VERSION": "What is the OC's last name?",
+        "translation": "What is the OC's last name?"
+    },
+
+    "7": "—————————————————[ NICKNAME ]———————————————————",
+    "nickname_label_text": {
+        "ORIGINAL-VERSION": "Nickname",
+        "translation": "Nickname"
+    },
+
+    "nickname": {
+        "ORIGINAL-VERSION": "What is the OC's nickname?",
+        "translation": "What is the OC's nickname?"
+    },
+
+    "8": "—————————————————[ ALIAS ]———————————————————",
+    "alias_label_text": {
+        "ORIGINAL-VERSION": "Alias",
+        "translation": "Alias"
+    },
+
+    "alias": {
+        "ORIGINAL-VERSION": "What is the OC's alias?",
+        "translation": "What is the OC's alias?"
+    },
+
+    "9": "—————————————————[ ALTER-EGO ]———————————————————",
+    "alter_ego_label_text": {
+        "ORIGINAL-VERSION": "Alter Ego",
+        "translation": "Alter Ego"
+    },
+
+    "alter_ego": {
+        "ORIGINAL-VERSION": "What is the OC's alter ego?",
+        "translation": "What is the OC's alter ego?"
+    },
+
+    "10": "—————————————————[ PREFIX ]———————————————————",
+    "prefix_label_text": {
+        "ORIGINAL-VERSION": "Prefix",
+        "translation": "Prefix"
+    },
+
+    "prefix": {
+        "ORIGINAL-VERSION": "What is the OC's prefix?",
+        "translation": "What is the OC's prefix?"
+    },
+
+    "11": "—————————————————[ SUFFIX ]———————————————————",
+    "suffix_label_text": {
+        "ORIGINAL-VERSION": "Suffix",
+        "translation": "Suffix"
+    },
+
+    "suffix": {
+        "ORIGINAL-VERSION": "What is the OC's suffix?",
+        "translation": "What is the OC's suffix?"
+    },
+
+    "12": "—————————————————[ FORMER-NAME ]———————————————————",
+    "former_name_label_text": {
+        "ORIGINAL-VERSION": "Former Name",
+        "translation": "Former Name"
+    },
+
+    "former_name": {
+        "ORIGINAL-VERSION": "What is the OC's former name?",
+        "translation": "What is the OC's former name?"
+    },
+
+    "13": "—————————————————[ NAME-ORIGIN ]———————————————————",
+    "name_origin_label_text": {
+        "ORIGINAL-VERSION": "Name Origin",
+        "translation": "Name Origin"
+    },
+
+    "name_origin": {
+        "ORIGINAL-VERSION": "What is the origin behind the oc's name?",
+        "translation": "What is the origin behind the oc's name?"
+    },
+
+    "14": "—————————————————[ PERSONAL-THOUGHTS-NAME ]———————————————————",
+    "personal_thoughts_name_label_text": {
+        "ORIGINAL-VERSION": "Personal Thoughts",
+        "translation": "Personal Thoughts"
+    },
+
+    "personal_thoughts_name": {
+        "ORIGINAL-VERSION": "What are the oc's thoughts towards their name?",
+        "translation": "What are the oc's thoughts towards their name?"
+    }
+}
