@@ -24,9 +24,9 @@ function lock_option() {
 
       // Update the text and lock option accordingly
       if (textBox.readOnly) {
-        lockOption.textContent = "🔓 Unlock Textbox";
+        lockOption.setAttribute('option', 'option_2');
         savedvalue = textBox.value;
-        textBox.value = (textBox.value + "🔒")
+        textBox.value = (textBox.value + "🔒");
         generateOption.style.opacity = "0.35"; // Fade the generate option
         generateOption.style.pointerEvents = "none"; // Disable pointer events
         colorOption.style.opacity = "0.35"; // Fade the color option
@@ -36,7 +36,7 @@ function lock_option() {
         source_history.style.opacity = "0.35"; // Fade the color option
         source_history.style.pointerEvents = "none"; // Disable pointer events
       } else {
-        lockOption.textContent = "🔒 Lock Textbox";
+        lockOption.setAttribute('option', 'option_1')
         textBox.value = savedvalue
         generateOption.style.opacity = "1"; // Restore generate option opacity
         generateOption.style.pointerEvents = "auto"; // Enable pointer events

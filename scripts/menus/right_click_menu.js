@@ -34,15 +34,21 @@ document.addEventListener("contextmenu", (e) => {
             const colorOption = document.querySelector("#color_option");
             const source_option = document.querySelector("#source_option");
             const source_history = document.querySelector("#history_option");
+            const settings_option = document.querySelector("#settings_option");
+
+            settings_option.style.opacity = "0.35";
 
             if (textBox.highlighted) {
-                colorOption.textContent = "⚪ Unhighlight Textbox";
+                colorOption.setAttribute('option', 'option_2');
+                translateToActive(configLanguage);
               } else {
-                colorOption.textContent = "🟡 Highlight Textbox";
+                colorOption.setAttribute('option', 'option_1');
+                translateToActive(configLanguage);
               }
 
             if (textBox.readOnly) {
-                lockOption.textContent = "🔓 Unlock Textbox";
+                lockOption.setAttribute('option', 'option_2');
+                translateToActive(configLanguage);
                 generateOption.style.opacity = "0.35"; // Fade the generate option
                 generateOption.style.pointerEvents = "none"; // Disable pointer events
                 colorOption.style.opacity = "0.35"; // Fade the color option
@@ -54,7 +60,8 @@ document.addEventListener("contextmenu", (e) => {
                 source_history.style.opacity = "0.35"; // Fade the color option
                 source_history.style.pointerEvents = "none"; // Disable pointer events
             } else {
-                lockOption.textContent = "🔒 Lock Textbox";
+                lockOption.setAttribute('option', 'option_1');
+                translateToActive(configLanguage);
                 generateOption.style.opacity = "1"; // Restore generate option opacity
                 generateOption.style.pointerEvents = "auto"; // Enable pointer events
                 colorOption.style.opacity = "1"; // Restore color option opacity
@@ -68,7 +75,8 @@ document.addEventListener("contextmenu", (e) => {
             }
             
             if (textBox.disabled) {
-                disableOption.textContent = "✅ Enable Textbox";
+                disableOption.setAttribute('option', 'option_2');
+                translateToActive(configLanguage);
                 generateOption.style.opacity = "0.35"; // Fade the generate option
                 generateOption.style.pointerEvents = "none"; // Disable pointer events
                 colorOption.style.opacity = "0.35"; // Fade the color option
@@ -80,7 +88,8 @@ document.addEventListener("contextmenu", (e) => {
                 source_history.style.opacity = "0.35"; // Fade the color option
                 source_history.style.pointerEvents = "none"; // Disable pointer events
             } else {
-                disableOption.textContent = "❌ Disable Textbox";
+                disableOption.setAttribute('option', 'option_1');
+                translateToActive(configLanguage);
                 generateOption.style.opacity = "1"; // Restore generate option opacity
                 generateOption.style.pointerEvents = "auto"; // Enable pointer events
                 colorOption.style.opacity = "1"; // Restore color option opacity
@@ -94,6 +103,7 @@ document.addEventListener("contextmenu", (e) => {
             }
 
             if (textBox.readOnly) {
+                textBox.setAttribute('option', 'option_2');
                 generateOption.style.opacity = "0.35"; // Fade the generate option
                 generateOption.style.pointerEvents = "none"; // Disable pointer events
                 colorOption.style.opacity = "0.35"; // Fade the color option
@@ -107,15 +117,19 @@ document.addEventListener("contextmenu", (e) => {
             }
 
             if (textBox.linked) {
-                source_option.textContent = "🔗 Unlink Source";
+                source_option.setAttribute('option', 'option_2');
+                translateToActive(configLanguage);
               } else {
-                source_option.textContent = "🔗 Link Source";
+                translateToActive(configLanguage);
+                source_option.setAttribute('option', 'option_1');
               }
 
             if (textBox.history) {
-                source_history.textContent = "📅 Show History";
+                source_history.setAttribute('option', 'option_2');
+                translateToActive(configLanguage);
               } else {
-                source_history.textContent = "📅 Hide History";
+                source_history.setAttribute('option', 'option_1');
+                translateToActive(configLanguage);
               }
         
         console.log("disabledGroupIDs:", disabledGroupIDs);

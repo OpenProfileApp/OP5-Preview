@@ -1,0 +1,207 @@
+{
+    "language": "dev / Developer",
+    "version": "v5.0.030",
+    
+    "1": "—————————————————[ TEXT-BOXES-PAGE-1 ]——————————————————",
+        "page_author_1_label_text": {
+            "ORIGINAL-VERSION": "Page Author",
+            "translation": ""
+        },
+    
+        "page_author_1": {
+            "ORIGINAL-VERSION": "Who is the page's author?",
+            "translation": "?"
+        },
+    
+        "name_information": {
+            "ORIGINAL-VERSION": "Name Information",
+            "translation": ""
+        },
+    
+        "written_date_1_label_text": {
+            "ORIGINAL-VERSION": "Written Date",
+            "translation": ""
+        },
+    
+        "written_date_1": {
+            "ORIGINAL-VERSION": "When was this page written?",
+            "translation": ""
+        },
+    
+        "full_name_label_text": {
+            "ORIGINAL-VERSION": "Full Name",
+            "translation": ""
+        },
+    
+        "full_name": {
+            "ORIGINAL-VERSION": "What is the oc's full name?",
+            "translation": ""
+        },
+    
+        "first_name_label_text": {
+            "ORIGINAL-VERSION": "First Name",
+            "translation": ""
+        },
+    
+        "first_name": {
+            "ORIGINAL-VERSION": "What is the oc's first name?",
+            "translation": ""
+        },
+    
+        "middle_name_label_text": {
+            "ORIGINAL-VERSION": "Middle Name",
+            "translation": ""
+        },
+    
+        "middle_name": {
+            "ORIGINAL-VERSION": "What is the oc's middle name?",
+            "translation": ""
+        },
+    
+        "last_name_label_text": {
+            "ORIGINAL-VERSION": "Last Name",
+            "translation": ""
+        },
+    
+        "last_name": {
+            "ORIGINAL-VERSION": "What is the oc's last name?",
+            "translation": ""
+        },
+    
+        "nickname_label_text": {
+            "ORIGINAL-VERSION": "Nickname",
+            "translation": ""
+        },
+    
+        "nickname": {
+            "ORIGINAL-VERSION": "What is the oc's nickname?",
+            "translation": ""
+        },
+    
+        "alias_label_text": {
+            "ORIGINAL-VERSION": "Alias",
+            "translation": ""
+        },
+    
+        "alias": {
+            "ORIGINAL-VERSION": "What is the oc's alias?",
+            "translation": ""
+        },
+    
+        "alter_ego_label_text": {
+            "ORIGINAL-VERSION": "Alter Ego",
+            "translation": ""
+        },
+    
+        "alter_ego": {
+            "ORIGINAL-VERSION": "What is the oc's alter ego?",
+            "translation": ""
+        },
+    
+        "prefix_label_text": {
+            "ORIGINAL-VERSION": "Prefix",
+            "translation": ""
+        },
+    
+        "prefix": {
+            "ORIGINAL-VERSION": "What is the oc's prefix?",
+            "translation": ""
+        },
+    
+        "suffix_label_text": {
+            "ORIGINAL-VERSION": "Suffix",
+            "translation": ""
+        },
+    
+        "suffix": {
+            "ORIGINAL-VERSION": "What is the oc's suffix?",
+            "translation": ""
+        },
+    
+        "former_name_label_text": {
+            "ORIGINAL-VERSION": "Former Name",
+            "translation": ""
+        },
+    
+        "former_name": {
+            "ORIGINAL-VERSION": "What is the oc's former name?",
+            "translation": ""
+        },
+    
+        "name_origin_label_text": {
+            "ORIGINAL-VERSION": "Name Origin",
+            "translation": ""
+        },
+    
+        "name_origin": {
+            "ORIGINAL-VERSION": "What is the origin behind the oc's name?",
+            "translation": ""
+        },
+    
+        "personal_thoughts_name_label_text": {
+            "ORIGINAL-VERSION": "Personal Thoughts",
+            "translation": ""
+        },
+    
+        "personal_thoughts_name": {
+            "ORIGINAL-VERSION": "What are the oc's thoughts towards their name?",
+            "translation": ""
+        },
+    
+    "a": "—————————————————[ RIGHT-CLICK-MENU ]———————————————————",
+        "generate_option": {
+            "ORIGINAL-VERSION": "🖊️ Generate Content",
+            "translation": "🖊️ "
+        },
+    
+        "color_option": {
+            "ORIGINAL-VERSION": "🟡 Highlight Textbox, ⚪ Unhighlight Textbox",
+            "option_1": "🟡 ",
+            "option_2": "⚪ "
+        },
+    
+        "source_option": {
+            "ORIGINAL-VERSION": "🔗 Link Source, 🔗 Unlink Source",
+            "option_1": "🔗 ",
+            "option_2": "🔗 "
+        },
+    
+        "history_option": {
+            "ORIGINAL-VERSION": "📅 Hide History, 📅 Show History",
+            "option_1": "📅 ",
+            "option_2": "📅 "
+        },
+    
+        "lock_option": {
+            "ORIGINAL-VERSION": "🔒 Lock Textbox, 🔓 Unlock Textbox",
+            "option_1": "🔒 ",
+            "option_2": "🔓 "
+        },
+    
+        "disable_option": {
+            "ORIGINAL-VERSION": "❌ Disable Textbox, ✅ Enable Textbox",
+            "option_1": "❌ ",
+            "option_2": "✅ "
+        },
+    
+        "language_option": {
+            "ORIGINAL-VERSION": "🌐 Change Language >",
+            "translation": "🌐  >"
+        },
+    
+        "settings_option": {
+            "ORIGINAL-VERSION": "⚙️ Settings",
+            "translation": "⚙️ "
+        },
+    
+    "b": "———————————————————[ LANGUAGE-MENU ]————————————————————",
+        "en-us": {
+            "ORIGINAL-VERSION": "🦅 English (US)",
+            "translation": "🦅 "
+        },
+    
+        "coming-soon": {
+            "ORIGINAL-VERSION": "🗣️ Coming Soon",
+            "translation": "🗣️ "
+        }
+    }

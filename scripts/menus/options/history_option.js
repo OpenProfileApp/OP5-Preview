@@ -22,11 +22,11 @@ function history_option() {
 
         // Update the text and lock option accordingly
         if (textBox.history) {
-          historyOption.textContent = "📅 Show History";
+          historyOption.setAttribute('option', 'option_2');
           history_group.style.top = "9px"
           history_group.style.opacity = "0"
         } else {
-          historyOption.textContent = "📅 Hide History";
+          historyOption.setAttribute('option', 'option_1');
           history_group.style.top = "19px"
           history_group.style.opacity = "1"
         }

@@ -641,6 +641,8 @@
     display: block;
     scale: 1.25;
     font-size: 10px;
+    opacity: 1;
+    transition: 0.3s ease-in-out;
     /* No need to set transform and opacity here */
   }
 
@@ -667,6 +669,8 @@
     border-radius: 0px 5px 5px 5px;
     margin: 0;
     padding: 0;
+    opacity: 1;
+    transition: 0.3s ease-in-out;
     border: none;
   }
 
@@ -675,6 +679,8 @@
     cursor: pointer;
     border-radius: 0px 5px 5px 5px;
     transition: background-color 0.2s;
+    opacity: 1;
+    transition: 0.3s ease-in-out;
     border: none;
   }
 
@@ -686,6 +692,8 @@
   .context-menu::selection {
     background-color: #bd9335;
     border-radius: 5px;
+    opacity: 1;
+    transition: 0.3s ease-in-out;
     color: #ffffff;
   }
 

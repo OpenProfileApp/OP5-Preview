@@ -1,3 +1,56 @@
+// ————————————————————[ LOAD-CONFIG ]————————————————————— //
+// Load config data when the document is ready
+document.addEventListener('DOMContentLoaded', loadConfig);
+
+// Define global variables to store config data
+let configLanguage = '';
+let configVersion = '';
+
+// Function to load and set config data
+function loadConfig() {
+    fetch('config.json') // Replace with the correct path to your config file
+        .then((response) => response.json())
+        .then((config) => {
+            // Set global variables based on config data
+            configLanguage = config.language;
+            configVersion = config.version;
+
+            // Log the version data
+                // —————————————————[ DEVELOPER-CONSOLE ]—————————————————— //
+                const logEntry45 = document.createElement("div");
+                logEntry45.textContent = '[Config] Version: ' + configVersion;
+                logEntry45.style.color = "#ffffff"
+                consoleLog.appendChild(logEntry45);
+
+            // Now you can use configLanguage and configVersion in your script
+            // or throughout your document as needed
+            // Load the selected language from local storage
+        const selectedLanguage = localStorage.getItem('selectedLanguage');
+
+        // —————————————————[ DEVELOPER-CONSOLE ]—————————————————— //
+        const logEntry445 = document.createElement("div");
+        logEntry445.textContent = '[Local] Language: ' + selectedLanguage;
+        logEntry445.style.color = "#ffffff"
+        consoleLog.appendChild(logEntry445);
+
+        // Call your translateTo function with the selected language
+        if (selectedLanguage) {
+            translateTo(selectedLanguage);
+        }
+        })
+        .catch((error) => {
+            console.error('Error loading config:', error);
+        });
+}
+
+setTimeout(() => {
+        const versionPlaceholder = document.getElementById('version_placeholder');
+        if (versionPlaceholder) {
+            versionPlaceholder.textContent = configVersion;
+        }
+        translateTo(configLanguage)
+}, 400); // Adjust the duration as needed
+
 // ————————————————————[ LOAD-EMOJIS ]————————————————————— //
 function onLoadEmojis() {
     page_author_1_emojis();
@@ -33,7 +86,9 @@ function onLoadAll() {
     logEntry4.style.color = "#ffffff"
     consoleLog.appendChild(logEntry4);
     
-    onLoadEmojis();
+    setTimeout(() => {
+        onLoadEmojis();
+    }, 400); // Adjust the duration as needed
     onLoadElse();
 
     // —————————————————[ DEVELOPER-CONSOLE ]—————————————————— //

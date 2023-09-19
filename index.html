@@ -467,8 +467,8 @@
   <div class="right"></div>
 
   <div class="bottom">
-    <div style="text-align: right; font-size: 12px; transform: translateX(-16px)translateY(2px);">
-      <a style="color: #ffffff;" href="https://www.github.com/OpenProfileDevs/OP5-Preview">v5.0.029 Preview</a>
+    <div style="text-align: right; font-size: 12px; transform: translateX(-16px) translateY(2px);">
+        <a id="version_placeholder" style="color: #ffffff;" href="https://www.github.com/OpenProfileDevs/OP5-Preview"></a>
     </div>
   </div>
 
@@ -478,18 +478,18 @@
     <ul>
       <li id="generate_option">🖊️ Generate Content</button>
         <script src="scripts/menus/options/generate_option.js"></script>
-      <li id="color_option">🟡 Highlight Textbox</button>
+      <li id="color_option" option="option_1">🟡 Highlight Textbox</button>
         <script src="scripts/menus/options/color_option.js"></script>
-      <li id="comments_option" style="opacity: 0.35;">💬 Disable Comments</button>
-      <li id="source_option">🔗 Link Source</button>
+      <li id="comments_option" style="opacity: 0.35;" option="option_1">💬 Disable Comments</button>
+      <li id="source_option" option="option_1">🔗 Link Source</button>
         <script src="scripts/menus/options/source_option.js"></script>
         <script src="scripts/source/source_position.js"></script>
         <script src="scripts/source/source_icon.js"></script>
-      <li id="history_option">📅 Hide History</button>
+      <li id="history_option" option="option_1">📅 Hide History</button>
         <script src="scripts/menus/options/history_option.js"></script>
-      <li id="lock_option">🔒 Lock Textbox</li>
+      <li id="lock_option" option="option_1">🔒 Lock Textbox</li>
         <script src="scripts/menus/options/lock_option.js"></script>
-      <li id="disable_option">❌ Disable Textbox</li>
+      <li id="disable_option" option="option_1">❌ Disable Textbox</li>
         <script src="scripts/menus/options/disable_option.js"></script>
       <li id="language_option">🌐 Change Language ></li>
         
@@ -500,9 +500,10 @@
           <li id="coming-soon">🗣️ Coming Soon</li>
         </ul>
         <script src="scripts/translate.js"></script>
+        <script src="scripts/translate_active.js"></script>
       </div>
 
-      <li id="version_option" style="opacity: 0.35;">⚙️ Settings</li>
+      <li id="settings_option" style="opacity: 0.35;">⚙️ Settings</li>
     </ul>
   </div>
 

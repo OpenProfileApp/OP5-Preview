@@ -21,10 +21,10 @@ function color_option() {
 
         // Update the text and lock option accordingly
         if (textBox.highlighted) {
-          colorOption.textContent = "⚪ Unhighlight Textbox";
+          colorOption.setAttribute('option', 'option_2');
           textBox.style.backgroundColor = "#ffee93";
         } else {
-          colorOption.textContent = "🟡 Highlight Textbox";
+          colorOption.setAttribute('option', 'option_1');
           textBox.style.backgroundColor = "#ffffff";
         }
       } else {

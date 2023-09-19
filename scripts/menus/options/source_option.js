@@ -31,7 +31,7 @@ function source_option() {
             textBoxStatesSource[textBox.id] = textBox.linked = true;
 
             // Update the text and lock option accordingly
-            source_option.textContent = "🔗 Unlink Source";
+            source_option.setAttribute('option', 'option_2');
             source_group.style.top = "6px";
             source_icon.style.top = "4.5px";
             source_group.style.opacity = "1";
@@ -47,7 +47,7 @@ function source_option() {
           source_icon.href = "";
 
           // Update the text and lock option accordingly
-          source_option.textContent = "🔗 Link Source";
+          source_option.setAttribute('option', 'option_1');
           source_group.style.top = "18px";
           source_icon.style.top = "2.5px";
           source_group.style.opacity = "0";
