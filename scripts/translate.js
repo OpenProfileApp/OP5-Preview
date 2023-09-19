@@ -4,6 +4,7 @@ function translateTo(language) {
 
     // Save the selected language in local storage
     localStorage.setItem('selectedLanguage', language);
+    selectedLanguage = localStorage.getItem('selectedLanguage');
 
     // Fetch the translations from the JSON file
     fetch(translationFile)
@@ -77,6 +78,9 @@ function translateTo(language) {
             if (isTranslating) {
                 // Your code to handle translation completion here
                 console.log('Translation completed.');
+                setTimeout(() => {
+                    updateLabelPositions();
+                }, 1000)
             }
         })
         .catch((error) => {
@@ -88,7 +92,6 @@ function translateTo(language) {
 const EnUsButton = document.getElementById('en-us');
 const deDeButton = document.getElementById("de-de");
 const frChButton = document.getElementById("fr-ch");
-const Button = document.getElementById('coming-soon');
 
 if (EnUsButton) {
     EnUsButton.addEventListener('click', () => {
@@ -96,7 +99,7 @@ if (EnUsButton) {
         // Call onLoadEmojis() at the end when needed
         setTimeout(() => {
             onLoadEmojis();
-        }, 300); // Adjust the duration as needed
+        }, 400); // Adjust the duration as needed
     });
 }
 
@@ -105,16 +108,12 @@ deDeButton.addEventListener('click', () => {
     translateTo("de-de");
     setTimeout(() => {
         onLoadEmojis();
-    }, 300)
+    }, 400)
 })
 
 frChButton.addEventListener('click', () => {
     translateTo("fr-ch");
     setTimeout(() => {
         onLoadEmojis();
-    }, 300)
+    }, 400)
 })
-
-if (Button) {
-    Button.addEventListener('click', () => translateTo('coming-soon'));
-}

@@ -9,6 +9,7 @@
 ———————————————[ OPENPROFILE-CHARACTER ]———————————————
 app_version:
 profile_version:
+language:
 theme:
 CREDITS {
     AvatarKage (developer)

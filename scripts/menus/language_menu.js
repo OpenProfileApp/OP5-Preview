@@ -1,6 +1,6 @@
 const languageOption = document.getElementById("language_option");
 const languageSubMenu = document.getElementById("languageSubMenu");
-const rmenu = document.getElementById("contextMenu")
+const rmenu = document.getElementById("contextmenu")
 
 let timer;
 
@@ -28,3 +28,29 @@ languageSubMenu.addEventListener("mouseout", () => {
     languageSubMenu.style.display = "none";
   }, 100); // 0.1 seconds
 });
+
+// Add global event listeners to close the context menu
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+      closelanguageSubMenu();
+  }
+});
+
+document.addEventListener("click", (e) => {
+  const languageSubMenu = document.querySelector("#languageSubMenu");
+  if (languageSubMenu.style.display === "block" && !languageSubMenu.contains(e.target)) {
+      e.preventDefault();
+      closelanguageSubMenu();
+  }
+});
+
+  // Event listener to close the context menu when scrolling
+window.addEventListener("scroll", () => {
+  closelanguageSubMenu();
+});
+
+// Helper function to close the context menu
+function closelanguageSubMenu() {
+  const languageSubMenu = document.querySelector("#languageSubMenu");
+  languageSubMenu.style.display = "none";
+}

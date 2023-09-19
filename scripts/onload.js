@@ -16,12 +16,13 @@ function loadConfig() {
             configLanguage = config.language;
             configVersion = config.version;
 
-            // Log the version data
-            // —————————————————[ DEVELOPER-CONSOLE ]—————————————————— //
-            const logEntry45 = document.createElement("div");
-            logEntry45.textContent = '[Config] Version: ' + configVersion;
-            logEntry45.style.color = "#ffffff";
-            consoleLog.appendChild(logEntry45);
+            setTimeout(() => {
+                const versionPlaceholder = document.getElementById('version_placeholder');
+                if (versionPlaceholder) {
+                    versionPlaceholder.textContent = configVersion;
+                }
+                translateTo(selectedLanguage) //config language later
+            }, 500); // Adjust the duration as needed
 
             // Now you can use configLanguage and configVersion in your script
             // or throughout your document as needed
@@ -44,14 +45,6 @@ function loadConfig() {
             console.error('Error loading config:', error);
         });
 }
-
-setTimeout(() => {
-        const versionPlaceholder = document.getElementById('version_placeholder');
-        if (versionPlaceholder) {
-            versionPlaceholder.textContent = configVersion;
-        }
-        translateTo(configLanguage)
-}, 400); // Adjust the duration as needed
 
 // ————————————————————[ LOAD-EMOJIS ]————————————————————— //
 function onLoadEmojis() {
@@ -90,7 +83,7 @@ function onLoadAll() {
     
     setTimeout(() => {
         onLoadEmojis();
-    }, 400); // Adjust the duration as needed
+    }, 800); // Adjust the duration as needed
     onLoadElse();
 
     // —————————————————[ DEVELOPER-CONSOLE ]—————————————————— //
