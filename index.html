@@ -491,9 +491,9 @@
         <script src="scripts/menus/options/lock_option.js"></script>
       <li id="disable_option" option="option_1">❌ Disable Textbox</li>
         <script src="scripts/menus/options/disable_option.js"></script>
-      <li id="language_option">🌐 Change Language ></li>
-        
-      <div id="languageSubMenu" class="context-menu">
+      
+        <li id="language_option">🌐 Change Language ></li> 
+      <div id="languageSubMenu" class="context-menu" style="scale: 100%;">
         <script src="scripts/menus/language_menu.js"></script>
         <ul>
           <li id="en-us">🦅 English (US)</li>
@@ -503,6 +503,17 @@
         </ul>
         <script src="scripts/translate.js"></script>
         <script src="scripts/translate_active.js"></script>
+      </div>
+
+      <li id="theme_option">🎨 Change Theme ></li>
+      <div id="themeSubMenu" class="context-menu" style="scale: 100%;">
+        <script src="scripts/menus/theme_menu.js"></script>
+        <ul>
+          <li id="release">🔴 Release</li>
+          <li id="beta">🔵 Beta</li>
+          <li id="preview">🟣 Preview</li>
+        </ul>
+        <script src="scripts/theme_changer.js"></script>
       </div>
 
       <li id="settings_option" style="opacity: 0.35;">⚙️ Settings</li>

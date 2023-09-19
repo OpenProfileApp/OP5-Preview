@@ -169,6 +169,8 @@
     border-radius: 10px;
     background: #5e467f;
     background-blend-mode: normal;
+    opacity: 1;
+    transition: 0.3s ease-in-out;
     z-index: 2;
   }
 

@@ -5,7 +5,9 @@ document.addEventListener('DOMContentLoaded', loadConfig);
 // Define global variables to store config data
 let configLanguage = '';
 let configVersion = '';
+let configTheme = '';
 let selectedLanguage = '';
+let selectedTheme = '';
 
 // Function to load and set config data
 function loadConfig() {
@@ -15,35 +17,63 @@ function loadConfig() {
             // Set global variables based on config data
             configLanguage = config.language;
             configVersion = config.version;
+            configTheme = config.theme;
 
             setTimeout(() => {
                 const versionPlaceholder = document.getElementById('version_placeholder');
                 if (versionPlaceholder) {
                     versionPlaceholder.textContent = configVersion;
                 }
-                translateTo(selectedLanguage) //config language later
+                // Translate to the selected language and change the theme using the config values
+                translateTo(selectedLanguage); // Use config language
+                changeTheme(selectedTheme); // Use config theme
             }, 500); // Adjust the duration as needed
 
-            // Now you can use configLanguage and configVersion in your script
-            // or throughout your document as needed
+            // Load the selected language and theme from local storage
+            selectedLanguage = localStorage.getItem('selectedLanguage')// || configLanguage; // Use config language if not found
+            selectedTheme = localStorage.getItem('selectedTheme') //|| configTheme; // Use config theme if not found
 
-            // Load the selected language from local storage
-            selectedLanguage = localStorage.getItem('selectedLanguage');
+        // —————————————————[ DEVELOPER-CONSOLE ]—————————————————— //
+        const logEntry445 = document.createElement("div");
+        logEntry445.textContent = '[Local] Language: ' + selectedLanguage;
+        logEntry445.style.color = "#ffffff";
+        consoleLog.appendChild(logEntry445);
 
-            // —————————————————[ DEVELOPER-CONSOLE ]—————————————————— //
-            const logEntry445 = document.createElement("div");
-            logEntry445.textContent = '[Local] Language: ' + selectedLanguage;
-            logEntry445.style.color = "#ffffff";
-            consoleLog.appendChild(logEntry445);
+        // —————————————————[ DEVELOPER-CONSOLE ]—————————————————— //
+        const logEntry44 = document.createElement("div");
+        logEntry44.textContent = '[Local] Theme: ' + selectedTheme;
+        logEntry44.style.color = "#ffffff";
+        consoleLog.appendChild(logEntry44);
 
-            // Call your translateTo function with the selected language
-            if (selectedLanguage) {
-                translateTo(selectedLanguage);
-            }
         })
         .catch((error) => {
             console.error('Error loading config:', error);
         });
+}
+
+// Save the selected theme and language to local storage
+function saveSelectedTheme(theme) {
+    localStorage.setItem('selectedTheme', theme);
+}
+
+function saveSelectedLanguage(language) {
+    localStorage.setItem('selectedLanguage', language);
+}
+
+// Example of how to change the theme and save it
+function changeTheme(theme) {
+    changeTheme(selectedTheme)
+
+    // Save the selected theme to local storage
+    saveSelectedTheme(theme);
+}
+
+// Example of how to change the language and save it
+function translateTo(language) {
+    translateTo(selectedLanguage)
+
+    // Save the selected language to local storage
+    saveSelectedLanguage(language);
 }
 
 // ————————————————————[ LOAD-EMOJIS ]————————————————————— //
