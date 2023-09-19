@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', loadConfig);
 // Define global variables to store config data
 let configLanguage = '';
 let configVersion = '';
+let selectedLanguage = '';
 
 // Function to load and set config data
 function loadConfig() {
@@ -16,27 +17,28 @@ function loadConfig() {
             configVersion = config.version;
 
             // Log the version data
-                // —————————————————[ DEVELOPER-CONSOLE ]—————————————————— //
-                const logEntry45 = document.createElement("div");
-                logEntry45.textContent = '[Config] Version: ' + configVersion;
-                logEntry45.style.color = "#ffffff"
-                consoleLog.appendChild(logEntry45);
+            // —————————————————[ DEVELOPER-CONSOLE ]—————————————————— //
+            const logEntry45 = document.createElement("div");
+            logEntry45.textContent = '[Config] Version: ' + configVersion;
+            logEntry45.style.color = "#ffffff";
+            consoleLog.appendChild(logEntry45);
 
             // Now you can use configLanguage and configVersion in your script
             // or throughout your document as needed
+
             // Load the selected language from local storage
-        const selectedLanguage = localStorage.getItem('selectedLanguage');
+            selectedLanguage = localStorage.getItem('selectedLanguage');
 
-        // —————————————————[ DEVELOPER-CONSOLE ]—————————————————— //
-        const logEntry445 = document.createElement("div");
-        logEntry445.textContent = '[Local] Language: ' + selectedLanguage;
-        logEntry445.style.color = "#ffffff"
-        consoleLog.appendChild(logEntry445);
+            // —————————————————[ DEVELOPER-CONSOLE ]—————————————————— //
+            const logEntry445 = document.createElement("div");
+            logEntry445.textContent = '[Local] Language: ' + selectedLanguage;
+            logEntry445.style.color = "#ffffff";
+            consoleLog.appendChild(logEntry445);
 
-        // Call your translateTo function with the selected language
-        if (selectedLanguage) {
-            translateTo(selectedLanguage);
-        }
+            // Call your translateTo function with the selected language
+            if (selectedLanguage) {
+                translateTo(selectedLanguage);
+            }
         })
         .catch((error) => {
             console.error('Error loading config:', error);

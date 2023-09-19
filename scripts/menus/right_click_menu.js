@@ -40,15 +40,15 @@ document.addEventListener("contextmenu", (e) => {
 
             if (textBox.highlighted) {
                 colorOption.setAttribute('option', 'option_2');
-                translateToActive(configLanguage);
+                translateToActive(selectedLanguage);
               } else {
                 colorOption.setAttribute('option', 'option_1');
-                translateToActive(configLanguage);
+                translateToActive(selectedLanguage);
               }
 
             if (textBox.readOnly) {
                 lockOption.setAttribute('option', 'option_2');
-                translateToActive(configLanguage);
+                translateToActive(selectedLanguage);
                 generateOption.style.opacity = "0.35"; // Fade the generate option
                 generateOption.style.pointerEvents = "none"; // Disable pointer events
                 colorOption.style.opacity = "0.35"; // Fade the color option
@@ -61,7 +61,7 @@ document.addEventListener("contextmenu", (e) => {
                 source_history.style.pointerEvents = "none"; // Disable pointer events
             } else {
                 lockOption.setAttribute('option', 'option_1');
-                translateToActive(configLanguage);
+                translateToActive(selectedLanguage);
                 generateOption.style.opacity = "1"; // Restore generate option opacity
                 generateOption.style.pointerEvents = "auto"; // Enable pointer events
                 colorOption.style.opacity = "1"; // Restore color option opacity
@@ -76,7 +76,7 @@ document.addEventListener("contextmenu", (e) => {
             
             if (textBox.disabled) {
                 disableOption.setAttribute('option', 'option_2');
-                translateToActive(configLanguage);
+                translateToActive(selectedLanguage);
                 generateOption.style.opacity = "0.35"; // Fade the generate option
                 generateOption.style.pointerEvents = "none"; // Disable pointer events
                 colorOption.style.opacity = "0.35"; // Fade the color option
@@ -89,7 +89,7 @@ document.addEventListener("contextmenu", (e) => {
                 source_history.style.pointerEvents = "none"; // Disable pointer events
             } else {
                 disableOption.setAttribute('option', 'option_1');
-                translateToActive(configLanguage);
+                translateToActive(selectedLanguage);
                 generateOption.style.opacity = "1"; // Restore generate option opacity
                 generateOption.style.pointerEvents = "auto"; // Enable pointer events
                 colorOption.style.opacity = "1"; // Restore color option opacity
@@ -118,18 +118,18 @@ document.addEventListener("contextmenu", (e) => {
 
             if (textBox.linked) {
                 source_option.setAttribute('option', 'option_2');
-                translateToActive(configLanguage);
+                translateToActive(selectedLanguage);
               } else {
-                translateToActive(configLanguage);
+                translateToActive(selectedLanguage);
                 source_option.setAttribute('option', 'option_1');
               }
 
             if (textBox.history) {
                 source_history.setAttribute('option', 'option_2');
-                translateToActive(configLanguage);
+                translateToActive(selectedLanguage);
               } else {
                 source_history.setAttribute('option', 'option_1');
-                translateToActive(configLanguage);
+                translateToActive(selectedLanguage);
               }
         
         console.log("disabledGroupIDs:", disabledGroupIDs);

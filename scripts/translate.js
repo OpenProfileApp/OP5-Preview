@@ -5,12 +5,6 @@ function translateTo(language) {
     // Save the selected language in local storage
     localStorage.setItem('selectedLanguage', language);
 
-     // —————————————————[ DEVELOPER-CONSOLE ]—————————————————— //
-     const logEntry45 = document.createElement("div");
-     logEntry45.textContent = '[Local] Language: ' + language;
-     logEntry45.style.color = "#ffffff"
-     consoleLog.appendChild(logEntry45);
-
     // Fetch the translations from the JSON file
     fetch(translationFile)
         .then((response) => response.json())
