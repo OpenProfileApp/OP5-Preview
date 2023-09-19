@@ -101,12 +101,7 @@ frChButton.addEventListener('click', () => {
     }, 300)
 })
 
-pirateButton.addEventListener("click", () => {
-    translateTo("pirate-US")
-    setTimeout(() => {
-        onLoadEmojis();
-    }, 300)
-})
+
 
 if (Button) {
     Button.addEventListener('click', () => translateTo('coming-soon'));
