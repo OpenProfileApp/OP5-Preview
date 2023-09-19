@@ -37,8 +37,8 @@
     },
 
     "full_name": {
-        "ORIGINAL-VERSION": "What is the OC's full name?",
-        "translation": "Quel est le nom complet de l'OC ?"
+        "ORIGINAL-VERSION": "What is the oc's full name?",
+        "translation": "Quel est le nom complet de l'oc ?"
     },
 
     "4": "—————————————————[ FIRST-NAME ]——————————————————",
@@ -48,8 +48,8 @@
     },
 
     "first_name": {
-        "ORIGINAL-VERSION": "What is the OC's first name?",
-        "translation": "Quel est le prénom de l'OC ?"
+        "ORIGINAL-VERSION": "What is the oc's first name?",
+        "translation": "Quel est le prénom de l'oc ?"
     },
 
     "5": "—————————————————[ MIDDLE-NAME ]——————————————————",
@@ -59,8 +59,8 @@
     },
 
     "middle_name": {
-        "ORIGINAL-VERSION": "What is the OC's middle name?",
-        "translation": "Quel est le deuxième prénom de l'OC ?"
+        "ORIGINAL-VERSION": "What is the oc's middle name?",
+        "translation": "Quel est le deuxième prénom de l'oc ?"
     },
 
     "6": "—————————————————[ LAST-NAME ]———————————————————",
@@ -70,8 +70,8 @@
     },
 
     "last_name": {
-        "ORIGINAL-VERSION": "What is the OC's last name?",
-        "translation": "Quel est le nom de famille de l'OC ?"
+        "ORIGINAL-VERSION": "What is the oc's last name?",
+        "translation": "Quel est le nom de famille de l'oc ?"
     },
 
     "7": "—————————————————[ NICKNAME ]———————————————————",
@@ -81,8 +81,8 @@
     },
 
     "nickname": {
-        "ORIGINAL-VERSION": "What is the OC's nickname?",
-        "translation": "Quel est le surnom de l'OC ?"
+        "ORIGINAL-VERSION": "What is the oc's nickname?",
+        "translation": "Quel est le surnom de l'oc ?"
     },
 
     "8": "—————————————————[ ALIAS ]———————————————————",
@@ -92,8 +92,8 @@
     },
 
     "alias": {
-        "ORIGINAL-VERSION": "What is the OC's alias?",
-        "translation": "Quel est l'alias de l'OC ?"
+        "ORIGINAL-VERSION": "What is the oc's alias?",
+        "translation": "Quel est l'alias de l'oc ?"
     },
 
     "9": "—————————————————[ ALTER-EGO ]———————————————————",
@@ -103,8 +103,8 @@
     },
 
     "alter_ego": {
-        "ORIGINAL-VERSION": "What is the OC's alter ego?",
-        "translation": "Quel est l'alter ego de l'OC ?"
+        "ORIGINAL-VERSION": "What is the oc's alter ego?",
+        "translation": "Quel est l'alter ego de l'oc ?"
     },
 
     "10": "—————————————————[ PREFIX ]———————————————————",
@@ -114,8 +114,8 @@
     },
 
     "prefix": {
-        "ORIGINAL-VERSION": "What is the OC's prefix?",
-        "translation": "Quel est le préfixe de l'OC ?"
+        "ORIGINAL-VERSION": "What is the oc's prefix?",
+        "translation": "Quel est le préfixe de l'oc ?"
     },
 
     "11": "—————————————————[ SUFFIX ]———————————————————",
@@ -125,8 +125,8 @@
     },
 
     "suffix": {
-        "ORIGINAL-VERSION": "What is the OC's suffix?",
-        "translation": "Quel est le suffixe de l'OC ?"
+        "ORIGINAL-VERSION": "What is the oc's suffix?",
+        "translation": "Quel est le suffixe de l'oc ?"
     },
 
     "12": "—————————————————[ FORMER-NAME ]———————————————————",
@@ -136,8 +136,8 @@
     },
 
     "former_name": {
-        "ORIGINAL-VERSION": "What is the OC's former name?",
-        "translation": "Quel est le nom précédent de l'OC ?"
+        "ORIGINAL-VERSION": "What is the oc's former name?",
+        "translation": "Quel est le nom précédent de l'oc ?"
     },
 
     "13": "—————————————————[ NAME-ORIGIN ]———————————————————",
@@ -148,7 +148,7 @@
 
     "name_origin": {
         "ORIGINAL-VERSION": "What is the origin behind the oc's name?",
-        "translation": "Quelle est l'origine du nom de l'OC ?"
+        "translation": "Quelle est l'origine du nom de l'oc ?"
     },
 
     "14": "—————————————————[ PERSONAL-THOUGHTS-NAME ]———————————————————",
@@ -159,6 +159,6 @@
 
     "personal_thoughts_name": {
         "ORIGINAL-VERSION": "What are the oc's thoughts towards their name?",
-        "translation": "Quelles sont les pensées de l'OC à propos de son nom ?"
+        "translation": "Quelles sont les pensées de l'oc à propos de son nom ?"
     }
 }
