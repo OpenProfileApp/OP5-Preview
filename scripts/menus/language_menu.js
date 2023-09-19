@@ -7,7 +7,7 @@ let timer;
 languageOption.addEventListener("mouseover", () => {
   clearTimeout(timer);
   languageSubMenu.style.left = "95.5px"; // Position to the right of the option
-  languageSubMenu.style.width = "75px";
+  languageSubMenu.style.width = "100px";
   languageSubMenu.style.scale = "110%"; // Position to the right of the option
   languageSubMenu.style.top = "145px"; // Maintain the same vertical position
   languageSubMenu.style.display = "block";
