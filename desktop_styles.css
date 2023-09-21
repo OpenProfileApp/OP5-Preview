@@ -231,13 +231,12 @@
   /*////MAIN ELEMENT GROUP///*/
   /*/////////////////////////*/
   .row {
-    position: absolute;
+    position: relative;
     left: 0px;
     top: 0px;
-    height: 28px;
+    height: 0px;
     opacity: 1;
     transition: 0.3s ease-in-out;
-    z-index: 5;
   }
 
   .group {
@@ -307,11 +306,11 @@
     font-family: "Open Sans";
     font-size: 7px;
     text-align: left;
-    z-index: 7;
     opacity: 1;
     display: inline-block;
     white-space: nowrap;
     transition: 0.3s ease-in-out;
+    z-index: 7;
   }
 
   .label_text::selection {
@@ -439,6 +438,61 @@
 
   .group:focus-within .verified_source_group{
     transform: translateY(-10px);
+  }
+
+  /*/////////////////////////*/
+  /*///////HELP GROUP////////*/
+  /*/////////////////////////*/
+  .help_box {
+    position: absolute;
+    top: 19px;
+    opacity: 0;
+    scale: 0;
+    transform-origin: top center;
+    transition: 0.3s ease-in-out;
+    z-index: 5;
+  }
+
+  .group:focus-within .help_box {
+    transform: translateY(10px);
+    scale: 1;
+    opacity: 1;
+  }
+
+  .group:focus-within .help_box {
+    transform: translateY(10px);
+    scale: 1;
+    opacity: 1;
+  }
+
+  .help_box_tab {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 183px;
+    margin-bottom: 3px;
+    border-radius: 0px 0px 5px 5px;
+    background: #bd9335;
+    opacity: 1;
+    transition: 0.3s ease-in-out;
+    z-index: 5;
+  }
+
+  .help_box_text {
+    position: absolute;
+    left: 5px;
+    top: 3px;
+    width: 174px;
+    color: #ffffff;
+    font-family: "Open Sans";
+    font-size: 7px;
+    font-weight: 400;
+    text-align: left;
+    align-items: top;
+    opacity: 1;
+    display: block;
+    transition: 0.3s ease-in-out;
+    z-index: 6;
   }
 
   /*/////////////////////////*/
@@ -583,13 +637,18 @@
     border: 2px solid #1b1f28;
   }
 
-  .input_text:focus {
-    border-radius: 0px 5px 0px 5px;
+  .group:focus-within .input_text {
+    border-radius: 0px 5px 0px 0px;
     border: 2px solid #1b1f28;
   }
 
   .group:hover textarea {
     border-radius: 0px 5px 0px 5px;
+    border: 2px solid #1b1f28;
+  }
+
+  .group:focus-within textarea {
+    border-radius: 0px 5px 0px 0px;
     border: 2px solid #1b1f28;
   }
 
@@ -632,11 +691,11 @@
     border: none;
     scale: 1.4;
     box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
     opacity: 0; /* Start with opacity at 0 */
     transform-origin: top left; /* Set the transform origin to the top-left corner */
     transform: scale(0.5); /* Start with a small scale */
     animation: scaleUp 0.2s ease forwards, fadeIn 0.2s ease forwards; /* Apply the animations */
+    z-index: 1000;
   }
 
   .context-menu.show {
@@ -749,6 +808,7 @@
     transition: 0.3s ease-in-out;
     animation: load_in_popup 0.3s ease-in-out;
     transform-origin: center;
+    z-index: 501;
   }
 
   @keyframes load_in_popup {

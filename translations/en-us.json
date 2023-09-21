@@ -1,6 +1,6 @@
 {
 "language": "en-us / English (US)",
-"version": "v5.0.030",
+"version": "v5.0.032",
 
 "1": "—————————————————[ TEXT-BOXES-PAGE-1 ]——————————————————",
     "page_author_1_label_text": {
@@ -11,6 +11,11 @@
     "page_author_1": {
         "ORIGINAL-VERSION": "Who is the page's author?",
         "translation": "Who is the page's author?"
+    },
+
+    "page_author_1_help_box_text": {
+        "ORIGINAL-VERSION": "What is your name or pseudonym? If you're working as part of a collaboration, include the fellow author's name or pseudonym next to yours.",
+        "translation": "What is your name or pseudonym? If you're working as part of a collaboration, include the fellow author's name or pseudonym next to yours."
     },
 
     "name_information": {
@@ -28,6 +33,11 @@
         "translation": "When was this page written?"
     },
 
+    "written_date_1_help_box_text": {
+        "ORIGINAL-VERSION": "What date was this page written on? You can include multiple dates in any format seperated by commas. This will prevent the last modified timestamp from showing.",
+        "translation": "What date was this page written on? You can include multiple dates in any format seperated by commas. This will prevent the last modified timestamp from showing."
+    },
+
     "full_name_label_text": {
         "ORIGINAL-VERSION": "Full Name",
         "translation": "Full Name"
@@ -36,6 +46,11 @@
     "full_name": {
         "ORIGINAL-VERSION": "What is the oc's full name?",
         "translation": "What is the oc's full name?"
+    },
+
+    "full_name_help_box_text": {
+        "ORIGINAL-VERSION": "What is the character's full name? Be sure to include their prefixes and suffixes.",
+        "translation": "What is the character's full name? Be sure to include their prefixes and suffixes."
     },
 
     "first_name_label_text": {
@@ -48,6 +63,11 @@
         "translation": "What is the oc's first name?"
     },
 
+    "first_name_help_box_text": {
+        "ORIGINAL-VERSION": "What is the character's first name? While optional, first names should generally describe the character in some way based on it's meaning.",
+        "translation": "What is the character's first name? While optional, first names should generally describe the character in some way based on it's meaning."
+    },
+
     "middle_name_label_text": {
         "ORIGINAL-VERSION": "Middle Name",
         "translation": "Middle Name"
@@ -56,6 +76,11 @@
     "middle_name": {
         "ORIGINAL-VERSION": "What is the oc's middle name?",
         "translation": "What is the oc's middle name?"
+    },
+
+    "middle_name_help_box_text": {
+        "ORIGINAL-VERSION": "What is the character's middle name? Middle names aren't always required and are more often used for realisum or an alternate calling. If so, a middle name should generally describe the character in the view or likings of the person who assigned the character the name such as their parent or guardian.",
+        "translation": "What is the character's middle name? Middle names aren't always required and are more often used for realisum or an alternate calling. If so, a middle name should generally describe the character in the view or likings of the person who assigned the character the name such as their parent or guardian."
     },
 
     "last_name_label_text": {
@@ -68,6 +93,11 @@
         "translation": "What is the oc's last name?"
     },
 
+    "last_name_help_box_text": {
+        "ORIGINAL-VERSION": "What is the character's last name? While optional, last names could be used to tell a lot about the character interests or values based on the name's ancestrial association. A last name is typically inherited from the character's father.",
+        "translation": "What is the character's last name? While optional, last names could be used to tell a lot about the character interests or values based on the name's ancestrial association. A last name is typically inherited from the character's father."
+    },
+
     "nickname_label_text": {
         "ORIGINAL-VERSION": "Nickname",
         "translation": "Nickname"
@@ -76,6 +106,11 @@
     "nickname": {
         "ORIGINAL-VERSION": "What is the oc's nickname?",
         "translation": "What is the oc's nickname?"
+    },
+
+    "nickname_help_box_text": {
+        "ORIGINAL-VERSION": "What is the character's nickname? Nicknames are meant to be fun lighthearted alternative callings for the character often created by their friends and family. Sometimes even enemies or other acquaintances may come up with nicknames for the character with negative intent.",
+        "translation": "What is the character's nickname? Nicknames are meant to be fun lighthearted alternative callings for the character often created by their friends and family. Sometimes even enemies or other acquaintances may come up with nicknames for the character with negative intent."
     },
 
     "alias_label_text": {
@@ -88,6 +123,11 @@
         "translation": "What is the oc's alias?"
     },
 
+    "alias_help_box_text": {
+        "ORIGINAL-VERSION": "What is the character's alias? If any, aliases are alternative names useally for cyberspace or business purposes for seperating themselves from their real identity to remain anonymous. These can include personal self-made titles and public callings in which the character made their own.",
+        "translation": "What is the character's alias? If any, aliases are alternative names useally for cyberspace or business purposes for seperating themselves from their real identity to remain anonymous. These can include personal self-made titles and public callings in which the character made their own."
+    },
+
     "alter_ego_label_text": {
         "ORIGINAL-VERSION": "Alter Ego",
         "translation": "Alter Ego"
@@ -96,6 +136,11 @@
     "alter_ego": {
         "ORIGINAL-VERSION": "What is the oc's alter ego?",
         "translation": "What is the oc's alter ego?"
+    },
+
+    "alter_ego_help_box_text": {
+        "ORIGINAL-VERSION": "What is the character's alter ego? Alter egos are alternate personalities that the character possesses and becomes during certain situations. Alter egos are commonly used for characters with secret heroic or villainic identities.",
+        "translation": "What is the character's alter ego? Alter egos are alternate personalities that the character possesses and becomes during certain situations. Alter egos are commonly used for characters with secret heroic or villainic identities."
     },
 
     "prefix_label_text": {
@@ -108,6 +153,11 @@
         "translation": "What is the oc's prefix?"
     },
 
+    "prefix_help_box_text": {
+        "ORIGINAL-VERSION": "What is the character's prefix? If the character is worldly notable then it's likely they might have a prefix or prefix based title apart from citizen standards. Prefixes are typically given by members of a higher ranking order than them for special ceremonies or accomplishments.",
+        "translation": "What is the character's prefix? If the character is worldly notable then it's likely they might have a prefix or prefix based title apart from citizen standards. Prefixes are typically given by members of a higher ranking order than them for special ceremonies or accomplishments."
+    },
+
     "suffix_label_text": {
         "ORIGINAL-VERSION": "Suffix",
         "translation": "Suffix"
@@ -116,6 +166,11 @@
     "suffix": {
         "ORIGINAL-VERSION": "What is the oc's suffix?",
         "translation": "What is the oc's suffix?"
+    },
+
+    "suffix_help_box_text": {
+        "ORIGINAL-VERSION": "What is the character's suffix? Suffixes are commonly known to be inherited from family trees but can also be earned in military service and other professions.",
+        "translation": "What is the character's suffix? Suffixes are commonly known to be inherited from family trees but can also be earned in military service and other professions."
     },
 
     "former_name_label_text": {
@@ -128,6 +183,11 @@
         "translation": "What is the oc's former name?"
     },
 
+    "former_name_help_box_text": {
+        "ORIGINAL-VERSION": "What is the character's former name? Reasons for a former name may be due to a once active alias or nickname the character was once known by. A former name can be useful for characters who changed their path in life and needed to let go the person they once were.",
+        "translation": "What is the character's former name? Reasons for a former name may be due to a once active alias or nickname the character was once known by. A former name can be useful for characters who changed their path in life and needed to let go the person they once were."
+    },
+
     "name_origin_label_text": {
         "ORIGINAL-VERSION": "Name Origin",
         "translation": "Name Origin"
@@ -138,6 +198,11 @@
         "translation": "What is the origin behind the oc's name?"
     },
 
+    "name_origin_help_box_text": {
+        "ORIGINAL-VERSION": "What is the origin behind the character's name and what does it mean? Is it from a specifc region or hold a special tale to it? Who gave it to them or whom did they inherit it from? Any reason when and why the character got the name? Try to be the most descriptive possible and remember the usage of the five Ws (who, what, when, where, and why) when needed.",
+        "translation": "What is the origin behind the character's name and what does it mean? Is it from a specifc region or hold a special tale to it? Who gave it to them or whom did they inherit it from? Any reason when and why the character got the name? Try to be the most descriptive possible and remember the usage of the five Ws (who, what, when, where, and why) when needed."
+    },
+
     "personal_thoughts_name_label_text": {
         "ORIGINAL-VERSION": "Personal Thoughts",
         "translation": "Personal Thoughts"
@@ -146,6 +211,11 @@
     "personal_thoughts_name": {
         "ORIGINAL-VERSION": "What are the oc's thoughts towards their name?",
         "translation": "What are the oc's thoughts towards their name?"
+    },
+
+    "personal_thoughts_name_help_box_text": {
+        "ORIGINAL-VERSION": "What are the character's personal thoughts towards their name? Do they like the name or would they rather have another? Does having the name affects their life in any certain way? Does the name remind them of anything? Are they comfortable sharing their name with others or would they rather it in secrecy? Try to be the most descriptive possible and remember the usage of the five Ws (who, what, when, where, and why) when needed.",
+        "translation": "What are the character's personal thoughts towards their name? Do they like the name or would they rather have another? Does having the name affects their life in any certain way? Does the name remind them of anything? Are they comfortable sharing their name with others or would they rather it in secrecy? Try to be the most descriptive possible and remember the usage of the five Ws (who, what, when, where, and why) when needed."
     },
 
 "a": "—————————————————[ RIGHT-CLICK-MENU ]———————————————————",

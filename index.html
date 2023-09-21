@@ -54,38 +54,48 @@
           <!-- /////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
           <!-- /////////////////|| PAGE AUTHOR ||\\\\\\\\\\\\\\\\\ -->
           <!-- /////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
-          <div class="group" id="page_author_1_group" style="top: 0px; left: -1px;">
-            <div class="label_tab" id="page_author_1_label_tab" style="top: 29px; border-radius: 0px 0px 5px 0px">
+          <div class="group" id="page_author_1_group" style="top: 0px; left: -1px; z-index: 24;">
+            <div class="label_tab" id="page_author_1_label_tab" style="top: 29px; border-radius: 0px 0px 5px 0px; z-index: 2;">
               <div class="label_text" id="page_author_1_label_text" style="top: 1.25px;">Page Author</div>
             </div>
             <div><input type="text" class="input_text" id="page_author_1" style="width: 175px; border-radius: 5px 0px 5px 0px;" autocomplete="off" autocorrect="off" placeholder="Who is the page's author?"></div>
+            <div class="help_box" id="page_author_1_help_box">
+              <div class="help_box_tab" id="page_author_1_help_box_tab">
+                <div class="help_box_text" id="page_author_1_help_box_text">What is your name or pseudonym? If you're working as part of a collaboration, include the fellow author's name or pseudonym next to yours.</div>
+              </div>
+            </div>
             <script src="scripts/emojis/page1/page_author_1_emojis.js"></script>
           </div>
 
           <!-- /////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
           <!-- //////////////|| NAME INFORMATION ||\\\\\\\\\\\\\\\ -->
           <!-- /////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
-          <div class="group" id="name_information_group" style="top: 0px; left: 249px;">
+          <div class="group" id="name_information_group" style="top: 0px; left: 249px; z-index: 23;">
             <div><input type="text" class="input_text" id="name_information" style="width: 175px; height: 28px; top: 9px; border-radius: 0px 0px 5px 5px; justify-content: center; text-align: center; font-size: 14px; background-color: #1b1f28; color: #ffffff; border-color: #1b1f28;" autocomplete="off" autocorrect="off" value="Name Information" tabindex="-1" readonly></div>
           </div>
 
           <!-- /////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
           <!-- ////////////////|| WRITTEN DATE ||\\\\\\\\\\\\\\\\\ -->
           <!-- /////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
-          <div class="group" id="written_date_1_group" style="top: 0px; left: 498px;">
-            <div class="label_tab" id="written_date_1_label_tab" option="page_date" style="top: 29px; border-radius: 0px 0px 0px 5px;">
+          <div class="group" id="written_date_1_group" style="top: 0px; left: 498px; z-index: 22;">
+            <div class="label_tab" id="written_date_1_label_tab" option="page_date" style="top: 29px; border-radius: 0px 0px 0px 5px; z-index: 2;">
               <div class="label_text" id="written_date_1_label_text" style="top: 1.25px;">Written Date</div>
             </div>
             <div><input type="text" class="input_text" id="written_date_1" style="width: 175px; border-radius: 0px 5px 0px 5px; text-align: right;" autocomplete="off" autocorrect="off" placeholder="When was this page written?"></div>
+            <div class="help_box" id="written_date_1_help_box">
+              <div class="help_box_tab" id="written_date_1_help_box_tab">
+                <div class="help_box_text" id="written_date_1_help_box_text">What date was this page written on? You can include multiple dates in any format seperated by commas. This will prevent the last modified timestamp from showing.</div>
+              </div>
+            </div>
+            <script src="scripts/emojis/page1/written_date_1_emojis.js"></script>
           </div>
-          <script src="scripts/emojis/page1/written_date_1_emojis.js"></script>
         </div>
 
         <div class="row" style="top: 50px; left: 36px;">
           <!-- /////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
           <!-- //////////////////|| FULL NAME ||\\\\\\\\\\\\\\\\\\ -->
           <!-- /////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
-          <div class="group" id="full_name_group" style="top: 0px; left: 0px">
+          <div class="group" id="full_name_group" style="top: 0px; left: 0px; z-index: 21;">
             <div class="label_tab" id="full_name_label_tab">
               <div class="label_text" id="full_name_label_text">Full Name</div>
             </div>
@@ -102,6 +112,11 @@
               </div>
             </div>
             <div><input type="text" class="input_text" id="full_name" style="width: 559px;" autocomplete="off" autocorrect="off" placeholder="What is the oc's full name?"></div>
+            <div class="help_box" id="full_name_help_box">
+              <div class="help_box_tab" id="full_name_help_box_tab">
+                <div class="help_box_text" id="full_name_help_box_text">What is the character's full name? Be sure to include their prefixes and suffixes.</div>
+              </div>
+            </div>
             <div class="history_group" id="full_name_history_group">
               <div class="history_tab" id="full_name_history_tab" style="left: 433.5px;">
                 <div class="last_modified_text" id="full_name_time"></div>
@@ -118,7 +133,7 @@
           <!-- /////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
           <!-- /////////////////|| FIRST NAME ||\\\\\\\\\\\\\\\\\\ -->
           <!-- /////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
-          <div class="group" id="first_name_group" style="top: 0px; left: 0px;">
+          <div class="group" id="first_name_group" style="top: 0px; left: 0px; z-index: 20;">
             <div class="label_tab" id="first_name_label_tab">
               <div class="label_text" id="first_name_label_text">First Name</div>
             </div>
@@ -135,6 +150,11 @@
               </div>
             </div>
             <div><input type="text" class="input_text" id="first_name" style="width: 175px;" autocomplete="off" autocorrect="off" placeholder="What is the oc's first name?"></div>
+            <div class="help_box" id="first_name_help_box">
+              <div class="help_box_tab" id="first_name_help_box_tab">
+                <div class="help_box_text" id="first_name_help_box_text">What is the character's first name? While optional, first names should generally describe the character in some way based on it's meaning.</div>
+              </div>
+            </div>
             <div class="history_group" id="first_name_history_group">
               <div class="history_tab" id="first_name_history_tab">
                 <div class="last_modified_text" id="first_name_time"></div>
@@ -148,7 +168,7 @@
           <!-- /////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
           <!-- /////////////////|| MIDDLE NAME ||\\\\\\\\\\\\\\\\\ -->
           <!-- /////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
-          <div class="group" id="middle_name_group" style="top: 0px; left: 230px;">
+          <div class="group" id="middle_name_group" style="top: 0px; left: 230px; z-index: 19;">
             <div class="label_tab" id="middle_name_label_tab">
               <div class="label_text" id="middle_name_label_text">Middle Name</div>
             </div>
@@ -165,6 +185,11 @@
               </div>
             </div>
             <div><input type="text" class="input_text" id="middle_name" style="width: 175px;" autocomplete="off" autocorrect="off" placeholder="What is the oc's middle name?"></div>
+            <div class="help_box" id="middle_name_help_box">
+              <div class="help_box_tab" id="middle_name_help_box_tab">
+                <div class="help_box_text" id="middle_name_help_box_text">What is the character's middle name? Middle names aren't always required and are more often used for realisum or an alternate calling. If so, a middle name should generally describe the character in the view or likings of the person who assigned the character the name such as their parent or guardian.</div>
+              </div>
+            </div>
             <div class="history_group" id="middle_name_history_group">
               <div class="history_tab" id="middle_name_history_tab">
                 <div class="last_modified_text" id="middle_name_time"></div>
@@ -178,7 +203,7 @@
           <!-- /////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
           <!-- //////////////////|| LAST NAME ||\\\\\\\\\\\\\\\\\\ -->
           <!-- /////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
-          <div class="group" id="last_name_group" style="top: 0px; left: 460px;">
+          <div class="group" id="last_name_group" style="top: 0px; left: 460px; z-index: 18;">
             <div class="label_tab" id="last_name_label_tab">
               <div class="label_text" id="last_name_label_text">Last Name</div>
             </div>
@@ -195,6 +220,11 @@
               </div>
             </div>
             <div><input type="text" class="input_text" id="last_name" style="width: 175px;" autocomplete="off" autocorrect="off" placeholder="What is the oc's last name?"></div>
+            <div class="help_box" id="last_name_help_box">
+              <div class="help_box_tab" id="last_name_help_box_tab">
+                <div class="help_box_text" id="last_name_help_box_text">What is the character's last name? While optional, last names could be used to tell a lot about the character interests or values based on the name's ancestrial association. A last name is typically inherited from the character's father.</div>
+              </div>
+            </div>
             <div class="history_group" id="last_name_history_group">
               <div class="history_tab" id="last_name_history_tab">
                 <div class="last_modified_text" id="last_name_time"></div>
@@ -210,7 +240,7 @@
           <!-- /////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
           <!-- //////////////////|| NICKNAME ||\\\\\\\\\\\\\\\\\\\ -->
           <!-- /////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
-          <div class="group" id="nickname_group" style="top: 0px; left: 0px">
+          <div class="group" id="nickname_group" style="top: 0px; left: 0px; z-index: 17;">
             <div class="label_tab" id="nickname_label_tab">
               <div class="label_text" id="nickname_label_text">Nickname</div>
             </div>
@@ -227,6 +257,11 @@
               </div>
             </div>
             <div><input type="text" class="input_text" id="nickname" style="width: 559px;" autocomplete="off" autocorrect="off" placeholder="What is the oc's nickname?"></div>
+            <div class="help_box" id="nickname_help_box">
+              <div class="help_box_tab" id="nickname_help_box_tab">
+                <div class="help_box_text" id="nickname_help_box_text">What is the character's nickname? Nicknames are meant to be fun lighthearted alternative callings for the character often created by their friends and family. Sometimes even enemies or other acquaintances may come up with nicknames for the character with negative intent.</div>
+              </div>
+            </div>
             <div class="history_group" id="nickname_history_group">
               <div class="history_tab" id="nickname_history_tab" style="left: 433.5px;">
                 <div class="last_modified_text" id="nickname_time"></div>
@@ -242,7 +277,7 @@
           <!-- /////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
           <!-- ////////////////////|| ALIAS ||\\\\\\\\\\\\\\\\\\\\ -->
           <!-- /////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
-          <div class="group" id="alias_group" style="top: 0px; left: 0px">
+          <div class="group" id="alias_group" style="top: 0px; left: 0px; z-index: 16;">
             <div class="label_tab" id="alias_label_tab">
               <div class="label_text" id="alias_label_text">Alias</div>
             </div>
@@ -259,6 +294,11 @@
               </div>
             </div>
             <div><input type="text" class="input_text" id="alias" style="width: 559px;" autocomplete="off" autocorrect="off" placeholder="What is the oc's alias?"></div>
+            <div class="help_box" id="alias_help_box">
+              <div class="help_box_tab" id="alias_help_box_tab">
+                <div class="help_box_text" id="alias_help_box_text">What is the character's alias? If any, aliases are alternative names useally for cyberspace or business purposes for seperating themselves from their real identity to remain anonymous. These can include personal self-made titles and public callings in which the character made their own.</div>
+              </div>
+            </div>
             <div class="history_group" id="alias_history_group">
               <div class="history_tab" id="alias_history_tab" style="left: 433.5px;">
                 <div class="last_modified_text" id="alias_time"></div>
@@ -274,7 +314,7 @@
           <!-- /////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
           <!-- //////////////////|| ALTER EGO ||\\\\\\\\\\\\\\\\\\ -->
           <!-- /////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
-          <div class="group" id="alter_ego_group" style="top: 0px; left: 0px">
+          <div class="group" id="alter_ego_group" style="top: 0px; left: 0px; z-index: 15;">
             <div class="label_tab" id="alter_ego_label_tab">
               <div class="label_text" id="alter_ego_label_text">Alter Ego</div>
             </div>
@@ -291,6 +331,11 @@
               </div>
             </div>
             <div><input type="text" class="input_text" id="alter_ego" style="width: 559px;" autocomplete="off" autocorrect="off" placeholder="What is the oc's alter ego?"></div>
+            <div class="help_box" id="alter_ego_help_box">
+              <div class="help_box_tab" id="alter_ego_help_box_tab">
+                <div class="help_box_text" id="alter_ego_help_box_text">What is the character's alter ego? Alter egos are alternate personalities that the character possesses and becomes during certain situations. Alter egos are commonly used for characters with secret heroic or villainic identities.</div>
+              </div>
+            </div>
             <div class="history_group" id="alter_ego_history_group">
               <div class="history_tab" id="alter_ego_history_tab" style="left: 433.5px;">
                 <div class="last_modified_text" id="alter_ego_time"></div>
@@ -306,7 +351,7 @@
           <!-- /////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
           <!-- ///////////////////|| PREFIX ||\\\\\\\\\\\\\\\\\\\\ -->
           <!-- /////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
-          <div class="group" id="prefix_group" style="top: 0px; left: 0px">
+          <div class="group" id="prefix_group" style="top: 0px; left: 0px; z-index: 14;">
             <div class="label_tab" id="prefix_label_tab">
               <div class="label_text" id="prefix_label_text">Prefix</div>
             </div>
@@ -323,6 +368,11 @@
               </div>
             </div>
             <div><input type="text" class="input_text" id="prefix" style="width: 367.5px;" autocomplete="off" autocorrect="off" placeholder="What is the oc's prefix?"></div>
+            <div class="help_box" id="prefix_help_box">
+              <div class="help_box_tab" id="prefix_help_box_tab">
+                <div class="help_box_text" id="prefix_help_box_text">What is the character's prefix? If the character is worldly notable then it's likely they might have a prefix or prefix based title apart from citizen standards. Prefixes are typically given by members of a higher ranking order than them for special ceremonies or accomplishments.</div>
+              </div>
+            </div>
             <div class="history_group" id="prefix_history_group">
               <div class="history_tab" id="prefix_history_tab" style="left: 242px;">
                 <div class="last_modified_text" id="prefix_time"></div>
@@ -336,7 +386,7 @@
           <!-- /////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
           <!-- ///////////////////|| SUFFIX ||\\\\\\\\\\\\\\\\\\\\ -->
           <!-- /////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
-          <div class="group" id="suffix_group" style="top: 0px; left: 460px;">
+          <div class="group" id="suffix_group" style="top: 0px; left: 460px; z-index: 13;">
             <div class="label_tab" id="suffix_label_tab">
               <div class="label_text" id="suffix_label_text">Suffix</div>
             </div>
@@ -353,6 +403,11 @@
               </div>
             </div>
             <div><input type="text" class="input_text" id="suffix" style="width: 175px;" autocomplete="off" autocorrect="off" placeholder="What is the oc's suffix?"></div>
+            <div class="help_box" id="suffix_help_box">
+              <div class="help_box_tab" id="suffix_help_box_tab">
+                <div class="help_box_text" id="suffix_help_box_text">What is the character's suffix? Suffixes are commonly known to be inherited from family trees but can also be earned in military service and other professions.</div>
+              </div>
+            </div>
             <div class="history_group" id="suffix_history_group">
               <div class="history_tab" id="suffix_history_tab">
                 <div class="last_modified_text" id="suffix_time"></div>
@@ -368,7 +423,7 @@
           <!-- /////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
           <!-- /////////////////|| FORMER NAME ||\\\\\\\\\\\\\\\\\ -->
           <!-- /////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
-          <div class="group" id="former_name_group" style="top: 0px; left: 0px">
+          <div class="group" id="former_name_group" style="top: 0px; left: 0px; z-index: 12;">
             <div class="label_tab" id="former_name_label_tab">
               <div class="label_text" id="former_name_label_text">Former Name</div>
             </div>
@@ -385,6 +440,11 @@
               </div>
             </div>
             <div><input type="text" class="input_text" id="former_name" style="width: 559px;" autocomplete="off" autocorrect="off" placeholder="What is the oc's former name?"></div>
+            <div class="help_box" id="former_name_help_box">
+              <div class="help_box_tab" id="former_name_help_box_tab">
+                <div class="help_box_text" id="former_name_help_box_text">What is the character's former name? Reasons for a former name may be due to a once active alias or nickname the character was once known by. A former name can be useful for characters who changed their path in life and needed to let go the person they once were.</div>
+              </div>
+            </div>
             <div class="history_group" id="former_name_history_group">
               <div class="history_tab" id="former_name_history_tab" style="left: 433.5px;">
                 <div class="last_modified_text" id="former_name_time"></div>
@@ -400,7 +460,7 @@
           <!-- /////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
           <!-- /////////////////|| NAME ORIGIN ||\\\\\\\\\\\\\\\\\ -->
           <!-- /////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
-          <div class="group" id="name_origin_group" style="top: 0px; left: 0px">
+          <div class="group" id="name_origin_group" style="top: 0px; left: 0px; z-index: 11;">
             <div class="label_tab" id="name_origin_label_tab">
               <div class="label_text" id="name_origin_label_text">Name Origin</div>
             </div>
@@ -417,6 +477,11 @@
               </div>
             </div>
             <textarea id="name_origin" style="width: 559px; height: 252px;" autocomplete="off" autocorrect="off" placeholder="What is the origin behind the oc's name?"></textarea>
+            <div class="help_box" id="name_origin_help_box" style="top: 259px;">
+              <div class="help_box_tab" id="name_origin_help_box_tab">
+                <div class="help_box_text" id="name_origin_help_box_text">What is the origin behind the character's name and what does it mean? Is it from a specifc region or hold a special tale to it? Who gave it to them or whom did they inherit it from? Any reason when and why the character got the name? Try to be the most descriptive possible and remember the usage of the five Ws (who, what, when, where, and why) when needed.</div>
+              </div>
+            </div>
             <div class="history_group" id="name_origin_history_group">
               <div class="history_tab" id="name_origin_history_tab" style="left: 433.5px; top: 240px;">
                 <div class="last_modified_text" id="name_origin_time"></div>
@@ -432,7 +497,7 @@
           <!-- /////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
           <!-- //////////////|| PERSONAL THOUGHTS ||\\\\\\\\\\\\\\ -->
           <!-- /////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
-          <div class="group" id="personal_thoughts_name_group" style="top: 0px; left: 0px">
+          <div class="group" id="personal_thoughts_name_group" style="top: 0px; left: 0px; z-index: 10;">
             <div class="label_tab" id="personal_thoughts_name_label_tab">
               <div class="label_text" id="personal_thoughts_name_label_text">Personal Thoughts</div>
             </div>
@@ -449,6 +514,11 @@
               </div>
             </div>
             <textarea id="personal_thoughts_name" style="width: 559px; height: 252px;" autocomplete="off" autocorrect="off" placeholder="What are the oc's thoughts towards their name?"></textarea>
+            <div class="help_box" id="personal_thoughts_name_help_box" style="top: 259px;">
+              <div class="help_box_tab" id="personal_thoughts_name_help_box_tab">
+                <div class="help_box_text" id="personal_thoughts_name_help_box_text">What are the character's personal thoughts towards their name? Do they like the name or would they rather have another? Does having the name affects their life in any certain way? Does the name remind them of anything? Are they comfortable sharing their name with others or would they rather it in secrecy? Try to be the most descriptive possible and remember the usage of the five Ws (who, what, when, where, and why) when needed.</div>
+              </div>
+            </div>
             <div class="history_group" id="personal_thoughts_name_history_group">
               <div class="history_tab" id="personal_thoughts_name_history_tab" style="left: 433.5px; top: 240px;"">
                 <div class="last_modified_text" id="personal_thoughts_name_time"></div>
@@ -497,8 +567,8 @@
         <script src="scripts/menus/language_menu.js"></script>
         <ul>
           <li id="en-us">🦅 English (US)</li>
-          <li id="de-de">🍺 Deutsch (DE)</li>
-          <li id="fr-ch">🥖 Suisse Français (CH)</li>
+          <li id="de-de" style="opacity: 0.35;">🍺 Deutsch (DE)</li>
+          <li id="fr-ch" style="opacity: 0.35;">🥖 Suisse Français (CH)</li>
           <li id="coming-soon">🗣️ Coming Soon</li>
         </ul>
         <script src="scripts/translate.js"></script>
