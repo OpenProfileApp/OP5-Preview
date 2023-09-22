@@ -1,6 +1,7 @@
 {
     "language": "dev / Developer",
-    "version": "v5.0.032",
+    "version": "v5.0.033",
+    "translator": "",
 
 "1": "—————————————————[ TEXT-BOXES-PAGE-1 ]——————————————————",
     "page_author_1_label_text": {
@@ -265,10 +266,6 @@
     },
 
 "b": "———————————————————[ LANGUAGE-MENU ]————————————————————",
-    "en-us": {
-        "ORIGINAL-VERSION": "🦅 English (US)",
-        "translation": "🦅 "
-    },
 
     "coming-soon": {
         "ORIGINAL-VERSION": "🗣️ Coming Soon",

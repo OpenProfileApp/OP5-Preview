@@ -1,4 +1,6 @@
-———————————————————————————————————————————————————————   
+———————————————————————————————————————————————————————
+———————————————————————————————————————————————————————
+———————————————————————————————————————————————————————
    ___                 ___          __ _ _       ___ 
   / _ \ _ __  ___ _ _ | _ \_ _ ___ / _(_) |___  | __|
  | (_) | '_ \/ -_) ' \|  _/ '_/ _ \  _| | / -_) |__ \
@@ -6,31 +8,77 @@
        |_|                                              
            ->  https://op5.avatarkage.com  <-
 
+———————————————————————————————————————————————————————
 ———————————————[ OPENPROFILE-CHARACTER ]———————————————
+———————————————————————————————————————————————————————
 app_version:
 profile_version:
 language:
 theme:
+
 CREDITS {
-    AvatarKage (developer)
+    openprofile_developer: AvatarKage (developer)
+    openprofile_translator:  (translator)
 }
 
+———————————————————————————————————————————————————————
+———————————————————[ PAGE-AUTHOR-1 ]———————————————————
+———————————————————————————————————————————————————————
+PAGE-AUTHOR-1-DATA {
+    page_author_1:
+}
+
+———————————————————————————————————————————————————————
+——————————————————[ WRITTEN-DATE-1 ]———————————————————
+———————————————————————————————————————————————————————
+WRITTEN-DATE-1-DATA {
+    written_date_1:
+}
+
+———————————————————————————————————————————————————————
+—————————————————————[ FULL-NAME ]—————————————————————
+———————————————————————————————————————————————————————
+FULL-NAME-DATA {
+    full_name:
+    full_name_verified_source_icon:
+    full_name_time:
+}
+
+FULL-NAME-GROUP {
+    full_name.highlighted: false
+    full_name.linked: false
+    full_name.locked: false
+    full_name.disabled: false
+    full_name.comments: false
+    full_name.history: true
+    full_name.history_visible: true
+}
+
+FULL-NAME-COMMENTS {
+    N/A
+}
+
+FULL-NAME-HISTORY {
+    N/A
+}
+
+———————————————————————————————————————————————————————
 ————————————————————[ FIRST-NAME ]—————————————————————
+———————————————————————————————————————————————————————
 FIRST-NAME-DATA {
     first_name:
-    first_name_source_url:
-    first_name_source_icon:
+    first_name_verified_source_icon:
     first_name_time:
 }
 
 FIRST-NAME-GROUP {
-    first_name-highlighted: false
-    first_name-linked: false
-    first_name-locked: false
-    first_name-disabled: false
-    first_name-comments: false
-    first_name-history: true
-    first_name-history_vis: true
+    first_name.highlighted: false
+    first_name.linked: false
+    first_name.locked: false
+    first_name.disabled: false
+    first_name.comments: false
+    first_name.history: true
+    first_name.history_visible: true
 }
 
 FIRST-NAME-COMMENTS {
@@ -41,4 +89,272 @@ FIRST-NAME-HISTORY {
     N/A
 }
 
+———————————————————————————————————————————————————————
 ————————————————————[ MIDDLE-NAME ]————————————————————
+———————————————————————————————————————————————————————
+MIDDLE-NAME-DATA {
+    middle_name:
+    middle_name_verified_source_icon:
+    middle_name_time:
+}
+
+MIDDLE-NAME-GROUP {
+    middle_name.highlighted: false
+    middle_name.linked: false
+    middle_name.locked: false
+    middle_name.disabled: false
+    middle_name.comments: false
+    middle_name.history: true
+    middle_name.history_visible: true
+}
+
+MIDDLE-NAME-COMMENTS {
+    N/A
+}
+
+MIDDLE-NAME-HISTORY {
+    N/A
+}
+
+———————————————————————————————————————————————————————
+—————————————————————[ LAST-NAME ]—————————————————————
+———————————————————————————————————————————————————————
+LAST-NAME-DATA {
+    last_name:
+    last_name_verified_source_icon:
+    last_name_time:
+}
+
+LAST-NAME-GROUP {
+    last_name.highlighted: false
+    last_name.linked: false
+    last_name.locked: false
+    last_name.disabled: false
+    last_name.comments: false
+    last_name.history: true
+    last_name.history_visible: true
+}
+
+LAST-NAME-COMMENTS {
+    N/A
+}
+
+LAST-NAME-HISTORY {
+    N/A
+}
+
+———————————————————————————————————————————————————————
+—————————————————————[ NICKNAME ]——————————————————————
+———————————————————————————————————————————————————————
+NICKNAME-DATA {
+    nickname:
+    nickname_verified_source_icon:
+    nickname_time:
+}
+
+NICKNAME-GROUP {
+    nickname.highlighted: false
+    nickname.linked: false
+    nickname.locked: false
+    nickname.disabled: false
+    nickname.comments: false
+    nickname.history: true
+    nickname.history_visible: true
+}
+
+NICKNAME-COMMENTS {
+    N/A
+}
+
+NICKNAME-HISTORY {
+    N/A
+}
+
+———————————————————————————————————————————————————————
+———————————————————————[ ALIAS ]———————————————————————
+———————————————————————————————————————————————————————
+ALIAS-DATA {
+    alias:
+    alias_verified_source_icon:
+    alias_time:
+}
+
+ALIAS-GROUP {
+    alias.highlighted: false
+    alias.linked: false
+    alias.locked: false
+    alias.disabled: false
+    alias.comments: false
+    alias.history: true
+    alias.history_visible: true
+}
+
+ALIAS-COMMENTS {
+    N/A
+}
+
+ALIAS-HISTORY {
+    N/A
+}
+
+———————————————————————————————————————————————————————
+—————————————————————[ ALTER-EGO ]—————————————————————
+———————————————————————————————————————————————————————
+ALTER-EGO-DATA {
+    alter_ego:
+    alter_ego_verified_source_icon:
+    alter_ego_time:
+}
+
+ALTER-EGO-GROUP {
+    alter_ego.highlighted: false
+    alter_ego.linked: false
+    alter_ego.locked: false
+    alter_ego.disabled: false
+    alter_ego.comments: false
+    alter_ego.history: true
+    alter_ego.history_visible: true
+}
+
+ALTER-EGO-COMMENTS {
+    N/A
+}
+
+ALTER-EGO-HISTORY {
+    N/A
+}
+
+———————————————————————————————————————————————————————
+——————————————————————[ PREFIX ]———————————————————————
+———————————————————————————————————————————————————————
+PREFIX-DATA {
+    prefix:
+    prefix_verified_source_icon:
+    prefix_time:
+}
+
+PREFIX-GROUP {
+    prefix.highlighted: false
+    prefix.linked: false
+    prefix.locked: false
+    prefix.disabled: false
+    prefix.comments: false
+    prefix.history: true
+    prefix.history_visible: true
+}
+
+PREFIX-COMMENTS {
+    N/A
+}
+
+PREFIX-HISTORY {
+    N/A
+}
+
+———————————————————————————————————————————————————————
+——————————————————————[ SUFFIX ]———————————————————————
+———————————————————————————————————————————————————————
+SUFFIX-DATA {
+    suffix:
+    suffix_verified_source_icon:
+    suffix_time:
+}
+
+SUFFIX-GROUP {
+    suffix.highlighted: false
+    suffix.linked: false
+    suffix.locked: false
+    suffix.disabled: false
+    suffix.comments: false
+    suffix.history: true
+    suffix.history_visible: true
+}
+
+SUFFIX-COMMENTS {
+    N/A
+}
+
+SUFFIX-HISTORY {
+    N/A
+}
+
+———————————————————————————————————————————————————————
+————————————————————[ FORMER-NAME ]————————————————————
+———————————————————————————————————————————————————————
+FORMER-NAME-DATA {
+    former_name:
+    former_name_verified_source_icon:
+    former_name_time:
+}
+
+FORMER-NAME-GROUP {
+    former_name.highlighted: false
+    former_name.linked: false
+    former_name.locked: false
+    former_name.disabled: false
+    former_name.comments: false
+    former_name.history: true
+    former_name.history_visible: true
+}
+
+FORMER-NAME-COMMENTS {
+    N/A
+}
+
+FORMER-NAME-HISTORY {
+    N/A
+}
+
+———————————————————————————————————————————————————————
+————————————————————[ NAME-ORIGIN ]————————————————————
+———————————————————————————————————————————————————————
+NAME-ORIGIN-DATA {
+    name_origin:
+    name_origin_verified_source_icon:
+    name_origin_time:
+}
+
+NAME-ORIGIN-GROUP {
+    name_origin.highlighted: false
+    name_origin.linked: false
+    name_origin.locked: false
+    name_origin.disabled: false
+    name_origin.comments: false
+    name_origin.history: true
+    name_origin.history_visible: true
+}
+
+NAME-ORIGIN-COMMENTS {
+    N/A
+}
+
+NAME-ORIGIN-HISTORY {
+    N/A
+}
+
+———————————————————————————————————————————————————————
+——————————————[ PERSONAL-THOUGHTS-NAME ]———————————————
+———————————————————————————————————————————————————————
+PERSONAL-THOUGHTS-NAME-DATA {
+    personal_thoughts_name:
+    personal_thoughts_name_verified_source_icon:
+    personal_thoughts_name_time:
+}
+
+PERSONAL-THOUGHTS-NAME-GROUP {
+    personal_thoughts_name.highlighted: false
+    personal_thoughts_name.linked: false
+    personal_thoughts_name.locked: false
+    personal_thoughts_name.disabled: false
+    personal_thoughts_name.comments: false
+    personal_thoughts_name.history: true
+    personal_thoughts_name.history_visible: true
+}
+
+PERSONAL-THOUGHTS-NAME-COMMENTS {
+    N/A
+}
+
+PERSONAL-THOUGHTS-NAME-HISTORY {
+    N/A
+}

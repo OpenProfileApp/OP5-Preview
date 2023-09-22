@@ -113,7 +113,7 @@ function onLoadAll() {
     
     setTimeout(() => {
         onLoadEmojis();
-    }, 800); // Adjust the duration as needed
+    }, 1000); // Adjust the duration as needed
     onLoadElse();
 
     // —————————————————[ DEVELOPER-CONSOLE ]—————————————————— //
