@@ -13,8 +13,8 @@ function history_option() {
     const history_group = document.getElementById(`${groupId}_history_group`);
 
     if (textBox) {
-      if (!textBox.readOnly) {
-        // Toggle the readOnly property based on the current state
+      if (!textBox.locked) {
+        // Toggle the locked property based on the current state
         textBox.history = !textBoxStatesHistory[textBox.id]; // Toggle based on stored state
 
         // Update the state for this textbox
@@ -56,8 +56,8 @@ function history_option2(groupId, history) {
   const history_group = document.getElementById(`${groupId}_history_group`);
 
   if (textBox) {
-    if (!textBox.readOnly) {
-      // Toggle the readOnly property based on the provided highlighted parameter
+    if (!textBox.locked) {
+      // Toggle the locked property based on the provided highlighted parameter
       textBox.history = history;
 
       // Update the state for this textbox
@@ -74,8 +74,8 @@ function history_option2(groupId, history) {
         history_group.style.opacity = "1"
       }
     } else {
-      colorOption.style.opacity = "0.35"; // Fade the color option
-      colorOption.style.pointerEvents = "none"; // Disable pointer events
+      historyOption.style.opacity = "0.35"; // Fade the color option
+      historyOption.style.pointerEvents = "none"; // Disable pointer events
     }
     console.log("Color Group ID:", groupId);
     console.log("Color TextBox:", textBox.history);

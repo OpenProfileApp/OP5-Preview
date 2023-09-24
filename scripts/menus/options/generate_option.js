@@ -8,8 +8,8 @@ function generate_option() {
     const textBox = document.getElementById(`${groupId}`);
 
     if (textBox) {
-      // Check if the input is not readonly
-      if (!textBox.readOnly) {
+      // Check if the input is not locked
+      if (!textBox.locked) {
         const functionName = `generate_${groupId}`;
 
         if (typeof window[functionName] === "function") {

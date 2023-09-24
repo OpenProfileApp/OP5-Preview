@@ -111,7 +111,7 @@ function disable_option2(groupId, disabled) {
     const timetab = document.getElementById(`${groupId}_history_tab`);
 
   if (textBox) {
-    if (!textBox.readOnly) {
+    if (!textBox.locked) {
       // Toggle the readOnly property based on the provided highlighted parameter
       textBox.disabled = disabled;
 

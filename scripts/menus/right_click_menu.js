@@ -46,7 +46,7 @@ document.addEventListener("contextmenu", (e) => {
                 translateToActive(selectedLanguage);
               }
 
-            if (textBox.readOnly) {
+            if (textBox.locked) {
                 lockOption.setAttribute('option', 'option_2');
                 translateToActive(selectedLanguage);
                 generateOption.style.opacity = "0.35"; // Fade the generate option
@@ -102,7 +102,7 @@ document.addEventListener("contextmenu", (e) => {
                 source_history.style.pointerEvents = "auto"; // Disable pointer events
             }
 
-            if (textBox.readOnly) {
+            if (textBox.locked) {
                 textBox.setAttribute('option', 'option_2');
                 generateOption.style.opacity = "0.35"; // Fade the generate option
                 generateOption.style.pointerEvents = "none"; // Disable pointer events

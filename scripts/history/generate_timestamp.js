@@ -135,3 +135,25 @@ document.addEventListener('DOMContentLoaded', function () {
       }
   }
 });
+
+
+function TimestampPosition(groupId) {
+    const lastModified = document.getElementById(`${groupId}_time`);
+    const targetElement = document.getElementById(`${groupId}_history_tab`);
+    const history_group = document.getElementById(`${groupId}_history_group`);
+    if (lastModified.textContent !== "") {
+      lastModified.style.opacity = '1';
+      targetElement.style.height = '15px';
+      targetElement.style.width = '59px';
+      history_group.style.left = (109.5 - 44) + "px";
+    } else {
+      lastModified.textContent = '';
+      lastModified.style.opacity = '0';
+      targetElement.style.height = '11px';
+      targetElement.style.width = '15px';
+      history_group.style.left = '109.5px';
+    }
+  }
+
+  // Call the TimestampPosition function here with the appropriate arguments
+  TimestampPosition(lastModified);

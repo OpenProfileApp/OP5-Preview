@@ -16,14 +16,15 @@ function lock_option() {
     const source_history = document.querySelector("#history_option");
 
     if (textBox) {
-      // Toggle the readOnly property based on the current state
-      textBox.readOnly = !textBoxStatesLocked[textBox.id]; // Toggle based on stored state
+      // Toggle the locked property based on the current state
+      textBox.locked = !textBoxStatesLocked[textBox.id]; // Toggle based on stored state
 
       // Update the state for this textbox
-      textBoxStatesLocked[textBox.id] = textBox.readOnly;
+      textBoxStatesLocked[textBox.id] = textBox.locked;
 
       // Update the text and lock option accordingly
-      if (textBox.readOnly) {
+      if (textBox.locked) {
+        textBox.readonly = true;
         lockOption.setAttribute('option', 'option_2');
         savedvalue = textBox.value;
         textBox.value = (textBox.value + "🔒");
@@ -36,6 +37,7 @@ function lock_option() {
         source_history.style.opacity = "0.35"; // Fade the color option
         source_history.style.pointerEvents = "none"; // Disable pointer events
       } else {
+        textBox.readonly = false;
         lockOption.setAttribute('option', 'option_1')
         textBox.value = savedvalue
         generateOption.style.opacity = "1"; // Restore generate option opacity
@@ -59,3 +61,55 @@ function lock_option() {
 document.querySelector("#lock_option").addEventListener("click", () => {
   lock_option();
 });
+
+// Handle "Lock" option click
+function lock_option2(groupId, locked) {
+  // Use the ID to target the associated text box and group
+    const textBox = document.getElementById(groupId);
+    const disableOption = document.querySelector("#disable_option");
+    const lockOption = document.querySelector("#lock_option");
+    const generateOption = document.querySelector("#generate_option");
+    const colorOption = document.querySelector("#color_option");
+    const source_history = document.querySelector("#history_option");
+
+  if (textBox) {
+
+      // Toggle the locked property based on the provided highlighted parameter
+      textBox.locked = locked;
+
+      // Update the state for this textbox
+      textBoxStatesLocked[textBox.id] = textBox.locked;
+
+      // Update the text and lock option accordingly
+      if (textBox.locked) {
+        textBox.readonly = true;
+        lockOption.setAttribute('option', 'option_2');
+        savedvalue = textBox.value;
+        generateOption.style.opacity = "0.35"; // Fade the generate option
+        generateOption.style.pointerEvents = "none"; // Disable pointer events
+        colorOption.style.opacity = "0.35"; // Fade the color option
+        colorOption.style.pointerEvents = "none"; // Disable pointer events
+        disableOption.style.opacity = "0.35"; // Fade the lock option
+        disableOption.style.pointerEvents = "none"; // Disable pointer events
+        source_history.style.opacity = "0.35"; // Fade the color option
+        source_history.style.pointerEvents = "none"; // Disable pointer events
+      } else {
+        textBox.readonly = false;
+        lockOption.setAttribute('option', 'option_1')
+        textBox.value = savedvalue
+        generateOption.style.opacity = "1"; // Restore generate option opacity
+        generateOption.style.pointerEvents = "auto"; // Enable pointer events
+        colorOption.style.opacity = "1"; // Restore color option opacity
+        colorOption.style.pointerEvents = "auto"; // Enable pointer events
+        disableOption.style.opacity = "1"; // Restore lock option opacity
+        disableOption.style.pointerEvents = "auto"; // Enable pointer events
+        source_history.style.opacity = "1"; // Fade the color option
+        source_history.style.pointerEvents = "auto"; // Disable pointer events
+      }
+
+    console.log("Locked Group ID:", groupId);
+    console.log("Locked TextBox:", textBox.locked);
+
+    closeContextMenu();
+  }
+}

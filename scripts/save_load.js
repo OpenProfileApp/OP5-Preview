@@ -79,17 +79,22 @@ FULL-NAME {
   full_name_time: ${full_name_time.textContent || ""}
   full_name_highlighted: ${full_name.highlighted || undefined == "false"}
   full_name_linked: ${full_name.linked || undefined == "false"}
-  full_name_locked: ${full_name.readonly || undefined == "false"}
+  full_name_locked: ${full_name.locked || undefined == "false"}
   full_name_disabled: ${full_name.disabled || undefined == "false"}
   full_name_comments: NOT YET AVALIABLE
   full_name_history: ${!full_name.history || undefined == "true"}
 }
 
 FIRST-NAME {
-  first_name: ${first_name.value || ""}
-  first_name_verified_source_icon: ${first_name_verified_source_icon.href || ""}
-  first_name_time: ${first_name_time.textContent || ""}
-  // Add more fields for other data here
+    first_name: ${first_name.value || ""}
+    first_name_verified_source_icon: ${first_name_verified_source_icon.href || ""}
+    first_name_time: ${first_name_time.textContent || ""}
+    first_name_highlighted: ${first_name.highlighted || undefined == "false"}
+    first_name_linked: ${first_name.linked || undefined == "false"}
+    first_name_locked: ${first_name.locked || undefined == "false"}
+    first_name_disabled: ${first_name.disabled || undefined == "false"}
+    first_name_comments: NOT YET AVALIABLE
+    first_name_history: ${!first_name.history || undefined == "true"}
 }`;
 
 // Merge custom download content with data
@@ -141,7 +146,7 @@ FULL-NAME {
   full_name_time: ${full_name_time.textContent || ""}
   full_name_highlighted: ${full_name.highlighted || undefined == "false"}
   full_name_linked: ${full_name.linked || undefined == "false"}
-  full_name_locked: ${full_name.readonly || undefined == "false"}
+  full_name_locked: ${full_name.locked || undefined == "false"}
   full_name_disabled: ${full_name.disabled || undefined == "false"}
   full_name_comments: NOT YET AVALIABLE
   full_name_history: ${!full_name.history || undefined == "true"}
@@ -152,6 +157,29 @@ FULL-NAME-COMMENTS {
 }
 
 FULL-NAME-HISTORY {
+    N/A
+}
+
+———————————————————————————————————————————————————————
+————————————————————[ FIRST-NAME ]—————————————————————
+———————————————————————————————————————————————————————
+FIRST-NAME {
+  first_name: ${first_name.value || ""}
+  first_name_verified_source_icon: ${first_name_verified_source_icon.href || ""}
+  first_name_time: ${first_name_time.textContent || ""}
+  first_name_highlighted: ${first_name.highlighted || undefined == "false"}
+  first_name_linked: ${first_name.linked || undefined == "false"}
+  first_name_locked: ${first_name.locked || undefined == "false"}
+  first_name_disabled: ${first_name.disabled || undefined == "false"}
+  first_name_comments: NOT YET AVALIABLE
+  first_name_history: ${!first_name.history || undefined == "true"}
+}
+
+FIRST-NAME-COMMENTS {
+    N/A
+}
+
+FIRST-NAME-HISTORY {
     N/A
 }`;
 
@@ -204,25 +232,54 @@ function populateFormFields(data) {
             full_name.value = unescapeNewlines(parsedData['full_name']) || "";
             full_name_verified_source_icon.href = unescapeNewlines(parsedData['full_name_verified_source_icon']) || "";
             full_name_time.textContent = unescapeNewlines(parsedData['full_name_time']) || "";
+            TimestampPosition('full_name');
             const full_name_highlighted = parsedData['full_name_highlighted'] === "true";
             color_option2('full_name', full_name_highlighted);
             const full_name_linked = parsedData['full_name_linked'] === "true";
             source_option2('full_name', full_name_linked, unescapeNewlines(parsedData['full_name_verified_source_icon']));
-            //const full_name_locked = parsedData['full_name_locked'] === "true";
-            //lock_option2('full_name', full_name_locked);
+            const full_name_locked = parsedData['full_name_locked'] === "true";
+            lock_option2('full_name', full_name_locked);
             const full_name_disabled = parsedData['full_name_disabled'] === "true";
             disable_option2('full_name', full_name_disabled);
             ///COMMENTS LATER
             const full_name_history = parsedData['full_name_history'] === "true";
             history_option2('full_name', full_name_history);
-            
         }
 
         if (parsedData.hasOwnProperty('first_name')) {
             first_name.value = unescapeNewlines(parsedData['first_name']) || "";
             first_name_verified_source_icon.href = unescapeNewlines(parsedData['first_name_verified_source_icon']) || "";
             first_name_time.textContent = unescapeNewlines(parsedData['first_name_time']) || "";
-            // Add more fields for other data here
+            TimestampPosition('first_name');
+            const first_name_highlighted = parsedData['first_name_highlighted'] === "true";
+            color_option2('first_name', first_name_highlighted);
+            const first_name_linked = parsedData['first_name_linked'] === "true";
+            source_option2('first_name', first_name_linked, unescapeNewlines(parsedData['first_name_verified_source_icon']));
+            const first_name_locked = parsedData['first_name_locked'] === "true";
+            lock_option2('first_name', first_name_locked);
+            const first_name_disabled = parsedData['first_name_disabled'] === "true";
+            disable_option2('first_name', first_name_disabled);
+            ///COMMENTS LATER
+            const first_name_history = parsedData['first_name_history'] === "true";
+            history_option2('first_name', first_name_history);
+        }
+
+        if (parsedData.hasOwnProperty('QIUJYFGIFOP')) {
+            QIUJYFGIFOP.value = unescapeNewlines(parsedData['QIUJYFGIFOP']) || "";
+            QIUJYFGIFOP_verified_source_icon.href = unescapeNewlines(parsedData['QIUJYFGIFOP_verified_source_icon']) || "";
+            QIUJYFGIFOP_time.textContent = unescapeNewlines(parsedData['QIUJYFGIFOP_time']) || "";
+            TimestampPosition('QIUJYFGIFOP');
+            const QIUJYFGIFOP_highlighted = parsedData['QIUJYFGIFOP_highlighted'] === "true";
+            color_option2('QIUJYFGIFOP', QIUJYFGIFOP_highlighted);
+            const QIUJYFGIFOP_linked = parsedData['QIUJYFGIFOP_linked'] === "true";
+            source_option2('QIUJYFGIFOP', QIUJYFGIFOP_linked, unescapeNewlines(parsedData['QIUJYFGIFOP_verified_source_icon']));
+            const QIUJYFGIFOP_locked = parsedData['QIUJYFGIFOP_locked'] === "true";
+            lock_option2('QIUJYFGIFOP', QIUJYFGIFOP_locked);
+            const QIUJYFGIFOP_disabled = parsedData['QIUJYFGIFOP_disabled'] === "true";
+            disable_option2('QIUJYFGIFOP', QIUJYFGIFOP_disabled);
+            ///COMMENTS LATER
+            const QIUJYFGIFOP_history = parsedData['QIUJYFGIFOP_history'] === "true";
+            history_option2('QIUJYFGIFOP', QIUJYFGIFOP_history);
         }
     }
 }

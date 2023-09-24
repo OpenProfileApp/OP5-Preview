@@ -12,8 +12,8 @@ function color_option() {
     const colorOption = document.querySelector("#color_option");
 
     if (textBox) {
-      if (!textBox.readOnly) {
-        // Toggle the readOnly property based on the current state
+      if (!textBox.locked) {
+        // Toggle the locked property based on the current state
         textBox.highlighted = !textBoxStatesColored[textBox.id]; // Toggle based on stored state
 
         // Update the state for this textbox
@@ -51,8 +51,8 @@ function color_option2(groupId, highlighted) {
   const colorOption = document.querySelector("#color_option");
 
   if (textBox) {
-    if (!textBox.readOnly) {
-      // Toggle the readOnly property based on the provided highlighted parameter
+    if (!textBox.locked) {
+      // Toggle the locked property based on the provided highlighted parameter
       textBox.highlighted = highlighted;
 
       // Update the state for this textbox

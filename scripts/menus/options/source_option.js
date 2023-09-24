@@ -15,7 +15,7 @@ function source_option() {
     const source_option = document.querySelector("#source_option");
 
     if (textBox) {
-      if (!textBox.readOnly) {
+      if (!textBox.locked) {
         if (!textBoxStatesSource[textBox.id]) {
           // Prompt the user for a link
           const link = prompt("Enter the link:");
@@ -82,8 +82,8 @@ function source_option2(groupId, linked, link) {
   const faviconElement = document.getElementById(`${groupId}_verified_source_favicon`);
 
   if (textBox) {
-    if (!textBox.readOnly) {
-      // Toggle the readOnly property based on the provided highlighted parameter
+    if (!textBox.locked) {
+      // Toggle the locked property based on the provided highlighted parameter
       textBox.linked = linked;
 
       // Update the state for this textbox
