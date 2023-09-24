@@ -79,7 +79,10 @@ FULL-NAME {
   full_name_time: ${full_name_time.textContent || ""}
   full_name_highlighted: ${full_name.highlighted || undefined == "false"}
   full_name_linked: ${full_name.linked || undefined == "false"}
-  full_name_locked: ${full_name.locked || undefined == "false"}
+  full_name_locked: ${full_name.readonly || undefined == "false"}
+  full_name_disabled: ${full_name.disabled || undefined == "false"}
+  full_name_comments: NOT YET AVALIABLE
+  full_name_history: ${!full_name.history || undefined == "true"}
 }
 
 FIRST-NAME {
@@ -105,7 +108,7 @@ const mergedData = `————————————————————
 ———————————————————————————————————————————————————————
 app_version: ${escapeNewlines(configVersion)}
 profile_version: v1.0.0
-character_id: dc-batman
+character_id: op5-perseus
 verified: false
 language: ${escapeNewlines(configLanguage)}
 theme: ${escapeNewlines(configTheme)}
@@ -138,11 +141,10 @@ FULL-NAME {
   full_name_time: ${full_name_time.textContent || ""}
   full_name_highlighted: ${full_name.highlighted || undefined == "false"}
   full_name_linked: ${full_name.linked || undefined == "false"}
-  full_name_locked: ${full_name.locked || undefined == "false"}
-  full_name_disabled: false
-  full_name_comments: false
-  full_name_history: true
-  full_name_history_visible: true
+  full_name_locked: ${full_name.readonly || undefined == "false"}
+  full_name_disabled: ${full_name.disabled || undefined == "false"}
+  full_name_comments: NOT YET AVALIABLE
+  full_name_history: ${!full_name.history || undefined == "true"}
 }
 
 FULL-NAME-COMMENTS {
@@ -206,8 +208,13 @@ function populateFormFields(data) {
             color_option2('full_name', full_name_highlighted);
             const full_name_linked = parsedData['full_name_linked'] === "true";
             source_option2('full_name', full_name_linked, unescapeNewlines(parsedData['full_name_verified_source_icon']));
-            const full_name_locked = parsedData['full_name_locked'] === "true";
-            lock_option2('full_name', full_name_locked);
+            //const full_name_locked = parsedData['full_name_locked'] === "true";
+            //lock_option2('full_name', full_name_locked);
+            const full_name_disabled = parsedData['full_name_disabled'] === "true";
+            disable_option2('full_name', full_name_disabled);
+            ///COMMENTS LATER
+            const full_name_history = parsedData['full_name_history'] === "true";
+            history_option2('full_name', full_name_history);
             
         }
 
