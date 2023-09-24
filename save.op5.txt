@@ -12,9 +12,11 @@
 ———————————————[ OPENPROFILE-CHARACTER ]———————————————
 ———————————————————————————————————————————————————————
 app_version:
-profile_version:
-language:
-theme:
+profile_version: v1.0.0
+character_id: dc-batman
+verified: false
+language: en-us
+theme: preview
 
 CREDITS {
     openprofile_developer: AvatarKage (developer)
@@ -24,34 +26,31 @@ CREDITS {
 ———————————————————————————————————————————————————————
 ———————————————————[ PAGE-AUTHOR-1 ]———————————————————
 ———————————————————————————————————————————————————————
-PAGE-AUTHOR-1-DATA {
+PAGE-AUTHOR-1 {
     page_author_1:
 }
 
 ———————————————————————————————————————————————————————
 ——————————————————[ WRITTEN-DATE-1 ]———————————————————
 ———————————————————————————————————————————————————————
-WRITTEN-DATE-1-DATA {
+WRITTEN-DATE-1 {
     written_date_1:
 }
 
 ———————————————————————————————————————————————————————
 —————————————————————[ FULL-NAME ]—————————————————————
 ———————————————————————————————————————————————————————
-FULL-NAME-DATA {
-    full_name:
-    full_name_verified_source_icon:
-    full_name_time:
-}
-
-FULL-NAME-GROUP {
-    full_name.highlighted: false
-    full_name.linked: false
-    full_name.locked: false
-    full_name.disabled: false
-    full_name.comments: false
-    full_name.history: true
-    full_name.history_visible: true
+FULL-NAME {
+  full_name:
+  full_name_verified_source_icon:
+  full_name_time:
+  full_name_highlighted:
+  first_name_linked: false
+  first_name_locked: false
+  first_name_disabled: false
+  first_name_comments: false
+  first_name_history: true
+  first_name_history_visible: true
 }
 
 FULL-NAME-COMMENTS {
@@ -65,7 +64,7 @@ FULL-NAME-HISTORY {
 ———————————————————————————————————————————————————————
 ————————————————————[ FIRST-NAME ]—————————————————————
 ———————————————————————————————————————————————————————
-FIRST-NAME-DATA {
+FIRST-NAME {
     first_name:
     first_name_verified_source_icon:
     first_name_time:
@@ -92,7 +91,7 @@ FIRST-NAME-HISTORY {
 ———————————————————————————————————————————————————————
 ————————————————————[ MIDDLE-NAME ]————————————————————
 ———————————————————————————————————————————————————————
-MIDDLE-NAME-DATA {
+MIDDLE-NAME {
     middle_name:
     middle_name_verified_source_icon:
     middle_name_time:
@@ -119,7 +118,7 @@ MIDDLE-NAME-HISTORY {
 ———————————————————————————————————————————————————————
 —————————————————————[ LAST-NAME ]—————————————————————
 ———————————————————————————————————————————————————————
-LAST-NAME-DATA {
+LAST-NAME {
     last_name:
     last_name_verified_source_icon:
     last_name_time:
@@ -146,7 +145,7 @@ LAST-NAME-HISTORY {
 ———————————————————————————————————————————————————————
 —————————————————————[ NICKNAME ]——————————————————————
 ———————————————————————————————————————————————————————
-NICKNAME-DATA {
+NICKNAME {
     nickname:
     nickname_verified_source_icon:
     nickname_time:
@@ -173,7 +172,7 @@ NICKNAME-HISTORY {
 ———————————————————————————————————————————————————————
 ———————————————————————[ ALIAS ]———————————————————————
 ———————————————————————————————————————————————————————
-ALIAS-DATA {
+ALIAS {
     alias:
     alias_verified_source_icon:
     alias_time:
@@ -200,7 +199,7 @@ ALIAS-HISTORY {
 ———————————————————————————————————————————————————————
 —————————————————————[ ALTER-EGO ]—————————————————————
 ———————————————————————————————————————————————————————
-ALTER-EGO-DATA {
+ALTER-EGO {
     alter_ego:
     alter_ego_verified_source_icon:
     alter_ego_time:
@@ -227,7 +226,7 @@ ALTER-EGO-HISTORY {
 ———————————————————————————————————————————————————————
 ——————————————————————[ PREFIX ]———————————————————————
 ———————————————————————————————————————————————————————
-PREFIX-DATA {
+PREFIX {
     prefix:
     prefix_verified_source_icon:
     prefix_time:
@@ -254,7 +253,7 @@ PREFIX-HISTORY {
 ———————————————————————————————————————————————————————
 ——————————————————————[ SUFFIX ]———————————————————————
 ———————————————————————————————————————————————————————
-SUFFIX-DATA {
+SUFFIX {
     suffix:
     suffix_verified_source_icon:
     suffix_time:
@@ -281,7 +280,7 @@ SUFFIX-HISTORY {
 ———————————————————————————————————————————————————————
 ————————————————————[ FORMER-NAME ]————————————————————
 ———————————————————————————————————————————————————————
-FORMER-NAME-DATA {
+FORMER-NAME {
     former_name:
     former_name_verified_source_icon:
     former_name_time:
@@ -308,7 +307,7 @@ FORMER-NAME-HISTORY {
 ———————————————————————————————————————————————————————
 ————————————————————[ NAME-ORIGIN ]————————————————————
 ———————————————————————————————————————————————————————
-NAME-ORIGIN-DATA {
+NAME-ORIGIN {
     name_origin:
     name_origin_verified_source_icon:
     name_origin_time:
@@ -335,7 +334,7 @@ NAME-ORIGIN-HISTORY {
 ———————————————————————————————————————————————————————
 ——————————————[ PERSONAL-THOUGHTS-NAME ]———————————————
 ———————————————————————————————————————————————————————
-PERSONAL-THOUGHTS-NAME-DATA {
+PERSONAL-THOUGHTS-NAME {
     personal_thoughts_name:
     personal_thoughts_name_verified_source_icon:
     personal_thoughts_name_time:

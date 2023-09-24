@@ -71,7 +71,70 @@ document.querySelector("#source_option").addEventListener("click", () => {
   source_option();
 });
 
-// Validation function (you can customize this function to suit your needs)
+// Handle "Lock" option click
+function source_option2(groupId, linked, link) {
+  // Use the ID to target the associated text box and group
+  const textBox = document.getElementById(`${groupId}`);
+  const source_group = document.getElementById(`${groupId}_verified_source_group`);
+  const source_icon = document.getElementById(`${groupId}_verified_source_icon`);
+  const source_tab = document.getElementById(`${groupId}_verified_source_tab`);
+  const source_option = document.querySelector("#source_option");
+  const faviconElement = document.getElementById(`${groupId}_verified_source_favicon`);
+
+  if (textBox) {
+    if (!textBox.readOnly) {
+      // Toggle the readOnly property based on the provided highlighted parameter
+      textBox.linked = linked;
+
+      // Update the state for this textbox
+      textBoxStatesSource[textBox.id] = textBox.linked;
+
+      // Update the text and lock option accordingly
+      if (textBox.linked) {
+        source_option.setAttribute('option', 'option_2');
+        source_group.style.top = "6px";
+        source_icon.style.top = "4.5px";
+        source_group.style.opacity = "1";
+        source_tab.style.height = "15px";
+        
+        if (isValidLink(link)) {
+          // Display the favicon if the link is valid
+          displayFavicon(link, faviconElement);
+        } else {
+          // Handle invalid link here
+          console.error("Invalid link:", link);
+          // You can set a default or display an error icon
+        }
+      } else {
+        source_option.setAttribute('option', 'option_1');
+        source_group.style.top = "18px";
+        source_icon.style.top = "2.5px";
+        source_group.style.opacity = "0";
+        source_tab.style.height = "11px";
+        // Clear the favicon when unlocking
+        faviconElement.src = "";
+      }
+    } else {
+      source_option.style.opacity = "0.35"; // Fade the color option
+      source_option.style.pointerEvents = "none"; // Disable pointer events
+    }
+    console.log("Source Group ID:", groupId);
+    console.log("Source TextBox:", textBox.linked);
+
+    closeContextMenu();
+  }
+}
+
+function displayFavicon(url, faviconElement) {
+  // Generate the favicon URL using favicon.io
+  const faviconUrl = `https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=${encodeURIComponent(url)}&size=64`;
+
+  // Set the src attribute of the image element to the favicon URL
+  faviconElement.src = faviconUrl;
+  updateVerifiedSourcePosition();
+}
+
+// Function to check if a link is valid (you can customize this function)
 function isValidLink(link) {
   // Implement your link validation logic here
   // For example, you can use regular expressions to check for a valid URL format
