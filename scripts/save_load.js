@@ -233,7 +233,7 @@ const mergedData = `————————————————————
   / _ \ _ __  ___ _ _ | _ \_ _ ___ / _(_) |___  | __|
  | (_) | '_ \/ -_) ' \|  _/ '_/ _ \  _| | / -_) |__ \
   \___/| .__/\___|_||_|_| |_| \___/_| |_|_\___| |___/
-       |_|                                              
+       |_|                                                                                                                                    
            ->  https://op5.avatarkage.com  <-
 
 ———————————————————————————————————————————————————————
@@ -602,7 +602,8 @@ function populateFormFields(data) {
             source_option2('full_name', full_name_linked, unescapeNewlines(parsedData['full_name_verified_source_icon']));
             const full_name_locked = parsedData['full_name_locked'] === "true";
             lock_option2('full_name', full_name_locked);
-            ///DISABLED LATER
+            const full_name_disabled = parsedData['full_name_disabled'] === "true";
+            disable_option2('full_name', full_name_disabled);
             ///COMMENTS LATER
             const full_name_history = parsedData['full_name_history'] === "true";
             history_option2('full_name', full_name_history);
@@ -619,7 +620,8 @@ function populateFormFields(data) {
             source_option2('first_name', first_name_linked, unescapeNewlines(parsedData['first_name_verified_source_icon']));
             const first_name_locked = parsedData['first_name_locked'] === "true";
             lock_option2('first_name', first_name_locked);
-            ///DISABLED LATER
+            const first_name_disabled = parsedData['first_name_disabled'] === "true";
+            disable_option2('first_name', first_name_disabled);
             ///COMMENTS LATER
             const first_name_history = parsedData['first_name_history'] === "true";
             history_option2('first_name', first_name_history);
@@ -636,7 +638,8 @@ function populateFormFields(data) {
             source_option2('middle_name', middle_name_linked, unescapeNewlines(parsedData['middle_name_verified_source_icon']));
             const middle_name_locked = parsedData['middle_name_locked'] === "true";
             lock_option2('middle_name', middle_name_locked);
-            ///DISABLED LATER
+            const middle_name_disabled = parsedData['middle_name_disabled'] === "true";
+            disable_option2('middle_name', middle_name_disabled);
             ///COMMENTS LATER
             const middle_name_history = parsedData['middle_name_history'] === "true";
             history_option2('middle_name', middle_name_history);
@@ -653,7 +656,8 @@ function populateFormFields(data) {
             source_option2('last_name', last_name_linked, unescapeNewlines(parsedData['last_name_verified_source_icon']));
             const last_name_locked = parsedData['last_name_locked'] === "true";
             lock_option2('last_name', last_name_locked);
-            ///DISABLED LATER
+            const last_name_disabled = parsedData['last_name_disabled'] === "true";
+            disable_option2('last_name', last_name_disabled);
             ///COMMENTS LATER
             const last_name_history = parsedData['last_name_history'] === "true";
             history_option2('last_name', last_name_history);
@@ -670,7 +674,8 @@ function populateFormFields(data) {
             source_option2('nickname', nickname_linked, unescapeNewlines(parsedData['nickname_verified_source_icon']));
             const nickname_locked = parsedData['nickname_locked'] === "true";
             lock_option2('nickname', nickname_locked);
-            ///DISABLED LATER
+            const nickname_disabled = parsedData['nickname_disabled'] === "true";
+            disable_option2('nickname', nickname_disabled);
             ///COMMENTS LATER
             const nickname_history = parsedData['nickname_history'] === "true";
             history_option2('nickname', nickname_history);
@@ -687,7 +692,8 @@ function populateFormFields(data) {
             source_option2('alias', alias_linked, unescapeNewlines(parsedData['alias_verified_source_icon']));
             const alias_locked = parsedData['alias_locked'] === "true";
             lock_option2('alias', alias_locked);
-            ///DISABLED LATER
+            const alias_disabled = parsedData['alias_disabled'] === "true";
+            disable_option2('alias', alias_disabled);
             ///COMMENTS LATER
             const alias_history = parsedData['alias_history'] === "true";
             history_option2('alias', alias_history);
@@ -704,7 +710,8 @@ function populateFormFields(data) {
             source_option2('alter_ego', alter_ego_linked, unescapeNewlines(parsedData['alter_ego_verified_source_icon']));
             const alter_ego_locked = parsedData['alter_ego_locked'] === "true";
             lock_option2('alter_ego', alter_ego_locked);
-            ///DISABLED LATER
+            const alter_ego_disabled = parsedData['alter_ego_disabled'] === "true";
+            disable_option2('alter_ego', alter_ego_disabled);
             ///COMMENTS LATER
             const alter_ego_history = parsedData['alter_ego_history'] === "true";
             history_option2('alter_ego', alter_ego_history);
@@ -721,7 +728,8 @@ function populateFormFields(data) {
             source_option2('prefix', prefix_linked, unescapeNewlines(parsedData['prefix_verified_source_icon']));
             const prefix_locked = parsedData['prefix_locked'] === "true";
             lock_option2('prefix', prefix_locked);
-            ///DISABLED LATER
+            const prefix_disabled = parsedData['prefix_disabled'] === "true";
+            disable_option2('prefix', prefix_disabled);
             ///COMMENTS LATER
             const prefix_history = parsedData['prefix_history'] === "true";
             history_option2('prefix', prefix_history);
@@ -738,7 +746,8 @@ function populateFormFields(data) {
             source_option2('suffix', suffix_linked, unescapeNewlines(parsedData['suffix_verified_source_icon']));
             const suffix_locked = parsedData['suffix_locked'] === "true";
             lock_option2('suffix', suffix_locked);
-            ///DISABLED LATER
+            const suffix_disabled = parsedData['suffix_disabled'] === "true";
+            disable_option2('suffix', suffix_disabled);
             ///COMMENTS LATER
             const suffix_history = parsedData['suffix_history'] === "true";
             history_option2('suffix', suffix_history);
@@ -755,7 +764,8 @@ function populateFormFields(data) {
             source_option2('former_name', former_name_linked, unescapeNewlines(parsedData['former_name_verified_source_icon']));
             const former_name_locked = parsedData['former_name_locked'] === "true";
             lock_option2('former_name', former_name_locked);
-            ///DISABLED LATER
+            const former_name_disabled = parsedData['former_name_disabled'] === "true";
+            disable_option2('former_name', former_name_disabled);
             ///COMMENTS LATER
             const former_name_history = parsedData['former_name_history'] === "true";
             history_option2('former_name', former_name_history);
@@ -772,7 +782,8 @@ function populateFormFields(data) {
             source_option2('name_origin', name_origin_linked, unescapeNewlines(parsedData['name_origin_verified_source_icon']));
             const name_origin_locked = parsedData['name_origin_locked'] === "true";
             lock_option2('name_origin', name_origin_locked);
-            ///DISABLED LATER
+            const name_origin_disabled = parsedData['name_origin_disabled'] === "true";
+            disable_option2('first_name', name_origin_disabled);
             ///COMMENTS LATER
             const name_origin_history = parsedData['name_origin_history'] === "true";
             history_option2('name_origin', name_origin_history);
@@ -789,7 +800,8 @@ function populateFormFields(data) {
             source_option2('personal_thoughts_name', personal_thoughts_name_linked, unescapeNewlines(parsedData['personal_thoughts_name_verified_source_icon']));
             const personal_thoughts_name_locked = parsedData['personal_thoughts_name_locked'] === "true";
             lock_option2('personal_thoughts_name', personal_thoughts_name_locked);
-            ///DISABLED LATER
+            const personal_thoughts_name_disabled = parsedData['personal_thoughts_name_disabled'] === "true";
+            disable_option2('personal_thoughts_name', personal_thoughts_name_disabled);
             ///COMMENTS LATER
             const personal_thoughts_name_history = parsedData['personal_thoughts_name_history'] === "true";
             history_option2('personal_thoughts_name', personal_thoughts_name_history);

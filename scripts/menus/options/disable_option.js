@@ -31,6 +31,7 @@ function disable_option() {
 
       // Update the text and lock option accordingly
       if (textBox.disabled) {
+        textBox.disabled = true
         disableOption.setAttribute('option', 'option_2');
         group.style.opacity = "0.35"; // Update the group's opacity
         generateOption.style.opacity = "0.35"; // Fade the generate option
@@ -44,6 +45,7 @@ function disable_option() {
         source_history.style.pointerEvents = "none"; // Disable pointer events
         source_history.setAttribute('option', 'option_1');
         textBox.value = " "; // Set a space as the value
+        source_icon.href = " "; // Clear the href
         source_option.setAttribute('option', 'option_1');
         history_group.style.top = "9px"
         history_group.style.opacity = "0"
@@ -58,6 +60,7 @@ function disable_option() {
         timetab.style.height = "11px";
         history_group.style.left = (109.5 - 44) + "px";
       } else {
+        textBox.disabled = false
         disableOption.setAttribute('option', 'option_1');
         group.style.opacity = "1"; // Update the group's opacity
         generateOption.style.opacity = "1"; // Restore generate option opacity
@@ -65,13 +68,12 @@ function disable_option() {
         colorOption.style.opacity = "1"; // Fade the lock option
         colorOption.style.pointerEvents = "auto"; // Disable pointer events
         colorOption.setAttribute('option', 'option_1')
+        textBox.value = textBox.value.replace(/(\s)(?=[^\s]*$)/, '-');
         lockOption.style.opacity = "1"; // Restore lock option opacity
         lockOption.style.pointerEvents = "auto"; // Enable pointer events
         source_history.style.opacity = "1"; // Fade the color option
         source_history.style.pointerEvents = "auto"; // Disable pointer events
         source_history.setAttribute('option', 'option_1');
-        textBox.value = ""; // Clear the value
-        source_icon.href = " "; // Clear the href
         source_option.setAttribute('option', 'option_1');
         history_group.style.top = "19px"
         history_group.style.opacity = "1"
@@ -111,7 +113,7 @@ function disable_option2(groupId, disabled) {
     const timetab = document.getElementById(`${groupId}_history_tab`);
 
   if (textBox) {
-    if (!textBox.locked) {
+  
       // Toggle the readOnly property based on the provided highlighted parameter
       textBox.disabled = disabled;
 
@@ -120,6 +122,7 @@ function disable_option2(groupId, disabled) {
 
       // Update the text and lock option accordingly
       if (textBox.disabled) {
+        textBox.disabled = true
         disableOption.setAttribute('option', 'option_2');
         group.style.opacity = "0.35"; // Update the group's opacity
         generateOption.style.opacity = "0.35"; // Fade the generate option
@@ -133,6 +136,7 @@ function disable_option2(groupId, disabled) {
         source_history.style.pointerEvents = "none"; // Disable pointer events
         source_history.setAttribute('option', 'option_1');
         textBox.value = " "; // Set a space as the value
+        source_icon.href = " "; // Clear the href
         source_option.setAttribute('option', 'option_1');
         history_group.style.top = "9px"
         history_group.style.opacity = "0"
@@ -147,6 +151,7 @@ function disable_option2(groupId, disabled) {
         timetab.style.height = "11px";
         history_group.style.left = (109.5 - 44) + "px";
       } else {
+        textBox.disabled = false
         disableOption.setAttribute('option', 'option_1');
         group.style.opacity = "1"; // Update the group's opacity
         generateOption.style.opacity = "1"; // Restore generate option opacity
@@ -154,13 +159,12 @@ function disable_option2(groupId, disabled) {
         colorOption.style.opacity = "1"; // Fade the lock option
         colorOption.style.pointerEvents = "auto"; // Disable pointer events
         colorOption.setAttribute('option', 'option_1')
+        textBox.value = textBox.value.replace(/(\s)(?=[^\s]*$)/, '-');
         lockOption.style.opacity = "1"; // Restore lock option opacity
         lockOption.style.pointerEvents = "auto"; // Enable pointer events
         source_history.style.opacity = "1"; // Fade the color option
         source_history.style.pointerEvents = "auto"; // Disable pointer events
         source_history.setAttribute('option', 'option_1');
-        textBox.value = ""; // Clear the value
-        source_icon.href = " "; // Clear the href
         source_option.setAttribute('option', 'option_1');
         history_group.style.top = "19px"
         history_group.style.opacity = "1"
@@ -176,5 +180,4 @@ function disable_option2(groupId, disabled) {
     console.log("Color TextBox:", textBox.disabled);
 
     closeContextMenu();
-  }
 }
