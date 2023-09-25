@@ -26,7 +26,6 @@ function lock_option() {
       if (textBox.locked) {
         textBox.readOnly = true;
         lockOption.setAttribute('option', 'option_2');
-        savedvalue = textBox.value;
         textBox.value = (textBox.value + "🔒");
         generateOption.style.opacity = "0.35"; // Fade the generate option
         generateOption.style.pointerEvents = "none"; // Disable pointer events
@@ -39,7 +38,6 @@ function lock_option() {
       } else {
         textBox.readOnly = false;
         lockOption.setAttribute('option', 'option_1')
-        textBox.value = savedvalue
         textBox.value = textBox.value.replace("🔒", "");
         generateOption.style.opacity = "1"; // Restore generate option opacity
         generateOption.style.pointerEvents = "auto"; // Enable pointer events
@@ -85,7 +83,7 @@ function lock_option2(groupId, locked) {
       if (textBox.locked) {
         textBox.readOnly = true;
         lockOption.setAttribute('option', 'option_2');
-        savedvalue = textBox.value;
+        textBox.value = (textBox.value + "🔒");
         generateOption.style.opacity = "0.35"; // Fade the generate option
         generateOption.style.pointerEvents = "none"; // Disable pointer events
         colorOption.style.opacity = "0.35"; // Fade the color option
@@ -97,7 +95,6 @@ function lock_option2(groupId, locked) {
       } else {
         textBox.readOnly = false;
         lockOption.setAttribute('option', 'option_1')
-        textBox.value = savedvalue
         textBox.value = textBox.value.replace("🔒", "");
         generateOption.style.opacity = "1"; // Restore generate option opacity
         generateOption.style.pointerEvents = "auto"; // Enable pointer events
