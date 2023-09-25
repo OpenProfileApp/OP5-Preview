@@ -24,7 +24,7 @@ function lock_option() {
 
       // Update the text and lock option accordingly
       if (textBox.locked) {
-        textBox.readonly = true;
+        textBox.readOnly = true;
         lockOption.setAttribute('option', 'option_2');
         savedvalue = textBox.value;
         textBox.value = (textBox.value + "🔒");
@@ -37,9 +37,10 @@ function lock_option() {
         source_history.style.opacity = "0.35"; // Fade the color option
         source_history.style.pointerEvents = "none"; // Disable pointer events
       } else {
-        textBox.readonly = false;
+        textBox.readOnly = false;
         lockOption.setAttribute('option', 'option_1')
         textBox.value = savedvalue
+        textBox.value = textBox.value.replace("🔒", "");
         generateOption.style.opacity = "1"; // Restore generate option opacity
         generateOption.style.pointerEvents = "auto"; // Enable pointer events
         colorOption.style.opacity = "1"; // Restore color option opacity
@@ -82,7 +83,7 @@ function lock_option2(groupId, locked) {
 
       // Update the text and lock option accordingly
       if (textBox.locked) {
-        textBox.readonly = true;
+        textBox.readOnly = true;
         lockOption.setAttribute('option', 'option_2');
         savedvalue = textBox.value;
         generateOption.style.opacity = "0.35"; // Fade the generate option
@@ -94,9 +95,10 @@ function lock_option2(groupId, locked) {
         source_history.style.opacity = "0.35"; // Fade the color option
         source_history.style.pointerEvents = "none"; // Disable pointer events
       } else {
-        textBox.readonly = false;
+        textBox.readOnly = false;
         lockOption.setAttribute('option', 'option_1')
         textBox.value = savedvalue
+        textBox.value = textBox.value.replace("🔒", "");
         generateOption.style.opacity = "1"; // Restore generate option opacity
         generateOption.style.pointerEvents = "auto"; // Enable pointer events
         colorOption.style.opacity = "1"; // Restore color option opacity

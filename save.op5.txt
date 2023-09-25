@@ -11,12 +11,13 @@
 ———————————————————————————————————————————————————————
 ———————————————[ OPENPROFILE-CHARACTER ]———————————————
 ———————————————————————————————————————————————————————
-app_version:
+app_version: ${escapeNewlines(configVersion)}
 profile_version: v1.0.0
-character_id: dc-batman
+author: user-alice
+character_id: op5-perseus
 verified: false
-language: en-us
-theme: preview
+language: ${escapeNewlines(configLanguage)}
+theme: ${escapeNewlines(configTheme)}
 
 CREDITS {
     openprofile_developer: AvatarKage (developer)
@@ -27,30 +28,29 @@ CREDITS {
 ———————————————————[ PAGE-AUTHOR-1 ]———————————————————
 ———————————————————————————————————————————————————————
 PAGE-AUTHOR-1 {
-    page_author_1:
+    page_author_1: ${page_author_1.value || ""}
 }
 
 ———————————————————————————————————————————————————————
 ——————————————————[ WRITTEN-DATE-1 ]———————————————————
 ———————————————————————————————————————————————————————
 WRITTEN-DATE-1 {
-    written_date_1:
+    written_date_1: ${written_date_1.value || ""}
 }
 
 ———————————————————————————————————————————————————————
 —————————————————————[ FULL-NAME ]—————————————————————
 ———————————————————————————————————————————————————————
 FULL-NAME {
-  full_name:
-  full_name_verified_source_icon:
-  full_name_time:
-  full_name_highlighted:
-  first_name_linked: false
-  first_name_locked: false
-  first_name_disabled: false
-  first_name_comments: false
-  first_name_history: true
-  first_name_history_visible: true
+  full_name: ${full_name.value || ""}
+  full_name_verified_source_icon: ${full_name_verified_source_icon.href || ""}
+  full_name_time: ${full_name_time.textContent || ""}
+  full_name_highlighted: ${full_name.highlighted || undefined == "false"}
+  full_name_linked: ${full_name.linked || undefined == "false"}
+  full_name_locked: ${full_name.locked || undefined == "false"}
+  full_name_disabled: ${full_name.disabled || undefined == "false"}
+  full_name_comments: NOT YET AVALIABLE
+  full_name_history: ${!full_name.history || undefined == "true"}
 }
 
 FULL-NAME-COMMENTS {
@@ -65,19 +65,15 @@ FULL-NAME-HISTORY {
 ————————————————————[ FIRST-NAME ]—————————————————————
 ———————————————————————————————————————————————————————
 FIRST-NAME {
-    first_name:
-    first_name_verified_source_icon:
-    first_name_time:
-}
-
-FIRST-NAME-GROUP {
-    first_name.highlighted: false
-    first_name.linked: false
-    first_name.locked: false
-    first_name.disabled: false
-    first_name.comments: false
-    first_name.history: true
-    first_name.history_visible: true
+  first_name: ${first_name.value || ""}
+  first_name_verified_source_icon: ${first_name_verified_source_icon.href || ""}
+  first_name_time: ${first_name_time.textContent || ""}
+  first_name_highlighted: ${first_name.highlighted || undefined == "false"}
+  first_name_linked: ${first_name.linked || undefined == "false"}
+  first_name_locked: ${first_name.locked || undefined == "false"}
+  first_name_disabled: ${first_name.disabled || undefined == "false"}
+  first_name_comments: NOT YET AVALIABLE
+  first_name_history: ${!first_name.history || undefined == "true"}
 }
 
 FIRST-NAME-COMMENTS {
@@ -89,22 +85,18 @@ FIRST-NAME-HISTORY {
 }
 
 ———————————————————————————————————————————————————————
-————————————————————[ MIDDLE-NAME ]————————————————————
+————————————————————[ MIDDLE-NAME ]—————————————————————
 ———————————————————————————————————————————————————————
 MIDDLE-NAME {
-    middle_name:
-    middle_name_verified_source_icon:
-    middle_name_time:
-}
-
-MIDDLE-NAME-GROUP {
-    middle_name.highlighted: false
-    middle_name.linked: false
-    middle_name.locked: false
-    middle_name.disabled: false
-    middle_name.comments: false
-    middle_name.history: true
-    middle_name.history_visible: true
+  middle_name: ${middle_name.value || ""}
+  middle_name_verified_source_icon: ${middle_name_verified_source_icon.href || ""}
+  middle_name_time: ${middle_name_time.textContent || ""}
+  middle_name_highlighted: ${middle_name.highlighted || undefined == "false"}
+  middle_name_linked: ${middle_name.linked || undefined == "false"}
+  middle_name_locked: ${middle_name.locked || undefined == "false"}
+  middle_name_disabled: ${middle_name.disabled || undefined == "false"}
+  middle_name_comments: NOT YET AVALIABLE
+  middle_name_history: ${!middle_name.history || undefined == "true"}
 }
 
 MIDDLE-NAME-COMMENTS {
@@ -116,22 +108,18 @@ MIDDLE-NAME-HISTORY {
 }
 
 ———————————————————————————————————————————————————————
-—————————————————————[ LAST-NAME ]—————————————————————
+————————————————————[ LAST-NAME ]—————————————————————
 ———————————————————————————————————————————————————————
 LAST-NAME {
-    last_name:
-    last_name_verified_source_icon:
-    last_name_time:
-}
-
-LAST-NAME-GROUP {
-    last_name.highlighted: false
-    last_name.linked: false
-    last_name.locked: false
-    last_name.disabled: false
-    last_name.comments: false
-    last_name.history: true
-    last_name.history_visible: true
+  last_name: ${last_name.value || ""}
+  last_name_verified_source_icon: ${last_name_verified_source_icon.href || ""}
+  last_name_time: ${last_name_time.textContent || ""}
+  last_name_highlighted: ${last_name.highlighted || undefined == "false"}
+  last_name_linked: ${last_name.linked || undefined == "false"}
+  last_name_locked: ${last_name.locked || undefined == "false"}
+  last_name_disabled: ${last_name.disabled || undefined == "false"}
+  last_name_comments: NOT YET AVALIABLE
+  last_name_history: ${!last_name.history || undefined == "true"}
 }
 
 LAST-NAME-COMMENTS {
@@ -143,22 +131,18 @@ LAST-NAME-HISTORY {
 }
 
 ———————————————————————————————————————————————————————
-—————————————————————[ NICKNAME ]——————————————————————
+———————————————————————[ NICKNAME ]————————————————————
 ———————————————————————————————————————————————————————
 NICKNAME {
-    nickname:
-    nickname_verified_source_icon:
-    nickname_time:
-}
-
-NICKNAME-GROUP {
-    nickname.highlighted: false
-    nickname.linked: false
-    nickname.locked: false
-    nickname.disabled: false
-    nickname.comments: false
-    nickname.history: true
-    nickname.history_visible: true
+  nickname: ${nickname.value || ""}
+  nickname_verified_source_icon: ${nickname_verified_source_icon.href || ""}
+  nickname_time: ${nickname_time.textContent || ""}
+  nickname_highlighted: ${nickname.highlighted || undefined == "false"}
+  nickname_linked: ${nickname.linked || undefined == "false"}
+  nickname_locked: ${nickname.locked || undefined == "false"}
+  nickname_disabled: ${nickname.disabled || undefined == "false"}
+  nickname_comments: NOT YET AVALIABLE
+  nickname_history: ${!nickname.history || undefined == "true"}
 }
 
 NICKNAME-COMMENTS {
@@ -173,19 +157,15 @@ NICKNAME-HISTORY {
 ———————————————————————[ ALIAS ]———————————————————————
 ———————————————————————————————————————————————————————
 ALIAS {
-    alias:
-    alias_verified_source_icon:
-    alias_time:
-}
-
-ALIAS-GROUP {
-    alias.highlighted: false
-    alias.linked: false
-    alias.locked: false
-    alias.disabled: false
-    alias.comments: false
-    alias.history: true
-    alias.history_visible: true
+  alias: ${alias.value || ""}
+  alias_verified_source_icon: ${alias_verified_source_icon.href || ""}
+  alias_time: ${alias_time.textContent || ""}
+  alias_highlighted: ${alias.highlighted || undefined == "false"}
+  alias_linked: ${alias.linked || undefined == "false"}
+  alias_locked: ${alias.locked || undefined == "false"}
+  alias_disabled: ${alias.disabled || undefined == "false"}
+  alias_comments: NOT YET AVALIABLE
+  alias_history: ${!alias.history || undefined == "true"}
 }
 
 ALIAS-COMMENTS {
@@ -200,19 +180,15 @@ ALIAS-HISTORY {
 —————————————————————[ ALTER-EGO ]—————————————————————
 ———————————————————————————————————————————————————————
 ALTER-EGO {
-    alter_ego:
-    alter_ego_verified_source_icon:
-    alter_ego_time:
-}
-
-ALTER-EGO-GROUP {
-    alter_ego.highlighted: false
-    alter_ego.linked: false
-    alter_ego.locked: false
-    alter_ego.disabled: false
-    alter_ego.comments: false
-    alter_ego.history: true
-    alter_ego.history_visible: true
+  alter_ego: ${alter_ego.value || ""}
+  alter_ego_verified_source_icon: ${alter_ego_verified_source_icon.href || ""}
+  alter_ego_time: ${alter_ego_time.textContent || ""}
+  alter_ego_highlighted: ${alter_ego.highlighted || undefined == "false"}
+  alter_ego_linked: ${alter_ego.linked || undefined == "false"}
+  alter_ego_locked: ${alter_ego.locked || undefined == "false"}
+  alter_ego_disabled: ${alter_ego.disabled || undefined == "false"}
+  alter_ego_comments: NOT YET AVALIABLE
+  alter_ego_history: ${!alter_ego.history || undefined == "true"}
 }
 
 ALTER-EGO-COMMENTS {
@@ -227,19 +203,15 @@ ALTER-EGO-HISTORY {
 ——————————————————————[ PREFIX ]———————————————————————
 ———————————————————————————————————————————————————————
 PREFIX {
-    prefix:
-    prefix_verified_source_icon:
-    prefix_time:
-}
-
-PREFIX-GROUP {
-    prefix.highlighted: false
-    prefix.linked: false
-    prefix.locked: false
-    prefix.disabled: false
-    prefix.comments: false
-    prefix.history: true
-    prefix.history_visible: true
+  prefix: ${prefix.value || ""}
+  prefix_verified_source_icon: ${prefix_verified_source_icon.href || ""}
+  prefix_time: ${prefix_time.textContent || ""}
+  prefix_highlighted: ${prefix.highlighted || undefined == "false"}
+  prefix_linked: ${prefix.linked || undefined == "false"}
+  prefix_locked: ${prefix.locked || undefined == "false"}
+  prefix_disabled: ${prefix.disabled || undefined == "false"}
+  prefix_comments: NOT YET AVALIABLE
+  prefix_history: ${!prefix.history || undefined == "true"}
 }
 
 PREFIX-COMMENTS {
@@ -254,19 +226,15 @@ PREFIX-HISTORY {
 ——————————————————————[ SUFFIX ]———————————————————————
 ———————————————————————————————————————————————————————
 SUFFIX {
-    suffix:
-    suffix_verified_source_icon:
-    suffix_time:
-}
-
-SUFFIX-GROUP {
-    suffix.highlighted: false
-    suffix.linked: false
-    suffix.locked: false
-    suffix.disabled: false
-    suffix.comments: false
-    suffix.history: true
-    suffix.history_visible: true
+  suffix: ${suffix.value || ""}
+  suffix_verified_source_icon: ${suffix_verified_source_icon.href || ""}
+  suffix_time: ${suffix_time.textContent || ""}
+  suffix_highlighted: ${suffix.highlighted || undefined == "false"}
+  suffix_linked: ${suffix.linked || undefined == "false"}
+  suffix_locked: ${suffix.locked || undefined == "false"}
+  suffix_disabled: ${suffix.disabled || undefined == "false"}
+  suffix_comments: NOT YET AVALIABLE
+  suffix_history: ${!suffix.history || undefined == "true"}
 }
 
 SUFFIX-COMMENTS {
@@ -281,19 +249,15 @@ SUFFIX-HISTORY {
 ————————————————————[ FORMER-NAME ]————————————————————
 ———————————————————————————————————————————————————————
 FORMER-NAME {
-    former_name:
-    former_name_verified_source_icon:
-    former_name_time:
-}
-
-FORMER-NAME-GROUP {
-    former_name.highlighted: false
-    former_name.linked: false
-    former_name.locked: false
-    former_name.disabled: false
-    former_name.comments: false
-    former_name.history: true
-    former_name.history_visible: true
+  former_name: ${former_name.value || ""}
+  former_name_verified_source_icon: ${former_name_verified_source_icon.href || ""}
+  former_name_time: ${former_name_time.textContent || ""}
+  former_name_highlighted: ${former_name.highlighted || undefined == "false"}
+  former_name_linked: ${former_name.linked || undefined == "false"}
+  former_name_locked: ${former_name.locked || undefined == "false"}
+  former_name_disabled: ${former_name.disabled || undefined == "false"}
+  former_name_comments: NOT YET AVALIABLE
+  former_name_history: ${!former_name.history || undefined == "true"}
 }
 
 FORMER-NAME-COMMENTS {
@@ -308,19 +272,15 @@ FORMER-NAME-HISTORY {
 ————————————————————[ NAME-ORIGIN ]————————————————————
 ———————————————————————————————————————————————————————
 NAME-ORIGIN {
-    name_origin:
-    name_origin_verified_source_icon:
-    name_origin_time:
-}
-
-NAME-ORIGIN-GROUP {
-    name_origin.highlighted: false
-    name_origin.linked: false
-    name_origin.locked: false
-    name_origin.disabled: false
-    name_origin.comments: false
-    name_origin.history: true
-    name_origin.history_visible: true
+  name_origin: ${name_origin.value || ""}
+  name_origin_verified_source_icon: ${name_origin_verified_source_icon.href || ""}
+  name_origin_time: ${name_origin_time.textContent || ""}
+  name_origin_highlighted: ${name_origin.highlighted || undefined == "false"}
+  name_origin_linked: ${name_origin.linked || undefined == "false"}
+  name_origin_locked: ${name_origin.locked || undefined == "false"}
+  name_origin_disabled: ${name_origin.disabled || undefined == "false"}
+  name_origin_comments: NOT YET AVALIABLE
+  name_origin_history: ${!name_origin.history || undefined == "true"}
 }
 
 NAME-ORIGIN-COMMENTS {
@@ -335,19 +295,15 @@ NAME-ORIGIN-HISTORY {
 ——————————————[ PERSONAL-THOUGHTS-NAME ]———————————————
 ———————————————————————————————————————————————————————
 PERSONAL-THOUGHTS-NAME {
-    personal_thoughts_name:
-    personal_thoughts_name_verified_source_icon:
-    personal_thoughts_name_time:
-}
-
-PERSONAL-THOUGHTS-NAME-GROUP {
-    personal_thoughts_name.highlighted: false
-    personal_thoughts_name.linked: false
-    personal_thoughts_name.locked: false
-    personal_thoughts_name.disabled: false
-    personal_thoughts_name.comments: false
-    personal_thoughts_name.history: true
-    personal_thoughts_name.history_visible: true
+  personal_thoughts_name: ${personal_thoughts_name.value || ""}
+  personal_thoughts_name_verified_source_icon: ${personal_thoughts_name_verified_source_icon.href || ""}
+  personal_thoughts_name_time: ${personal_thoughts_name_time.textContent || ""}
+  personal_thoughts_name_highlighted: ${personal_thoughts_name.highlighted || undefined == "false"}
+  personal_thoughts_name_linked: ${personal_thoughts_name.linked || undefined == "false"}
+  personal_thoughts_name_locked: ${personal_thoughts_name.locked || undefined == "false"}
+  personal_thoughts_name_disabled: ${personal_thoughts_name.disabled || undefined == "false"}
+  personal_thoughts_name_comments: NOT YET AVALIABLE
+  personal_thoughts_name_history: ${!personal_thoughts_name.history || undefined == "true"}
 }
 
 PERSONAL-THOUGHTS-NAME-COMMENTS {
