@@ -903,6 +903,7 @@
 
   .top_button {
     position: absolute;
+    display: inline-block;
     left: 0px;
     top: 0px;
     height: 11px;

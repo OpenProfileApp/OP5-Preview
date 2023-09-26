@@ -21,14 +21,16 @@ function history_option() {
         textBoxStatesHistory[textBox.id] = textBox.history;
 
         // Update the text and lock option accordingly
-        if (textBox.history) {
+        if (!textBox.history) {
+          textBox.history = true;
           historyOption.setAttribute('option', 'option_2');
-          history_group.style.top = "9px"
-          history_group.style.opacity = "0"
+          history_group.style.top = "9px";
+          history_group.style.opacity = "0";
         } else {
+          textBox.history = false;
           historyOption.setAttribute('option', 'option_1');
-          history_group.style.top = "19px"
-          history_group.style.opacity = "1"
+          history_group.style.top = "19px";
+          history_group.style.opacity = "1";
         }
       } else {
         historyOption.style.opacity = "0.35"; // Fade the color option
@@ -61,17 +63,19 @@ function history_option2(groupId, history) {
       textBox.history = history;
 
       // Update the state for this textbox
-      textBoxStatesColored[textBox.id] = textBox.history;
+      textBoxStatesHistory[textBox.id] = textBox.history;
 
       // Update the text and lock option accordingly
       if (!textBox.history) {
+        textBox.history = true;
         historyOption.setAttribute('option', 'option_2');
-        history_group.style.top = "9px"
-        history_group.style.opacity = "0"
+        history_group.style.top = "9px";
+        history_group.style.opacity = "0";
       } else {
+        textBox.history = false;
         historyOption.setAttribute('option', 'option_1');
-        history_group.style.top = "19px"
-        history_group.style.opacity = "1"
+        history_group.style.top = "19px";
+        history_group.style.opacity = "1";
       }
     } else {
       historyOption.style.opacity = "0.35"; // Fade the color option
