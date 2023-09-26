@@ -136,7 +136,6 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 });
 
-
 function TimestampPosition(groupId) {
     const lastModified = document.getElementById(`${groupId}_time`);
     const targetElement = document.getElementById(`${groupId}_history_tab`);

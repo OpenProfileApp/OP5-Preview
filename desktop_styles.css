@@ -465,7 +465,6 @@
     position: absolute;
     left: 0px;
     top: 0px;
-    width: 183px;
     margin-bottom: 3px;
     border-radius: 0px 0px 5px 5px;
     background: #bd9335;
@@ -478,7 +477,6 @@
     position: absolute;
     left: 5px;
     top: 3px;
-    width: 174px;
     color: #ffffff;
     font-family: "Open Sans";
     font-size: 7px;
@@ -774,14 +772,32 @@
     text-justify: auto;
     font-size: 16px;
     color: #ffffff;
-    top: 325px;
-    left: 450px;
+    top: 150px;
+    left: 400px;
     opacity: 1;
     transition: 0.3s ease-in-out;
     animation: load_in_popup 0.3s ease-in-out;
     transform-origin: center;
     z-index: 501;
   }
+
+  .seperator {
+    align-items: center;
+    justify-content: center;
+    height: 5px;
+    width: 800px;
+  }
+
+  #changelog {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    width: 800px;
+    white-space: normal !important;
+    overflow-x: hidden;
+    overflow-y: auto; 
+  }  
 
   @keyframes load_in_popup {
     0% {
