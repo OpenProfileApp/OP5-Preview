@@ -63,6 +63,9 @@
     <div class="top_button" id="loadFileButton" style="width: 26px; top: 12px; left: 225px; scale: 3; z-index: 61;">
       <input type="file" id="loadFileInput" accept=".op5" style="display: none;">
       <label for="loadFileInput" class="label_text" style="width: 26px; top: 1.25px;">Load</label>
+    </div>
+    <div class="top_button" id="add-profile" style="width: 46px; top: 12px; left: 325px; scale: 3; z-index: 61;">
+      <label class="label_text" style="width: 26px; top: 1.25px;">Add Profile</label>
     </div>    
   </div>
 
@@ -70,8 +73,33 @@
   <!--———————————————————[ LEFT-ELEMENTS ]————————————————————-->
   <!--————————————————————————————————————————————————————————-->
   <div class="left">
-    <div class="label_text" id="left" style="width: 375px; font-size: 45px; transform: translateY(375px)translateX(40px);">Coming soon</div>
-    <div class="label_text" id="left" style="width: 375px; font-size: 25px; transform: translateY(435px)translateX(60px);">(management panel)</div>
+    <div class="profile_manager"> 
+      <p style="font-size: 24px; text-align: center; font-weight: 500;">Profile Manager</p>
+      <div id="top-bar">
+        <div id="create-global" onclick="createGlobalGalaxy()">
+            🌍 <!-- Earth emoji for global galaxy -->
+        </div>
+        <ul id="galaxy-list"></ul>
+        <div id="create-galaxy" onclick="createGalaxy()">
+            ➕ <!-- Plus emoji for create galaxy -->
+        </div>
+      </div>
+      <div>
+        <label for="profile-name">Profile Name:</label>
+        <input type="text" id="profile-name">
+        <button onclick="addProfile()">Add Profile</button>
+      </div>
+      <div>
+        <h2>Profiles</h2>
+        <ul id="profile-list"></ul>
+        <button onclick="removeProfile()">Remove Profile</button>
+        <button onclick="renameProfile()">Rename Profile</button>
+      </div>
+        <textarea id="edited-profile-content"></textarea><br>
+        <button onclick="saveEditedProfile()">Save Edited Profile</button>
+      </div>
+      <script src="scripts/profile_manager.js"></script>
+    </div>
   </div>
 
   <!--————————————————————————————————————————————————————————-->
