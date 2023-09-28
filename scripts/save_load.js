@@ -89,7 +89,7 @@ FULL-NAME {
   full_name_linked: ${full_name.linked || undefined == "false"}
   full_name_locked: ${full_name.locked || undefined == "false"}
   full_name_disabled: ${full_name.disabled || undefined == "false"}
-  full_name_comments: NOT YET AVALIABLE
+  full_name_comments: NOT YET AVAILABLE
   full_name_history: ${!full_name.history || undefined == "true"}
 }
 
@@ -101,7 +101,7 @@ FIRST-NAME {
     first_name_linked: ${first_name.linked || undefined == "false"}
     first_name_locked: ${first_name.locked || undefined == "false"}
     first_name_disabled: ${first_name.disabled || undefined == "false"}
-    first_name_comments: NOT YET AVALIABLE
+    first_name_comments: NOT YET AVAILABLE
     first_name_history: ${!first_name.history || undefined == "true"}
 }
 
@@ -113,7 +113,7 @@ MIDDLE-NAME {
     middle_name_linked: ${middle_name.linked || undefined == "false"}
     middle_name_locked: ${middle_name.locked || undefined == "false"}
     middle_name_disabled: ${middle_name.disabled || undefined == "false"}
-    middle_name_comments: NOT YET AVALIABLE
+    middle_name_comments: NOT YET AVAILABLE
     middle_name_history: ${!middle_name.history || undefined == "true"}
 }
 
@@ -125,7 +125,7 @@ LAST-NAME {
     last_name_linked: ${last_name.linked || undefined == "false"}
     last_name_locked: ${last_name.locked || undefined == "false"}
     last_name_disabled: ${last_name.disabled || undefined == "false"}
-    last_name_comments: NOT YET AVALIABLE
+    last_name_comments: NOT YET AVAILABLE
     last_name_history: ${!last_name.history || undefined == "true"}
 }
 
@@ -137,7 +137,7 @@ NICKNAME {
     nickname_linked: ${nickname.linked || undefined == "false"}
     nickname_locked: ${nickname.locked || undefined == "false"}
     nickname_disabled: ${nickname.disabled || undefined == "false"}
-    nickname_comments: NOT YET AVALIABLE
+    nickname_comments: NOT YET AVAILABLE
     nickname_history: ${!nickname.history || undefined == "true"}
 }
 
@@ -149,7 +149,7 @@ ALIAS {
     alias_linked: ${alias.linked || undefined == "false"}
     alias_locked: ${alias.locked || undefined == "false"}
     alias_disabled: ${alias.disabled || undefined == "false"}
-    alias_comments: NOT YET AVALIABLE
+    alias_comments: NOT YET AVAILABLE
     alias_history: ${!alias.history || undefined == "true"}
 }
 
@@ -161,7 +161,7 @@ ALTER-EGO {
     alter_ego_linked: ${alter_ego.linked || undefined == "false"}
     alter_ego_locked: ${alter_ego.locked || undefined == "false"}
     alter_ego_disabled: ${alter_ego.disabled || undefined == "false"}
-    alter_ego_comments: NOT YET AVALIABLE
+    alter_ego_comments: NOT YET AVAILABLE
     alter_ego_history: ${!alter_ego.history || undefined == "true"}
 }
 
@@ -173,7 +173,7 @@ PREFIX {
     prefix_linked: ${prefix.linked || undefined == "false"}
     prefix_locked: ${prefix.locked || undefined == "false"}
     prefix_disabled: ${prefix.disabled || undefined == "false"}
-    prefix_comments: NOT YET AVALIABLE
+    prefix_comments: NOT YET AVAILABLE
     prefix_history: ${!prefix.history || undefined == "true"}
 }
 
@@ -185,7 +185,7 @@ SUFFIX {
     suffix_linked: ${suffix.linked || undefined == "false"}
     suffix_locked: ${suffix.locked || undefined == "false"}
     suffix_disabled: ${suffix.disabled || undefined == "false"}
-    suffix_comments: NOT YET AVALIABLE
+    suffix_comments: NOT YET AVAILABLE
     suffix_history: ${!suffix.history || undefined == "true"}
 }
 
@@ -197,7 +197,7 @@ FORMER-NAME {
     former_name_linked: ${former_name.linked || undefined == "false"}
     former_name_locked: ${former_name.locked || undefined == "false"}
     former_name_disabled: ${former_name.disabled || undefined == "false"}
-    former_name_comments: NOT YET AVALIABLE
+    former_name_comments: NOT YET AVAILABLE
     former_name_history: ${!former_name.history || undefined == "true"}
 }
 
@@ -209,7 +209,7 @@ NAME-ORIGIN {
     name_origin_linked: ${name_origin.linked || undefined == "false"}
     name_origin_locked: ${name_origin.locked || undefined == "false"}
     name_origin_disabled: ${name_origin.disabled || undefined == "false"}
-    name_origin_comments: NOT YET AVALIABLE
+    name_origin_comments: NOT YET AVAILABLE
     name_origin_history: ${!name_origin.history || undefined == "true"}
 }
 
@@ -221,7 +221,7 @@ PERSONAL-THOUGHTS-NAME {
     personal_thoughts_name_linked: ${personal_thoughts_name.linked || undefined == "false"}
     personal_thoughts_name_locked: ${personal_thoughts_name.locked || undefined == "false"}
     personal_thoughts_name_disabled: ${personal_thoughts_name.disabled || undefined == "false"}
-    personal_thoughts_name_comments: NOT YET AVALIABLE
+    personal_thoughts_name_comments: NOT YET AVAILABLE
     personal_thoughts_name_history: ${!personal_thoughts_name.history || undefined == "true"}
 }`;
 
@@ -277,7 +277,7 @@ FULL-NAME {
   full_name_linked: ${full_name.linked || undefined == "false"}
   full_name_locked: ${full_name.locked || undefined == "false"}
   full_name_disabled: ${full_name.disabled || undefined == "false"}
-  full_name_comments: NOT YET AVALIABLE
+  full_name_comments: NOT YET AVAILABLE
   full_name_history: ${!full_name.history || undefined == "true"}
 }
 
@@ -300,7 +300,7 @@ FIRST-NAME {
   first_name_linked: ${first_name.linked || undefined == "false"}
   first_name_locked: ${first_name.locked || undefined == "false"}
   first_name_disabled: ${first_name.disabled || undefined == "false"}
-  first_name_comments: NOT YET AVALIABLE
+  first_name_comments: NOT YET AVAILABLE
   first_name_history: ${!first_name.history || undefined == "true"}
 }
 
@@ -323,7 +323,7 @@ MIDDLE-NAME {
   middle_name_linked: ${middle_name.linked || undefined == "false"}
   middle_name_locked: ${middle_name.locked || undefined == "false"}
   middle_name_disabled: ${middle_name.disabled || undefined == "false"}
-  middle_name_comments: NOT YET AVALIABLE
+  middle_name_comments: NOT YET AVAILABLE
   middle_name_history: ${!middle_name.history || undefined == "true"}
 }
 
@@ -346,7 +346,7 @@ LAST-NAME {
   last_name_linked: ${last_name.linked || undefined == "false"}
   last_name_locked: ${last_name.locked || undefined == "false"}
   last_name_disabled: ${last_name.disabled || undefined == "false"}
-  last_name_comments: NOT YET AVALIABLE
+  last_name_comments: NOT YET AVAILABLE
   last_name_history: ${!last_name.history || undefined == "true"}
 }
 
@@ -369,7 +369,7 @@ NICKNAME {
   nickname_linked: ${nickname.linked || undefined == "false"}
   nickname_locked: ${nickname.locked || undefined == "false"}
   nickname_disabled: ${nickname.disabled || undefined == "false"}
-  nickname_comments: NOT YET AVALIABLE
+  nickname_comments: NOT YET AVAILABLE
   nickname_history: ${!nickname.history || undefined == "true"}
 }
 
@@ -392,7 +392,7 @@ ALIAS {
   alias_linked: ${alias.linked || undefined == "false"}
   alias_locked: ${alias.locked || undefined == "false"}
   alias_disabled: ${alias.disabled || undefined == "false"}
-  alias_comments: NOT YET AVALIABLE
+  alias_comments: NOT YET AVAILABLE
   alias_history: ${!alias.history || undefined == "true"}
 }
 
@@ -415,7 +415,7 @@ ALTER-EGO {
   alter_ego_linked: ${alter_ego.linked || undefined == "false"}
   alter_ego_locked: ${alter_ego.locked || undefined == "false"}
   alter_ego_disabled: ${alter_ego.disabled || undefined == "false"}
-  alter_ego_comments: NOT YET AVALIABLE
+  alter_ego_comments: NOT YET AVAILABLE
   alter_ego_history: ${!alter_ego.history || undefined == "true"}
 }
 
@@ -438,7 +438,7 @@ PREFIX {
   prefix_linked: ${prefix.linked || undefined == "false"}
   prefix_locked: ${prefix.locked || undefined == "false"}
   prefix_disabled: ${prefix.disabled || undefined == "false"}
-  prefix_comments: NOT YET AVALIABLE
+  prefix_comments: NOT YET AVAILABLE
   prefix_history: ${!prefix.history || undefined == "true"}
 }
 
@@ -461,7 +461,7 @@ SUFFIX {
   suffix_linked: ${suffix.linked || undefined == "false"}
   suffix_locked: ${suffix.locked || undefined == "false"}
   suffix_disabled: ${suffix.disabled || undefined == "false"}
-  suffix_comments: NOT YET AVALIABLE
+  suffix_comments: NOT YET AVAILABLE
   suffix_history: ${!suffix.history || undefined == "true"}
 }
 
@@ -484,7 +484,7 @@ FORMER-NAME {
   former_name_linked: ${former_name.linked || undefined == "false"}
   former_name_locked: ${former_name.locked || undefined == "false"}
   former_name_disabled: ${former_name.disabled || undefined == "false"}
-  former_name_comments: NOT YET AVALIABLE
+  former_name_comments: NOT YET AVAILABLE
   former_name_history: ${!former_name.history || undefined == "true"}
 }
 
@@ -507,7 +507,7 @@ NAME-ORIGIN {
   name_origin_linked: ${name_origin.linked || undefined == "false"}
   name_origin_locked: ${name_origin.locked || undefined == "false"}
   name_origin_disabled: ${name_origin.disabled || undefined == "false"}
-  name_origin_comments: NOT YET AVALIABLE
+  name_origin_comments: NOT YET AVAILABLE
   name_origin_history: ${!name_origin.history || undefined == "true"}
 }
 
@@ -530,7 +530,7 @@ PERSONAL-THOUGHTS-NAME {
   personal_thoughts_name_linked: ${personal_thoughts_name.linked || undefined == "false"}
   personal_thoughts_name_locked: ${personal_thoughts_name.locked || undefined == "false"}
   personal_thoughts_name_disabled: ${personal_thoughts_name.disabled || undefined == "false"}
-  personal_thoughts_name_comments: NOT YET AVALIABLE
+  personal_thoughts_name_comments: NOT YET AVAILABLE
   personal_thoughts_name_history: ${!personal_thoughts_name.history || undefined == "true"}
 }
 
