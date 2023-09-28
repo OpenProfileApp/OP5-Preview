@@ -52,7 +52,11 @@ customStyleButton.addEventListener('change', (event) => {
                     ele.style.textColor = jsonifiedData.textColor
                 })
             } catch (error) {
-                console.error(error);
+                
+                alert("The custom theme is invalid!")
+
+                console.error("Developer Stuff! -->: " + error);
+
             }
         }
 
