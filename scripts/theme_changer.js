@@ -27,7 +27,43 @@ function changeTheme(theme) {
 const releaseButton = document.getElementById('release');
 const betaButton = document.getElementById('beta');
 const previewButton = document.getElementById('preview');
+const labelCustomStyle = document.getElementById('labelCustomStyles');
+const customStyleButton = document.getElementById('customStyleInput');
+labelCustomStyle.addEventListener('click', () => {
+    customStyleButton.click();
+})
 
+//funny oohahh for custom styles
+customStyleButton.addEventListener('change', (event) => {
+    const activeFile = event.target.files[0];
+
+
+    if(activeFile) {
+        const fileReader = new FileReader();
+        
+        fileReader.onload = (e) => {
+            const fileContent = e.target.result;
+            try {
+                const jsonifiedData = JSON.parse(fileContent)
+                console.log(jsonifiedData);
+                const elementsToChange2 = document.querySelectorAll(".inner, .left, .right");
+                elementsToChange2.forEach(ele => {
+                    ele.style.backgroundColor = jsonifiedData.backgroundColor
+                    ele.style.textColor = jsonifiedData.textColor
+                })
+            } catch (error) {
+                console.error(error);
+            }
+        }
+
+        fileReader.readAsText(activeFile);
+    }
+
+    
+    
+
+
+})
 if (releaseButton) {
     releaseButton.addEventListener('click', () => {
         changeTheme("release");
