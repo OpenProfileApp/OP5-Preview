@@ -888,6 +888,42 @@
   }
 
   /*/————————————————————————————————————————————————————————/*/
+  /*/——————————————————[ PROFILE-MANAGER ]———————————————————/*/
+  /*/————————————————————————————————————————————————————————/*/
+  .profile_manager {
+    position: absolute;
+    opacity: 1;
+    transition: 0.3s ease-in-out;
+    z-index: 51;
+  }
+
+  .profile {
+    position: absolute;
+    opacity: 1;
+    transition: 0.3s ease-in-out;
+    z-index: 52;
+  }
+
+  #top-bar {
+    background-color: #333; /* Set a background color */
+    color: #fff; /* Set text color to white */
+    padding: 10px; /* Add some padding for spacing */
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space out the elements */
+    align-items: center; /* Center items vertically */
+}
+
+  #create-galaxy,
+  #create-profile {
+      cursor: pointer; /* Change cursor to pointer on hover */
+      margin-right: 10px; /* Add some margin between icons */
+  }
+
+  #create-galaxy i,
+  #create-profile i {
+      font-size: 24px; /* Adjust icon size */
+  }
+  /*/————————————————————————————————————————————————————————/*/
   /*/—————————————————[ DEVELOPER-ELEMENTS ]—————————————————/*/
   /*/————————————————————————————————————————————————————————/*/
   .history-popup {
@@ -941,39 +977,5 @@
     position: absolute;
     background-color: #bd9335;
     transition: 0.3s ease-in-out;
-  }
-
-  .profile_manager {
-    position: absolute;
-    opacity: 1;
-    transition: 0.3s ease-in-out;
-    z-index: 51;
-  }
-
-  .profile {
-    position: absolute;
-    opacity: 1;
-    transition: 0.3s ease-in-out;
-    z-index: 52;
-  }
-
-  #top-bar {
-    background-color: #333; /* Set a background color */
-    color: #fff; /* Set text color to white */
-    padding: 10px; /* Add some padding for spacing */
-    display: flex; /* Use flexbox for layout */
-    justify-content: space-between; /* Space out the elements */
-    align-items: center; /* Center items vertically */
-}
-
-  #create-galaxy,
-  #create-profile {
-      cursor: pointer; /* Change cursor to pointer on hover */
-      margin-right: 10px; /* Add some margin between icons */
-  }
-
-  #create-galaxy i,
-  #create-profile i {
-      font-size: 24px; /* Adjust icon size */
   }
 }

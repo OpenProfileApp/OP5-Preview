@@ -9,10 +9,6 @@ window.addEventListener("load", () => {
     edit.style.opacity = "1"
 });
 
-function createGlobalGalaxy() {
-    createGalaxy("op5-profiles", "🌍");
-}
-
 function createGalaxy(name, emoji) {
     const galaxyName = name || prompt("Enter a name for the new galaxy:");
     if (!galaxyName) return;
@@ -37,6 +33,21 @@ function selectGalaxy(index) {
     updateProfileList(galaxy);
 }
 
+function renameGalaxy(index) {
+    const galaxy = galaxies[index];
+    if (galaxy) {
+        const newName = prompt("Enter a new name for the galaxy:", galaxy.name);
+        if (newName !== null && newName.trim() !== "") {
+            const newEmoji = prompt("Enter a new emoji for the galaxy (e.g., 🌌):", galaxy.emoji);
+
+            galaxy.name = newName;
+            galaxy.emoji = newEmoji;
+            localStorage.setItem("op5-galaxies", JSON.stringify(galaxies));
+            updateGalaxyList();
+        }
+    }
+}
+
 function removeGalaxy(index) {
     const galaxy = galaxies[index];
     const galaxyName = galaxy.name;
@@ -59,11 +70,11 @@ function removeGalaxy(index) {
 function updateGalaxyList() {
     const galaxyList = document.getElementById("galaxy-list");
     galaxyList.innerHTML = galaxies.map((galaxy, index) => `
-        <li>
-            <strong>${galaxy.name}</strong> ${galaxy.emoji || ''} 
-            <button onclick="selectGalaxy(${index})">Select Galaxy</button>
-            <button onclick="removeGalaxy(${index})">Remove Galaxy</button>
-        </li>
+            ${galaxy.emoji || ''} 
+            <button onclick="selectGalaxy(${index})">Select</button>
+            <button onclick="renameGalaxy(${index})">Rename</button>
+            <button onclick="removeGalaxy(${index})">Delete</button>
+            <br>
     `).join("");
 }
 
