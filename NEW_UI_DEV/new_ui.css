@@ -3,6 +3,7 @@
   body {
     background-color: #1b1f28;
     overflow-x: hidden;
+    font-family: 'Open Sans';
   }
 
   .top {
@@ -162,6 +163,27 @@
     background: #333a4d;
     z-index: 0;
   }
+
+  /*/Page/*/
+  .tag {
+    position: relative;
+    display: inline-block;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    text-justify: distribute;
+    font-size: 16px;
+    top: 0px;
+    left: 14px;
+    width: 60px;
+    height: 25px;
+    margin-right: 10px;
+    background: #2775ba;
+    border-radius: 10px;
+    transform-origin: center center;
+    transition: 0.2s all;
+    z-index: 5;
+  }
 }
 
 @media screen and (max-width: 1500px) {
@@ -169,6 +191,7 @@
   body {
     background-color: #1b1f28;
     overflow-x: hidden;
+    font-family: 'Open Sans';
   }
 
   .top {
@@ -328,5 +351,27 @@
     border-radius: 15px;
     background: #333a4d;
     z-index: 0;
+  }
+
+  /*/Page/*/
+  .tag {
+    position: relative;
+    display: inline-block;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    text-justify: distribute;
+    font-size: 16px;
+    top: 12px;
+    left: 14px;
+    transform: translateY(-50%);
+    width: 60px;
+    height: 25px;
+    margin-right: 10px;
+    background: #2775ba;
+    border-radius: 10px;
+    transform-origin: center center;
+    transition: 0.2s all;
+    z-index: 5;
   }
 }
