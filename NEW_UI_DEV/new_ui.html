@@ -1,19 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+    <!--————————————————————————————————————————————————————————-->
+    <!--——————————————————[ PAGE-INFORMATION ]——————————————————-->
+    <!--————————————————————————————————————————————————————————-->
+    <title>OpenProfile 5 Preview</title>
+    <link rel="icon" href="media/images/openprofile/preview/op_preview_favicon.png" type="image/x-icon">
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>New UI</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap">
-    <link rel="stylesheet" href="new_ui.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+
+    <!--————————————————————————————————————————————————————————-->
+    <!--—————————————————————[ META-TAGS ]——————————————————————-->
+    <!--————————————————————————————————————————————————————————-->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="OpenProfile 5 Preview" />
+    <meta property="twitter:creator" content="@OpenProfileDevs" />
+    <meta property="og:description" content="OpenProfile is the most advanced character profile template in the world and a GNU open source project. Created freely for writers by writers!" />
+    <meta property="og:image" content="https://raw.githubusercontent.com/OpenProfileDevs/OP5-Preview/web/media/images/openprofile/preview/op_preview_512.jpeg" />
+    <meta property="og:url" content="https://openprofiledevs.github.io/OP5-Preview/" />
+    <meta property="theme-color" content="#5e467f" />
+
+    <!--————————————————————————————————————————————————————————-->
+    <!--————————————————————[ STYLESHEETS ]—————————————————————-->
+    <!--————————————————————————————————————————————————————————-->
+    <link rel="stylesheet" type="text/css" href="desktop_styles.css">
+    <link rel="stylesheet" type="text/css" href="mobile_styles.css">
 </head>
 <body>
+
+    <!--————————————————————————————————————————————————————————-->
+    <!--————————————————————[ BASE-SCRIPTS ]————————————————————-->
+    <!--————————————————————————————————————————————————————————-->
+    <script src="scripts/clear_cache.js"></script>
+    <script src="scripts/loader.js"></script>
+    <script src="scripts/popup.js"></script>
+    <script src="scripts/history/generate_timestamp.js"></script>
+    <script src="scripts/onload.js"></script>
+
+    <!--————————————————————————————————————————————————————————-->
+    <!--————————————————————[ PAGE-LOADER ]—————————————————————-->
+    <!--————————————————————————————————————————————————————————-->
+    <!--<div class="loader_outer">
+        <div class="loader_inner"></div>
+    </div>-->
+
+    <!--————————————————————————————————————————————————————————-->
+    <!--————————————————————[ TOP-ELEMENTS ]————————————————————-->
+    <!--————————————————————————————————————————————————————————-->
     <div class="top">
         <div class="top_button" id="" style="width: 75px; border-radius: 10px;"></div>
         <div class="top_button" id="" style="width: 75px; border-radius: 10px;"></div>
         <div class="top_button" id="" style="width: 100px; border-radius: 10px;"></div>
         <div class="top_button" id="" style="width: 125px; border-radius: 10px;"></div>
-        <div class="tag" id="">BETA</div>
         <div class="top_button_2" id="" style="background-color: #ac2222;"></div>
         <div class="top_button_2" id="" style="transform: translateX(-35px)translateY(-50%); background-color: #d5a728;"></div>
         <div class="top_button_2" id="" style="transform: translateX(-70px)translateY(-50%); background-color: #2d8018;"></div>
@@ -29,59 +68,557 @@
         </div>
     </div>
     
+    <!--————————————————————————————————————————————————————————-->
+    <!--———————————————————[ LEFT-ELEMENTS ]————————————————————-->
+    <!--————————————————————————————————————————————————————————-->
     <div class="left">
         <div class="left_bar">
-            <div class="side_button" id="" style="background-color: #272c39;">
+            <div class="side_button_2" id="">
                 <img src="feather_icons/user.svg" style="scale: 0.30; transform-origin: top left; margin: 10px;">
-                <div class="tag" id="" style="top: -90px; left: -8px; scale: 0.55; width: 85px; background: #5e329b;">PREVIEW</div>
+                <div class="tag" id="" style="left: -8px; scale: 0.55; width: 85px; background: #5e329b;">PREVIEW</div>
             </div>
-            <div class="side_button" id="" style="background-color: #272c39;">
+            <div class="side_button_2" id="">
                 <img src="feather_icons/globe.svg" style="scale: 0.30; transform-origin: top left; margin: 10px;">
-                <div class="tag" id="" style="top: -90px; left: -8px; scale: 0.55; width: 85px; background: #5e329b;">PREVIEW</div>
+                <div class="tag" id="" style="left: -8px; scale: 0.55; width: 85px; background: #5e329b;">PREVIEW</div>
             </div>
-            <div class="side_button" id="" style="background-color: #272c39;">
+            <div class="side_button_2" id="">
                 <img src="feather_icons/upload.svg" style="scale: 0.30; transform-origin: top left; margin: 10px;">
-                <div class="tag" id="" style="top: -90px; left: 8px; scale: 0.55;">BETA</div>
+                <div class="tag" id="" style="left: 8px; scale: 0.55;">BETA</div>
             </div>
         </div>
     </div>
 
-    <div class="center">
-        <div class="page_outer">
-            <div class="page_inner">
-
-            </div>
-        </div>
-    </div>
-
+    <!--————————————————————————————————————————————————————————-->
+    <!--———————————————————[ RIGHT-ELEMENTS ]———————————————————-->
+    <!--————————————————————————————————————————————————————————-->
     <div class="right">
         <div class="side_button" id="">
             <img src="feather_icons/database.svg" style="scale: 0.30; transform-origin: top left; margin: 10px;">
-            <div class="tag" id="" style="top: -90px; left: 8px; scale: 0.55;">BETA</div>
+            <div class="tag" id="" style="left: 8px; scale: 0.55;">BETA</div>
         </div>
         <div class="side_button" id="">
             <img src="feather_icons/edit-3.svg" style="scale: 0.30; transform-origin: top left; margin: 10px;">
-            <div class="tag" id="" style="top: -90px; left: 8px; scale: 0.55;">BETA</div>
+            <div class="tag" id="" style="left: 8px; scale: 0.55;">BETA</div>
         </div>
         <div class="side_button" id="">
             <img src="feather_icons/message-circle.svg" style="scale: 0.30; transform-origin: top left; margin: 10px; opacity: 0.35;">
-            <div class="tag" id="" style="top: -90px; left: -8px; scale: 0.55; width: 85px; background: #5e329b;">PREVIEW</div>
+            <div class="tag" id="" style="left: -8px; scale: 0.55; width: 85px; background: #5e329b;">PREVIEW</div>
         </div>
         <div class="side_button" id="">
             <img src="feather_icons/link.svg" style="scale: 0.30; transform-origin: top left; margin: 10px;">
-            <div class="tag" id="" style="top: -90px; left: 8px; scale: 0.55;">BETA</div>
+            <div class="tag" id="" style="left: 8px; scale: 0.55;">BETA</div>
         </div>
         <div class="side_button" id="">
             <img src="feather_icons/calendar.svg" style="scale: 0.30; transform-origin: top left; margin: 10px;">
-            <div class="tag" id="" style="top: -90px; left: 8px; scale: 0.55;">BETA</div>
+            <div class="tag" id="" style="left: 8px; scale: 0.55;">BETA</div>
         </div>
         <div class="side_button" id="">
             <img src="feather_icons/lock.svg" style="scale: 0.30; transform-origin: top left; margin: 10px;">
-            <div class="tag" id="" style="top: -90px; left: 8px; scale: 0.55;">BETA</div>
+            <div class="tag" id="" style="left: 8px; scale: 0.55;">BETA</div>
         </div>
         <div class="side_button" id="">
             <img src="feather_icons/x.svg" style="scale: 0.30; transform-origin: top left; margin: 10px;">
-            <div class="tag" id="" style="top: -90px; left: 8px; scale: 0.55;">BETA</div>
+            <div class="tag" id="" style="left: 8px; scale: 0.55;">BETA</div>
+        </div>
+    </div>
+
+    <!--————————————————————————————————————————————————————————-->
+    <!--——————————————————[ CENTER-ELEMENTS ]———————————————————-->
+    <!--————————————————————————————————————————————————————————-->
+    <div class="center">
+        <div class="page_outer" id="page_1" style="z-index: 11;">
+            <div class="page_inner">
+                <div class="row" style="top: -8px; left: 17px;">
+                    <!--————————————————————————————————————————————————————————-->
+                    <!--———————————————————[ PAGE-AUTHOR-1 ]————————————————————-->
+                    <!--————————————————————————————————————————————————————————-->
+                    <div class="group" id="page_author_1_group" style="top: 0px; left: -1px; z-index: 24;">
+                        <div class="tag" id="" style="top: -2.5px; left: 130px; scale: 0.38; width: 85px; background: #5e329b;">PREVIEW</div>
+                        <div class="label_tab" id="page_author_1_label_tab" style="top: 29px; border-radius: 0px 0px 5px 0px; z-index: 2;">
+                        <div class="label_text" id="page_author_1_label_text" style="top: 1.25px;">Page Author</div>
+                        </div>
+                        <div><input type="text" class="input_text" id="page_author_1" style="width: 175px; border-radius: 5px 0px 5px 0px;" autocomplete="off" autocorrect="off" placeholder="Who is the page's author?"></div>
+                        <div class="help_box" id="page_author_1_help_box">
+                        <div class="help_box_tab" id="page_author_1_help_box_tab">
+                            <div class="help_box_text" id="page_author_1_help_box_text">What is your name or pseudonym? If you're working as part of a collaboration, include the fellow author's name or pseudonym next to yours.</div>
+                        </div>
+                        </div>
+                        <script src="scripts/emojis/page1/page_author_1_emojis.js"></script>
+                    </div>
+
+                    <!--————————————————————————————————————————————————————————-->
+                    <!--——————————————————[ NAME-INFORMATION ]——————————————————-->
+                    <!--————————————————————————————————————————————————————————-->
+                    <div class="group" id="name_information_group" style="top: 0px; left: 249px; z-index: 23;">
+                        <div><input type="text" class="input_text" id="name_information" style="width: 175px; height: 28px; top: 9px; border-radius: 0px 0px 5px 5px; justify-content: center; text-align: center; font-size: 14px; background-color: #272c39; color: #ffffff; border-color: #272c39;" autocomplete="off" autocorrect="off" value="Name Information" tabindex="-1" readonly></div>
+                    </div>
+
+                    <!--————————————————————————————————————————————————————————-->
+                    <!--———————————————————[ WRITTEN-DATE-1 ]———————————————————-->
+                    <!--————————————————————————————————————————————————————————-->
+                    <div class="group" id="written_date_1_group" style="top: 0px; left: 498px; z-index: 22;">
+                        <div class="label_tab" id="written_date_1_label_tab" option="page_date" style="top: 29px; border-radius: 0px 0px 0px 5px; z-index: 2;">
+                        <div class="label_text" id="written_date_1_label_text" style="top: 1.25px;">Written Date</div>
+                        </div>
+                        <div><input type="text" class="input_text" id="written_date_1" style="width: 175px; border-radius: 0px 5px 0px 5px; text-align: right;" autocomplete="off" autocorrect="off" placeholder="When was this page written?"></div>
+                        <div class="help_box" id="written_date_1_help_box">
+                        <div class="help_box_tab" id="written_date_1_help_box_tab">
+                            <div class="help_box_text" id="written_date_1_help_box_text">What date was this page written on? You can include multiple dates in any format seperated by commas. This will prevent the last modified timestamp from showing.</div>
+                        </div>
+                        </div>
+                        <script src="scripts/emojis/page1/written_date_1_emojis.js"></script>
+                    </div>
+                    </div>
+                    
+                    <div class="row" style="top: 50px; left: 36px;">
+
+                    <!--————————————————————————————————————————————————————————-->
+                    <!--—————————————————————[ FULL-NAME ]——————————————————————-->
+                    <!--————————————————————————————————————————————————————————-->
+                    <div class="group" id="full_name_group" style="top: 0px; left: 0px; z-index: 21;">
+                        <div class="label_tab" id="full_name_label_tab">
+                        <div class="label_text" id="full_name_label_text">Full Name</div>
+                        </div>
+                        <div class="comment_group" id="full_name_comment_group" style="left: 5px;">
+                        <div class="comment_tab">
+                            <div class="comment_dot"></div>
+                        </div>
+                        </div>
+                        <div class="verified_source_group" id="full_name_verified_source_group" style="left: 46px;">
+                        <div class="verified_source_tab" id="full_name_verified_source_tab">
+                            <a class="verified_source_icon" id="full_name_verified_source_icon" href="https://www.github.com/OpenProfileDevs" target="_blank" tabindex="-1">
+                            <img class="verified_source_favicon" id="full_name_verified_source_favicon" src=""></img>
+                            </a>
+                        </div>
+                        </div>
+                        <div><input type="text" class="input_text" id="full_name" style="width: 559px;" autocomplete="off" autocorrect="off" placeholder="What is the oc's full name?"></div>
+                        <div class="help_box" id="full_name_help_box">
+                        <div class="help_box_tab" id="full_name_help_box_tab">
+                            <div class="help_box_text" id="full_name_help_box_text">What is the character's full name? Be sure to include their prefixes and suffixes.</div>
+                        </div>
+                        </div>
+                        <div class="history_group" id="full_name_history_group">
+                        <div class="history_tab" id="full_name_history_tab" style="left: 433.5px;">
+                            <div class="last_modified_text" id="full_name_time"></div>
+                            <div class="history_dot" id="full_name_history_dot"></div>
+                        </div>
+                        </div>
+                        <script src="scripts/emojis/page1/full_name_emojis.js"></script>
+                        <script src="scripts/source/page1/position/full_name_source_position.js"></script>
+                        <script src="scripts/source/page1/full_name_source_icon.js"></script>
+                    </div>
+                    </div>
+
+                    <div class="row" style="top: 96px; left: 36px;">
+
+                    <!--————————————————————————————————————————————————————————-->
+                    <!--—————————————————————[ FIRST-NAME ]—————————————————————-->
+                    <!--————————————————————————————————————————————————————————-->
+                    <div class="group" id="first_name_group" style="top: 0px; left: 0px; z-index: 20;">
+                        <div class="label_tab" id="first_name_label_tab">
+                        <div class="label_text" id="first_name_label_text">First Name</div>
+                        </div>
+                        <div class="comment_group" id="first_name_comment_group" style="left: 5px;">
+                        <div class="comment_tab">
+                            <div class="comment_dot"></div>
+                        </div>
+                        </div>
+                        <div class="verified_source_group" id="first_name_verified_source_group" style="left: 46px;">
+                        <div class="verified_source_tab" id="first_name_verified_source_tab">
+                            <a class="verified_source_icon" id="first_name_verified_source_icon" href="https://www.github.com/OpenProfileDevs" target="_blank" tabindex="-1">
+                            <img class="verified_source_favicon" id="first_name_verified_source_favicon" src=""></img>
+                            </a>
+                        </div>
+                        </div>
+                        <div><input type="text" class="input_text" id="first_name" style="width: 175px;" autocomplete="off" autocorrect="off" placeholder="What is the oc's first name?"></div>
+                        <div class="help_box" id="first_name_help_box">
+                        <div class="help_box_tab" id="first_name_help_box_tab">
+                            <div class="help_box_text" id="first_name_help_box_text">What is the character's first name? While optional, first names should generally describe the character in some way based on it's meaning.</div>
+                        </div>
+                        </div>
+                        <div class="history_group" id="first_name_history_group">
+                        <div class="history_tab" id="first_name_history_tab">
+                            <div class="last_modified_text" id="first_name_time"></div>
+                            <div class="history_dot" id="first_name_history_dot"></div>
+                        </div>
+                        </div>
+                        <script src="scripts/emojis/page1/first_name_emojis.js"></script>
+                        <script src="scripts/generations/page1/generate_first_name.js"></script>
+                    </div>
+
+                    <!--————————————————————————————————————————————————————————-->
+                    <!--————————————————————[ MIDDLE-NAME ]—————————————————————-->
+                    <!--————————————————————————————————————————————————————————-->
+                    <div class="group" id="middle_name_group" style="top: 0px; left: 230px; z-index: 19;">
+                        <div class="label_tab" id="middle_name_label_tab">
+                        <div class="label_text" id="middle_name_label_text">Middle Name</div>
+                        </div>
+                        <div class="comment_group" id="middle_name_comment_group" style="left: 5px;">
+                        <div class="comment_tab">
+                            <div class="comment_dot"></div>
+                        </div>
+                        </div>
+                        <div class="verified_source_group" id="middle_name_verified_source_group" style="left: 46px;">
+                        <div class="verified_source_tab" id="middle_name_verified_source_tab">
+                            <a class="verified_source_icon" id="middle_name_verified_source_icon" href="https://www.github.com/OpenProfileDevs" target="_blank" tabindex="-1">
+                            <img class="verified_source_favicon" id="middle_name_verified_source_favicon" src=""></img>
+                            </a>
+                        </div>
+                        </div>
+                        <div><input type="text" class="input_text" id="middle_name" style="width: 175px;" autocomplete="off" autocorrect="off" placeholder="What is the oc's middle name?"></div>
+                        <div class="help_box" id="middle_name_help_box">
+                        <div class="help_box_tab" id="middle_name_help_box_tab">
+                            <div class="help_box_text" id="middle_name_help_box_text">What is the character's middle name? Middle names aren't always required and are more often used for realisum or an alternate calling. If so, a middle name should generally describe the character in the view or likings of the person who assigned the character the name such as their parent or guardian.</div>
+                        </div>
+                        </div>
+                        <div class="history_group" id="middle_name_history_group">
+                        <div class="history_tab" id="middle_name_history_tab">
+                            <div class="last_modified_text" id="middle_name_time"></div>
+                            <div class="history_dot" id="middle_name_history_dot"></div>
+                        </div>
+                        </div>
+                        <script src="scripts/emojis/page1/middle_name_emojis.js"></script>
+                        <script src="scripts/generations/page1/generate_middle_name.js"></script>
+                    </div>
+
+                    <!--————————————————————————————————————————————————————————-->
+                    <!--—————————————————————[ LAST-NAME ]——————————————————————-->
+                    <!--————————————————————————————————————————————————————————-->
+                    <div class="group" id="last_name_group" style="top: 0px; left: 460px; z-index: 18;">
+                        <div class="label_tab" id="last_name_label_tab">
+                        <div class="label_text" id="last_name_label_text">Last Name</div>
+                        </div>
+                        <div class="comment_group" id="last_name_comment_group" style="left: 5px;">
+                        <div class="comment_tab">
+                            <div class="comment_dot"></div>
+                        </div>
+                        </div>
+                        <div class="verified_source_group" id="last_name_verified_source_group" style="left: 46px;">
+                        <div class="verified_source_tab" id="last_name_verified_source_tab">
+                            <a class="verified_source_icon" id="last_name_verified_source_icon" href="https://www.github.com/OpenProfileDevs" target="_blank" tabindex="-1">
+                            <img class="verified_source_favicon" id="last_name_verified_source_favicon" src=""></img>
+                            </a>
+                        </div>
+                        </div>
+                        <div><input type="text" class="input_text" id="last_name" style="width: 175px;" autocomplete="off" autocorrect="off" placeholder="What is the oc's last name?"></div>
+                        <div class="help_box" id="last_name_help_box">
+                        <div class="help_box_tab" id="last_name_help_box_tab">
+                            <div class="help_box_text" id="last_name_help_box_text">What is the character's last name? While optional, last names could be used to tell a lot about the character interests or values based on the name's ancestrial association. A last name is typically inherited from the character's father.</div>
+                        </div>
+                        </div>
+                        <div class="history_group" id="last_name_history_group">
+                        <div class="history_tab" id="last_name_history_tab">
+                            <div class="last_modified_text" id="last_name_time"></div>
+                            <div class="history_dot" id="last_name_history_dot"></div>
+                        </div>
+                        </div>
+                        <script src="scripts/emojis/page1/last_name_emojis.js"></script>
+                        <script src="scripts/generations/page1/generate_last_name.js"></script>
+                    </div>
+                    </div>
+
+                    <div class="row" style="top: 142px; left: 36px;">
+
+                    <!--————————————————————————————————————————————————————————-->
+                    <!--—————————————————————[ NICKNAME ]——————————————————————-->
+                    <!--————————————————————————————————————————————————————————-->
+                    <div class="group" id="nickname_group" style="top: 0px; left: 0px; z-index: 17;">
+                        <div class="label_tab" id="nickname_label_tab">
+                        <div class="label_text" id="nickname_label_text">Nickname</div>
+                        </div>
+                        <div class="comment_group" id="nickname_comment_group" style="left: 5px;">
+                        <div class="comment_tab">
+                            <div class="comment_dot"></div>
+                        </div>
+                        </div>
+                        <div class="verified_source_group" id="nickname_verified_source_group" style="left: 46px;">
+                        <div class="verified_source_tab" id="nickname_verified_source_tab">
+                            <a class="verified_source_icon" id="nickname_verified_source_icon" href="https://www.github.com/OpenProfileDevs" target="_blank" tabindex="-1">
+                            <img class="verified_source_favicon" id="nickname_verified_source_favicon" src=""></img>
+                            </a>
+                        </div>
+                        </div>
+                        <div><input type="text" class="input_text" id="nickname" style="width: 559px;" autocomplete="off" autocorrect="off" placeholder="What is the oc's nickname?"></div>
+                        <div class="help_box" id="nickname_help_box">
+                        <div class="help_box_tab" id="nickname_help_box_tab">
+                            <div class="help_box_text" id="nickname_help_box_text">What is the character's nickname? Nicknames are meant to be fun lighthearted alternative callings for the character often created by their friends and family. Sometimes even enemies or other acquaintances may come up with nicknames for the character with negative intent.</div>
+                        </div>
+                        </div>
+                        <div class="history_group" id="nickname_history_group">
+                        <div class="history_tab" id="nickname_history_tab" style="left: 433.5px;">
+                            <div class="last_modified_text" id="nickname_time"></div>
+                            <div class="history_dot" id="nickname_history_dot"></div>
+                        </div>
+                        </div>
+                        <script src="scripts/emojis/page1/nickname_emojis.js"></script>
+                        <script src="scripts/generations/page1/generate_nickname.js"></script>
+                    </div>
+                    </div>
+
+                    <div class="row" style="top: 188px; left: 36px;">
+
+                    <!--————————————————————————————————————————————————————————-->
+                    <!--———————————————————————[ ALIAS ]————————————————————————-->
+                    <!--————————————————————————————————————————————————————————-->
+                    <div class="group" id="alias_group" style="top: 0px; left: 0px; z-index: 16;">
+                        <div class="label_tab" id="alias_label_tab">
+                        <div class="label_text" id="alias_label_text">Alias</div>
+                        </div>
+                        <div class="comment_group" id="alias_comment_group" style="left: 5px;">
+                        <div class="comment_tab">
+                            <div class="comment_dot"></div>
+                        </div>
+                        </div>
+                        <div class="verified_source_group" id="alias_verified_source_group" style="left: 46px;">
+                        <div class="verified_source_tab" id="alias_verified_source_tab">
+                            <a class="verified_source_icon" id="alias_verified_source_icon" href="https://www.github.com/OpenProfileDevs" target="_blank" tabindex="-1">
+                            <img class="verified_source_favicon" id="alias_verified_source_favicon" src=""></img>
+                            </a>
+                        </div>
+                        </div>
+                        <div><input type="text" class="input_text" id="alias" style="width: 559px;" autocomplete="off" autocorrect="off" placeholder="What is the oc's alias?"></div>
+                        <div class="help_box" id="alias_help_box">
+                        <div class="help_box_tab" id="alias_help_box_tab">
+                            <div class="help_box_text" id="alias_help_box_text">What is the character's alias? If any, aliases are alternative names useally for cyberspace or business purposes for seperating themselves from their real identity to remain anonymous. These can include personal self-made titles and public callings in which the character made their own.</div>
+                        </div>
+                        </div>
+                        <div class="history_group" id="alias_history_group">
+                        <div class="history_tab" id="alias_history_tab" style="left: 433.5px;">
+                            <div class="last_modified_text" id="alias_time"></div>
+                            <div class="history_dot" id="alias_history_dot"></div>
+                        </div>
+                        </div>
+                        <script src="scripts/emojis/page1/alias_emojis.js"></script>
+                        <script src="scripts/generations/page1/generate_alias.js"></script>
+                    </div>
+                    </div>
+
+                    <div class="row" style="top: 234px; left: 36px;">
+
+                    <!--————————————————————————————————————————————————————————-->
+                    <!--—————————————————————[ ALTER-EGO ]——————————————————————-->
+                    <!--————————————————————————————————————————————————————————-->
+                    <div class="group" id="alter_ego_group" style="top: 0px; left: 0px; z-index: 15;">
+                        <div class="label_tab" id="alter_ego_label_tab">
+                        <div class="label_text" id="alter_ego_label_text">Alter Ego</div>
+                        </div>
+                        <div class="comment_group" id="alter_ego_comment_group" style="left: 5px;">
+                        <div class="comment_tab">
+                            <div class="comment_dot"></div>
+                        </div>
+                        </div>
+                        <div class="verified_source_group" id="alter_ego_verified_source_group" style="left: 46px;">
+                        <div class="verified_source_tab" id="alter_ego_verified_source_tab">
+                            <a class="verified_source_icon" id="alter_ego_verified_source_icon" href="https://www.github.com/OpenProfileDevs" target="_blank" tabindex="-1">
+                            <img class="verified_source_favicon" id="alter_ego_verified_source_favicon" src=""></img>
+                            </a>
+                        </div>
+                        </div>
+                        <div><input type="text" class="input_text" id="alter_ego" style="width: 559px;" autocomplete="off" autocorrect="off" placeholder="What is the oc's alter ego?"></div>
+                        <div class="help_box" id="alter_ego_help_box">
+                        <div class="help_box_tab" id="alter_ego_help_box_tab">
+                            <div class="help_box_text" id="alter_ego_help_box_text">What is the character's alter ego? Alter egos are alternate personalities that the character possesses and becomes during certain situations. Alter egos are commonly used for characters with secret heroic or villainic identities.</div>
+                        </div>
+                        </div>
+                        <div class="history_group" id="alter_ego_history_group">
+                        <div class="history_tab" id="alter_ego_history_tab" style="left: 433.5px;">
+                            <div class="last_modified_text" id="alter_ego_time"></div>
+                            <div class="history_dot" id="alter_ego_history_dot"></div>
+                        </div>
+                        </div>
+                        <script src="scripts/emojis/page1/alter_ego_emojis.js"></script>
+                        <script src="scripts/generations/page1/generate_alter_ego.js"></script>
+                    </div>
+                    </div>
+
+                    <div class="row" style="top: 280px; left: 36px;">
+                    
+
+                    <!--————————————————————————————————————————————————————————-->
+                    <!--———————————————————————[ PREFIX ]———————————————————————-->
+                    <!--————————————————————————————————————————————————————————-->
+                    <div class="group" id="prefix_group" style="top: 0px; left: 0px; z-index: 14;">
+                        <div class="label_tab" id="prefix_label_tab">
+                        <div class="label_text" id="prefix_label_text">Prefix</div>
+                        </div>
+                        <div class="comment_group" id="prefix_comment_group" style="left: 5px;">
+                        <div class="comment_tab">
+                            <div class="comment_dot"></div>
+                        </div>
+                        </div>
+                        <div class="verified_source_group" id="prefix_verified_source_group" style="left: 46px;">
+                        <div class="verified_source_tab" id="prefix_verified_source_tab">
+                            <a class="verified_source_icon" id="prefix_verified_source_icon" href="https://www.github.com/OpenProfileDevs" target="_blank" tabindex="-1">
+                            <img class="verified_source_favicon" id="prefix_verified_source_favicon" src=""></img>
+                            </a>
+                        </div>
+                        </div>
+                        <div><input type="text" class="input_text" id="prefix" style="width: 367.5px;" autocomplete="off" autocorrect="off" placeholder="What is the oc's prefix?"></div>
+                        <div class="help_box" id="prefix_help_box">
+                        <div class="help_box_tab" id="prefix_help_box_tab">
+                            <div class="help_box_text" id="prefix_help_box_text">What is the character's prefix? If the character is worldly notable then it's likely they might have a prefix or prefix based title apart from citizen standards. Prefixes are typically given by members of a higher ranking order than them for special ceremonies or accomplishments.</div>
+                        </div>
+                        </div>
+                        <div class="history_group" id="prefix_history_group">
+                        <div class="history_tab" id="prefix_history_tab" style="left: 242px;">
+                            <div class="last_modified_text" id="prefix_time"></div>
+                            <div class="history_dot" id="prefix_history_dot"></div>
+                        </div>
+                        </div>
+                        <script src="scripts/emojis/page1/prefix_emojis.js"></script>
+                        <script src="scripts/generations/page1/generate_prefix.js"></script>
+                    </div>
+
+                    <!--————————————————————————————————————————————————————————-->
+                    <!--———————————————————————[ SUFFIX ]———————————————————————-->
+                    <!--————————————————————————————————————————————————————————-->
+                    <div class="group" id="suffix_group" style="top: 0px; left: 460px; z-index: 13;">
+                        <div class="label_tab" id="suffix_label_tab">
+                        <div class="label_text" id="suffix_label_text">Suffix</div>
+                        </div>
+                        <div class="comment_group" id="suffix_comment_group" style="left: 5px;">
+                        <div class="comment_tab">
+                            <div class="comment_dot"></div>
+                        </div>
+                        </div>
+                        <div class="verified_source_group" id="suffix_verified_source_group" style="left: 46px;">
+                        <div class="verified_source_tab" id="suffix_verified_source_tab">
+                            <a class="verified_source_icon" id="suffix_verified_source_icon" href="https://www.github.com/OpenProfileDevs" target="_blank" tabindex="-1">
+                            <img class="verified_source_favicon" id="suffix_verified_source_favicon" src=""></img>
+                            </a>
+                        </div>
+                        </div>
+                        <div><input type="text" class="input_text" id="suffix" style="width: 175px;" autocomplete="off" autocorrect="off" placeholder="What is the oc's suffix?"></div>
+                        <div class="help_box" id="suffix_help_box">
+                        <div class="help_box_tab" id="suffix_help_box_tab">
+                            <div class="help_box_text" id="suffix_help_box_text">What is the character's suffix? Suffixes are commonly known to be inherited from family trees but can also be earned in military service and other professions.</div>
+                        </div>
+                        </div>
+                        <div class="history_group" id="suffix_history_group">
+                        <div class="history_tab" id="suffix_history_tab">
+                            <div class="last_modified_text" id="suffix_time"></div>
+                            <div class="history_dot" id="suffix_history_dot"></div>
+                        </div>
+                        </div>
+                        <script src="scripts/emojis/page1/suffix_emojis.js"></script>
+                        <script src="scripts/generations/page1/generate_suffix.js"></script>
+                    </div>
+                    </div>
+
+                    <div class="row" style="top: 326px; left: 36px;">
+
+                    <!--————————————————————————————————————————————————————————-->
+                    <!--————————————————————[ FORMER-NAME ]—————————————————————-->
+                    <!--————————————————————————————————————————————————————————-->
+                    <div class="group" id="former_name_group" style="top: 0px; left: 0px; z-index: 12;">
+                        <div class="label_tab" id="former_name_label_tab">
+                        <div class="label_text" id="former_name_label_text">Former Name</div>
+                        </div>
+                        <div class="comment_group" id="former_name_comment_group" style="left: 5px;">
+                        <div class="comment_tab">
+                            <div class="comment_dot"></div>
+                        </div>
+                        </div>
+                        <div class="verified_source_group" id="former_name_verified_source_group" style="left: 46px;">
+                        <div class="verified_source_tab" id="former_name_verified_source_tab">
+                            <a class="verified_source_icon" id="former_name_verified_source_icon" href="https://www.github.com/OpenProfileDevs" target="_blank" tabindex="-1">
+                            <img class="verified_source_favicon" id="former_name_verified_source_favicon" src=""></img>
+                            </a>
+                        </div>
+                        </div>
+                        <div><input type="text" class="input_text" id="former_name" style="width: 559px;" autocomplete="off" autocorrect="off" placeholder="What is the oc's former name?"></div>
+                        <div class="help_box" id="former_name_help_box">
+                        <div class="help_box_tab" id="former_name_help_box_tab">
+                            <div class="help_box_text" id="former_name_help_box_text">What is the character's former name? Reasons for a former name may be due to a once active alias or nickname the character was once known by. A former name can be useful for characters who changed their path in life and needed to let go the person they once were.</div>
+                        </div>
+                        </div>
+                        <div class="history_group" id="former_name_history_group">
+                        <div class="history_tab" id="former_name_history_tab" style="left: 433.5px;">
+                            <div class="last_modified_text" id="former_name_time"></div>
+                            <div class="history_dot" id="former_name_history_dot"></div>
+                        </div>
+                        </div>
+                        <script src="scripts/emojis/page1/former_name_emojis.js"></script>
+                        <script src="scripts/generations/page1/generate_former_name.js"></script>
+                    </div>
+                    </div>
+
+                    <div class="row" style="top: 372px; left: 36px;">
+
+                    <!--————————————————————————————————————————————————————————-->
+                    <!--————————————————————[ NAME-ORIGIN ]—————————————————————-->
+                    <!--————————————————————————————————————————————————————————-->
+                    <div class="group" id="name_origin_group" style="top: 0px; left: 0px; z-index: 11;">
+                        <div class="label_tab" id="name_origin_label_tab">
+                        <div class="label_text" id="name_origin_label_text">Name Origin</div>
+                        </div>
+                        <div class="comment_group" id="name_origin_comment_group" style="left: 5px;">
+                        <div class="comment_tab">
+                            <div class="comment_dot"></div>
+                        </div>
+                        </div>
+                        <div class="verified_source_group" id="name_origin_verified_source_group" style="left: 46px;">
+                        <div class="verified_source_tab" id="name_origin_verified_source_tab">
+                            <a class="verified_source_icon" id="name_origin_verified_source_icon" href="https://www.github.com/OpenProfileDevs" target="_blank" tabindex="-1">
+                            <img class="verified_source_favicon" id="name_origin_verified_source_favicon" src=""></img>
+                            </a>
+                        </div>
+                        </div>
+                        <textarea id="name_origin" style="width: 559px; height: 252px;" autocomplete="off" autocorrect="off" placeholder="What is the origin behind the oc's name?"></textarea>
+                        <div class="help_box" id="name_origin_help_box" style="top: 259px;">
+                        <div class="help_box_tab" id="name_origin_help_box_tab">
+                            <div class="help_box_text" id="name_origin_help_box_text">What is the origin behind the character's name and what does it mean? Is it from a specifc region or hold a special tale to it? Who gave it to them or whom did they inherit it from? Any reason when and why the character got the name? Try to be the most descriptive possible and remember the usage of the five Ws (who, what, when, where, and why) when needed.</div>
+                        </div>
+                        </div>
+                        <div class="history_group" id="name_origin_history_group">
+                        <div class="history_tab" id="name_origin_history_tab" style="left: 433.5px; top: 240px;">
+                            <div class="last_modified_text" id="name_origin_time"></div>
+                            <div class="history_dot" id="name_origin_history_dot"></div>
+                        </div>
+                        </div>
+                        <script src="scripts/emojis/page1/name_origin_emojis.js"></script>
+                        <script src="scripts/generations/page1/generate_name_origin.js"></script>
+                    </div>
+                    </div>
+
+                    <div class="row" style="top: 706px; left: 36px;">
+
+                    <!--————————————————————————————————————————————————————————-->
+                    <!--———————————————[ PERSONAL-THOUGHTS-NAME ]———————————————-->
+                    <!--————————————————————————————————————————————————————————-->
+                    <div class="group" id="personal_thoughts_name_group" style="top: 0px; left: 0px; z-index: 10;">
+                        <div class="label_tab" id="personal_thoughts_name_label_tab">
+                        <div class="label_text" id="personal_thoughts_name_label_text">Personal Thoughts</div>
+                        </div>
+                        <div class="comment_group" id="personal_thoughts_name_comment_group" style="left: 5px;">
+                        <div class="comment_tab">
+                            <div class="comment_dot"></div>
+                        </div>
+                        </div>
+                        <div class="verified_source_group" id="personal_thoughts_name_verified_source_group" style="left: 46px;">
+                        <div class="verified_source_tab" id="personal_thoughts_name_verified_source_tab">
+                            <a class="verified_source_icon" id="personal_thoughts_name_verified_source_icon" href="https://www.github.com/OpenProfileDevs" target="_blank" tabindex="-1">
+                            <img class="verified_source_favicon" id="personal_thoughts_name_verified_source_favicon" src=""></img>
+                            </a>
+                        </div>
+                        </div>
+                        <textarea id="personal_thoughts_name" style="width: 559px; height: 252px;" autocomplete="off" autocorrect="off" placeholder="What are the oc's thoughts towards their name?"></textarea>
+                        <div class="help_box" id="personal_thoughts_name_help_box" style="top: 259px;">
+                        <div class="help_box_tab" id="personal_thoughts_name_help_box_tab">
+                            <div class="help_box_text" id="personal_thoughts_name_help_box_text">What are the character's personal thoughts towards their name? Do they like the name or would they rather have another? Does having the name affects their life in any certain way? Does the name remind them of anything? Are they comfortable sharing their name with others or would they rather it in secrecy? Try to be the most descriptive possible and remember the usage of the five Ws (who, what, when, where, and why) when needed.</div>
+                        </div>
+                        </div>
+                        <div class="history_group" id="personal_thoughts_name_history_group">
+                        <div class="history_tab" id="personal_thoughts_name_history_tab" style="left: 433.5px; top: 240px;"">
+                            <div class="last_modified_text" id="personal_thoughts_name_time"></div>
+                            <div class="history_dot" id="personal_thoughts_name_history_dot"></div>
+                        </div>
+                        </div>
+                        <script src="scripts/emojis/page1/personal_thoughts_name_emojis.js"></script>
+                        <script src="scripts/generations/page1/generate_personal_thoughts_name.js"></script>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </body>
