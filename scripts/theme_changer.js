@@ -1,4 +1,4 @@
-function changeTheme(theme) {
+function changeThemeDISABLED(theme) {
     // Define the theme file based on the selected theme
     const themeFile = `themes/${theme}.json`;
 

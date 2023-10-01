@@ -25,7 +25,7 @@ function color_option() {
           textBox.style.backgroundColor = "#ffee93";
         } else {
           colorOption.setAttribute('option', 'option_1');
-          textBox.style.backgroundColor = "#ffffff";
+          textBox.style.backgroundColor = "#596379";
         }
       } else {
         colorOption.style.opacity = "0.35"; // Fade the color option
@@ -64,7 +64,7 @@ function color_option2(groupId, highlighted) {
         textBox.style.backgroundColor = "#ffee93";
       } else {
         colorOption.setAttribute('option', 'option_1');
-        textBox.style.backgroundColor = "#ffffff";
+        textBox.style.backgroundColor = "#596379";
       }
     } else {
       colorOption.style.opacity = "0.35"; // Fade the color option
