@@ -76,17 +76,33 @@
     <!--———————————————————[ LEFT-ELEMENTS ]————————————————————-->
     <!--————————————————————————————————————————————————————————-->
     <div class="left">
+        <div class="left_top">
+            <div><input type="text" class="input_search" id="data_base_search" autocomplete="off" autocorrect="off" placeholder="Search the database!">
+                <img src="media/icons/feather_icons/search.svg" style="position: absolute; top: -11px; left: -10px; scale: 0.20; transform-origin: center center; z-index: 4;">
+                <div class="tag" id="" style="left: 270px; top: 41px; scale: 0.55; width: 85px; background: #5e329b; z-index: 4;">PREVIEW</div>
+            </div>
+            <div class="left_top_2">
+                <div id="universe-list"></div>
+            </div>
+        </div>
+
+        <div class="profiles_scroll" id="profile-list"></div>
+
         <div class="left_bar">
+            <div class="side_button_2" id="toggle_left_menu" title="Show Menu">
+                <img src="media/icons/feather_icons/menu.svg" style="scale: 0.30; transform-origin: top left; margin: 10px;">
+                <div class="tag" id="" style="left: -8px; scale: 0.55; width: 85px; background: #5e329b;">PREVIEW</div>
+            </div>
             <div class="side_button_2" id="" title="User Profiles">
                 <img src="media/icons/feather_icons/user.svg" style="scale: 0.30; transform-origin: top left; margin: 10px;">
                 <div class="tag" id="" style="left: -8px; scale: 0.55; width: 85px; background: #5e329b;">PREVIEW</div>
             </div>
             <div class="side_button_2" id="" title="Profiles Database">
-                <img src="media/icons/feather_icons/globe.svg" style="scale: 0.30; transform-origin: top left; margin: 10px;">
+                <img src="media/icons/feather_icons/globe.svg" style="scale: 0.30; transform-origin: top left; margin: 10px; opacity: 0.35;">
                 <div class="tag" id="" style="left: -8px; scale: 0.55; width: 85px; background: #5e329b;">PREVIEW</div>
             </div>
             <div class="side_button_2" id="" title="Schemes Database">
-                <img src="media/icons/feather_icons/shopping-bag.svg" style="scale: 0.30; transform-origin: top left; margin: 10px;">
+                <img src="media/icons/feather_icons/shopping-bag.svg" style="scale: 0.30; transform-origin: top left; margin: 10px; opacity: 0.35;">
                 <div class="tag" id="" style="left: -8px; scale: 0.55; width: 85px; background: #5e329b;">PREVIEW</div>
             </div>
 
@@ -109,6 +125,14 @@
              <div class="side_button_2" id="saveButton" title="Save Profile">
                 <img src="media/icons/feather_icons/save.svg" style="scale: 0.30; transform-origin: top left; margin: 10px;">
                 <div class="tag" id="" style="left: 8px; scale: 0.55;">BETA</div>
+            </div>
+            <div class="side_button_2" id="add_profile" title="Add Profile" onclick="addProfile()">
+                <img src="media/icons/feather_icons/plus.svg" style="scale: 0.30; transform-origin: top left; margin: 10px;">
+                <div class="tag" id="" style="left: -8px; scale: 0.55; width: 85px; background: #5e329b;">PREVIEW</div>
+            </div>
+            <div class="side_button_2" id="add_universe" title="Add Universe" onclick="createuniverse()";>
+                <img src="media/icons/feather_icons/plus-circle.svg" style="transform-origin: top left; min-width: 50px; min-height: 50px; max-width: 50px; max-height: 50px; border-radius: 50%;">
+                <div class="tag" id="" style="left: -8px; scale: 0.55; width: 85px; background: #5e329b;">PREVIEW</div>
             </div>
         </div>
     </div>
@@ -154,6 +178,7 @@
         <div class="page_outer" id="page_1" style="z-index: 11;">
             <div class="page_inner">
                 <div class="row" style="top: -8px; left: 17px;">
+
                     <!--————————————————————————————————————————————————————————-->
                     <!--———————————————————[ PAGE-AUTHOR-1 ]————————————————————-->
                     <!--————————————————————————————————————————————————————————-->
@@ -743,27 +768,24 @@
 <!--————————————————————————————————————————————————————————-->
   <!--———————————————————[ LEFT-ELEMENTS ]————————————————————-->
   <!--————————————————————————————————————————————————————————-->
-  <!--<div class="left">
+  <!--<div class="left" style="overflow: auto; height: 100vh;">
     <div class="profile_manager"> 
       <p style="font-size: 24px; text-align: center; font-weight: 500;">Profile Manager</p>
       <div id="top-bar">
-        <ul id="galaxy-list"></ul>
-        <div id="create-galaxy" onclick="createGalaxy()">
-            ➕ Plus emoji for create galaxy -->
-        <!--</div>
+        <ul id="universe-list"></ul>
+        <div id="create-universe" onclick="createuniverse()">
+            ➕ Plus emoji for create universe
+        </div>
       </div>
-      <div>
-        <label for="profile-name">Profile Name:</label>
-        <input type="text" id="profile-name">
-        <button onclick="addProfile()">Add Profile</button>
-      </div>
-      <div>
-        <h2>Profiles</h2>
+        <div class="side_button_2" id="add_profile" title="Add Profile" onclick="addProfile()">
+            <img src="media/icons/feather_icons/plus.svg" style="scale: 0.30; transform-origin: top left; margin: 10px;">
+            <div class="tag" id="" style="left: -8px; scale: 0.55; width: 85px; background: #5e329b;">PREVIEW</div>
+        </div>
         <ul id="profile-list"></ul>
       </div>
-      <script src="scripts/profile_manager.js"></script>
     </div>
-  </div>-->
+</div>-->
+<script src="scripts/profile_manager.js"></script>
 
   <!--————————————————————————————————————————————————————————-->
   <!--——————————————————[ BOTTOM-ELEMENTS ]———————————————————-->

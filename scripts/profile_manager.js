@@ -1,5 +1,5 @@
-let galaxies = JSON.parse(localStorage.getItem("op5-galaxies")) || [];
-let selectedGalaxyIndex = -1;
+let universes = JSON.parse(localStorage.getItem("op5-universes")) || [];
+let selecteduniverseIndex = -1;
 let selectedProfileIndex = -1;
 let currentProfileData = {};
 
@@ -9,84 +9,102 @@ window.addEventListener("load", () => {
     edit.style.opacity = "1"
 });
 
-function createGalaxy(name, emoji) {
-    const galaxyName = name || prompt("Enter a name for the new galaxy:");
-    if (!galaxyName) return;
+function createuniverse(name, url) {
+    const universeName = name || prompt("Enter a name for the new universe:");
+    if (!universeName) return;
 
-    const galaxyEmoji = emoji || prompt("Enter an emoji for the new galaxy (e.g., 🌌):");
+    const universeurl = url || prompt("Enter a url for the universe's image:");
 
-    const newGalaxy = {
-        name: galaxyName,
-        emoji: galaxyEmoji,
+    const newuniverse = {
+        name: universeName,
+        url: universeurl,
         profiles: [],
     };
 
-    galaxies.push(newGalaxy);
-    localStorage.setItem("op5-galaxies", JSON.stringify(galaxies));
-    updateGalaxyList();
+    universes.push(newuniverse);
+    localStorage.setItem("op5-universes", JSON.stringify(universes));
+    updateuniverseList();
 }
 
-function selectGalaxy(index) {
-    selectedGalaxyIndex = index;
-    localStorage.setItem("selectedGalaxyIndex", selectedGalaxyIndex.toString());
-    const galaxy = galaxies[index];
-    updateProfileList(galaxy);
+function selectuniverse(index) {
+    // Remove the .selected-universe class from previously selected universe
+    const previousSelectedUniverse = document.querySelector(".profile_universe.selected-universe");
+    if (previousSelectedUniverse) {
+        previousSelectedUniverse.classList.remove("selected-universe");
+    }
+
+    selecteduniverseIndex = index;
+    localStorage.setItem("selecteduniverseIndex", selecteduniverseIndex.toString());
+    const universe = universes[index];
+
+    // Add the .selected-universe class to the newly selected universe
+    const selectedUniverseElement = document.querySelector(`.profile_universe:nth-child(${index + 1})`);
+    if (selectedUniverseElement) {
+        selectedUniverseElement.classList.add("selected-universe");
+    }
+
+    updateProfileList(universe);
 }
 
-function renameGalaxy(index) {
-    const galaxy = galaxies[index];
-    if (galaxy) {
-        const newName = prompt("Enter a new name for the galaxy:", galaxy.name);
+function renameuniverse(index) {
+    const universe = universes[index];
+    if (universe) {
+        const newName = prompt("Enter a new name for the universe:", universe.name);
         if (newName !== null && newName.trim() !== "") {
-            const newEmoji = prompt("Enter a new emoji for the galaxy (e.g., 🌌):", galaxy.emoji);
+            const newurl = prompt("Enter a url for the universe's image:", universe.url);
 
-            galaxy.name = newName;
-            galaxy.emoji = newEmoji;
-            localStorage.setItem("op5-galaxies", JSON.stringify(galaxies));
-            updateGalaxyList();
+            universe.name = newName;
+            universe.url = newurl;
+            localStorage.setItem("op5-universes", JSON.stringify(universes));
+            updateuniverseList();
         }
     }
 }
 
-function removeGalaxy(index) {
-    const galaxy = galaxies[index];
-    const galaxyName = galaxy.name;
-    const userInput = prompt(`To confirm deletion, please enter the name of the galaxy "${galaxyName}"`);
+function removeuniverse(index) {
+    const universe = universes[index];
+    const universeName = universe.name;
+    const userInput = prompt(`To confirm deletion, please enter the name of the universe "${universeName}"`);
 
-    if (userInput === galaxyName) {
-        const confirmDelete = confirm("Are you sure you want to delete this galaxy?");
+    if (userInput === universeName) {
+        const confirmDelete = confirm("Are you sure you want to delete this universe?");
         if (confirmDelete) {
-            galaxies.splice(index, 1);
-            localStorage.setItem("op5-galaxies", JSON.stringify(galaxies));
-            selectedGalaxyIndex = -1;
-            updateGalaxyList();
+            universes.splice(index, 1);
+            localStorage.setItem("op5-universes", JSON.stringify(universes));
+            selecteduniverseIndex = -1;
+            updateuniverseList();
             updateProfileList(null);
         }
     } else {
-        alert("Galaxy name does not match. Deletion canceled.");
+        alert("universe name does not match. Deletion canceled.");
     }
 }
 
-function updateGalaxyList() {
-    const galaxyList = document.getElementById("galaxy-list");
-    galaxyList.innerHTML = galaxies.map((galaxy, index) => `
-            ${galaxy.emoji || ''} 
-            <button onclick="selectGalaxy(${index})">Select</button>
-            <button onclick="renameGalaxy(${index})">Rename</button>
-            <button onclick="removeGalaxy(${index})">Delete</button>
-            <br>
+function updateuniverseList() {
+    const universeList = document.getElementById("universe-list");
+    universeList.innerHTML = universes.map((universe, index) => `
+                <div class="profile_universe" id="" title="${universe.name || '<i>Unknown Universe</i>'}" onclick="selectuniverse(${index})";>
+                    <img src="${universe.url || 'media/images/openprofile/preview/op_preview_512.jpeg'}" style="transform-origin: top left; min-width: 50px; min-height: 50px; max-width: 50px; max-height: 50px; border-radius: 50%;">
+                    <div class="delete_button_2" onclick="removeuniverse(${index})" title="Delete Universe">
+                        <img src="media/icons/feather_icons/x.svg" style="scale: 0.30; transform-origin: top left; margin: 10px;">
+                    </div>
+                    <div class="tag" id="" style="left: -8px; scale: 0.55; width: 85px; background: #5e329b;">PREVIEW</div>
+                </div>
     `).join("");
 }
 
 function addProfile() {
-    if (selectedGalaxyIndex < 0 || selectedGalaxyIndex >= galaxies.length) {
-        alert("Please select a galaxy to add a profile.");
+    if (selecteduniverseIndex < 0 || selecteduniverseIndex >= universes.length) {
+        alert("Please select a universe to add a profile.");
         return;
     }
 
-    const profileName = document.getElementById("profile-name").value.trim();
-    if (profileName === "") {
-        alert("Please enter a profile name.");
+    // Use a window prompt to get the profile name from the user
+    const profileName = prompt("Please enter a profile name:");
+    
+    // Check if the user canceled or didn't enter a name
+    if (profileName === null || profileName.trim() === "") {
+        alert("Please enter a valid profile name.");
         return;
     }
 
@@ -230,48 +248,49 @@ function addProfile() {
         personal_thoughts_name_history: document.getElementById("personal_thoughts_name").history || true,
     };
 
-    const activeGalaxy = galaxies[selectedGalaxyIndex];
-    activeGalaxy.profiles.push(newProfile);
-    localStorage.setItem("op5-galaxies", JSON.stringify(galaxies));
+    const activeuniverse = universes[selecteduniverseIndex];
+    activeuniverse.profiles.push(newProfile);
+    localStorage.setItem("op5-universes", JSON.stringify(universes));
 
     document.getElementById("profile-name").value = "";
-    updateProfileList(activeGalaxy);
+    updateProfileList(universes[selecteduniverseIndex]);
+    selectuniverse(selecteduniverseIndex)
 }
 
 function removeProfile(index) {
-    if (selectedGalaxyIndex >= 0 && selectedGalaxyIndex < galaxies.length) {
+    if (selecteduniverseIndex >= 0 && selecteduniverseIndex < universes.length) {
         const confirmDelete = confirm("Are you sure you want to delete this profile?");
         if (!confirmDelete) {
             return;
         }
-        galaxies[selectedGalaxyIndex].profiles.splice(index, 1);
-        localStorage.setItem("op5-galaxies", JSON.stringify(galaxies));
+        universes[selecteduniverseIndex].profiles.splice(index, 1);
+        localStorage.setItem("op5-universes", JSON.stringify(universes));
         selectedProfileIndex = -1;
-        updateProfileList(galaxies[selectedGalaxyIndex]);
+        updateProfileList(universes[selecteduniverseIndex]);
         clearProfileForm();
     }
 }
 
 function renameProfile(index) {
-    if (selectedGalaxyIndex >= 0 && selectedGalaxyIndex < galaxies.length) {
+    if (selecteduniverseIndex >= 0 && selecteduniverseIndex < universes.length) {
         const newName = prompt("Enter a new name for the profile:");
         if (newName !== null && newName.trim() !== "") {
-            galaxies[selectedGalaxyIndex].profiles[index].name = newName;
-            localStorage.setItem("op5-galaxies", JSON.stringify(galaxies));
-            updateProfileList(galaxies[selectedGalaxyIndex]);
+            universes[selecteduniverseIndex].profiles[index].name = newName;
+            localStorage.setItem("op5-universes", JSON.stringify(universes));
+            updateProfileList(universes[selecteduniverseIndex]);
             clearProfileForm();
         }
     }
 }
 
 function loadProfile(index) {
-    const activeGalaxy = galaxies[selectedGalaxyIndex];
+    const activeuniverse = universes[selecteduniverseIndex];
     const loadButton = document.querySelector("#profile-list li:nth-child(" + (index + 1) + ") button:nth-of-type(1)");
 
     if (loadButton.textContent === "Load Profile") {
         if (selectedProfileIndex !== index) {
             if (selectedProfileIndex !== -1) {
-                const currentProfile = activeGalaxy.profiles[selectedProfileIndex];
+                const currentProfile = activeuniverse.profiles[selectedProfileIndex];
                 // page author 1
                 const page_author_1_changed = document.getElementById("page_author_1").value !== (currentProfile.page_author_1 || "");
                 // written date 1
@@ -553,7 +572,7 @@ function loadProfile(index) {
             }
 
             selectedProfileIndex = index;
-            currentProfileData = { ...activeGalaxy.profiles[selectedProfileIndex] };
+            currentProfileData = { ...activeuniverse.profiles[selectedProfileIndex] };
             // page author
             document.getElementById("page_author_1").value = currentProfileData.page_author_1 || "";
             // written date 1
@@ -846,8 +865,8 @@ function loadProfile(index) {
 }
 
 function saveProfile() {
-    const activeGalaxy = galaxies[selectedGalaxyIndex];
-    const profile = activeGalaxy.profiles[selectedProfileIndex];
+    const activeuniverse = universes[selecteduniverseIndex];
+    const profile = activeuniverse.profiles[selectedProfileIndex];
     // page author 1
     profile.page_author_1 = document.getElementById("page_author_1").value;
     // written date 1
@@ -973,7 +992,7 @@ function saveProfile() {
     profile.personal_thoughts_name_history = document.getElementById("personal_thoughts_name").history || false;
 
     // Save the updated data to localStorage
-    localStorage.setItem("op5-galaxies", JSON.stringify(galaxies));
+    localStorage.setItem("op5-universes", JSON.stringify(universes));
 
     selectedProfileIndex = -1;
     currentProfileData = {};
@@ -984,7 +1003,7 @@ function saveProfile() {
         loadButton.onclick = () => loadProfile(selectedProfileIndex);
     }
 
-    updateProfileList(activeGalaxy);
+    updateProfileList(activeuniverse);
 }
 
 function openProfileInNewTab() {
@@ -998,24 +1017,34 @@ function openProfileInNewTab() {
     }
 }
 
-function updateProfileList(activeGalaxy) {
+function updateProfileList(activeuniverse) {
     const profileList = document.getElementById("profile-list");
     profileList.innerHTML = "";
 
-    if (activeGalaxy) {
-        activeGalaxy.profiles.forEach((profile, index) => {
+    if (activeuniverse) {
+        activeuniverse.profiles.forEach((profile, index) => {
             const listItem = document.createElement("li");
             listItem.innerHTML = `
-                <strong>${profile.name}</strong><br>
-                Page Author: ${profile.page_author_1 || ''}<br>
-                Written Date: ${profile.written_date_1 || ''}<br>
-                Profile Version: ${profile.version || ''}<br>
-                Full Name: ${profile.full_name || ''}<br>
-                Full Name Verified Source Icon: ${profile.full_name_verified_source_icon || ''}<br>
-                Full Name Time: ${profile.full_name_time || ''}<br>
-                <button onclick="loadProfile(${index})">Load Profile</button>
-                <button onclick="renameProfile(${index})">Rename</button>
-                <button onclick="removeProfile(${index})">Remove</button>
+                <button onclick="loadProfile(${index})" style="display: none;">Load Profile</button>
+                <button onclick="renameProfile(${index})" style="display: none;">Rename</button>
+                <button onclick="removeProfile(${index})" style="display: none;">Remove</button>
+
+            <div class="profile_group">
+                <div class="profile_image">
+                    <img src="media/images/openprofile/preview/op_preview_512.jpeg" style="min-width: 100px; min-height: 100px; max-width: 100px; max-height: 100px; transform-origin: top left; border-radius: 5px;">
+                </div>
+                <div class="side_button_2" id="load_database_profile" onclick="loadProfile(${index})" title="Load Profile" style="left: 246px; top: 9px; scale: 0.75; z-index: 3;">
+                    <img src="media/icons/feather_icons/download.svg" style="scale: 0.30; transform-origin: top left; margin: 10px;">
+                </div>
+                <div class="delete_button" onclick="removeProfile(${index})" title="Delete Profile">
+                    <img src="media/icons/feather_icons/x.svg" style="scale: 0.30; transform-origin: top left; margin: 10px;">
+                </div>
+                <div class="profile_text" style="max-width: 125px; max-height: 20px;">${profile.name}</div>
+                <div class="profile_text" style="top: 36px; font-size: 12px; opacity: 0.85; max-width: 125px; max-height: 18px;">${profile.page_author_1 || '<i>Unknown</i>'}</div>
+                <div class="profile_text" style="top: 55px; font-size: 10px; opacity: 0.65; max-width: 166px; max-height: 58px;">Profile descriptions are still under development!</div>
+                <div class="profile_tag" id="" style="width: 60;">#tags-under-development</div>
+                <div class="tag" id="" style="left: 246px; top: 139px; scale: 0.55; width: 85px; background: #5e329b; z-index: 4;">PREVIEW</div>
+            </div>
             `;
             profileList.appendChild(listItem);
         });
@@ -1292,5 +1321,5 @@ function clearProfileForm() {
     history_option2('personal_thoughts_name', personal_thoughts_name_history);
 }
 
-updateGalaxyList();
+updateuniverseList();
 updateProfileList(null);
