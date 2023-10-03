@@ -106,7 +106,6 @@
     scale: 1.25;
     border-radius: 25px;
     background: #272c3900;
-    transition: 0.2s all;
     z-index: 0;
   }
 
@@ -166,7 +165,7 @@
   /*/——————————————————[ PAGE-MAIN-ELEMENTS ]————————————————/*/
   /*/————————————————————————————————————————————————————————/*/
   .row {
-    position: relative;
+    position: absolute;
     left: 0px;
     top: 0px;
     height: 0px;
@@ -908,6 +907,7 @@
     height: 11.7in;
     border-radius: 25px;
     background-color: #272c39;
+    transition: 0.4s all;
     z-index: 0;
   }
 
@@ -1044,16 +1044,6 @@
   .disable-animations {
     transition: none !important; /* Disable transitions */
     animation: none !important; /* Disable animations */
-  }
-
-  #page_0 {
-    opacity: 0;
-    transition: 0.3s ease-in-out;
-  }
-
-  #page_1 {
-    opacity: 1;
-    transition: 0.3s ease-in-out;
   }
 
   /*/GALAXY ELEMENTS/*/

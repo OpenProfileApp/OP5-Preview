@@ -99,7 +99,7 @@ function addProfile() {
         return;
     }
 
-    // Use a window prompt to get the profile name from the user
+    // Use a window prompt to get the profile name and profile URL from the user
     const profileName = prompt("Please enter a profile name:");
     
     // Check if the user canceled or didn't enter a name
@@ -108,8 +108,17 @@ function addProfile() {
         return;
     }
 
+    const profileURL = prompt("Enter a URL for the profile's image:");
+    
+    // Check if the user canceled
+    if (profileURL === null) {
+        alert("Please enter a valid profile URL.");
+        return;
+    }
+
     const newProfile = {
         name: profileName,
+        image: profileURL,
         version: "v1.0.0",
         // page_author_1
         page_author_1: document.getElementById("page_author_1").value,
@@ -248,28 +257,39 @@ function addProfile() {
         personal_thoughts_name_history: document.getElementById("personal_thoughts_name").history || true,
     };
 
+    // Add the new profile to the currently selected universe
     const activeuniverse = universes[selecteduniverseIndex];
     activeuniverse.profiles.push(newProfile);
     localStorage.setItem("op5-universes", JSON.stringify(universes));
 
+    // Clear the profile form
     document.getElementById("profile-name").value = "";
-    updateProfileList(universes[selecteduniverseIndex]);
-    selectuniverse(selecteduniverseIndex)
+
+    // Refresh the currently selected universe (galaxy)
+    selectuniverse(selecteduniverseIndex);
 }
 
 function removeProfile(index) {
     if (selecteduniverseIndex >= 0 && selecteduniverseIndex < universes.length) {
-        const confirmDelete = confirm("Are you sure you want to delete this profile?");
-        if (!confirmDelete) {
-            return;
+        const profileToDelete = universes[selecteduniverseIndex].profiles[index];
+        const profileName = prompt(`To confirm deletion, please enter the name of the profile "${profileToDelete.name}"`);
+        
+        if (profileName === profileToDelete.name) {
+            const confirmDelete = confirm("Are you sure you want to delete this profile?");
+            if (!confirmDelete) {
+                return;
+            }
+            universes[selecteduniverseIndex].profiles.splice(index, 1);
+            localStorage.setItem("op5-universes", JSON.stringify(universes));
+            selectedProfileIndex = -1;
+            updateProfileList(universes[selecteduniverseIndex]);
+            clearProfileForm();
+        } else {
+            alert("Profile name does not match. Deletion canceled.");
         }
-        universes[selecteduniverseIndex].profiles.splice(index, 1);
-        localStorage.setItem("op5-universes", JSON.stringify(universes));
-        selectedProfileIndex = -1;
-        updateProfileList(universes[selecteduniverseIndex]);
-        clearProfileForm();
     }
 }
+
 
 function renameProfile(index) {
     if (selecteduniverseIndex >= 0 && selecteduniverseIndex < universes.length) {
@@ -1031,7 +1051,7 @@ function updateProfileList(activeuniverse) {
 
             <div class="profile_group">
                 <div class="profile_image">
-                    <img src="media/images/openprofile/preview/op_preview_512.jpeg" style="min-width: 100px; min-height: 100px; max-width: 100px; max-height: 100px; transform-origin: top left; border-radius: 5px;">
+                    <img src="${profile.image || 'media/images/openprofile/preview/op_preview_512.jpeg'}" style="min-width: 100px; min-height: 100px; max-width: 100px; max-height: 100px; transform-origin: top left; border-radius: 5px;">
                 </div>
                 <div class="side_button_2" id="load_database_profile" onclick="loadProfile(${index})" title="Load Profile" style="left: 246px; top: 9px; scale: 0.75; z-index: 3;">
                     <img src="media/icons/feather_icons/download.svg" style="scale: 0.30; transform-origin: top left; margin: 10px;">

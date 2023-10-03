@@ -1,18 +1,21 @@
-const movableElement = document.getElementById('page_0');
-const edit = document.getElementById('page_1');
-const moveButton = document.getElementById('page_switcher');
-const moveButton2 = document.getElementById('page_switcher2');
+const nextPage = document.getElementById('next_page');
+const previousPage = document.getElementById('previous_page');
+
+const page0 = document.getElementById('page_0');
+const page1 = document.getElementById('page_1');
+
 let currentPosition = 0;
 
-moveButton.addEventListener('click', () => {
-  movableElement.style.left = "-800px"
-  movableElement.style.opacity = "0"
-  edit.style.opacity = "1"
+nextPage.addEventListener('click', () => {
+  if (currentPosition === 0) {
+    page0.style.left = "-100vw"
+    currentPosition = 1;
+  }
 });
 
-moveButton2.addEventListener('click', () => {
-    movableElement.style.left = "365px"
-    movableElement.style.opacity = "1"
-    edit.style.opacity = "0"
-  });
-  
+previousPage.addEventListener('click', () => {
+  if (currentPosition === 1) {
+    page0.style.left = "0px";
+    currentPosition = 0;
+  }
+});
