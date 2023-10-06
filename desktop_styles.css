@@ -507,7 +507,6 @@
 
   .input_text::placeholder {
     color: #ffffff;
-    font-size: 12px;
     opacity: 0.35;
     transition: 0.2s all;
   }
@@ -581,6 +580,64 @@
     transition: 0.2s all;
   }
 
+  .page_indicator {
+    position: absolute;
+    justify-content: center;
+    text-align: center;
+    left: 0px;
+    top: 9px;
+    height: 28px;
+    width: 175px;
+    font-family: "Open Sans";
+    font-size: 14px;
+    color: #ffffff;
+    background: #272c39;
+    border-radius: 0px 0px 5px 5px;
+    border: 2px solid #272c39;
+    outline: none;
+    opacity: 1;
+    transform-origin: center;
+    transition: 0.2s all;
+    z-index: 10;
+  }
+
+  .image_input {
+    position: absolute;
+    background-color: #596379;
+    border-radius: 0px 5px 5px 5px;
+    width: 568;
+    cursor: pointer; 
+    overflow: hidden;
+    transition: 0.2s all;
+    z-index: 30;
+  }
+
+  .image_input_2 {
+    position: absolute;
+    background-color: #596379;
+    border-radius: 0px 5px 5px 5px;
+    width: 568;
+    cursor: pointer; 
+    overflow: hidden;
+    transition: 0.2s all;
+    z-index: 30;
+  }
+
+  .image_input:hover{
+    background-color: #768099;
+    border-radius: 0px 5px 0px 5px;
+  }
+
+  .image_input_2:hover{
+    background-color: #768099;
+    border-radius: 5px;
+  }
+
+  #brand_icon_container:hover{
+    scale: 1.05;
+    border-radius: 2.5;
+  }
+
   @keyframes scrollText {
     0% {
       transform: translateX(100%);
@@ -590,7 +647,7 @@
     }
   }
 
-  #seperator::selection {
+  #seperator:selection {
     background-color: #1b1f28;
     border-radius: 5px;
     color: #ffffff;
@@ -758,7 +815,7 @@
     z-index: 501;
   }
 
-  .seperator {
+  .seperator{
     align-items: center;
     justify-content: center;
     height: 5px;
@@ -1068,7 +1125,7 @@
     overflow-y: auto;
     overflow-x: hidden;
     transform: translateY(165px);
-    height: 100vh;
+    height: 576px;
   }
 
   .profile_universe {
@@ -1319,9 +1376,23 @@
 @media screen and (max-width: 1500px) {
 
   body {
-    background-color: #1b1f28;
     overflow-x: hidden;
-    font-family: 'Open Sans';
+    font-family: "Open Sans";
+}
+
+body::before {
+    content: "";
+    background-image: url('URL');
+    background-size: cover;
+    background-position: center;
+    filter: blur(5px); /* Adjust the blur amount as needed */
+    position: fixed;
+    scale: 1.5;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
   }
 
   .top {
@@ -1729,7 +1800,7 @@
     z-index: 7;
   }
 
-  /*/————————————————————————————————————————————————————————/*/
+    /*/————————————————————————————————————————————————————————/*/
   /*/—————————————————[ PAGE-INPUT-ELEMENTS ]————————————————/*/
   /*/————————————————————————————————————————————————————————/*/
   .input_text {
@@ -1752,9 +1823,51 @@
 
   .input_text::placeholder {
     color: #ffffff;
-    font-size: 12px;
     opacity: 0.35;
     transition: 0.2s all;
+  }
+
+  .input_search {
+    position: relative;
+    left: 65px;
+    top: 19px;
+    width: 195px;
+    font-family: "Open Sans";
+    font-size: 12px;
+    color: white;
+    height: 14px;
+    margin: 10px;
+    background: #272c39;
+    border-radius: 10px;
+    border: 2px solid #272c39;
+    outline: none;
+    scale: 1.5;
+    opacity: 1;
+    transform-origin: center;
+    transition: 0.2s all;
+    z-index: 3;
+  }
+
+  .input_search::placeholder {
+    color: #ffffff;
+    font-size: 12px;
+    opacity: 0.35;
+    transform: translateX(17px);
+    transition: 0.2s all;
+  }
+
+  .input_search::content {
+    transform: translateX(50px);
+  }
+
+  .input_search:hover{
+    background-color: #596379;
+    border: 2px solid #596379;
+  }
+
+  .input_search:focus {
+    background-color: #596379;
+    border: 2px solid #596379;
   }
 
   textarea {
@@ -1783,6 +1896,27 @@
     transition: 0.2s all;
   }
 
+  .image_input {
+    position: absolute;
+    background-color: #596379;
+    border-radius: 0px 5px 5px 5px;
+    width: 568;
+    cursor: pointer; 
+    overflow: hidden;
+    transition: 0.2s all;
+    z-index: 30;
+  }
+
+  .image_input:hover{
+    background-color: #768099;
+    border-radius: 0px 5px 0px 5px;
+  }
+
+  #brand_icon_container:hover{
+    scale: 1.05;
+    border-radius: 2.5;
+  }
+
   @keyframes scrollText {
     0% {
       transform: translateX(100%);
@@ -1792,7 +1926,7 @@
     }
   }
 
-  #seperator::selection {
+  #seperator:selection {
     background-color: #1b1f28;
     border-radius: 5px;
     color: #ffffff;
@@ -1805,7 +1939,7 @@
   }
 
   .group:focus-within .input_text {
-    border-radius: 0px 5px 0px 5px;
+    border-radius: 0px 5px 0px 0px;
     background-color: #768099;
     border: 2px solid #768099;
   }
@@ -1823,7 +1957,7 @@
   }
 
   textarea:focus {
-    border-radius: 0px 5px 0px 5px;
+    border-radius: 0px 5px 0px 0px;
     background-color: #768099;
     border: 2px solid #768099;
   }
@@ -1960,7 +2094,7 @@
     z-index: 501;
   }
 
-  .seperator {
+  .seperator{
     align-items: center;
     justify-content: center;
     height: 5px;
@@ -2597,7 +2731,7 @@
     }
   }
 
-  #seperator::selection {
+  #seperator:selection {
     background-color: #1b1f28;
     border-radius: 5px;
     color: #ffffff;
@@ -3121,7 +3255,7 @@
     }
   }
 
-  #seperator::selection {
+  #seperator:selection {
     background-color: #1b1f28;
     border-radius: 5px;
     color: #ffffff;

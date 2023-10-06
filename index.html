@@ -189,8 +189,30 @@
     <!--——————————————————[ CENTER-ELEMENTS ]———————————————————-->
     <!--————————————————————————————————————————————————————————-->
     <div class="center">
-        
         <div class="page_outer" id="page_0" style="z-index: 99;">
+
+            <div class="row" style="top: 4px; left: 319px;">
+
+                <!--————————————————————————————————————————————————————————-->
+                <!--—————————————————————[ BRAND-ICON ]—————————————————————-->
+                <!--————————————————————————————————————————————————————————-->
+                <div class="group" id="brand_icon_group" style="top: 0px; left: 0px; z-index: 21;">
+                    <div class="tag" id="" style="top: 43px; left: 39px; scale: 0.38; width: 85px; background: #5e329b; z-index: 50;">PREVIEW</div>
+                    <div class="label_tab" id="brand_icon_label_tab">
+                        <div class="label_text" id="brand_icon_label_text">Insert Brand Banner (this text will dismiss after)</div>
+                    </div>
+                    <div>
+                        <input type="file" id="brand_icon_media_input" accept="image/*,video/*" style="display: none;">
+                        <label for="brand_icon_media_input">
+                            <div class="image_input_2" id="brand_icon_container" style="width: 162px; height: 45px; border-radius: 2.5px;">
+                                <img id="brand_icon_icon_image" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); max-width: 100%; max-height: 100%; opacity: 0.35; cursor: pointer; z-index: 30;" src="media/icons/feather_icons/plus-square.svg">                                <img id="brand_icon_selected_image" style="border-radius: 2.5px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); max-width: 100%; max-height: 100%; display: none;  z-index: 30;" src="" alt="Selected Media">
+                                <video id="brand_icon_selected_video" controls style="border-radius: 2.5px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); max-width: 100%; max-height: 100%; display: none; z-index: 30;"></video>
+                            </div>
+                        </label>
+                    </div>
+                    <script src="scripts/media/import/brand_icon_import_media.js"></script>
+                </div>
+            </div>
             <div class="page_inner">
                 <div class="row" style="top: -8px; left: 17px;">
 
@@ -214,7 +236,7 @@
                     <!--———————————————————[ OPENPROFILE-5 ]————————————————————-->
                     <!--————————————————————————————————————————————————————————-->
                     <div class="group" id="openprofile_5_group" style="top: 0px; left: 249px; z-index: 23;">
-                        <div><input type="text" class="input_text" id="openprofile_5" style="width: 175px; height: 28px; top: 9px; border-radius: 0px 0px 5px 5px; justify-content: center; text-align: center; font-size: 14px; background-color: #272c39; color: #ffffff; border-color: #272c39;" autocomplete="off" autocorrect="off" value="OpenProfile 5" tabindex="-1" readonly></div>
+                        <div><input type="text" class="page_indicator" id="openprofile_5" autocomplete="off" autocorrect="off" tabindex="-1" readonly></div>
                     </div>
 
                     <!--————————————————————————————————————————————————————————-->
@@ -245,13 +267,13 @@
                         </div>
                         
                         <div>
-                            <input type="file" id="media_input" accept="image/*,video/*" style="display: none;">
-                            <label for="media_input">
-                                <div id="image_container" style="position: relative; width: 568px; height: 320px; background: rgba(0, 0, 0, 0.1); cursor: pointer; overflow: hidden;">
-                                    <img id="icon_image" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); max-width: 100%; max-height: 100%; opacity: 0.35; cursor: pointer; z-index: 30;" src="media/icons/feather_icons/plus-square.svg">
-                                    <img id="blurred_image" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) scale(2); max-width: 100%; max-height: 100%; display: none; filter: blur(5px); z-index: 30;" alt="Blurred Image">
-                                    <img id="selected_image" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); max-width: 100%; max-height: 100%; display: none;  z-index: 30;" src="" alt="Selected Media">
-                                    <video id="selected_video" controls style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); max-width: 100%; max-height: 100%; display: none; z-index: 30;"></video>
+                            <input type="file" id="profile_image_media_input" accept="image/*,video/*" style="display: none;">
+                            <label for="profile_image_media_input">
+                                <div class="image_input" id="profile_image_container" style="width: 568px; height: 320px;">
+                                    <img id="profile_image_icon_image" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); max-width: 100%; max-height: 100%; opacity: 0.35; cursor: pointer; z-index: 30;" src="media/icons/feather_icons/plus-square.svg">
+                                    <img id="profile_image_blurred_image" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) scale(2); max-width: 100%; max-height: 100%; display: none; filter: blur(5px); z-index: 30;" alt="Blurred Image">
+                                    <img id="profile_image_selected_image" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); max-width: 100%; max-height: 100%; display: none;  z-index: 30;" src="" alt="Selected Media">
+                                    <video id="profile_image_selected_video" controls style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); max-width: 100%; max-height: 100%; display: none; z-index: 30;"></video>
                                 </div>
                             </label>
                         </div>
@@ -262,13 +284,115 @@
                                 <div class="history_dot" id="profile_image_history_dot"></div>
                             </div>
                         </div>
-                        <script src="scripts/import_image.js"></script>
+                        <script src="scripts/media/import/profile_image_import_media.js"></script>
                     </div>
                 </div>
+
+                <div class="row" style="top: 457.5px; left: 36px;">
+
+                    <!--————————————————————————————————————————————————————————-->
+                    <!--—————————————————[ FULL-NAME-FEATURED ]—————————————————-->
+                    <!--————————————————————————————————————————————————————————-->
+                    <div class="group" id="full_name_featured_group" style="top: 0px; left: 0px; z-index: 21;">
+                        <div class="label_tab" id="full_name_label_tab">
+                            <div class="label_text" id="full_name_label_text">Full Name</div>
+                        </div>
+                        <div class="comment_group" id="full_name_featured_comment_group" style="left: 5px;">
+                            <div class="comment_tab">
+                                <div class="comment_dot"></div>
+                            </div>
+                        </div>
+                        <div class="verified_source_group" id="full_name_featured_verified_source_group" style="left: 46px;">
+                            <div class="verified_source_tab" id="full_name_featured_verified_source_tab">
+                                <a class="verified_source_icon" id="full_name_featured_verified_source_icon" href="https://www.github.com/OpenProfileDevs" target="_blank" tabindex="-1">
+                                    <img class="verified_source_favicon" id="full_name_featured_verified_source_favicon" src=""></img>
+                                </a>
+                            </div>
+                        </div>
+                        <div><input type="text" class="input_text" id="full_name_featured" style="width: 559px; height: 20px; font-size: 18px; text-align: center;" autocomplete="off" autocorrect="off" placeholder="What is the oc's full name?"></div>
+                        <div class="help_box" id="full_name_help_box">
+                            <div class="help_box_tab" id="full_name_help_box_tab" style="top: 6px;">
+                                <div class="help_box_text" id="full_name_help_box_text">What is the character's full name? Be sure to include their prefixes and suffixes.</div>
+                            </div>
+                        </div>
+                        <div class="history_group" id="full_name_history_group">
+                            <div class="history_tab" id="full_name_history_tab" style="left: 433.5px; top: 6px;">
+                                <div class="last_modified_text" id="full_name_time"></div>
+                                <div class="history_dot" id="full_name_history_dot"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row" style="top: 706px; left: 36px;">
+
+                    <!--————————————————————————————————————————————————————————-->
+                    <!--———————————————[ PERSONAL-THOUGHTS-NAME ]———————————————-->
+                    <!--————————————————————————————————————————————————————————-->
+                    <div class="group" id="personal_thoughts_name_group" style="top: 0px; left: 0px; z-index: 10;">
+                        <div class="label_tab" id="personal_thoughts_name_label_tab">
+                            <div class="label_text" id="personal_thoughts_name_label_text">Personal Thoughts</div>
+                        </div>
+                        <div class="comment_group" id="personal_thoughts_name_comment_group" style="left: 5px;">
+                            <div class="comment_tab">
+                                <div class="comment_dot"></div>
+                            </div>
+                        </div>
+                        <div class="verified_source_group" id="personal_thoughts_name_verified_source_group" style="left: 46px;">
+                            <div class="verified_source_tab" id="personal_thoughts_name_verified_source_tab">
+                                <a class="verified_source_icon" id="personal_thoughts_name_verified_source_icon" href="https://www.github.com/OpenProfileDevs" target="_blank" tabindex="-1">
+                                    <img class="verified_source_favicon" id="personal_thoughts_name_verified_source_favicon" src=""></img>
+                                </a>
+                            </div>
+                        </div>
+                        <textarea id="personal_thoughts_name" style="width: 559px; height: 252px;" autocomplete="off" autocorrect="off" placeholder="What are the oc's thoughts towards their name?"></textarea>
+                        <div class="help_box" id="personal_thoughts_name_help_box" style="top: 259px;">
+                            <div class="help_box_tab" id="personal_thoughts_name_help_box_tab">
+                                <div class="help_box_text" id="personal_thoughts_name_help_box_text">What are the character's personal thoughts towards their name? Do they like the name or would they rather have another? Does having the name affects their life in any certain way? Does the name remind them of anything? Are they comfortable sharing their name with others or would they rather it in secrecy? Try to be the most descriptive possible and remember the usage of the five Ws (who, what, when, where, and why) when needed.</div>
+                            </div>
+                        </div>
+                        <div class="history_group" id="personal_thoughts_name_history_group">
+                            <div class="history_tab" id="personal_thoughts_name_history_tab" style="left: 433.5px; top: 240px;"">
+                                <div class="last_modified_text" id="personal_thoughts_name_time"></div>
+                                <div class="history_dot" id="personal_thoughts_name_history_dot"></div>
+                            </div>
+                        </div>
+                        <script src="scripts/generations/page1/generate_personal_thoughts_name.js"></script>
+                    </div>
+                </div>
+
+
+
+
+
+
             </div>
         </div>
 
         <div class="page_outer" id="page_1" style="z-index: 98;">
+            <div class="row" style="top: 4px; left: 367px;">
+
+                <!--————————————————————————————————————————————————————————-->
+                <!--—————————————————————[ BRAND-ICON ]—————————————————————-->
+                <!--————————————————————————————————————————————————————————-->
+                <div class="group" id="brand_icon_group" style="top: 0px; left: 0px; z-index: 21;">
+                    <div class="tag" id="" style="top: 23px; left: -1px; scale: 0.38; width: 85px; background: #5e329b; z-index: 50;">PREVIEW</div>
+                    <div class="label_tab" id="brand_icon_label_tab">
+                        <div class="label_text" id="brand_icon_label_text">*Insert Brand Banner*</div>
+                    </div>
+                    <div>
+                        <input type="file" id="brand_icon_media_input" accept="image/*,video/*" style="display: none;">
+                        <label for="brand_icon_media_input">
+                            <div class="image_input_2" id="brand_icon_container" style="width: 81px; height: 22.5px; border-radius: 2.5px;">
+                                <img id="brand_icon_icon_image" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); max-width: 100%; max-height: 100%; opacity: 0.35; cursor: pointer; z-index: 30;" src="media/icons/feather_icons/plus-square.svg">                                <img id="brand_icon_selected_image" style="border-radius: 2.5px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); max-width: 100%; max-height: 100%; display: none;  z-index: 30;" src="" alt="Selected Media">
+                                <video id="brand_icon_selected_video" controls style="border-radius: 2.5px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); max-width: 100%; max-height: 100%; display: none; z-index: 30;"></video>
+                            </div>
+                        </label>
+                    </div>
+                    <script src="scripts/media/import/brand_icon_import_media.js"></script>
+                </div>
+            </div>
+
             <div class="page_inner">
                 <div class="row" style="top: -8px; left: 17px;">
 
@@ -292,7 +416,7 @@
                     <!--——————————————————[ NAME-INFORMATION ]——————————————————-->
                     <!--————————————————————————————————————————————————————————-->
                     <div class="group" id="name_information_group" style="top: 0px; left: 249px; z-index: 23;">
-                        <div><input type="text" class="input_text" id="name_information" style="width: 175px; height: 28px; top: 9px; border-radius: 0px 0px 5px 5px; justify-content: center; text-align: center; font-size: 14px; background-color: #272c39; color: #ffffff; border-color: #272c39;" autocomplete="off" autocorrect="off" value="Name Information" tabindex="-1" readonly></div>
+                        <div><input type="text" class="page_indicator" id="name_information" autocomplete="off" autocorrect="off" value="Name Information" tabindex="-1" readonly></div>
                     </div>
 
                     <!--————————————————————————————————————————————————————————-->
@@ -830,8 +954,44 @@
     <script src="scripts/label_position.js"></script>
     <script src="scripts/pages/switch_page.js"></script>
     <script src="scripts/scheme_switcher.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.0/color-thief.umd.js"></script>
     <script src="scripts/save_load.js"></script> <!-- Needs to be very last to save and load properly -->
+    <script src="scripts/id_generator.js"></script>
     <script src="scripts/profile_manager.js"></script> <!-- Needs to be very last to save and load properly -->
+
+
+<!--<button style="z-index: 500; position: absolute; top: 0; left: 0;" id="discord">Send Message to Discord</button>
+<script>
+    const discordButton = document.getElementById('discord');
+
+    discordButton.addEventListener('click', () => {
+        // Send a POST request to your server to trigger sending the message to Discord
+        fetch('/send-message-to-discord', {
+            method: 'POST',
+        })
+            .then(response => response.json())
+            .then(data => {
+                console.log(data.message);
+            })
+            .catch(error => {
+                console.error(error);
+            });
+    });
+</script>-->
+
+<!--<script>
+    // Create a WebSocket connection to the server
+const socket = new WebSocket('ws://localhost:3000');
+
+// Listen for WebSocket messages
+socket.addEventListener('message', (event) => {
+    const newText = event.data;
+    
+    // Update the page_author_0 textbox with the received text
+    document.getElementById('page_author_0').value = newText;
+});-->
+
+</script>
 
     <div class="history-popup">
         <!-- History content will be added here -->

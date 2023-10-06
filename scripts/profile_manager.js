@@ -100,7 +100,7 @@ function addProfile() {
     }
 
     // Use a window prompt to get the profile name and profile URL from the user
-    const profileName = prompt("Please enter a profile name:");
+    const profileName = prompt("What name is this character reconized by?");
     
     // Check if the user canceled or didn't enter a name
     if (profileName === null || profileName.trim() === "") {
@@ -108,15 +108,52 @@ function addProfile() {
         return;
     }
 
-    const profileURL = prompt("Enter a URL for the profile's image:");
-    
-    // Check if the user canceled
-    if (profileURL === null) {
-        alert("Please enter a valid profile URL.");
-        return;
+    const profileURL = prompt("What image is this character reconized by?");
+
+    const cardCreator = prompt("Who is the character's original creator?");
+
+    const cardDescription = prompt("Give a brief description of the character:");
+
+    const cardMainTag = prompt("Give this character a primary tag:");
+
+    const pageOuterElements = document.getElementsByClassName('page_outer');
+    const pageInnerElements = document.getElementsByClassName('page_inner');
+    const inputTextElements = document.getElementsByClassName('input_text');
+
+    // Initialize a variable to store the background color
+    let cardBackground = '';
+    let cardAccent = '';
+    let cardAccentHover = '';
+
+    // Check if there are elements with the class name 'page_outer'
+    if (pageOuterElements.length > 0) {
+        // Get the first element's backgroundColor style property
+        cardBackground = window.getComputedStyle(pageOuterElements[0]).backgroundColor;
     }
 
+    if (pageInnerElements.length > 0) {
+        // Get the first element's backgroundColor style property
+        cardAccent = window.getComputedStyle(pageInnerElements[0]).backgroundColor;
+    }
+
+    if (inputTextElements.length > 0) {
+        // Get the first element's backgroundColor style property
+        cardAccentHover = window.getComputedStyle(inputTextElements[0]).backgroundColor;
+    }
+
+    const minNumber = 1000000000000000;
+    const maxNumber = 9999999999999999;
+    const profileID = generate_global_id(minNumber, maxNumber);
+
     const newProfile = {
+        card_background: cardBackground,
+        card_accent: cardAccent,
+        card_accent_hover: cardAccentHover,
+        card_creator: cardCreator,
+        card_description: cardDescription,
+        card_tag_1: cardMainTag,
+        card_id: profileID,
+
         name: profileName,
         image: profileURL,
         version: "v1.0.0",
@@ -1049,21 +1086,22 @@ function updateProfileList(activeuniverse) {
                 <button onclick="renameProfile(${index})" style="display: none;">Rename</button>
                 <button onclick="removeProfile(${index})" style="display: none;">Remove</button>
 
-            <div class="profile_group">
+            <div class="profile_group" style="background-color: ${profile.card_background};">
                 <div class="profile_image">
                     <img src="${profile.image || 'media/images/openprofile/preview/op_preview_512.jpeg'}" style="min-width: 100px; min-height: 100px; max-width: 100px; max-height: 100px; transform-origin: top left; border-radius: 5px;">
                 </div>
-                <div class="side_button_2" id="load_database_profile" onclick="loadProfile(${index})" title="Load Profile" style="left: 246px; top: 9px; scale: 0.75; z-index: 3;">
+                <div class="side_button_2" id="load_database_profile" onclick="loadProfile(${index})" title="Load Profile" style="left: 246px; top: 9px; scale: 0.75; background-color: ${profile.card_accent}; z-index: 3;" onmouseover="this.style.backgroundColor='${profile.card_accent_hover}'" onmouseout="this.style.backgroundColor='${profile.card_accent}'">
                     <img src="media/icons/feather_icons/download.svg" style="scale: 0.30; transform-origin: top left; margin: 10px;">
                 </div>
                 <div class="delete_button" onclick="removeProfile(${index})" title="Delete Profile">
                     <img src="media/icons/feather_icons/x.svg" style="scale: 0.30; transform-origin: top left; margin: 10px;">
                 </div>
                 <div class="profile_text" style="max-width: 125px; max-height: 20px;">${profile.name}</div>
-                <div class="profile_text" style="top: 36px; font-size: 12px; opacity: 0.85; max-width: 125px; max-height: 18px;">${profile.page_author_1 || '<i>Unknown</i>'}</div>
-                <div class="profile_text" style="top: 55px; font-size: 10px; opacity: 0.65; max-width: 166px; max-height: 58px;">Profile descriptions are still under development!</div>
-                <div class="profile_tag" id="" style="width: 60;">#tags-under-development</div>
+                <div class="profile_text" style="top: 36px; font-size: 12px; opacity: 0.85; max-width: 125px; max-height: 18px;">${profile.card_creator || '<i>Unknown</i>'}</div>
+                <div class="profile_text" style="top: 55px; font-size: 10px; opacity: 0.65; max-width: 166px; max-height: 58px;">${profile.card_description || '<i>This character does not have a description.</i>'}</div>
+                <div class="profile_tag" id="" style="width: 60; background-color: ${profile.card_accent};" onmouseover="this.style.backgroundColor='${profile.card_accent_hover}'" onmouseout="this.style.backgroundColor='${profile.card_accent}'">#${profile.card_tag_1 || 'uncategorized'}</div>
                 <div class="tag" id="" style="left: 246px; top: 139px; scale: 0.55; width: 85px; background: #5e329b; z-index: 4;">PREVIEW</div>
+                <div class="profile_text" style="top: 113px; left: 18px; font-size: 8px; opacity: 0.85; max-width: 166px; max-height: 18px;">${profile.card_id}</div>
             </div>
             `;
             profileList.appendChild(listItem);
