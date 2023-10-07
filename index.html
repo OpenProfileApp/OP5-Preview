@@ -55,6 +55,7 @@
     <!--————————————————————[ TOP-ELEMENTS ]————————————————————-->
     <!--————————————————————————————————————————————————————————-->
     <div class="top">
+        <!--<button id="logoutButton" style="position: absolute; left: 500px; top: 10px;">Logout</button>-->
         <div class="top_button" id="" style="width: 75px; border-radius: 10px;"></div>
         <div class="top_button" id="" style="width: 75px; border-radius: 10px;"></div>
         <div class="top_button" id="" style="width: 100px; border-radius: 10px;"></div>
@@ -199,14 +200,14 @@
                 <div class="group" id="brand_icon_group" style="top: 0px; left: 0px; z-index: 21;">
                     <div class="tag" id="" style="top: 43px; left: 39px; scale: 0.38; width: 85px; background: #5e329b; z-index: 50;">PREVIEW</div>
                     <div class="label_tab" id="brand_icon_label_tab">
-                        <div class="label_text" id="brand_icon_label_text">Insert Brand Banner (this text will dismiss after)</div>
+                        <div class="brand_icon_label_text" id="brand_icon_label_text">Insert Brand Banner (this text will dismiss after)</div>
                     </div>
                     <div>
-                        <input type="file" id="brand_icon_media_input" accept="image/*,video/*" style="display: none;">
+                        <input class="brand_icon_media_input" id="brand_icon_media_input" type="file" accept="image/*,video/*" style="display: none;">
                         <label for="brand_icon_media_input">
                             <div class="image_input_2" id="brand_icon_container" style="width: 162px; height: 45px; border-radius: 2.5px;">
-                                <img id="brand_icon_icon_image" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); max-width: 100%; max-height: 100%; opacity: 0.35; cursor: pointer; z-index: 30;" src="media/icons/feather_icons/plus-square.svg">                                <img id="brand_icon_selected_image" style="border-radius: 2.5px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); max-width: 100%; max-height: 100%; display: none;  z-index: 30;" src="" alt="Selected Media">
-                                <video id="brand_icon_selected_video" controls style="border-radius: 2.5px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); max-width: 100%; max-height: 100%; display: none; z-index: 30;"></video>
+                                <img class="brand_icon_selected_image" id="brand_icon_selected_image" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); max-width: 100%; max-height: 100%; opacity: 0.35; cursor: pointer; z-index: 30;" src="media/icons/feather_icons/plus-square.svg">                                <img id="brand_icon_selected_image" style="border-radius: 2.5px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); max-width: 100%; max-height: 100%; display: none;  z-index: 30;" src="" alt="Selected Media">
+                                <video class="brand_icon_selected_video" id="brand_icon_selected_video" controls style="border-radius: 2.5px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); max-width: 100%; max-height: 100%; display: none; z-index: 30;"></video>
                             </div>
                         </label>
                     </div>
@@ -288,12 +289,12 @@
                     </div>
                 </div>
 
-                <div class="row" style="top: 457.5px; left: 36px;">
+                <div class="row" style="top: 457px; left: 36px;">
 
                     <!--————————————————————————————————————————————————————————-->
                     <!--—————————————————[ FULL-NAME-FEATURED ]—————————————————-->
                     <!--————————————————————————————————————————————————————————-->
-                    <div class="group" id="full_name_featured_group" style="top: 0px; left: 0px; z-index: 21;">
+                    <div class="group" id="full_name_featured_group" style="top: 0px; left: 0px; z-index: 20;">
                         <div class="label_tab" id="full_name_label_tab">
                             <div class="label_text" id="full_name_label_text">Full Name</div>
                         </div>
@@ -324,12 +325,48 @@
                     </div>
                 </div>
 
+                <div class="row" style="top: 510px; left: 36px;">
+
+                    <!--————————————————————————————————————————————————————————-->
+                    <!--—————————————————————[ OC-CREATOR ]—————————————————————-->
+                    <!--————————————————————————————————————————————————————————-->
+                    <div class="group" id="oc_creator_group" style="top: 0px; left: 0px; z-index: 19;">
+                        <div class="label_tab" id="oc_creator_label_tab">
+                            <div class="label_text" id="oc_creator_label_text">OC Creator</div>
+                        </div>
+                        <div class="comment_group" id="oc_creator_comment_group" style="left: 5px;">
+                            <div class="comment_tab">
+                                <div class="comment_dot"></div>
+                            </div>
+                        </div>
+                        <div class="verified_source_group" id="oc_creator_verified_source_group" style="left: 46px;">
+                            <div class="verified_source_tab" id="oc_creator_verified_source_tab">
+                                <a class="verified_source_icon" id="oc_creator_verified_source_icon" href="https://www.github.com/OpenProfileDevs" target="_blank" tabindex="-1">
+                                    <img class="verified_source_favicon" id="oc_creator_verified_source_favicon" src=""></img>
+                                </a>
+                            </div>
+                        </div>
+                        <div><input type="text" class="input_text" id="oc_creator" style="width: 559px; text-align: center;" autocomplete="off" autocorrect="off" placeholder="Who is the oc's creator?"></div>
+                        <div class="help_box" id="oc_creator_help_box">
+                            <div class="help_box_tab" id="oc_creator_help_box_tab">
+                                <div class="help_box_text" id="oc_creator_help_box_text">What is the name or pseudonym of the character's original creator? If multiple authors worked as part of a collaboration, include their name or pseudonym next to the original creator.</div>
+                            </div>
+                        </div>
+                        <div class="history_group" id="oc_creator_history_group">
+                            <div class="history_tab" id="oc_creator_history_tab" style="left: 433.5px;">
+                                <div class="last_modified_text" id="oc_creator_time"></div>
+                                <div class="history_dot" id="oc_creator_history_dot"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="row" style="top: 706px; left: 36px;">
 
                     <!--————————————————————————————————————————————————————————-->
                     <!--———————————————[ PERSONAL-THOUGHTS-NAME ]———————————————-->
                     <!--————————————————————————————————————————————————————————-->
-                    <div class="group" id="personal_thoughts_name_group" style="top: 0px; left: 0px; z-index: 10;">
+                    <div class="group" id="personal_thoughts_name_group" style="top: 0px; left: 0px; z-index: 17;">
                         <div class="label_tab" id="personal_thoughts_name_label_tab">
                             <div class="label_text" id="personal_thoughts_name_label_text">Personal Thoughts</div>
                         </div>
@@ -360,15 +397,33 @@
                         <script src="scripts/generations/page1/generate_personal_thoughts_name.js"></script>
                     </div>
                 </div>
-
-
-
-
-
-
             </div>
-        </div>
 
+            <!--————————————————————————————————————————————————————————-->
+            <!--————————————————[ SOCIAL-MEDIA-BUTTONS ]————————————————-->
+            <!--————————————————————————————————————————————————————————-->
+            <div class="social_button" id="youtube_button" title="YouTube">
+                <img src="media/icons/media_icons/youtube.png" style="position: absolute; scale: 0.01; transform-origin: top left; margin: 5px;">
+            </div>
+            <div class="social_button" id="x_button" title="X (Twitter)">
+                <img src="media/icons/media_icons/x_twitter.svg" style="position: absolute; scale: 0.0122; transform-origin: top left; margin: 5px;">
+            </div>
+            <div class="social_button" id="x_button" title="Discord">
+                <img src="media/icons/media_icons/discord.svg" style="position: absolute; scale: 0.74; transform-origin: top left; margin-top: 7px; margin-left: 5px;">
+            </div>
+
+            <!--————————————————————————————————————————————————————————-->
+            <!--———————————————————[ WATCH-BUTTONS ]————————————————————-->
+            <!--————————————————————————————————————————————————————————-->
+            <div class="watch_button" id="disney_plus_button" title="Disney Network">
+                <img src="media/icons/media_icons/disney.png" style="position: absolute; scale: 0.0105; transform-origin: top left; margin: 5px;">
+            </div>
+            <div class="watch_button" id="youtube_movie_button" title="YouTube Movies">
+                <img src="media/icons/media_icons/youtube.png" style="position: absolute; scale: 0.01; transform-origin: top left; margin: 5px;">
+            </div>
+
+        </div>
+        
         <div class="page_outer" id="page_1" style="z-index: 98;">
             <div class="row" style="top: 4px; left: 367px;">
 
@@ -378,14 +433,14 @@
                 <div class="group" id="brand_icon_group" style="top: 0px; left: 0px; z-index: 21;">
                     <div class="tag" id="" style="top: 23px; left: -1px; scale: 0.38; width: 85px; background: #5e329b; z-index: 50;">PREVIEW</div>
                     <div class="label_tab" id="brand_icon_label_tab">
-                        <div class="label_text" id="brand_icon_label_text">*Insert Brand Banner*</div>
+                        <div class="brand_icon_label_text" id="brand_icon_label_text">*Insert Brand Banner*</div>
                     </div>
                     <div>
-                        <input type="file" id="brand_icon_media_input" accept="image/*,video/*" style="display: none;">
+                        <input class="brand_icon_media_input" id="brand_icon_media_input" type="file" accept="image/*,video/*" style="display: none;">
                         <label for="brand_icon_media_input">
                             <div class="image_input_2" id="brand_icon_container" style="width: 81px; height: 22.5px; border-radius: 2.5px;">
-                                <img id="brand_icon_icon_image" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); max-width: 100%; max-height: 100%; opacity: 0.35; cursor: pointer; z-index: 30;" src="media/icons/feather_icons/plus-square.svg">                                <img id="brand_icon_selected_image" style="border-radius: 2.5px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); max-width: 100%; max-height: 100%; display: none;  z-index: 30;" src="" alt="Selected Media">
-                                <video id="brand_icon_selected_video" controls style="border-radius: 2.5px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); max-width: 100%; max-height: 100%; display: none; z-index: 30;"></video>
+                                <img class="brand_icon_selected_image" id="brand_icon_selected_image" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); max-width: 100%; max-height: 100%; opacity: 0.35; cursor: pointer; z-index: 30;" src="media/icons/feather_icons/plus-square.svg">                                <img id="brand_icon_selected_image" style="border-radius: 2.5px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); max-width: 100%; max-height: 100%; display: none;  z-index: 30;" src="" alt="Selected Media">
+                                <video class="brand_icon_selected_video" id="brand_icon_selected_video" controls style="border-radius: 2.5px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); max-width: 100%; max-height: 100%; display: none; z-index: 30;"></video>
                             </div>
                         </label>
                     </div>
@@ -873,7 +928,9 @@
             </div>
         </div>
     </div>
-    
+
+    <div style="top: 1491px; height: 25px; position: relative; display: block; font-size: 0px; opacity: 0;" tabindex="-1"> </div>
+
     <!--————————————————————————————————————————————————————————-->
     <!--——————————————————[ RIGHT-CLICK-MENU ]——————————————————-->
     <!--————————————————————————————————————————————————————————-->
@@ -996,6 +1053,41 @@ socket.addEventListener('message', (event) => {
     <div class="history-popup">
         <!-- History content will be added here -->
     </div>
+
+
+
+    <script>
+        // Check if the user is already logged in
+const loggedInUser = localStorage.getItem('loggedInUser') || sessionStorage.getItem('loggedInUser');
+
+// Reference to the logout button
+const logoutButton = document.getElementById('logoutButton');
+
+if (loggedInUser) {
+    // User is logged in
+    // Show the logout button
+    logoutButton.style.display = 'block';
+
+    // Add a click event listener to the logout button
+    logoutButton.addEventListener('click', () => {
+        // Clear the stored user data (log out the user)
+        localStorage.removeItem('loggedInUser');
+        sessionStorage.removeItem('loggedInUser');
+        const styleSheetLink = document.getElementById('styleSheet');
+        styleSheetLink.href = 'desktop_styles.css';
+
+        // Redirect the user to the login page
+        window.location.href = 'login.html';
+    });
+} else {
+    // User is not logged in
+    // Hide the logout button
+    logoutButton.style.display = 'none';
+    const styleSheetLink = document.getElementById('styleSheet');
+    styleSheetLink.href = 'mobile_styles.css';
+}
+
+    </script>
 </body>
 </html>
 
