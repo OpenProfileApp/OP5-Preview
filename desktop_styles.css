@@ -217,34 +217,27 @@
   .label_tab {
     position: relative;
     left: 0px;
-    top: 0px;
-    height: 11px;
+    top: -2px;
+    height: fit-content;
+    width: fit-content;
+    color: #ffffff;
+    font-family: "Open Sans";
+    font-size: 7px;
+    text-align: left;
+    padding-top: 1px;
+    padding-bottom: 2px;
+    padding-left: 4px;
+    padding-right: 4px;
     border-radius: 5px 5px 0px 0px;
     background: #272c39;
     align-items: left;
     justify-content: center;
     opacity: 1;
     transition: 0.2s all;
-    z-index: 6;
+    z-index: 2;
   }
 
-  .label_text {
-    position: absolute;
-    left: 5px;
-    top: 0px;
-    height: 10px;
-    color: #ffffff;
-    font-family: "Open Sans";
-    font-size: 7px;
-    text-align: left;
-    opacity: 1;
-    display: inline-block;
-    white-space: nowrap;
-    transition: 0.2s all;
-    z-index: 7;
-  }
-
-  .label_text::selection {
+  .label_tab::selection {
     background-color: #1b1f28;
     color: #ffffff;
     border-radius: 5px;
@@ -505,7 +498,33 @@
     z-index: 10;
   }
 
+  .input_text_legal {
+    position: absolute;
+    left: 0px;
+    top: 10px;
+    font-family: "Open Sans";
+    font-size: 12px;
+    color: white;
+    height: 14px;
+    text-align: center;
+    width: 559px;
+    background: #333a4d;
+    border-radius: 5px;
+    border: 2px solid #333a4d;
+    outline: none;
+    opacity: 1;
+    transform-origin: center;
+    transition: 0.2s all;
+    z-index: 10;
+  }
+
   .input_text::placeholder {
+    color: #ffffff;
+    opacity: 0.35;
+    transition: 0.2s all;
+  }
+
+  .input_text_legal::placeholder {
     color: #ffffff;
     opacity: 0.35;
     transition: 0.2s all;
@@ -603,6 +622,7 @@
 
   .image_input {
     position: absolute;
+    top: 10px;
     background-color: #596379;
     border-radius: 0px 5px 5px 5px;
     width: 568;
@@ -614,6 +634,7 @@
 
   .image_input_2 {
     position: absolute;
+    top: 10px;
     background-color: #596379;
     border-radius: 0px 5px 5px 5px;
     width: 568;
@@ -657,6 +678,11 @@
     border-radius: 0px 5px 0px 5px;
     background-color: #768099;
     border: 2px solid #768099;
+  }
+
+    .group:hover .input_text_legal {
+    background-color: #596379;
+    border: 2px solid #596379;
   }
 
   .group:focus-within .input_text {
@@ -921,34 +947,44 @@
     background-color: #596379;
   }
 
+  .social_buttons {
+    position: absolute;
+    bottom: 35px;
+    left: 7px;
+    display: flex;
+    flex-direction: column; 
+  }
+  
   .social_button {
     position: relative;
-    float: left;
-    left: 40px;
-    top: 1091px;
     width: 25px;
     height: 25px;
     border-radius: 50%;
     background: #333a4d;
-    margin-right: 5px;
+    margin-bottom: 5px;
     transform-origin: center center;
     transition: 0.2s all;
-    z-index: 5;
+    z-index: 2;
+  }
+
+  .watch_buttons {
+    position: absolute;
+    bottom: 35px;
+    right: 7px;
+    display: flex;
+    flex-direction: column;
   }
 
   .watch_button {
     position: relative;
-    float: right;
-    right: 40px;
-    top: 1091px;
     width: 25px;
     height: 25px;
     border-radius: 50%;
     background: #333a4d;
-    margin-right: 5px;
+    margin-bottom: 5px;
     transform-origin: center center;
     transition: 0.2s all;
-    z-index: 5;
+    z-index: 2;
 }
 
   .watch_button:hover {
@@ -1589,34 +1625,27 @@ body::before {
   .label_tab {
     position: relative;
     left: 0px;
-    top: 0px;
-    height: 11px;
+    top: -2px;
+    height: fit-content;
+    width: fit-content;
+    color: #ffffff;
+    font-family: "Open Sans";
+    font-size: 7px;
+    text-align: left;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 4px;
+    padding-right: 4px;
     border-radius: 5px 5px 0px 0px;
     background: #272c39;
     align-items: left;
     justify-content: center;
     opacity: 1;
     transition: 0.2s all;
-    z-index: 6;
+    z-index: 2;
   }
 
-  .label_text {
-    position: absolute;
-    left: 5px;
-    top: 0px;
-    height: 10px;
-    color: #ffffff;
-    font-family: "Open Sans";
-    font-size: 7px;
-    text-align: left;
-    opacity: 1;
-    display: inline-block;
-    white-space: nowrap;
-    transition: 0.2s all;
-    z-index: 7;
-  }
-
-  .label_text::selection {
+  .label_tab::selection {
     background-color: #1b1f28;
     color: #ffffff;
     border-radius: 5px;

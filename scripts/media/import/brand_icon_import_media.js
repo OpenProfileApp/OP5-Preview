@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const history_tab = document.querySelectorAll('.history_tab');
     const social_button = document.querySelectorAll('.social_button');
     const watch_button = document.querySelectorAll('.watch_button');
+    const input_text_legal = document.querySelectorAll('.input_text_legal');
 
     let brand_icon_fileInputOpened = false;
 
@@ -152,16 +153,61 @@ document.addEventListener('DOMContentLoaded', () => {
                             element.style.backgroundColor = shadedColor || 'transparent';
                         });
 
+                        input_text_legal.forEach((element) => {
+                            const shadingFactor = 0; // Adjust the shading based on the element's position
+                            const shadedColor = darkenhexColors(hexColors[0], shadingFactor);
+                            element.style.backgroundColor = shadedColor || 'transparent';
+                            element.style.border = `2px solid ${shadedColor || 'transparent'}`;
+                            element.addEventListener('mouseenter', () => {
+                                // Code to run when the mouse leaves the element
+                                const shadingFactor = -35; // Adjust the shading based on the element's position
+                                const shadedColor = darkenhexColors(hexColors[0], shadingFactor);
+                                element.style.backgroundColor = shadedColor || 'transparent';
+                                element.style.border = `2px solid ${shadedColor || 'transparent'}`;
+                              });
+                              element.addEventListener('mouseleave', () => {
+                                // Code to run when the mouse leaves the element
+                                const shadingFactor = 0; // Adjust the shading based on the element's position
+                                const shadedColor = darkenhexColors(hexColors[0], shadingFactor);
+                                element.style.backgroundColor = shadedColor || 'transparent';
+                                element.style.border = `2px solid ${shadedColor || 'transparent'}`;
+                              });
+                        });
+
                         social_button.forEach((element) => {
                             const shadingFactor = 0;
                             const shadedColor = darkenhexColors(hexColors[0], shadingFactor);
                             element.style.backgroundColor = shadedColor || 'transparent';
+                            element.addEventListener('mouseenter', () => {
+                                // Code to run when the mouse leaves the element
+                                const shadingFactor = -35; // Adjust the shading based on the element's position
+                                const shadedColor = darkenhexColors(hexColors[0], shadingFactor);
+                                element.style.backgroundColor = shadedColor || 'transparent';
+                              });
+                              element.addEventListener('mouseleave', () => {
+                                // Code to run when the mouse leaves the element
+                                const shadingFactor = 0; // Adjust the shading based on the element's position
+                                const shadedColor = darkenhexColors(hexColors[0], shadingFactor);
+                                element.style.backgroundColor = shadedColor || 'transparent';
+                              });
                         });
 
                         watch_button.forEach((element) => {
                             const shadingFactor = 0;
                             const shadedColor = darkenhexColors(hexColors[0], shadingFactor);
                             element.style.backgroundColor = shadedColor || 'transparent';
+                            element.addEventListener('mouseenter', () => {
+                                // Code to run when the mouse leaves the element
+                                const shadingFactor = -35; // Adjust the shading based on the element's position
+                                const shadedColor = darkenhexColors(hexColors[0], shadingFactor);
+                                element.style.backgroundColor = shadedColor || 'transparent';
+                              });
+                              element.addEventListener('mouseleave', () => {
+                                // Code to run when the mouse leaves the element
+                                const shadingFactor = -0; // Adjust the shading based on the element's position
+                                const shadedColor = darkenhexColors(hexColors[0], shadingFactor);
+                                element.style.backgroundColor = shadedColor || 'transparent';
+                              });
                         });
 
                         input_text.forEach((element) => {
@@ -169,6 +215,20 @@ document.addEventListener('DOMContentLoaded', () => {
                             const shadedColor = darkenhexColors(hexColors[0], shadingFactor);
                             element.style.backgroundColor = shadedColor || 'transparent';
                             element.style.border = `2px solid ${shadedColor || 'transparent'}`;
+                            element.addEventListener('mouseenter', () => {
+                                // Code to run when the mouse leaves the element
+                                const shadingFactor = -70; // Adjust the shading based on the element's position
+                                const shadedColor = darkenhexColors(hexColors[0], shadingFactor);
+                                element.style.backgroundColor = shadedColor || 'transparent';
+                                element.style.border = `2px solid ${shadedColor || 'transparent'}`;
+                              });
+                              element.addEventListener('mouseleave', () => {
+                                // Code to run when the mouse leaves the element
+                                const shadingFactor = -35; // Adjust the shading based on the element's position
+                                const shadedColor = darkenhexColors(hexColors[0], shadingFactor);
+                                element.style.backgroundColor = shadedColor || 'transparent';
+                                element.style.border = `2px solid ${shadedColor || 'transparent'}`;
+                              });
                         });
 
                         textarea.forEach((element) => {
@@ -176,12 +236,38 @@ document.addEventListener('DOMContentLoaded', () => {
                             const shadedColor = darkenhexColors(hexColors[0], shadingFactor);
                             element.style.backgroundColor = shadedColor || 'transparent';
                             element.style.border = `2px solid ${shadedColor || 'transparent'}`;
+                            element.addEventListener('mouseenter', () => {
+                                // Code to run when the mouse leaves the element
+                                const shadingFactor = -70; // Adjust the shading based on the element's position
+                                const shadedColor = darkenhexColors(hexColors[0], shadingFactor);
+                                element.style.backgroundColor = shadedColor || 'transparent';
+                                element.style.border = `2px solid ${shadedColor || 'transparent'}`;
+                              });
+                              element.addEventListener('mouseleave', () => {
+                                // Code to run when the mouse leaves the element
+                                const shadingFactor = -35; // Adjust the shading based on the element's position
+                                const shadedColor = darkenhexColors(hexColors[0], shadingFactor);
+                                element.style.backgroundColor = shadedColor || 'transparent';
+                                element.style.border = `2px solid ${shadedColor || 'transparent'}`;
+                              });
                         });
 
                         image_input.forEach((element) => {
                             const shadingFactor = -35;
                             const shadedColor = darkenhexColors(hexColors[0], shadingFactor);
                             element.style.backgroundColor = shadedColor || 'transparent';
+                            element.addEventListener('mouseenter', () => {
+                                // Code to run when the mouse leaves the element
+                                const shadingFactor = -70; // Adjust the shading based on the element's position
+                                const shadedColor = darkenhexColors(hexColors[0], shadingFactor);
+                                element.style.backgroundColor = shadedColor || 'transparent';
+                              });
+                              element.addEventListener('mouseleave', () => {
+                                // Code to run when the mouse leaves the element
+                                const shadingFactor = -35; // Adjust the shading based on the element's position
+                                const shadedColor = darkenhexColors(hexColors[0], shadingFactor);
+                                element.style.backgroundColor = shadedColor || 'transparent';
+                              });
                         });
 
                         brand_icon_iconImage.forEach((element) => {

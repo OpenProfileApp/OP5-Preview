@@ -197,13 +197,9 @@
                 <!--————————————————————————————————————————————————————————-->
                 <!--—————————————————————[ BRAND-ICON ]—————————————————————-->
                 <!--————————————————————————————————————————————————————————-->
-                <div class="group" id="brand_icon_group" style="top: 0px; left: 0px; z-index: 21;">
+                <div class="group" id="brand_icon_group" style="top: 0px; left: 0px; z-index: 21;" title="Brand Banner">
                     <div class="tag" id="" style="top: 43px; left: 39px; scale: 0.38; width: 85px; background: #5e329b; z-index: 50;">PREVIEW</div>
-                    <div class="label_tab" id="brand_icon_label_tab">
-                        <div class="brand_icon_label_text" id="brand_icon_label_text">Insert Brand Banner (this text will dismiss after)</div>
-                    </div>
-                    <div>
-                        <input class="brand_icon_media_input" id="brand_icon_media_input" type="file" accept="image/*,video/*" style="display: none;">
+                    <div><input class="brand_icon_media_input" id="brand_icon_media_input" type="file" accept="image/*,video/*" style="display: none;">
                         <label for="brand_icon_media_input">
                             <div class="image_input_2" id="brand_icon_container" style="width: 162px; height: 45px; border-radius: 2.5px;">
                                 <img class="brand_icon_selected_image" id="brand_icon_selected_image" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); max-width: 100%; max-height: 100%; opacity: 0.35; cursor: pointer; z-index: 30;" src="media/icons/feather_icons/plus-square.svg">                                <img id="brand_icon_selected_image" style="border-radius: 2.5px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); max-width: 100%; max-height: 100%; display: none;  z-index: 30;" src="" alt="Selected Media">
@@ -222,9 +218,7 @@
                     <!--————————————————————————————————————————————————————————-->
                     <div class="group" id="page_author_0_group" style="top: 0px; left: -1px; z-index: 24;">
                         <div class="tag" id="" style="top: -2.5px; left: 130px; scale: 0.38; width: 85px; background: #5e329b;">PREVIEW</div>
-                            <div class="label_tab" id="page_author_label_tab" style="top: 29px; border-radius: 0px 0px 5px 0px; z-index: 2;">
-                                <div class="label_text" id="page_author_label_text" style="top: 1.25px;">Page Author</div>
-                            </div>
+                            <div class="label_tab" id="page_author_label_tab" style="top: 29px; border-radius: 0px 0px 5px 0px; z-index: 2;">Page Author</div>
                         <div><input type="text" class="input_text" id="page_author_0" style="width: 175px; border-radius: 5px 0px 5px 0px;" autocomplete="off" autocorrect="off" placeholder="Who is the page's author?"></div>
                         <div class="help_box" id="page_author_help_box">
                             <div class="help_box_tab" id="page_author_help_box_tab">
@@ -245,9 +239,7 @@
                     <!--————————————————————————————————————————————————————————-->
                     <div class="group" id="written_date_0_group" style="top: 0px; left: 498px; z-index: 22;">
                         <div class="tag" id="" style="top: -2.5px; left: 145px; scale: 0.38;">BETA</div>
-                            <div class="label_tab" id="written_date_label_tab" option="page_date" style="top: 29px; border-radius: 0px 0px 0px 5px; z-index: 2;">
-                                <div class="label_text" id="written_date_label_text" style="top: 1.25px;">Written Date</div>
-                            </div>
+                            <div class="label_tab" id="written_date_label_tab" option="page_date" style="top: 29px; border-radius: 0px 0px 0px 5px; left: 12px; float: right;">Written Date</div>
                         <div><input type="text" class="input_text" id="written_date_0" style="width: 175px; border-radius: 0px 5px 0px 5px; text-align: right;" autocomplete="off" autocorrect="off" placeholder="When was this page written?"></div>
                         <div class="help_box" id="written_date_help_box">
                             <div class="help_box_tab" id="written_date_help_box_tab">
@@ -263,12 +255,8 @@
                     <!--———————————————————[ PROFILE-IMAGE ]————————————————————-->
                     <!--————————————————————————————————————————————————————————-->
                     <div class="group" id="profile_image_group" style="top: 0px; left: 0px; z-index: 21;">
-                        <div class="label_tab" id="profile_image_label_tab">
-                            <div class="label_text" id="profile_image_label_text">Image</div>
-                        </div>
-                        
-                        <div>
-                            <input type="file" id="profile_image_media_input" accept="image/*,video/*" style="display: none;">
+                        <div class="label_tab" id="profile_image_label_tab">Image</div>
+                        <div><input type="file" id="profile_image_media_input" accept="image/*,video/*" style="display: none;">
                             <label for="profile_image_media_input">
                                 <div class="image_input" id="profile_image_container" style="width: 568px; height: 320px;">
                                     <img id="profile_image_icon_image" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); max-width: 100%; max-height: 100%; opacity: 0.35; cursor: pointer; z-index: 30;" src="media/icons/feather_icons/plus-square.svg">
@@ -295,9 +283,7 @@
                     <!--—————————————————[ FULL-NAME-FEATURED ]—————————————————-->
                     <!--————————————————————————————————————————————————————————-->
                     <div class="group" id="full_name_featured_group" style="top: 0px; left: 0px; z-index: 20;">
-                        <div class="label_tab" id="full_name_label_tab">
-                            <div class="label_text" id="full_name_label_text">Full Name</div>
-                        </div>
+                        <div class="label_tab" id="full_name_label_tab">Full Name</div>
                         <div class="comment_group" id="full_name_featured_comment_group" style="left: 5px;">
                             <div class="comment_tab">
                                 <div class="comment_dot"></div>
@@ -305,7 +291,7 @@
                         </div>
                         <div class="verified_source_group" id="full_name_featured_verified_source_group" style="left: 46px;">
                             <div class="verified_source_tab" id="full_name_featured_verified_source_tab">
-                                <a class="verified_source_icon" id="full_name_featured_verified_source_icon" href="https://www.github.com/OpenProfileDevs" target="_blank" tabindex="-1">
+                                <a class="verified_source_icon" id="full_name_featured_verified_source_icon" href="https://www.example.com" target="_blank" tabindex="-1">
                                     <img class="verified_source_favicon" id="full_name_featured_verified_source_favicon" src=""></img>
                                 </a>
                             </div>
@@ -331,9 +317,7 @@
                     <!--—————————————————————[ OC-CREATOR ]—————————————————————-->
                     <!--————————————————————————————————————————————————————————-->
                     <div class="group" id="oc_creator_group" style="top: 0px; left: 0px; z-index: 19;">
-                        <div class="label_tab" id="oc_creator_label_tab">
-                            <div class="label_text" id="oc_creator_label_text">OC Creator</div>
-                        </div>
+                        <div class="label_tab" id="oc_creator_label_tab">OC Creator</div>
                         <div class="comment_group" id="oc_creator_comment_group" style="left: 5px;">
                             <div class="comment_tab">
                                 <div class="comment_dot"></div>
@@ -341,7 +325,7 @@
                         </div>
                         <div class="verified_source_group" id="oc_creator_verified_source_group" style="left: 46px;">
                             <div class="verified_source_tab" id="oc_creator_verified_source_tab">
-                                <a class="verified_source_icon" id="oc_creator_verified_source_icon" href="https://www.github.com/OpenProfileDevs" target="_blank" tabindex="-1">
+                                <a class="verified_source_icon" id="oc_creator_verified_source_icon" href="https://www.example.com" target="_blank" tabindex="-1">
                                     <img class="verified_source_favicon" id="oc_creator_verified_source_favicon" src=""></img>
                                 </a>
                             </div>
@@ -361,40 +345,71 @@
                     </div>
                 </div>
 
-                <div class="row" style="top: 706px; left: 36px;">
+                <div class="row" style="top: 556px; left: 36px;">
 
                     <!--————————————————————————————————————————————————————————-->
-                    <!--———————————————[ PERSONAL-THOUGHTS-NAME ]———————————————-->
+                    <!--————————————————[ FEATURED-DESCRIPTION ]————————————————-->
                     <!--————————————————————————————————————————————————————————-->
-                    <div class="group" id="personal_thoughts_name_group" style="top: 0px; left: 0px; z-index: 17;">
-                        <div class="label_tab" id="personal_thoughts_name_label_tab">
-                            <div class="label_text" id="personal_thoughts_name_label_text">Personal Thoughts</div>
-                        </div>
-                        <div class="comment_group" id="personal_thoughts_name_comment_group" style="left: 5px;">
+                    <div class="group" id="featured_description_group" style="top: 0px; left: 0px; z-index: 18;">
+                        <div class="label_tab" id="featured_description_label_tab">Description</div>
+                        <div class="comment_group" id="featured_description_comment_group" style="left: 5px;">
                             <div class="comment_tab">
                                 <div class="comment_dot"></div>
                             </div>
                         </div>
-                        <div class="verified_source_group" id="personal_thoughts_name_verified_source_group" style="left: 46px;">
-                            <div class="verified_source_tab" id="personal_thoughts_name_verified_source_tab">
-                                <a class="verified_source_icon" id="personal_thoughts_name_verified_source_icon" href="https://www.github.com/OpenProfileDevs" target="_blank" tabindex="-1">
-                                    <img class="verified_source_favicon" id="personal_thoughts_name_verified_source_favicon" src=""></img>
+                        <div class="verified_source_group" id="featured_description_verified_source_group" style="left: 46px;">
+                            <div class="verified_source_tab" id="featured_description_verified_source_tab">
+                                <a class="verified_source_icon" id="featured_description_verified_source_icon" href="https://www.example.com" target="_blank" tabindex="-1">
+                                    <img class="verified_source_favicon" id="featured_description_verified_source_favicon" src=""></img>
                                 </a>
                             </div>
                         </div>
-                        <textarea id="personal_thoughts_name" style="width: 559px; height: 252px;" autocomplete="off" autocorrect="off" placeholder="What are the oc's thoughts towards their name?"></textarea>
-                        <div class="help_box" id="personal_thoughts_name_help_box" style="top: 259px;">
-                            <div class="help_box_tab" id="personal_thoughts_name_help_box_tab">
-                                <div class="help_box_text" id="personal_thoughts_name_help_box_text">What are the character's personal thoughts towards their name? Do they like the name or would they rather have another? Does having the name affects their life in any certain way? Does the name remind them of anything? Are they comfortable sharing their name with others or would they rather it in secrecy? Try to be the most descriptive possible and remember the usage of the five Ws (who, what, when, where, and why) when needed.</div>
+                        <textarea id="featured_description" style="width: 559px; height: 252px;" autocomplete="off" autocorrect="off" placeholder="What is the oc's description?"></textarea>
+                        <div class="help_box" id="featured_description_help_box" style="top: 259px;">
+                            <div class="help_box_tab" id="featured_description_help_box_tab">
+                                <div class="help_box_text" id="featured_description_help_box_text">What is the character's general description? This should contain at least some sentences long information of each category within the profile to showcase the character the most possible.</div>
                             </div>
                         </div>
-                        <div class="history_group" id="personal_thoughts_name_history_group">
-                            <div class="history_tab" id="personal_thoughts_name_history_tab" style="left: 433.5px; top: 240px;"">
-                                <div class="last_modified_text" id="personal_thoughts_name_time"></div>
-                                <div class="history_dot" id="personal_thoughts_name_history_dot"></div>
+                        <div class="history_group" id="featured_description_history_group">
+                            <div class="history_tab" id="featured_description_history_tab" style="left: 433.5px; top: 240px;"">
+                                <div class="last_modified_text" id="featured_description_time"></div>
+                                <div class="history_dot" id="featured_description_history_dot"></div>
                             </div>
                         </div>
-                        <script src="scripts/generations/page1/generate_personal_thoughts_name.js"></script>
+                    </div>
+                </div>
+
+                <div class="row" style="top: 890px; left: 36px;">
+
+                    <!--————————————————————————————————————————————————————————-->
+                    <!--————————————————————[ FEATURED-BTS ]————————————————————-->
+                    <!--————————————————————————————————————————————————————————-->
+                    <div class="group" id="featured_bts_group" style="top: 0px; left: 0px; z-index: 17;">
+                        <div class="label_tab" id="featured_bts_label_tab">Behind The Scenes</div>
+                        <div class="comment_group" id="featured_bts_comment_group" style="left: 5px;">
+                            <div class="comment_tab">
+                                <div class="comment_dot"></div>
+                            </div>
+                        </div>
+                        <div class="verified_source_group" id="featured_bts_verified_source_group" style="left: 46px;">
+                            <div class="verified_source_tab" id="featured_bts_verified_source_tab">
+                                <a class="verified_source_icon" id="featured_bts_verified_source_icon" href="https://www.example.com" target="_blank" tabindex="-1">
+                                    <img class="verified_source_favicon" id="featured_bts_verified_source_favicon" src=""></img>
+                                </a>
+                            </div>
+                        </div>
+                        <textarea id="featured_bts" style="width: 559px; height: 97px;" autocomplete="off" autocorrect="off" placeholder="What happened behind the scenes?"></textarea>
+                        <div class="help_box" id="featured_bts_help_box" style="top: 104px;">
+                            <div class="help_box_tab" id="featured_bts_help_box_tab">
+                                <div class="help_box_text" id="featured_bts_help_box_text">What happened during the character's development? Give some interesting prominent details or facts!</div>
+                            </div>
+                        </div>
+                        <div class="history_group" id="featured_bts_history_group">
+                            <div class="history_tab" id="featured_bts_history_tab" style="left: 433.5px; top: 85px;"">
+                                <div class="last_modified_text" id="featured_bts_time"></div>
+                                <div class="history_dot" id="featured_bts_history_dot"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -402,26 +417,54 @@
             <!--————————————————————————————————————————————————————————-->
             <!--————————————————[ SOCIAL-MEDIA-BUTTONS ]————————————————-->
             <!--————————————————————————————————————————————————————————-->
-            <div class="social_button" id="youtube_button" title="YouTube">
-                <img src="media/icons/media_icons/youtube.png" style="position: absolute; scale: 0.01; transform-origin: top left; margin: 5px;">
+            <div class="social_buttons">
+                <a class="social_button" id="website_button" title="Website" href="https://www.example.com" target="_blank">
+                    <img src="media/icons/feather_icons/globe.svg" style="position: absolute; scale: 0.171; transform-origin: top left; margin: 4px;">
+                </a>
+                <a class="social_button" id="youtube_button" title="YouTube" href="https://www.youtube.com" target="_blank">
+                    <img src="media/icons/media_icons/youtube.png" style="position: absolute; scale: 0.01; transform-origin: top left; margin: 5px;">
+                </a>
+                <a class="social_button" id="x_button" title="X (Twitter)" href="https://www.x.com" target="_blank">
+                    <img src="media/icons/media_icons/x_twitter.svg" style="position: absolute; scale: 0.0122; transform-origin: top left; margin: 5px;">
+                </a>
+                <a class="social_button" id="facebook_button" title="Facebook" href="https://www.facebook.com" target="_blank">
+                    <img src="media/icons/media_icons/facebook.png" style="position: absolute; scale: 0.00823; transform-origin: top left; margin: 4px;">
+                </a>
+                <a class="social_button" id="instagram_button" title="Instagram" href="https://www.instagram.com" target="_blank">
+                    <img src="media/icons/media_icons/instagram.svg" style="position: absolute; scale: 1; transform-origin: top left; margin: 5px;">
+                </a>
+                <a class="social_button" id="pinterest_button" title="Pinterest" href="https://www.pinterest.com" target="_blank">
+                    <img src="media/icons/media_icons/pinterest.png" style="position: absolute; scale: 0.021; transform-origin: top left; margin: 4px;">
+                </a>
+                
+                <a class="social_button" id="twitch_button" title="Twitch" href="https://www.twitch.tv" target="_blank">
+                    <img src="media/icons/media_icons/twitch.svg" style="position: absolute; scale: 0.7; transform-origin: top left; margin-top: 5px; margin-left: 6px;">
+                <a class="social_button" id="discord_button" title="Discord" href="https://www.discord.com" target="_blank">
+                    <img src="media/icons/media_icons/discord.svg" style="position: absolute; scale: 0.74; transform-origin: top left; margin-top: 7px; margin-left: 5px;">
+                </a>
             </div>
-            <div class="social_button" id="x_button" title="X (Twitter)">
-                <img src="media/icons/media_icons/x_twitter.svg" style="position: absolute; scale: 0.0122; transform-origin: top left; margin: 5px;">
-            </div>
-            <div class="social_button" id="x_button" title="Discord">
-                <img src="media/icons/media_icons/discord.svg" style="position: absolute; scale: 0.74; transform-origin: top left; margin-top: 7px; margin-left: 5px;">
+
+            <div class="row" style="top: 1083px; left: 76px;">
+
+                <!--————————————————————————————————————————————————————————-->
+                <!--————————————————————[ LEGAL-FOOTER ]————————————————————-->
+                <!--————————————————————————————————————————————————————————-->
+                <div class="group" id="legal_footer_group" style="top: 0px; left: 0px; z-index: 19;">
+                    <div><input type="text" class="input_text_legal" id="legal_footer" autocomplete="off" autocorrect="off" placeholder="Who owns and what is the legal licensing of this character?"></div>
+                </div>
             </div>
 
             <!--————————————————————————————————————————————————————————-->
             <!--———————————————————[ WATCH-BUTTONS ]————————————————————-->
             <!--————————————————————————————————————————————————————————-->
-            <div class="watch_button" id="disney_plus_button" title="Disney Network">
-                <img src="media/icons/media_icons/disney.png" style="position: absolute; scale: 0.0105; transform-origin: top left; margin: 5px;">
+            <div class="watch_buttons">
+                <a class="watch_button" id="disney_plus_button" title="Disney Network" href="https://www.disneyplus.com" target="_blank">
+                    <img src="media/icons/media_icons/disney.png" style="position: absolute; scale: 0.0105; transform-origin: top left; margin: 5px;">
+                </a>
+                <a class="watch_button" id="youtube_movie_button" title="YouTube Movies" href="https://www.youtube.com/movies" target="_blank">
+                    <img src="media/icons/media_icons/youtube.png" style="position: absolute; scale: 0.01; transform-origin: top left; margin: 5px;">
+                </a>
             </div>
-            <div class="watch_button" id="youtube_movie_button" title="YouTube Movies">
-                <img src="media/icons/media_icons/youtube.png" style="position: absolute; scale: 0.01; transform-origin: top left; margin: 5px;">
-            </div>
-
         </div>
         
         <div class="page_outer" id="page_1" style="z-index: 98;">
@@ -430,13 +473,9 @@
                 <!--————————————————————————————————————————————————————————-->
                 <!--—————————————————————[ BRAND-ICON ]—————————————————————-->
                 <!--————————————————————————————————————————————————————————-->
-                <div class="group" id="brand_icon_group" style="top: 0px; left: 0px; z-index: 21;">
+                <div class="group" id="brand_icon_group" style="top: 0px; left: 0px; z-index: 21;" title="Brand Banner">
                     <div class="tag" id="" style="top: 23px; left: -1px; scale: 0.38; width: 85px; background: #5e329b; z-index: 50;">PREVIEW</div>
-                    <div class="label_tab" id="brand_icon_label_tab">
-                        <div class="brand_icon_label_text" id="brand_icon_label_text">*Insert Brand Banner*</div>
-                    </div>
-                    <div>
-                        <input class="brand_icon_media_input" id="brand_icon_media_input" type="file" accept="image/*,video/*" style="display: none;">
+                    <div><input class="brand_icon_media_input" id="brand_icon_media_input" type="file" accept="image/*,video/*" style="display: none;">
                         <label for="brand_icon_media_input">
                             <div class="image_input_2" id="brand_icon_container" style="width: 81px; height: 22.5px; border-radius: 2.5px;">
                                 <img class="brand_icon_selected_image" id="brand_icon_selected_image" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); max-width: 100%; max-height: 100%; opacity: 0.35; cursor: pointer; z-index: 30;" src="media/icons/feather_icons/plus-square.svg">                                <img id="brand_icon_selected_image" style="border-radius: 2.5px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); max-width: 100%; max-height: 100%; display: none;  z-index: 30;" src="" alt="Selected Media">
@@ -507,7 +546,7 @@
                         </div>
                         <div class="verified_source_group" id="full_name_verified_source_group" style="left: 46px;">
                             <div class="verified_source_tab" id="full_name_verified_source_tab">
-                                <a class="verified_source_icon" id="full_name_verified_source_icon" href="https://www.github.com/OpenProfileDevs" target="_blank" tabindex="-1">
+                                <a class="verified_source_icon" id="full_name_verified_source_icon" href="https://www.example.com" target="_blank" tabindex="-1">
                                     <img class="verified_source_favicon" id="full_name_verified_source_favicon" src=""></img>
                                 </a>
                             </div>
@@ -543,7 +582,7 @@
                         </div>
                         <div class="verified_source_group" id="first_name_verified_source_group" style="left: 46px;">
                             <div class="verified_source_tab" id="first_name_verified_source_tab">
-                                <a class="verified_source_icon" id="first_name_verified_source_icon" href="https://www.github.com/OpenProfileDevs" target="_blank" tabindex="-1">
+                                <a class="verified_source_icon" id="first_name_verified_source_icon" href="https://www.example.com" target="_blank" tabindex="-1">
                                     <img class="verified_source_favicon" id="first_name_verified_source_favicon" src=""></img>
                                 </a>
                             </div>
@@ -577,7 +616,7 @@
                         </div>
                         <div class="verified_source_group" id="middle_name_verified_source_group" style="left: 46px;">
                             <div class="verified_source_tab" id="middle_name_verified_source_tab">
-                                <a class="verified_source_icon" id="middle_name_verified_source_icon" href="https://www.github.com/OpenProfileDevs" target="_blank" tabindex="-1">
+                                <a class="verified_source_icon" id="middle_name_verified_source_icon" href="https://www.example.com" target="_blank" tabindex="-1">
                                     <img class="verified_source_favicon" id="middle_name_verified_source_favicon" src=""></img>
                                 </a>
                             </div>
@@ -611,7 +650,7 @@
                         </div>
                         <div class="verified_source_group" id="last_name_verified_source_group" style="left: 46px;">
                             <div class="verified_source_tab" id="last_name_verified_source_tab">
-                                <a class="verified_source_icon" id="last_name_verified_source_icon" href="https://www.github.com/OpenProfileDevs" target="_blank" tabindex="-1">
+                                <a class="verified_source_icon" id="last_name_verified_source_icon" href="https://www.example.com" target="_blank" tabindex="-1">
                                     <img class="verified_source_favicon" id="last_name_verified_source_favicon" src=""></img>
                                 </a>
                             </div>
@@ -648,7 +687,7 @@
                         </div>
                         <div class="verified_source_group" id="nickname_verified_source_group" style="left: 46px;">
                             <div class="verified_source_tab" id="nickname_verified_source_tab">
-                                <a class="verified_source_icon" id="nickname_verified_source_icon" href="https://www.github.com/OpenProfileDevs" target="_blank" tabindex="-1">
+                                <a class="verified_source_icon" id="nickname_verified_source_icon" href="https://www.example.com" target="_blank" tabindex="-1">
                                     <img class="verified_source_favicon" id="nickname_verified_source_favicon" src=""></img>
                                 </a>
                             </div>
@@ -685,7 +724,7 @@
                         </div>
                         <div class="verified_source_group" id="alias_verified_source_group" style="left: 46px;">
                             <div class="verified_source_tab" id="alias_verified_source_tab">
-                                <a class="verified_source_icon" id="alias_verified_source_icon" href="https://www.github.com/OpenProfileDevs" target="_blank" tabindex="-1">
+                                <a class="verified_source_icon" id="alias_verified_source_icon" href="https://www.example.com" target="_blank" tabindex="-1">
                                     <img class="verified_source_favicon" id="alias_verified_source_favicon" src=""></img>
                                 </a>
                             </div>
@@ -722,7 +761,7 @@
                         </div>
                         <div class="verified_source_group" id="alter_ego_verified_source_group" style="left: 46px;">
                             <div class="verified_source_tab" id="alter_ego_verified_source_tab">
-                                <a class="verified_source_icon" id="alter_ego_verified_source_icon" href="https://www.github.com/OpenProfileDevs" target="_blank" tabindex="-1">
+                                <a class="verified_source_icon" id="alter_ego_verified_source_icon" href="https://www.example.com" target="_blank" tabindex="-1">
                                     <img class="verified_source_favicon" id="alter_ego_verified_source_favicon" src=""></img>
                                 </a>
                             </div>
@@ -760,7 +799,7 @@
                         </div>
                         <div class="verified_source_group" id="prefix_verified_source_group" style="left: 46px;">
                             <div class="verified_source_tab" id="prefix_verified_source_tab">
-                                <a class="verified_source_icon" id="prefix_verified_source_icon" href="https://www.github.com/OpenProfileDevs" target="_blank" tabindex="-1">
+                                <a class="verified_source_icon" id="prefix_verified_source_icon" href="https://www.example.com" target="_blank" tabindex="-1">
                                     <img class="verified_source_favicon" id="prefix_verified_source_favicon" src=""></img>
                                 </a>
                             </div>
@@ -794,7 +833,7 @@
                         </div>
                         <div class="verified_source_group" id="suffix_verified_source_group" style="left: 46px;">
                             <div class="verified_source_tab" id="suffix_verified_source_tab">
-                                <a class="verified_source_icon" id="suffix_verified_source_icon" href="https://www.github.com/OpenProfileDevs" target="_blank" tabindex="-1">
+                                <a class="verified_source_icon" id="suffix_verified_source_icon" href="https://www.example.com" target="_blank" tabindex="-1">
                                     <img class="verified_source_favicon" id="suffix_verified_source_favicon" src=""></img>
                                 </a>
                             </div>
@@ -831,7 +870,7 @@
                         </div>
                         <div class="verified_source_group" id="former_name_verified_source_group" style="left: 46px;">
                             <div class="verified_source_tab" id="former_name_verified_source_tab">
-                                <a class="verified_source_icon" id="former_name_verified_source_icon" href="https://www.github.com/OpenProfileDevs" target="_blank" tabindex="-1">
+                                <a class="verified_source_icon" id="former_name_verified_source_icon" href="https://www.example.com" target="_blank" tabindex="-1">
                                     <img class="verified_source_favicon" id="former_name_verified_source_favicon" src=""></img>
                                 </a>
                             </div>
@@ -868,7 +907,7 @@
                         </div>
                         <div class="verified_source_group" id="name_origin_verified_source_group" style="left: 46px;">
                             <div class="verified_source_tab" id="name_origin_verified_source_tab">
-                                <a class="verified_source_icon" id="name_origin_verified_source_icon" href="https://www.github.com/OpenProfileDevs" target="_blank" tabindex="-1">
+                                <a class="verified_source_icon" id="name_origin_verified_source_icon" href="https://www.example.com" target="_blank" tabindex="-1">
                                     <img class="verified_source_favicon" id="name_origin_verified_source_favicon" src=""></img>
                                 </a>
                             </div>
@@ -905,7 +944,7 @@
                         </div>
                         <div class="verified_source_group" id="personal_thoughts_name_verified_source_group" style="left: 46px;">
                             <div class="verified_source_tab" id="personal_thoughts_name_verified_source_tab">
-                                <a class="verified_source_icon" id="personal_thoughts_name_verified_source_icon" href="https://www.github.com/OpenProfileDevs" target="_blank" tabindex="-1">
+                                <a class="verified_source_icon" id="personal_thoughts_name_verified_source_icon" href="https://www.example.com" target="_blank" tabindex="-1">
                                     <img class="verified_source_favicon" id="personal_thoughts_name_verified_source_favicon" src=""></img>
                                 </a>
                             </div>
@@ -1008,7 +1047,6 @@
     <!--————————————————————————————————————————————————————————-->
     <!--—————————————————[ DEVELOPER-ELEMENTS ]—————————————————-->
     <!--————————————————————————————————————————————————————————-->
-    <script src="scripts/label_position.js"></script>
     <script src="scripts/pages/switch_page.js"></script>
     <script src="scripts/scheme_switcher.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.0/color-thief.umd.js"></script>
@@ -1096,7 +1134,7 @@ if (loggedInUser) {
   <!--————————————————————————————————————————————————————————-->
   <!--<div class="bottom">
     <div style="text-align: right; font-size: 12px; transform: translateX(-16px) translateY(2px);">
-        <a id="version_placeholder" style="color: #ffffff;" href="https://www.github.com/OpenProfileDevs/OP5-Preview"></a>
+        <a id="version_placeholder" style="color: #ffffff;" href="https://www.example.com/OP5-Preview"></a>
     </div>
   </div>
 
