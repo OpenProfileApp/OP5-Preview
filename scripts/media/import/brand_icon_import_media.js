@@ -154,20 +154,20 @@ document.addEventListener('DOMContentLoaded', () => {
                         });
 
                         input_text_legal.forEach((element) => {
-                            const shadingFactor = 0; // Adjust the shading based on the element's position
+                            const shadingFactor = 35; // Adjust the shading based on the element's position
                             const shadedColor = darkenhexColors(hexColors[0], shadingFactor);
                             element.style.backgroundColor = shadedColor || 'transparent';
                             element.style.border = `2px solid ${shadedColor || 'transparent'}`;
                             element.addEventListener('mouseenter', () => {
                                 // Code to run when the mouse leaves the element
-                                const shadingFactor = -35; // Adjust the shading based on the element's position
+                                const shadingFactor = 0; // Adjust the shading based on the element's position
                                 const shadedColor = darkenhexColors(hexColors[0], shadingFactor);
                                 element.style.backgroundColor = shadedColor || 'transparent';
                                 element.style.border = `2px solid ${shadedColor || 'transparent'}`;
                               });
                               element.addEventListener('mouseleave', () => {
                                 // Code to run when the mouse leaves the element
-                                const shadingFactor = 0; // Adjust the shading based on the element's position
+                                const shadingFactor = 35; // Adjust the shading based on the element's position
                                 const shadedColor = darkenhexColors(hexColors[0], shadingFactor);
                                 element.style.backgroundColor = shadedColor || 'transparent';
                                 element.style.border = `2px solid ${shadedColor || 'transparent'}`;
