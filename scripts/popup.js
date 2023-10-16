@@ -1,18 +1,42 @@
-// Function to show the modal dialog on page load
+// Function to show the modal dialog
 function showTextPopup() {
   const modal = document.getElementById('popup_0');
   modal.style.display = 'block';
 
   // Close the modal with delay and opacity transition on left-click
-  modal.addEventListener('click', () => {
-    modal.style.transition = 'opacity 0.5s'; // Apply a 0.5s opacity transition
-    modal.style.opacity = '0'; // Set opacity to 0 for the transition effect
+  modal.addEventListener('click', (event) => {
+    if (!event.target.classList.contains('social_buttons')) {
+      // Trigger the confetti blast
+      triggerConfetti();
 
-    setTimeout(() => {
-      modal.style.display = 'none'; // Hide the modal after the transition
-    }, 500); // Wait for the transition duration (0.5s) + additional delay (0.5s)
+      modal.style.opacity = '0'; // Set opacity to 0 for the transition effect
+
+      setTimeout(() => {
+        modal.style.display = 'none'; // Hide the modal after the transition
+      }, 100); // Wait for the transition duration (0.2s) + additional delay (0.2s)
+    }
   });
 }
 
-// Trigger the modal on page load
-showTextPopup();
+// Function to trigger the confetti blast
+function triggerConfetti() {
+  const duration = 3500; // How long the confetti blast will last (in milliseconds)
+
+  // Configure confetti options
+  const options = {
+    particleCount: 200, // Number of confetti particles
+    spread: 1000, // Spread of the particles
+    origin: { y: 0.5 }, // Origin point (top of the screen)
+  };
+
+  // Trigger the confetti animation
+  confetti(options);
+
+  // Stop the animation after the specified duration
+  setTimeout(() => {
+    confetti.reset();
+  }, duration);
+}
+
+// Add an event listener to run the showTextPopup() function when the page loads
+document.addEventListener('DOMContentLoaded', showTextPopup);

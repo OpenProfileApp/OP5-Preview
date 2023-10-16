@@ -42,35 +42,78 @@
     <!--————————————————————————————————————————————————————————-->
     <!--————————————————————[ PAGE-LOADER ]—————————————————————-->
     <!--————————————————————————————————————————————————————————-->
-    <!--<div class="loader_outer">
+    <div class="loader_outer">
         <div class="loader_inner"></div>
-    </div>-->
+        <!--<div class="loading_message">Loading</div>-->
+    </div>
+
+    <!--————————————————————————————————————————————————————————-->
+    <!--——————————————————[ POP-UP-ELEMENTS ]———————————————————-->
+    <!--————————————————————————————————————————————————————————-->
+    <div class="popup_background" id="popup_0">
+        <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.0.1"></script>
+        <div class="popup">
+            <div class="popup_text">
+            <p class="popup_text" style="font-size: 18px;">Welcome to OpenProfile 5, a collaborative database application surrounding the immersive world of original characters! OP5 is still in early stages and this is the preview version, basically nightly updates with rough edges. Not recommended for production work!</p>
+            <p class="popup_text" style="font-size: 24px;">⚠️ DO NOT UPLOAD PERSONALLY IDENTIFIABLE INFORMATION ⚠️</p>
+            <p class="popup_text" id="changelog_name" style="font-size: 18px;"></p>
+            <script src="scripts/change_log.js"></script>
+            <p class="popup_text" id="changelog"></p>
+            <p class="popup_text" style="font-size: 16px;" id="popup_text">(click anywhere to dismiss)</p>
+            <p class="popup_text" style="font-size: 14px;" id="popup_text">💡 Did you know there is currently over 10,000 lines of active code in the OP5?</p>
+            </div>
+            <div class="social_buttons" style="top: 305px; left: 20px; z-index: 5000; scale: 1.5;">
+                <a class="social_button" id="website_button" title="Website" href="https://bio.link/openprofile" target="_blank" style="background-color: #12141a;">
+                    <img src="media/icons/feather_icons/globe.svg" style="position: absolute; scale: 0.171; transform-origin: top left; margin: 4px;">
+                </a>
+                <a class="social_button" id="youtube_button" title="YouTube" href="https://www.youtube.com/@openprofile" target="_blank" style="background-color: #12141a;">
+                    <img src="media/icons/media_icons/youtube.png" style="position: absolute; scale: 0.01; transform-origin: top left; margin: 5px;">
+                </a>
+                <a class="social_button" id="x_button" title="X (Twitter)" href="https://x.com/OpenProfileDevs" target="_blank" style="background-color: #12141a;">
+                    <img src="media/icons/media_icons/x_twitter.svg" style="position: absolute; scale: 0.0122; transform-origin: top left; margin: 5px;">
+                </a>
+                <a class="social_button" id="facebook_button" title="Facebook" href="https://www.facebook.com/OpenProfileDevs/" target="_blank" style="background-color: #12141a;">
+                    <img src="media/icons/media_icons/facebook.png" style="position: absolute; scale: 0.00823; transform-origin: top left; margin: 4px;">
+                </a>
+                <a class="social_button" id="instagram_button" title="Instagram" href="https://instagram.com/openprofiledevs" target="_blank" style="background-color: #12141a;">
+                    <img src="media/icons/media_icons/instagram.svg" style="position: absolute; scale: 1; transform-origin: top left; margin: 5px;">
+                </a>
+                <a class="social_button" id="pinterest_button" title="Pinterest" href="https://www.pinterest.com/openprofiledevs/" target="_blank" style="background-color: #12141a;">
+                    <img src="media/icons/media_icons/pinterest.png" style="position: absolute; scale: 0.021; transform-origin: top left; margin: 4px;">
+                </a>
+                <a class="social_button" id="discord_button" title="Discord" href="https://www.discord.com/invite/w6aV9gkz8g" target="_blank" style="background-color: #12141a;">
+                    <img src="media/icons/media_icons/discord.svg" style="position: absolute; scale: 0.74; transform-origin: top left; margin-top: 7px; margin-left: 5px;">
+                </a>
+            </div>
+        </div>
+    </div>
 
     <!--————————————————————————————————————————————————————————-->
     <!--—————————————————[ HALLOWEEN-ELEMENTS ]—————————————————-->
     <!--————————————————————————————————————————————————————————-->
-    <img style="position: fixed; left: 0px; top: 0px; scale: 0.1; transform-origin: top left; z-index: 100; opacity: 0.85; pointer-events: none;"src="media/images/openprofile/halloween/cobweb.png">
-    <img style="position: fixed; right: -475px; top: 0px; scale: 0.1; transform: scaleX(-1); transform-origin: top left; z-index: 100; opacity: 0.85; pointer-events: none;"src="media/images/openprofile/halloween/cobweb.png">
+    <img style="position: fixed; left: 0px; top: 0px; scale: 0.1; transform-origin: top left; z-index: 8000; opacity: 0.85; pointer-events: none;"src="media/images/openprofile/halloween/cobweb.png">
+    <img style="position: fixed; right: -475px; top: 0px; scale: 0.1; transform: scaleX(-1); transform-origin: top left; z-index: 8000; opacity: 0.85; pointer-events: none;"src="media/images/openprofile/halloween/cobweb.png">
+    
     <!--————————————————————————————————————————————————————————-->
     <!--————————————————————[ TOP-ELEMENTS ]————————————————————-->
     <!--————————————————————————————————————————————————————————-->
     <div class="top">
         <!--<button id="logoutButton" style="position: absolute; left: 500px; top: 10px;">Logout</button>-->
-        <div class="top_button" id="" style="width: 75px; border-radius: 10px;"></div>
-        <div class="top_button" id="" style="width: 75px; border-radius: 10px;"></div>
-        <div class="top_button" id="" style="width: 100px; border-radius: 10px;"></div>
-        <div class="top_button" id="" style="width: 125px; border-radius: 10px;"></div>
-        <div class="top_button_2" id="" style="background-color: #ac2222;"></div>
-        <div class="top_button_2" id="" style="transform: translateX(-35px)translateY(-50%); background-color: #d5a728;"></div>
-        <div class="top_button_2" id="" style="transform: translateX(-70px)translateY(-50%); background-color: #2d8018;"></div>
+        <div class="top_button" style="width: 75px; border-radius: 10px;"></div>
+        <div class="top_button" style="width: 75px; border-radius: 10px;"></div>
+        <div class="top_button" style="width: 100px; border-radius: 10px;"></div>
+        <div class="top_button" style="width: 125px; border-radius: 10px;"></div>
+        <div class="top_button_2" style="background-color: #ac2222;"></div>
+        <div class="top_button_2" style="transform: translateX(-35px)translateY(-50%); background-color: #d5a728;"></div>
+        <div class="top_button_2" style="transform: translateX(-70px)translateY(-50%); background-color: #2d8018;"></div>
         <div class="top_button_2" id="button_scheme" title="Schemes" style="transform: translateX(-105px)translateY(-50%); border-radius: 10px;">
             <img id="icon_scheme" src="media/icons/feather_icons/sun.svg" style="scale: 0.15; transform-origin: top left; margin: 5px;">
         </div>
-        <div class="top_button_2" id="" style="transform: translateX(-140px)translateY(-50%); border-radius: 10px; width: 50px;"></div>
-        <div class="top_button_2" id="" style="transform: translateX(-200px)translateY(-50%); border-radius: 10px; width: 50px;">
+        <div class="top_button_2" style="transform: translateX(-140px)translateY(-50%); border-radius: 10px; width: 50px;"></div>
+        <div class="top_button_2" style="transform: translateX(-200px)translateY(-50%); border-radius: 10px; width: 50px;">
             <img src="media/icons/feather_icons/mail.svg" style="scale: 0.15; transform-origin: top left; margin: 5px;">
         </div>
-        <div class="top_button_2" id="" style="transform: translateX(-260px)translateY(-50%); border-radius: 10px; width: 50px;">
+        <div class="top_button_2" style="transform: translateX(-260px)translateY(-50%); border-radius: 10px; width: 50px;">
             <img src="media/icons/feather_icons/bell.svg" style="scale: 0.15; transform-origin: top left; margin: 5px;">
         </div>
         <div class="top_button_2" id="button_print" title="Print" style="transform: translateX(-320px)translateY(-50%); border-radius: 10px;">
@@ -85,31 +128,32 @@
         <div class="left_top">
             <div><input type="text" class="input_search" id="data_base_search" autocomplete="off" autocorrect="off" placeholder="Search the database!">
                 <img src="media/icons/feather_icons/search.svg" style="position: absolute; top: -11px; left: -10px; scale: 0.20; transform-origin: center center; z-index: 4;">
-                <div class="tag" id="" style="left: 270px; top: 41px; scale: 0.55; width: 85px; background: #5e329b; z-index: 4;">PREVIEW</div>
-            </div>
-            <div class="left_top_2">
-                <div id="universe-list" style="width: max-content;"></div>
+                <div class="tag" style="left: 270px; top: 41px; scale: 0.55; width: 85px; background: #5e329b; z-index: 4;">PREVIEW</div>
             </div>
         </div>
+        <div class="left_top_2">
+            <div id="universe-list" style="width: max-content; transform: translateY(10px);"></div>
+        </div>
+
 
         <div class="profiles_scroll" id="profile-list"></div>
 
         <div class="left_bar">
             <div class="side_button_2" id="toggle_left_menu" title="Show Menu">
                 <img src="media/icons/feather_icons/menu.svg" style="scale: 0.30; transform-origin: top left; margin: 10px;">
-                <div class="tag" id="" style="left: -8px; scale: 0.55; width: 85px; background: #5e329b;">PREVIEW</div>
+                <div class="tag" style="left: -8px; scale: 0.55; width: 85px; background: #5e329b;">PREVIEW</div>
             </div>
-            <div class="side_button_2" id="" title="User Profiles">
+            <div class="side_button_2" title="User Profiles">
                 <img src="media/icons/feather_icons/user.svg" style="scale: 0.30; transform-origin: top left; margin: 10px;">
-                <div class="tag" id="" style="left: -8px; scale: 0.55; width: 85px; background: #5e329b;">PREVIEW</div>
+                <div class="tag" style="left: -8px; scale: 0.55; width: 85px; background: #5e329b;">PREVIEW</div>
             </div>
-            <div class="side_button_2" id="" title="Profiles Database">
+            <div class="side_button_2" title="Profiles Database">
                 <img src="media/icons/feather_icons/globe.svg" style="scale: 0.30; transform-origin: top left; margin: 10px; opacity: 0.35;">
-                <div class="tag" id="" style="left: -8px; scale: 0.55; width: 85px; background: #5e329b;">PREVIEW</div>
+                <div class="tag" style="left: -8px; scale: 0.55; width: 85px; background: #5e329b;">PREVIEW</div>
             </div>
-            <div class="side_button_2" id="" title="Schemes Database">
+            <div class="side_button_2" title="Schemes Database">
                 <img src="media/icons/feather_icons/shopping-bag.svg" style="scale: 0.30; transform-origin: top left; margin: 10px; opacity: 0.35;">
-                <div class="tag" id="" style="left: -8px; scale: 0.55; width: 85px; background: #5e329b;">PREVIEW</div>
+                <div class="tag" style="left: -8px; scale: 0.55; width: 85px; background: #5e329b;">PREVIEW</div>
             </div>
 
             <!--————————————————————[ LOAD PROFILE ]————————————————————-->
@@ -125,29 +169,29 @@
                     }
                 </script>
                 <img src="media/icons/feather_icons/upload.svg" style="scale: 0.30; transform-origin: top left; margin: 10px;">
-                <div class="tag" id="" style="left: 8px; scale: 0.55;">BETA</div>
+                <div class="tag" style="left: 8px; scale: 0.55;">BETA</div>
             </div>  
 
              <div class="side_button_2" id="saveButton" title="Save Profile">
                 <img src="media/icons/feather_icons/save.svg" style="scale: 0.30; transform-origin: top left; margin: 10px;">
-                <div class="tag" id="" style="left: 8px; scale: 0.55;">BETA</div>
+                <div class="tag" style="left: 8px; scale: 0.55;">BETA</div>
             </div>
             <div class="side_button_2" id="add_profile" title="Add Profile" onclick="addProfile()">
                 <img src="media/icons/feather_icons/plus.svg" style="scale: 0.30; transform-origin: top left; margin: 10px;">
-                <div class="tag" id="" style="left: -8px; scale: 0.55; width: 85px; background: #5e329b;">PREVIEW</div>
+                <div class="tag" style="left: -8px; scale: 0.55; width: 85px; background: #5e329b;">PREVIEW</div>
             </div>
             <div class="side_button_2" id="add_universe" title="Add Universe" onclick="createuniverse()";>
                 <img src="media/icons/feather_icons/plus-circle.svg" style="transform-origin: top left; min-width: 50px; min-height: 50px; max-width: 50px; max-height: 50px; border-radius: 50%;">
-                <div class="tag" id="" style="left: -8px; scale: 0.55; width: 85px; background: #5e329b;">PREVIEW</div>
+                <div class="tag" style="left: -8px; scale: 0.55; width: 85px; background: #5e329b;">PREVIEW</div>
             </div>
             <div class="side_button_2" style="opacity: 0;"></div>
             <div class="side_button_2" id="next_page" title="Next Page" onclick="";>
                 <img src="media/icons/feather_icons/arrow-right.svg" style="transform-origin: top left; min-width: 50px; min-height: 50px; max-width: 50px; max-height: 50px; border-radius: 50%;">
-                <div class="tag" id="" style="left: -8px; scale: 0.55; width: 85px; background: #5e329b;">PREVIEW</div>
+                <div class="tag" style="left: -8px; scale: 0.55; width: 85px; background: #5e329b;">PREVIEW</div>
             </div>
             <div class="side_button_2" id="previous_page" title="Previous Page" onclick="";>
                 <img src="media/icons/feather_icons/arrow-left.svg" style="transform-origin: top left; min-width: 50px; min-height: 50px; max-width: 50px; max-height: 50px; border-radius: 50%;">
-                <div class="tag" id="" style="left: -8px; scale: 0.55; width: 85px; background: #5e329b;">PREVIEW</div>
+                <div class="tag" style="left: -8px; scale: 0.55; width: 85px; background: #5e329b;">PREVIEW</div>
             </div>
         </div>
     </div>
@@ -156,33 +200,33 @@
     <!--———————————————————[ RIGHT-ELEMENTS ]———————————————————-->
     <!--————————————————————————————————————————————————————————-->
     <div class="right">
-        <div class="side_button" id="" title="Generate Data">
+        <div class="side_button" title="Generate Data">
             <img src="media/icons/feather_icons/database.svg" style="scale: 0.30; transform-origin: top left; margin: 10px;">
-            <div class="tag" id="" style="left: 8px; scale: 0.55;">BETA</div>
+            <div class="tag" style="left: 8px; scale: 0.55;">BETA</div>
         </div>
-        <div class="side_button" id="" title="Highlight Textbox">
+        <div class="side_button" title="Highlight Textbox">
             <img src="media/icons/feather_icons/edit-3.svg" style="scale: 0.30; transform-origin: top left; margin: 10px;">
-            <div class="tag" id="" style="left: 8px; scale: 0.55;">BETA</div>
+            <div class="tag" style="left: 8px; scale: 0.55;">BETA</div>
         </div>
-        <div class="side_button" id="" title="Disable Comments">
+        <div class="side_button" title="Disable Comments">
             <img src="media/icons/feather_icons/message-circle.svg" style="scale: 0.30; transform-origin: top left; margin: 10px; opacity: 0.35;">
-            <div class="tag" id="" style="left: -8px; scale: 0.55; width: 85px; background: #5e329b;">PREVIEW</div>
+            <div class="tag" style="left: -8px; scale: 0.55; width: 85px; background: #5e329b;">PREVIEW</div>
         </div>
-        <div class="side_button" id="" title="Link Source">
+        <div class="side_button" title="Link Source">
             <img src="media/icons/feather_icons/link.svg" style="scale: 0.30; transform-origin: top left; margin: 10px;">
-            <div class="tag" id="" style="left: 8px; scale: 0.55;">BETA</div>
+            <div class="tag" style="left: 8px; scale: 0.55;">BETA</div>
         </div>
-        <div class="side_button" id="" title="Hide History">
+        <div class="side_button" title="Hide History">
             <img src="media/icons/feather_icons/calendar.svg" style="scale: 0.30; transform-origin: top left; margin: 10px;">
-            <div class="tag" id="" style="left: 8px; scale: 0.55;">BETA</div>
+            <div class="tag" style="left: 8px; scale: 0.55;">BETA</div>
         </div>
-        <div class="side_button" id="" title="Lock Textbox">
+        <div class="side_button" title="Lock Textbox">
             <img src="media/icons/feather_icons/lock.svg" style="scale: 0.30; transform-origin: top left; margin: 10px;">
-            <div class="tag" id="" style="left: 8px; scale: 0.55;">BETA</div>
+            <div class="tag" style="left: 8px; scale: 0.55;">BETA</div>
         </div>
-        <div class="side_button" id="" title="Disable Textbox">
+        <div class="side_button" title="Disable Textbox">
             <img src="media/icons/feather_icons/x.svg" style="scale: 0.30; transform-origin: top left; margin: 10px;">
-            <div class="tag" id="" style="left: 8px; scale: 0.55;">BETA</div>
+            <div class="tag" style="left: 8px; scale: 0.55;">BETA</div>
         </div>
     </div>
 
@@ -198,7 +242,7 @@
                 <!--—————————————————————[ BRAND-ICON ]—————————————————————-->
                 <!--————————————————————————————————————————————————————————-->
                 <div class="group" id="brand_icon_group" style="top: 0px; left: 0px; z-index: 21;" title="Brand Banner">
-                    <div class="tag" id="" style="top: 43px; left: 39px; scale: 0.38; width: 85px; background: #5e329b; z-index: 50;">PREVIEW</div>
+                    <div class="tag" style="top: 43px; left: 39px; scale: 0.38; width: 85px; background: #5e329b; z-index: 50;">PREVIEW</div>
                     <div><input class="brand_icon_media_input" id="brand_icon_media_input" type="file" accept="image/*,video/*" style="display: none;">
                         <label for="brand_icon_media_input">
                             <div class="image_input_2" id="brand_icon_container" style="width: 162px; height: 45px; border-radius: 2.5px;">
@@ -212,19 +256,14 @@
             </div>
             <div class="page_inner">
                 <div class="row" style="top: -8px; left: 17px;">
-
                     <!--————————————————————————————————————————————————————————-->
                     <!--———————————————————[ PAGE-AUTHOR-0 ]————————————————————-->
                     <!--————————————————————————————————————————————————————————-->
                     <div class="group" id="page_author_0_group" style="top: 0px; left: -1px; z-index: 24;">
-                        <div class="tag" id="" style="top: -2.5px; left: 130px; scale: 0.38; width: 85px; background: #5e329b;">PREVIEW</div>
-                            <div class="label_tab" id="page_author_label_tab" style="top: 29px; border-radius: 0px 0px 5px 0px; z-index: 2;">Page Author</div>
-                        <div><input type="text" class="input_text" id="page_author_0" style="width: 175px; border-radius: 5px 0px 5px 0px;" autocomplete="off" autocorrect="off" placeholder="Who is the page's author?"></div>
-                        <div class="help_box" id="page_author_help_box">
-                            <div class="help_box_tab" id="page_author_help_box_tab">
-                                <div class="help_box_text" id="page_author_help_box_text">What is your name or pseudonym? If you're working as part of a collaboration, include the fellow author's name or pseudonym next to yours.</div>
-                            </div>
-                        </div>
+                        <div class="tag" style="top: -2.5px; left: 130px; scale: 0.38; width: 85px; background: #5e329b;">PREVIEW</div>
+                        <div class="label_tab" id="page_author_label_tab" style="top: 29px; border-radius: 0px 0px 5px 0px; z-index: 2;">Page Author</div>
+                        <div><input type="text" class="input_text_author" id="page_author_0" style="width: 175px;" autocomplete="off" autocorrect="off" placeholder="Who is the page's author?"></div>
+                        <div class="help_box" id="page_author_help_box" style="width: 173px;">What is your name or pseudonym? If you're working as part of a collaboration, include the fellow author's name or pseudonym next to yours.</div>
                     </div>
 
                     <!--————————————————————————————————————————————————————————-->
@@ -238,19 +277,14 @@
                     <!--———————————————————[ WRITTEN-DATE-0 ]———————————————————-->
                     <!--————————————————————————————————————————————————————————-->
                     <div class="group" id="written_date_0_group" style="top: 0px; left: 498px; z-index: 22;">
-                        <div class="tag" id="" style="top: -2.5px; left: 145px; scale: 0.38;">BETA</div>
-                            <div class="label_tab" id="written_date_label_tab" option="page_date" style="top: 29px; border-radius: 0px 0px 0px 5px; left: 12px; float: right;">Written Date</div>
-                        <div><input type="text" class="input_text" id="written_date_0" style="width: 175px; border-radius: 0px 5px 0px 5px; text-align: right;" autocomplete="off" autocorrect="off" placeholder="When was this page written?"></div>
-                        <div class="help_box" id="written_date_help_box">
-                            <div class="help_box_tab" id="written_date_help_box_tab">
-                                <div class="help_box_text" id="written_date_help_box_text">What date was this page written on? You can include multiple dates in any format seperated by commas. This will prevent the last modified timestamp from showing.</div>
-                            </div>
-                        </div>
+                        <div class="tag" style="top: -2.5px; left: 145px; scale: 0.38;">BETA</div>
+                        <div class="label_tab" id="written_date_label_tab" option="page_date" style="top: 29px; border-radius: 0px 0px 0px 5px; left: 134px;">Written Date</div>
+                        <div><input type="text" class="input_text_written" id="written_date_0" style="width: 175px; text-align: right;" autocomplete="off" autocorrect="off" placeholder="When was this page written?"></div>
+                        <div class="help_box" id="written_date_help_box" style="width: 173px;">What date was this page written on? You can include multiple dates in any format seperated by commas. This will prevent the last modified timestamp from showing.</div>
                     </div>
                 </div>
                     
                 <div class="row" style="top: 50px; left: 36px;">
-
                     <!--————————————————————————————————————————————————————————-->
                     <!--———————————————————[ PROFILE-IMAGE ]————————————————————-->
                     <!--————————————————————————————————————————————————————————-->
@@ -278,7 +312,6 @@
                 </div>
 
                 <div class="row" style="top: 457px; left: 36px;">
-
                     <!--————————————————————————————————————————————————————————-->
                     <!--—————————————————[ FULL-NAME-FEATURED ]—————————————————-->
                     <!--————————————————————————————————————————————————————————-->
@@ -289,19 +322,13 @@
                                 <div class="comment_dot"></div>
                             </div>
                         </div>
-                        <div class="verified_source_group" id="full_name_featured_verified_source_group" style="left: 46px;">
-                            <div class="verified_source_tab" id="full_name_featured_verified_source_tab">
-                                <a class="verified_source_icon" id="full_name_featured_verified_source_icon" href="https://www.example.com" target="_blank" tabindex="-1">
-                                    <img class="verified_source_favicon" id="full_name_featured_verified_source_favicon" src=""></img>
-                                </a>
-                            </div>
+                        <div class="verified_source_tab" id="full_name_featured_verified_source_tab">
+                            <a class="verified_source_icon" id="full_name_featured_verified_source_icon" href="https://www.example.com" target="_blank" tabindex="-1">
+                                <img class="verified_source_favicon" id="full_name_featured_verified_source_favicon" src=""></img>
+                            </a>
                         </div>
                         <div><input type="text" class="input_text" id="full_name_featured" style="width: 559px; height: 20px; font-size: 18px; text-align: center;" autocomplete="off" autocorrect="off" placeholder="What is the oc's full name?"></div>
-                        <div class="help_box" id="full_name_help_box">
-                            <div class="help_box_tab" id="full_name_help_box_tab" style="top: 6px;">
-                                <div class="help_box_text" id="full_name_help_box_text">What is the character's full name? Be sure to include their prefixes and suffixes.</div>
-                            </div>
-                        </div>
+                        <div class="help_box" id="full_name_help_box" style="width: 557px; top: 14px;">What is the character's full name? Be sure to include their prefixes and suffixes.</div>
                         <div class="history_group" id="full_name_history_group">
                             <div class="history_tab" id="full_name_history_tab" style="left: 433.5px; top: 6px;">
                                 <div class="last_modified_text" id="full_name_time"></div>
@@ -312,7 +339,6 @@
                 </div>
 
                 <div class="row" style="top: 510px; left: 36px;">
-
                     <!--————————————————————————————————————————————————————————-->
                     <!--—————————————————————[ OC-CREATOR ]—————————————————————-->
                     <!--————————————————————————————————————————————————————————-->
@@ -323,19 +349,13 @@
                                 <div class="comment_dot"></div>
                             </div>
                         </div>
-                        <div class="verified_source_group" id="oc_creator_verified_source_group" style="left: 46px;">
-                            <div class="verified_source_tab" id="oc_creator_verified_source_tab">
-                                <a class="verified_source_icon" id="oc_creator_verified_source_icon" href="https://www.example.com" target="_blank" tabindex="-1">
-                                    <img class="verified_source_favicon" id="oc_creator_verified_source_favicon" src=""></img>
-                                </a>
-                            </div>
+                        <div class="verified_source_tab" id="oc_creator_verified_source_tab">
+                            <a class="verified_source_icon" id="oc_creator_verified_source_icon" href="https://www.example.com" target="_blank" tabindex="-1">
+                                <img class="verified_source_favicon" id="oc_creator_verified_source_favicon" src=""></img>
+                            </a>
                         </div>
                         <div><input type="text" class="input_text" id="oc_creator" style="width: 559px; text-align: center;" autocomplete="off" autocorrect="off" placeholder="Who is the oc's creator?"></div>
-                        <div class="help_box" id="oc_creator_help_box">
-                            <div class="help_box_tab" id="oc_creator_help_box_tab">
-                                <div class="help_box_text" id="oc_creator_help_box_text">What is the name or pseudonym of the character's original creator? If multiple authors worked as part of a collaboration, include their name or pseudonym next to the original creator.</div>
-                            </div>
-                        </div>
+                        <div class="help_box" id="oc_creator_help_box" style="width: 557px;">What is the name or pseudonym of the character's original creator? If multiple authors worked as part of a collaboration, include their name or pseudonym next to the original creator.</div>
                         <div class="history_group" id="oc_creator_history_group">
                             <div class="history_tab" id="oc_creator_history_tab" style="left: 433.5px;">
                                 <div class="last_modified_text" id="oc_creator_time"></div>
@@ -346,7 +366,6 @@
                 </div>
 
                 <div class="row" style="top: 556px; left: 36px;">
-
                     <!--————————————————————————————————————————————————————————-->
                     <!--————————————————[ FEATURED-DESCRIPTION ]————————————————-->
                     <!--————————————————————————————————————————————————————————-->
@@ -357,19 +376,13 @@
                                 <div class="comment_dot"></div>
                             </div>
                         </div>
-                        <div class="verified_source_group" id="featured_description_verified_source_group" style="left: 46px;">
-                            <div class="verified_source_tab" id="featured_description_verified_source_tab">
-                                <a class="verified_source_icon" id="featured_description_verified_source_icon" href="https://www.example.com" target="_blank" tabindex="-1">
-                                    <img class="verified_source_favicon" id="featured_description_verified_source_favicon" src=""></img>
-                                </a>
-                            </div>
+                        <div class="verified_source_tab" id="featured_description_verified_source_tab">
+                            <a class="verified_source_icon" id="featured_description_verified_source_icon" href="https://www.example.com" target="_blank" tabindex="-1">
+                                <img class="verified_source_favicon" id="featured_description_verified_source_favicon" src=""></img>
+                            </a>
                         </div>
                         <textarea id="featured_description" style="width: 559px; height: 252px;" autocomplete="off" autocorrect="off" placeholder="What is the oc's description?"></textarea>
-                        <div class="help_box" id="featured_description_help_box" style="top: 259px;">
-                            <div class="help_box_tab" id="featured_description_help_box_tab">
-                                <div class="help_box_text" id="featured_description_help_box_text">What is the character's general description? This should contain at least some sentences long information of each category within the profile to showcase the character the most possible.</div>
-                            </div>
-                        </div>
+                        <div class="help_box" id="featured_description_help_box" style="width: 557px; top: 248px;">What is the character's general description? This should contain at least some sentences long information of each category within the profile to showcase the character the most possible.</div>
                         <div class="history_group" id="featured_description_history_group">
                             <div class="history_tab" id="featured_description_history_tab" style="left: 433.5px; top: 240px;"">
                                 <div class="last_modified_text" id="featured_description_time"></div>
@@ -380,7 +393,6 @@
                 </div>
 
                 <div class="row" style="top: 890px; left: 36px;">
-
                     <!--————————————————————————————————————————————————————————-->
                     <!--————————————————————[ FEATURED-BTS ]————————————————————-->
                     <!--————————————————————————————————————————————————————————-->
@@ -391,19 +403,13 @@
                                 <div class="comment_dot"></div>
                             </div>
                         </div>
-                        <div class="verified_source_group" id="featured_bts_verified_source_group" style="left: 46px;">
-                            <div class="verified_source_tab" id="featured_bts_verified_source_tab">
-                                <a class="verified_source_icon" id="featured_bts_verified_source_icon" href="https://www.example.com" target="_blank" tabindex="-1">
-                                    <img class="verified_source_favicon" id="featured_bts_verified_source_favicon" src=""></img>
-                                </a>
-                            </div>
+                        <div class="verified_source_tab" id="featured_bts_verified_source_tab">
+                            <a class="verified_source_icon" id="featured_bts_verified_source_icon" href="https://www.example.com" target="_blank" tabindex="-1">
+                                <img class="verified_source_favicon" id="featured_bts_verified_source_favicon" src=""></img>
+                            </a>
                         </div>
                         <textarea id="featured_bts" style="width: 559px; height: 97px;" autocomplete="off" autocorrect="off" placeholder="What happened behind the scenes?"></textarea>
-                        <div class="help_box" id="featured_bts_help_box" style="top: 104px;">
-                            <div class="help_box_tab" id="featured_bts_help_box_tab">
-                                <div class="help_box_text" id="featured_bts_help_box_text">What happened during the character's development? Give some interesting prominent details or facts!</div>
-                            </div>
-                        </div>
+                        <div class="help_box" id="featured_bts_help_box" style="width: 557px; top: 92px;">What happened during the character's development? Give some interesting prominent details or facts!</div>
                         <div class="history_group" id="featured_bts_history_group">
                             <div class="history_tab" id="featured_bts_history_tab" style="left: 433.5px; top: 85px;"">
                                 <div class="last_modified_text" id="featured_bts_time"></div>
@@ -445,7 +451,6 @@
             </div>
 
             <div class="row" style="top: 1083px; left: 76px;">
-
                 <!--————————————————————————————————————————————————————————-->
                 <!--————————————————————[ LEGAL-FOOTER ]————————————————————-->
                 <!--————————————————————————————————————————————————————————-->
@@ -499,12 +504,11 @@
         
         <div class="page_outer" id="page_1" style="z-index: 98;">
             <div class="row" style="top: 4px; left: 367px;">
-
                 <!--————————————————————————————————————————————————————————-->
                 <!--—————————————————————[ BRAND-ICON ]—————————————————————-->
                 <!--————————————————————————————————————————————————————————-->
                 <div class="group" id="brand_icon_group" style="top: 0px; left: 0px; z-index: 21;" title="Brand Banner">
-                    <div class="tag" id="" style="top: 23px; left: -1px; scale: 0.38; width: 85px; background: #5e329b; z-index: 50;">PREVIEW</div>
+                    <div class="tag" style="top: 23px; left: -1px; scale: 0.38; width: 85px; background: #5e329b; z-index: 50;">PREVIEW</div>
                     <div><input class="brand_icon_media_input" id="brand_icon_media_input" type="file" accept="image/*,video/*" style="display: none;">
                         <label for="brand_icon_media_input">
                             <div class="image_input_2" id="brand_icon_container" style="width: 81px; height: 22.5px; border-radius: 2.5px;">
@@ -519,21 +523,14 @@
 
             <div class="page_inner">
                 <div class="row" style="top: -8px; left: 17px;">
-
                     <!--————————————————————————————————————————————————————————-->
                     <!--———————————————————[ PAGE-AUTHOR-1 ]————————————————————-->
                     <!--————————————————————————————————————————————————————————-->
                     <div class="group" id="page_author_1_group" style="top: 0px; left: -1px; z-index: 24;">
-                        <div class="tag" id="" style="top: -2.5px; left: 130px; scale: 0.38; width: 85px; background: #5e329b;">PREVIEW</div>
-                            <div class="label_tab" id="page_author_label_tab" style="top: 29px; border-radius: 0px 0px 5px 0px; z-index: 2;">
-                                <div class="label_text" id="page_author_label_text" style="top: 1.25px;">Page Author</div>
-                            </div>
-                        <div><input type="text" class="input_text" id="page_author_1" style="width: 175px; border-radius: 5px 0px 5px 0px;" autocomplete="off" autocorrect="off" placeholder="Who is the page's author?"></div>
-                        <div class="help_box" id="page_author_help_box">
-                            <div class="help_box_tab" id="page_author_help_box_tab">
-                                <div class="help_box_text" id="page_author_help_box_text">What is your name or pseudonym? If you're working as part of a collaboration, include the fellow author's name or pseudonym next to yours.</div>
-                            </div>
-                        </div>
+                        <div class="tag" style="top: -2.5px; left: 130px; scale: 0.38; width: 85px; background: #5e329b;">PREVIEW</div>
+                        <div class="label_tab" id="page_author_label_tab" style="top: 29px; border-radius: 0px 0px 5px 0px; z-index: 2;">Page Author</div>
+                        <div><input type="text" class="input_text_author" id="page_author_1" style="width: 175px;" autocomplete="off" autocorrect="off" placeholder="Who is the page's author?"></div>
+                        <div class="help_box" id="page_author_help_box" style="width: 173px;">What is your name or pseudonym? If you're working as part of a collaboration, include the fellow author's name or pseudonym next to yours.</div>
                     </div>
 
                     <!--————————————————————————————————————————————————————————-->
@@ -547,21 +544,14 @@
                     <!--———————————————————[ WRITTEN-DATE-1 ]———————————————————-->
                     <!--————————————————————————————————————————————————————————-->
                     <div class="group" id="written_date_1_group" style="top: 0px; left: 498px; z-index: 22;">
-                        <div class="tag" id="" style="top: -2.5px; left: 145px; scale: 0.38;">BETA</div>
-                            <div class="label_tab" id="written_date_label_tab" option="page_date" style="top: 29px; border-radius: 0px 0px 0px 5px; z-index: 2;">
-                                <div class="label_text" id="written_date_label_text" style="top: 1.25px;">Written Date</div>
-                            </div>
-                        <div><input type="text" class="input_text" id="written_date_1" style="width: 175px; border-radius: 0px 5px 0px 5px; text-align: right;" autocomplete="off" autocorrect="off" placeholder="When was this page written?"></div>
-                        <div class="help_box" id="written_date_help_box">
-                            <div class="help_box_tab" id="written_date_help_box_tab">
-                                <div class="help_box_text" id="written_date_help_box_text">What date was this page written on? You can include multiple dates in any format seperated by commas. This will prevent the last modified timestamp from showing.</div>
-                            </div>
-                        </div>
+                        <div class="tag" style="top: -2.5px; left: 145px; scale: 0.38;">BETA</div>
+                        <div class="label_tab" id="written_date_label_tab" option="page_date" style="top: 29px; border-radius: 0px 0px 0px 5px; left: 134px;">Written Date</div>
+                        <div><input type="text" class="input_text_written" id="written_date_1" style="width: 175px; text-align: right;" autocomplete="off" autocorrect="off" placeholder="When was this page written?"></div>
+                        <div class="help_box" id="written_date_help_box" style="width: 173px;">What date was this page written on? You can include multiple dates in any format seperated by commas. This will prevent the last modified timestamp from showing.</div>
                     </div>
                 </div>
                     
                 <div class="row" style="top: 50px; left: 36px;">
-
                     <!--————————————————————————————————————————————————————————-->
                     <!--—————————————————————[ FULL-NAME ]——————————————————————-->
                     <!--————————————————————————————————————————————————————————-->
@@ -574,19 +564,13 @@
                                 <div class="comment_dot"></div>
                             </div>
                         </div>
-                        <div class="verified_source_group" id="full_name_verified_source_group" style="left: 46px;">
-                            <div class="verified_source_tab" id="full_name_verified_source_tab">
-                                <a class="verified_source_icon" id="full_name_verified_source_icon" href="https://www.example.com" target="_blank" tabindex="-1">
-                                    <img class="verified_source_favicon" id="full_name_verified_source_favicon" src=""></img>
-                                </a>
-                            </div>
+                        <div class="verified_source_tab" id="full_name_verified_source_tab">
+                            <a class="verified_source_icon" id="full_name_verified_source_icon" href="https://www.example.com" target="_blank" tabindex="-1">
+                                <img class="verified_source_favicon" id="full_name_verified_source_favicon" src=""></img>
+                            </a>
                         </div>
                         <div><input type="text" class="input_text" id="full_name" style="width: 559px;" autocomplete="off" autocorrect="off" placeholder="What is the oc's full name?"></div>
-                        <div class="help_box" id="full_name_help_box">
-                            <div class="help_box_tab" id="full_name_help_box_tab">
-                                <div class="help_box_text" id="full_name_help_box_text">What is the character's full name? Be sure to include their prefixes and suffixes.</div>
-                            </div>
-                        </div>
+                        <div class="help_box" id="full_name_help_box" style="width: 557px;">What is the character's full name? Be sure to include their prefixes and suffixes.</div>
                         <div class="history_group" id="full_name_history_group">
                             <div class="history_tab" id="full_name_history_tab" style="left: 433.5px;">
                                 <div class="last_modified_text" id="full_name_time"></div>
@@ -597,7 +581,6 @@
                 </div>
 
                 <div class="row" style="top: 96px; left: 36px;">
-
                     <!--————————————————————————————————————————————————————————-->
                     <!--—————————————————————[ FIRST-NAME ]—————————————————————-->
                     <!--————————————————————————————————————————————————————————-->
@@ -610,19 +593,13 @@
                                 <div class="comment_dot"></div>
                             </div>
                         </div>
-                        <div class="verified_source_group" id="first_name_verified_source_group" style="left: 46px;">
-                            <div class="verified_source_tab" id="first_name_verified_source_tab">
-                                <a class="verified_source_icon" id="first_name_verified_source_icon" href="https://www.example.com" target="_blank" tabindex="-1">
-                                    <img class="verified_source_favicon" id="first_name_verified_source_favicon" src=""></img>
-                                </a>
-                            </div>
+                        <div class="verified_source_tab" id="first_name_verified_source_tab">
+                            <a class="verified_source_icon" id="first_name_verified_source_icon" href="https://www.example.com" target="_blank" tabindex="-1">
+                                <img class="verified_source_favicon" id="first_name_verified_source_favicon" src=""></img>
+                            </a>
                         </div>
                         <div><input type="text" class="input_text" id="first_name" style="width: 175px;" autocomplete="off" autocorrect="off" placeholder="What is the oc's first name?"></div>
-                        <div class="help_box" id="first_name_help_box">
-                            <div class="help_box_tab" id="first_name_help_box_tab">
-                                <div class="help_box_text" id="first_name_help_box_text">What is the character's first name? While optional, first names should generally describe the character in some way based on it's meaning.</div>
-                            </div>
-                        </div>
+                        <div class="help_box" id="first_name_help_box" style="width: 173px;">What is the character's first name? While optional, first names should generally describe the character in some way based on it's meaning.</div>
                         <div class="history_group" id="first_name_history_group">
                             <div class="history_tab" id="first_name_history_tab">
                                 <div class="last_modified_text" id="first_name_time"></div>
@@ -644,19 +621,13 @@
                                 <div class="comment_dot"></div>
                             </div>
                         </div>
-                        <div class="verified_source_group" id="middle_name_verified_source_group" style="left: 46px;">
-                            <div class="verified_source_tab" id="middle_name_verified_source_tab">
-                                <a class="verified_source_icon" id="middle_name_verified_source_icon" href="https://www.example.com" target="_blank" tabindex="-1">
-                                    <img class="verified_source_favicon" id="middle_name_verified_source_favicon" src=""></img>
-                                </a>
-                            </div>
+                        <div class="verified_source_tab" id="middle_name_verified_source_tab">
+                            <a class="verified_source_icon" id="middle_name_verified_source_icon" href="https://www.example.com" target="_blank" tabindex="-1">
+                                <img class="verified_source_favicon" id="middle_name_verified_source_favicon" src=""></img>
+                            </a>
                         </div>
                         <div><input type="text" class="input_text" id="middle_name" style="width: 175px;" autocomplete="off" autocorrect="off" placeholder="What is the oc's middle name?"></div>
-                        <div class="help_box" id="middle_name_help_box">
-                            <div class="help_box_tab" id="middle_name_help_box_tab">
-                                <div class="help_box_text" id="middle_name_help_box_text">What is the character's middle name? Middle names aren't always required and are more often used for realisum or an alternate calling. If so, a middle name should generally describe the character in the view or likings of the person who assigned the character the name such as their parent or guardian.</div>
-                            </div>
-                        </div>
+                        <div class="help_box" id="middle_name_help_box" style="width: 173px;">What is the character's middle name? Middle names aren't always required and are more often used for realisum or an alternate calling. If so, a middle name should generally describe the character in the view or likings of the person who assigned the character the name such as their parent or guardian.</div>
                         <div class="history_group" id="middle_name_history_group">
                             <div class="history_tab" id="middle_name_history_tab">
                                 <div class="last_modified_text" id="middle_name_time"></div>
@@ -678,19 +649,13 @@
                                 <div class="comment_dot"></div>
                             </div>
                         </div>
-                        <div class="verified_source_group" id="last_name_verified_source_group" style="left: 46px;">
-                            <div class="verified_source_tab" id="last_name_verified_source_tab">
-                                <a class="verified_source_icon" id="last_name_verified_source_icon" href="https://www.example.com" target="_blank" tabindex="-1">
-                                    <img class="verified_source_favicon" id="last_name_verified_source_favicon" src=""></img>
-                                </a>
-                            </div>
+                        <div class="verified_source_tab" id="last_name_verified_source_tab">
+                            <a class="verified_source_icon" id="last_name_verified_source_icon" href="https://www.example.com" target="_blank" tabindex="-1">
+                                <img class="verified_source_favicon" id="last_name_verified_source_favicon" src=""></img>
+                            </a>
                         </div>
                         <div><input type="text" class="input_text" id="last_name" style="width: 175px;" autocomplete="off" autocorrect="off" placeholder="What is the oc's last name?"></div>
-                        <div class="help_box" id="last_name_help_box">
-                            <div class="help_box_tab" id="last_name_help_box_tab">
-                                <div class="help_box_text" id="last_name_help_box_text">What is the character's last name? While optional, last names could be used to tell a lot about the character interests or values based on the name's ancestrial association. A last name is typically inherited from the character's father.</div>
-                            </div>
-                        </div>
+                        <div class="help_box" id="last_name_help_box" style="width: 173px;">What is the character's last name? While optional, last names could be used to tell a lot about the character interests or values based on the name's ancestrial association. A last name is typically inherited from the character's father.</div>
                         <div class="history_group" id="last_name_history_group">
                             <div class="history_tab" id="last_name_history_tab">
                                 <div class="last_modified_text" id="last_name_time"></div>
@@ -702,7 +667,6 @@
                 </div>
 
                 <div class="row" style="top: 142px; left: 36px;">
-
                     <!--————————————————————————————————————————————————————————-->
                     <!--—————————————————————[ NICKNAME ]——————————————————————-->
                     <!--————————————————————————————————————————————————————————-->
@@ -715,19 +679,13 @@
                                 <div class="comment_dot"></div>
                             </div>
                         </div>
-                        <div class="verified_source_group" id="nickname_verified_source_group" style="left: 46px;">
-                            <div class="verified_source_tab" id="nickname_verified_source_tab">
-                                <a class="verified_source_icon" id="nickname_verified_source_icon" href="https://www.example.com" target="_blank" tabindex="-1">
-                                    <img class="verified_source_favicon" id="nickname_verified_source_favicon" src=""></img>
-                                </a>
-                            </div>
+                        <div class="verified_source_tab" id="nickname_verified_source_tab">
+                            <a class="verified_source_icon" id="nickname_verified_source_icon" href="https://www.example.com" target="_blank" tabindex="-1">
+                                <img class="verified_source_favicon" id="nickname_verified_source_favicon" src=""></img>
+                            </a>
                         </div>
                         <div><input type="text" class="input_text" id="nickname" style="width: 559px;" autocomplete="off" autocorrect="off" placeholder="What is the oc's nickname?"></div>
-                        <div class="help_box" id="nickname_help_box">
-                            <div class="help_box_tab" id="nickname_help_box_tab">
-                                <div class="help_box_text" id="nickname_help_box_text">What is the character's nickname? Nicknames are meant to be fun lighthearted alternative callings for the character often created by their friends and family. Sometimes even enemies or other acquaintances may come up with nicknames for the character with negative intent.</div>
-                            </div>
-                        </div>
+                        <div class="help_box" id="nickname_help_box" style="width: 557px;">What is the character's nickname? Nicknames are meant to be fun lighthearted alternative callings for the character often created by their friends and family. Sometimes even enemies or other acquaintances may come up with nicknames for the character with negative intent.</div>
                         <div class="history_group" id="nickname_history_group">
                             <div class="history_tab" id="nickname_history_tab" style="left: 433.5px;">
                                 <div class="last_modified_text" id="nickname_time"></div>
@@ -739,7 +697,6 @@
                 </div>
 
                 <div class="row" style="top: 188px; left: 36px;">
-
                     <!--————————————————————————————————————————————————————————-->
                     <!--———————————————————————[ ALIAS ]————————————————————————-->
                     <!--————————————————————————————————————————————————————————-->
@@ -752,19 +709,13 @@
                                 <div class="comment_dot"></div>
                             </div>
                         </div>
-                        <div class="verified_source_group" id="alias_verified_source_group" style="left: 46px;">
-                            <div class="verified_source_tab" id="alias_verified_source_tab">
-                                <a class="verified_source_icon" id="alias_verified_source_icon" href="https://www.example.com" target="_blank" tabindex="-1">
-                                    <img class="verified_source_favicon" id="alias_verified_source_favicon" src=""></img>
-                                </a>
-                            </div>
+                        <div class="verified_source_tab" id="alias_verified_source_tab">
+                            <a class="verified_source_icon" id="alias_verified_source_icon" href="https://www.example.com" target="_blank" tabindex="-1">
+                                <img class="verified_source_favicon" id="alias_verified_source_favicon" src=""></img>
+                            </a>
                         </div>
                         <div><input type="text" class="input_text" id="alias" style="width: 559px;" autocomplete="off" autocorrect="off" placeholder="What is the oc's alias?"></div>
-                        <div class="help_box" id="alias_help_box">
-                            <div class="help_box_tab" id="alias_help_box_tab">
-                                <div class="help_box_text" id="alias_help_box_text">What is the character's alias? If any, aliases are alternative names useally for cyberspace or business purposes for seperating themselves from their real identity to remain anonymous. These can include personal self-made titles and public callings in which the character made their own.</div>
-                            </div>
-                        </div>
+                        <div class="help_box" id="alias_help_box" style="width: 557px;">What is the character's alias? If any, aliases are alternative names useally for cyberspace or business purposes for seperating themselves from their real identity to remain anonymous. These can include personal self-made titles and public callings in which the character made their own.</div>
                         <div class="history_group" id="alias_history_group">
                             <div class="history_tab" id="alias_history_tab" style="left: 433.5px;">
                                 <div class="last_modified_text" id="alias_time"></div>
@@ -776,7 +727,6 @@
                 </div>
 
                 <div class="row" style="top: 234px; left: 36px;">
-
                     <!--————————————————————————————————————————————————————————-->
                     <!--—————————————————————[ ALTER-EGO ]——————————————————————-->
                     <!--————————————————————————————————————————————————————————-->
@@ -789,19 +739,13 @@
                                 <div class="comment_dot"></div>
                             </div>
                         </div>
-                        <div class="verified_source_group" id="alter_ego_verified_source_group" style="left: 46px;">
-                            <div class="verified_source_tab" id="alter_ego_verified_source_tab">
-                                <a class="verified_source_icon" id="alter_ego_verified_source_icon" href="https://www.example.com" target="_blank" tabindex="-1">
-                                    <img class="verified_source_favicon" id="alter_ego_verified_source_favicon" src=""></img>
-                                </a>
-                            </div>
+                        <div class="verified_source_tab" id="alter_ego_verified_source_tab">
+                            <a class="verified_source_icon" id="alter_ego_verified_source_icon" href="https://www.example.com" target="_blank" tabindex="-1">
+                                <img class="verified_source_favicon" id="alter_ego_verified_source_favicon" src=""></img>
+                            </a>
                         </div>
                         <div><input type="text" class="input_text" id="alter_ego" style="width: 559px;" autocomplete="off" autocorrect="off" placeholder="What is the oc's alter ego?"></div>
-                        <div class="help_box" id="alter_ego_help_box">
-                            <div class="help_box_tab" id="alter_ego_help_box_tab">
-                                <div class="help_box_text" id="alter_ego_help_box_text">What is the character's alter ego? Alter egos are alternate personalities that the character possesses and becomes during certain situations. Alter egos are commonly used for characters with secret heroic or villainic identities.</div>
-                            </div>
-                        </div>
+                        <div class="help_box" id="alter_ego_help_box" style="width: 557px;">What is the character's alter ego? Alter egos are alternate personalities that the character possesses and becomes during certain situations. Alter egos are commonly used for characters with secret heroic or villainic identities.</div>
                         <div class="history_group" id="alter_ego_history_group">
                             <div class="history_tab" id="alter_ego_history_tab" style="left: 433.5px;">
                                 <div class="last_modified_text" id="alter_ego_time"></div>
@@ -813,8 +757,6 @@
                 </div>
 
                 <div class="row" style="top: 280px; left: 36px;">
-                    
-
                     <!--————————————————————————————————————————————————————————-->
                     <!--———————————————————————[ PREFIX ]———————————————————————-->
                     <!--————————————————————————————————————————————————————————-->
@@ -827,19 +769,13 @@
                                 <div class="comment_dot"></div>
                             </div>
                         </div>
-                        <div class="verified_source_group" id="prefix_verified_source_group" style="left: 46px;">
-                            <div class="verified_source_tab" id="prefix_verified_source_tab">
-                                <a class="verified_source_icon" id="prefix_verified_source_icon" href="https://www.example.com" target="_blank" tabindex="-1">
-                                    <img class="verified_source_favicon" id="prefix_verified_source_favicon" src=""></img>
-                                </a>
-                            </div>
+                        <div class="verified_source_tab" id="prefix_verified_source_tab">
+                            <a class="verified_source_icon" id="prefix_verified_source_icon" href="https://www.example.com" target="_blank" tabindex="-1">
+                                <img class="verified_source_favicon" id="prefix_verified_source_favicon" src=""></img>
+                            </a>
                         </div>
                         <div><input type="text" class="input_text" id="prefix" style="width: 367.5px;" autocomplete="off" autocorrect="off" placeholder="What is the oc's prefix?"></div>
-                        <div class="help_box" id="prefix_help_box">
-                            <div class="help_box_tab" id="prefix_help_box_tab">
-                                <div class="help_box_text" id="prefix_help_box_text">What is the character's prefix? If the character is worldly notable then it's likely they might have a prefix or prefix based title apart from citizen standards. Prefixes are typically given by members of a higher ranking order than them for special ceremonies or accomplishments.</div>
-                            </div>
-                        </div>
+                        <div class="help_box" id="prefix_help_box" style="width: 365.5px;">What is the character's prefix? If the character is worldly notable then it's likely they might have a prefix or prefix based title apart from citizen standards. Prefixes are typically given by members of a higher ranking order than them for special ceremonies or accomplishments.</div>
                         <div class="history_group" id="prefix_history_group">
                             <div class="history_tab" id="prefix_history_tab" style="left: 242px;">
                                 <div class="last_modified_text" id="prefix_time"></div>
@@ -861,19 +797,13 @@
                                 <div class="comment_dot"></div>
                             </div>
                         </div>
-                        <div class="verified_source_group" id="suffix_verified_source_group" style="left: 46px;">
-                            <div class="verified_source_tab" id="suffix_verified_source_tab">
-                                <a class="verified_source_icon" id="suffix_verified_source_icon" href="https://www.example.com" target="_blank" tabindex="-1">
-                                    <img class="verified_source_favicon" id="suffix_verified_source_favicon" src=""></img>
-                                </a>
-                            </div>
+                        <div class="verified_source_tab" id="suffix_verified_source_tab">
+                            <a class="verified_source_icon" id="suffix_verified_source_icon" href="https://www.example.com" target="_blank" tabindex="-1">
+                                <img class="verified_source_favicon" id="suffix_verified_source_favicon" src=""></img>
+                            </a>
                         </div>
                         <div><input type="text" class="input_text" id="suffix" style="width: 175px;" autocomplete="off" autocorrect="off" placeholder="What is the oc's suffix?"></div>
-                        <div class="help_box" id="suffix_help_box">
-                            <div class="help_box_tab" id="suffix_help_box_tab">
-                                <div class="help_box_text" id="suffix_help_box_text">What is the character's suffix? Suffixes are commonly known to be inherited from family trees but can also be earned in military service and other professions.</div>
-                            </div>
-                        </div>
+                        <div class="help_box" id="suffix_help_box" style="width: 173px;">What is the character's suffix? Suffixes are commonly known to be inherited from family trees but can also be earned in military service and other professions.</div>
                         <div class="history_group" id="suffix_history_group">
                             <div class="history_tab" id="suffix_history_tab">
                                 <div class="last_modified_text" id="suffix_time"></div>
@@ -885,7 +815,6 @@
                 </div>
 
                 <div class="row" style="top: 326px; left: 36px;">
-
                     <!--————————————————————————————————————————————————————————-->
                     <!--————————————————————[ FORMER-NAME ]—————————————————————-->
                     <!--————————————————————————————————————————————————————————-->
@@ -898,19 +827,13 @@
                                 <div class="comment_dot"></div>
                             </div>
                         </div>
-                        <div class="verified_source_group" id="former_name_verified_source_group" style="left: 46px;">
-                            <div class="verified_source_tab" id="former_name_verified_source_tab">
-                                <a class="verified_source_icon" id="former_name_verified_source_icon" href="https://www.example.com" target="_blank" tabindex="-1">
-                                    <img class="verified_source_favicon" id="former_name_verified_source_favicon" src=""></img>
-                                </a>
-                            </div>
+                        <div class="verified_source_tab" id="former_name_verified_source_tab">
+                            <a class="verified_source_icon" id="former_name_verified_source_icon" href="https://www.example.com" target="_blank" tabindex="-1">
+                                <img class="verified_source_favicon" id="former_name_verified_source_favicon" src=""></img>
+                            </a>
                         </div>
                         <div><input type="text" class="input_text" id="former_name" style="width: 559px;" autocomplete="off" autocorrect="off" placeholder="What is the oc's former name?"></div>
-                        <div class="help_box" id="former_name_help_box">
-                            <div class="help_box_tab" id="former_name_help_box_tab">
-                                <div class="help_box_text" id="former_name_help_box_text">What is the character's former name? Reasons for a former name may be due to a once active alias or nickname the character was once known by. A former name can be useful for characters who changed their path in life and needed to let go the person they once were.</div>
-                            </div>
-                        </div>
+                        <div class="help_box" id="former_name_help_box" style="width: 557px;">What is the character's former name? Reasons for a former name may be due to a once active alias or nickname the character was once known by. A former name can be useful for characters who changed their path in life and needed to let go the person they once were.</div>
                         <div class="history_group" id="former_name_history_group">
                             <div class="history_tab" id="former_name_history_tab" style="left: 433.5px;">
                                 <div class="last_modified_text" id="former_name_time"></div>
@@ -922,7 +845,6 @@
                 </div>
 
                 <div class="row" style="top: 372px; left: 36px;">
-
                     <!--————————————————————————————————————————————————————————-->
                     <!--————————————————————[ NAME-ORIGIN ]—————————————————————-->
                     <!--————————————————————————————————————————————————————————-->
@@ -935,19 +857,13 @@
                                 <div class="comment_dot"></div>
                             </div>
                         </div>
-                        <div class="verified_source_group" id="name_origin_verified_source_group" style="left: 46px;">
-                            <div class="verified_source_tab" id="name_origin_verified_source_tab">
-                                <a class="verified_source_icon" id="name_origin_verified_source_icon" href="https://www.example.com" target="_blank" tabindex="-1">
-                                    <img class="verified_source_favicon" id="name_origin_verified_source_favicon" src=""></img>
-                                </a>
-                            </div>
+                        <div class="verified_source_tab" id="name_origin_verified_source_tab">
+                            <a class="verified_source_icon" id="name_origin_verified_source_icon" href="https://www.example.com" target="_blank" tabindex="-1">
+                                <img class="verified_source_favicon" id="name_origin_verified_source_favicon" src=""></img>
+                            </a>
                         </div>
                         <textarea id="name_origin" style="width: 559px; height: 252px;" autocomplete="off" autocorrect="off" placeholder="What is the origin behind the oc's name?"></textarea>
-                        <div class="help_box" id="name_origin_help_box" style="top: 259px;">
-                            <div class="help_box_tab" id="name_origin_help_box_tab">
-                                <div class="help_box_text" id="name_origin_help_box_text">What is the origin behind the character's name and what does it mean? Is it from a specifc region or hold a special tale to it? Who gave it to them or whom did they inherit it from? Any reason when and why the character got the name? Try to be the most descriptive possible and remember the usage of the five Ws (who, what, when, where, and why) when needed.</div>
-                            </div>
-                        </div>
+                        <div class="help_box" id="name_origin_help_box" style="width: 557px; top: 248px;">What is the origin behind the character's name and what does it mean? Is it from a specifc region or hold a special tale to it? Who gave it to them or whom did they inherit it from? Any reason when and why the character got the name? Try to be the most descriptive possible and remember the usage of the five Ws (who, what, when, where, and why) when needed.</div>
                         <div class="history_group" id="name_origin_history_group">
                             <div class="history_tab" id="name_origin_history_tab" style="left: 433.5px; top: 240px;">
                                 <div class="last_modified_text" id="name_origin_time"></div>
@@ -959,7 +875,6 @@
                 </div>
 
                 <div class="row" style="top: 706px; left: 36px;">
-
                     <!--————————————————————————————————————————————————————————-->
                     <!--———————————————[ PERSONAL-THOUGHTS-NAME ]———————————————-->
                     <!--————————————————————————————————————————————————————————-->
@@ -972,19 +887,13 @@
                                 <div class="comment_dot"></div>
                             </div>
                         </div>
-                        <div class="verified_source_group" id="personal_thoughts_name_verified_source_group" style="left: 46px;">
-                            <div class="verified_source_tab" id="personal_thoughts_name_verified_source_tab">
-                                <a class="verified_source_icon" id="personal_thoughts_name_verified_source_icon" href="https://www.example.com" target="_blank" tabindex="-1">
-                                    <img class="verified_source_favicon" id="personal_thoughts_name_verified_source_favicon" src=""></img>
-                                </a>
-                            </div>
+                        <div class="verified_source_tab" id="personal_thoughts_name_verified_source_tab">
+                            <a class="verified_source_icon" id="personal_thoughts_name_verified_source_icon" href="https://www.example.com" target="_blank" tabindex="-1">
+                                <img class="verified_source_favicon" id="personal_thoughts_name_verified_source_favicon" src=""></img>
+                            </a>
                         </div>
                         <textarea id="personal_thoughts_name" style="width: 559px; height: 252px;" autocomplete="off" autocorrect="off" placeholder="What are the oc's thoughts towards their name?"></textarea>
-                        <div class="help_box" id="personal_thoughts_name_help_box" style="top: 259px;">
-                            <div class="help_box_tab" id="personal_thoughts_name_help_box_tab">
-                                <div class="help_box_text" id="personal_thoughts_name_help_box_text">What are the character's personal thoughts towards their name? Do they like the name or would they rather have another? Does having the name affects their life in any certain way? Does the name remind them of anything? Are they comfortable sharing their name with others or would they rather it in secrecy? Try to be the most descriptive possible and remember the usage of the five Ws (who, what, when, where, and why) when needed.</div>
-                            </div>
-                        </div>
+                        <div class="help_box" id="personal_thoughts_name_help_box" style="width: 557px; top: 248px;">What are the character's personal thoughts towards their name? Do they like the name or would they rather have another? Does having the name affects their life in any certain way? Does the name remind them of anything? Are they comfortable sharing their name with others or would they rather it in secrecy? Try to be the most descriptive possible and remember the usage of the five Ws (who, what, when, where, and why) when needed.</div>
                         <div class="history_group" id="personal_thoughts_name_history_group">
                             <div class="history_tab" id="personal_thoughts_name_history_tab" style="left: 433.5px; top: 240px;"">
                                 <div class="last_modified_text" id="personal_thoughts_name_time"></div>
@@ -995,6 +904,17 @@
                     </div>
                 </div>
             </div>
+
+            <div class="row" style="top: 1083px; left: 76px;">
+                <!--————————————————————————————————————————————————————————-->
+                <!--————————————————————[ LEGAL-FOOTER ]————————————————————-->
+                <!--————————————————————————————————————————————————————————-->
+                <div class="group" id="legal_footer_group" style="top: 0px; left: 0px; z-index: 0;">
+                    <div><input type="text" class="input_text_legal" id="legal_footer" autocomplete="off" autocorrect="off" placeholder="Who owns and what is the legal licensing of this character?"></div>
+                </div>
+            </div>
+
+            <div class="page_number">1</div>
         </div>
     </div>
 
@@ -1052,27 +972,8 @@
 
         <li id="settings_option" style="opacity: 0.35;">⚙️ Settings</li>
         </ul>
-        <div class="tag" id="" style="left: 41px; top: 197px; scale: 0.45; width: 85px; background: #5e329b;">PREVIEW</div>
+        <div class="tag" style="left: 41px; top: 197px; scale: 0.45; width: 85px; background: #5e329b;">PREVIEW</div>
     </div>
-
-    <!--————————————————————————————————————————————————————————-->
-    <!--——————————————————[ POP-UP-ELEMENTS ]———————————————————-->
-    <!--————————————————————————————————————————————————————————-->
-    <!--<div class="popup" id="popup_0">
-        <div class="popup_text">
-        <p class="seperator">Preview versions are basically nightly updates with rough edges! Not recommended for production work.</p>
-        <br class="seperator">
-        <p class="seperator" style=" font-size: 16px;">⚠️ DO NOT UPLOAD PERSONALLY IDENTIFIABLE INFORMATION ⚠️</p>
-        <br class="seperator">
-        <p class="seperator" style=" font-size: 16px;">What's new?</p>
-        <script src="scripts/change_log.js"></script>
-        <p class="seperator" id="changelog"></p>
-        <br class="seperator">
-        <p style="font-size: 14px;" id="seperator">(click anywhere to dismiss)</p>
-        <br class="seperator">
-        <p style="font-size: 12px;" id="seperator">💡 Did you know there is currently over 3,500 lines of active code in the OP5?</p>
-        </div>
-    </div>-->
 
     <!--————————————————————————————————————————————————————————-->
     <!--—————————————————[ DEVELOPER-ELEMENTS ]—————————————————-->

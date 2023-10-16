@@ -22,14 +22,16 @@ function updateVerifiedSourcePosition() {
 
     // Use the ID to target the associated text box and group
     const Group = document.getElementById(`${groupId}_label_tab`);
-    const VerifiedSourceGroup = document.getElementById(`${groupId}_verified_source_group`);
+    const VerifiedSourceGroup = document.getElementById(`${groupId}_verified_source_tab`);
     
     if (Group && VerifiedSourceGroup) {
       const labelWidthStr = getComputedStyle(Group).width; // Get the width of the label as a string
       const labelWidth = parseInt(labelWidthStr, 10); // Parse the width as an integer
       
       // Set the left position of the verified source group to be 10 pixels to the right of the label
-      VerifiedSourceGroup.style.left = (labelWidth + 5) + "px";
+      VerifiedSourceGroup.style.left = (labelWidth + 14) + "px";
+      VerifiedSourceGroup.style.opacity = "1";
+      VerifiedSourceGroup.style.display = "block";
     }
 }
   

@@ -3,14 +3,14 @@ function updateVerifiedSourcePosition() {
     const groupId = currentClickedElement.id.replace("_group", "");
 
     // Use the ID to target the associated text box and group
-    const firstNameGroup = document.getElementById(`${groupId}_tab`);
-    const firstNameVerifiedSourceGroup = document.getElementById(`${groupId}_verified_source_group`);
+    const Group = document.getElementById(`${groupId}_label_tab`);
+    const VerifiedSourceGroup = document.getElementById(`${groupId}_verified_source_tab`);
     
-    if (firstNameGroup && firstNameVerifiedSourceGroup) {
-      const labelWidth = firstNameGroup.offsetWidth; // Get the width of the label
+    if (Group && VerifiedSourceGroup) {
+      const labelwidth = Group.offsetWidth; // Get the width of the label
       
       // Set the left position of the verified source group to be after the label
-      firstNameVerifiedSourceGroup.style.left = labelWidth + 'px';
+      VerifiedSourceGroup.style.left = labelwidth + 'px';
     }
   }
   
