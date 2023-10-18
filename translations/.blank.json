@@ -1,274 +1,194 @@
 {
-    "language": "dev / Developer",
-    "version": "v5.0.033",
-    "translator": "",
-
-"1": "—————————————————[ TEXT-BOXES-PAGE-1 ]——————————————————",
-    "page_author_1_label_text": {
-        "ORIGINAL-VERSION": "Page Author",
-        "translation": ""
-    },
-
-    "page_author_1": {
-        "ORIGINAL-VERSION": "Who is the page's author?",
-        "translation": ""
-    },
-
-    "page_author_1_help_box_text": {
-        "ORIGINAL-VERSION": "What is your name or pseudonym? If you're working as part of a collaboration, include the fellow author's name or pseudonym next to yours.",
-        "translation": ""
-    },
-
-    "name_information": {
-        "ORIGINAL-VERSION": "Name Information",
-        "translation": ""
-    },
-
-    "written_date_1_label_text": {
-        "ORIGINAL-VERSION": "Written Date",
-        "translation": ""
-    },
-
-    "written_date_1": {
-        "ORIGINAL-VERSION": "When was this page written?",
-        "translation": ""
-    },
-
-    "written_date_1_help_box_text": {
-        "ORIGINAL-VERSION": "What date was this page written on? You can include multiple dates in any format seperated by commas. This will prevent the last modified timestamp from showing.",
-        "translation": ""
-    },
-
-    "full_name_label_text": {
-        "ORIGINAL-VERSION": "Full Name",
-        "translation": ""
-    },
-
-    "full_name": {
-        "ORIGINAL-VERSION": "What is the oc's full name?",
-        "translation": ""
-    },
-
-    "full_name_help_box_text": {
-        "ORIGINAL-VERSION": "What is the character's full name? Be sure to include their prefixes and suffixes.",
-        "translation": ""
-    },
-
-    "first_name_label_text": {
-        "ORIGINAL-VERSION": "First Name",
-        "translation": ""
-    },
-
-    "first_name": {
-        "ORIGINAL-VERSION": "What is the oc's first name?",
-        "translation": ""
-    },
-
-    "first_name_help_box_text": {
-        "ORIGINAL-VERSION": "What is the character's first name? While optional, first names should generally describe the character in some way based on it's meaning.",
-        "translation": ""
-    },
-
-    "middle_name_label_text": {
-        "ORIGINAL-VERSION": "Middle Name",
-        "translation": ""
-    },
-
-    "middle_name": {
-        "ORIGINAL-VERSION": "What is the oc's middle name?",
-        "translation": ""
-    },
-
-    "middle_name_help_box_text": {
-        "ORIGINAL-VERSION": "What is the character's middle name? Middle names aren't always required and are more often used for realisum or an alternate calling. If so, a middle name should generally describe the character in the view or likings of the person who assigned the character the name such as their parent or guardian.",
-        "translation": ""
-    },
-
-    "last_name_label_text": {
-        "ORIGINAL-VERSION": "Last Name",
-        "translation": ""
-    },
-
-    "last_name": {
-        "ORIGINAL-VERSION": "What is the oc's last name?",
-        "translation": ""
-    },
-
-    "last_name_help_box_text": {
-        "ORIGINAL-VERSION": "What is the character's last name? While optional, last names could be used to tell a lot about the character interests or values based on the name's ancestrial association. A last name is typically inherited from the character's father.",
-        "translation": ""
-    },
-
-    "nickname_label_text": {
-        "ORIGINAL-VERSION": "Nickname",
-        "translation": ""
-    },
-
-    "nickname": {
-        "ORIGINAL-VERSION": "What is the oc's nickname?",
-        "translation": ""
-    },
-
-    "nickname_help_box_text": {
-        "ORIGINAL-VERSION": "What is the character's nickname? Nicknames are meant to be fun lighthearted alternative callings for the character often created by their friends and family. Sometimes even enemies or other acquaintances may come up with nicknames for the character with negative intent.",
-        "translation": ""
-    },
-
-    "alias_label_text": {
-        "ORIGINAL-VERSION": "Alias",
-        "translation": ""
-    },
-
-    "alias": {
-        "ORIGINAL-VERSION": "What is the oc's alias?",
-        "translation": ""
-    },
-
-    "alias_help_box_text": {
-        "ORIGINAL-VERSION": "What is the character's alias? If any, aliases are alternative names useally for cyberspace or business purposes for seperating themselves from their real identity to remain anonymous. These can include personal self-made titles and public callings in which the character made their own.",
-        "translation": ""
-    },
-
-    "alter_ego_label_text": {
-        "ORIGINAL-VERSION": "Alter Ego",
-        "translation": ""
-    },
-
-    "alter_ego": {
-        "ORIGINAL-VERSION": "What is the oc's alter ego?",
-        "translation": ""
-    },
-
-    "alter_ego_help_box_text": {
-        "ORIGINAL-VERSION": "What is the character's alter ego? Alter egos are alternate personalities that the character possesses and becomes during certain situations. Alter egos are commonly used for characters with secret heroic or villainic identities.",
-        "translation": ""
-    },
-
-    "prefix_label_text": {
-        "ORIGINAL-VERSION": "Prefix",
-        "translation": ""
-    },
-
-    "prefix": {
-        "ORIGINAL-VERSION": "What is the oc's prefix?",
-        "translation": ""
-    },
-
-    "prefix_help_box_text": {
-        "ORIGINAL-VERSION": "What is the character's prefix? If the character is worldly notable then it's likely they might have a prefix or prefix based title apart from citizen standards. Prefixes are typically given by members of a higher ranking order than them for special ceremonies or accomplishments.",
-        "translation": ""
-    },
-
-    "suffix_label_text": {
-        "ORIGINAL-VERSION": "Suffix",
-        "translation": ""
-    },
-
-    "suffix": {
-        "ORIGINAL-VERSION": "What is the oc's suffix?",
-        "translation": "?"
-    },
-
-    "suffix_help_box_text": {
-        "ORIGINAL-VERSION": "What is the character's suffix? Suffixes are commonly known to be inherited from family trees but can also be earned in military service and other professions.",
-        "translation": ""
-    },
-
-    "former_name_label_text": {
-        "ORIGINAL-VERSION": "Former Name",
-        "translation": ""
-    },
-
-    "former_name": {
-        "ORIGINAL-VERSION": "What is the oc's former name?",
-        "translation": ""
-    },
-
-    "former_name_help_box_text": {
-        "ORIGINAL-VERSION": "What is the character's former name? Reasons for a former name may be due to a once active alias or nickname the character was once known by. A former name can be useful for characters who changed their path in life and needed to let go the person they once were.",
-        "translation": ""
-    },
-
-    "name_origin_label_text": {
-        "ORIGINAL-VERSION": "Name Origin",
-        "translation": ""
-    },
-
-    "name_origin": {
-        "ORIGINAL-VERSION": "What is the origin behind the oc's name?",
-        "translation": ""
-    },
-
-    "name_origin_help_box_text": {
-        "ORIGINAL-VERSION": "What is the origin behind the character's name and what does it mean? Is it from a specifc region or hold a special tale to it? Who gave it to them or whom did they inherit it from? Any reason when and why the character got the name? Try to be the most descriptive possible and remember the usage of the five Ws (who, what, when, where, and why) when needed.",
-        "translation": ""
-    },
-
-    "personal_thoughts_name_label_text": {
-        "ORIGINAL-VERSION": "Personal Thoughts",
-        "translation": ""
-    },
-
-    "personal_thoughts_name": {
-        "ORIGINAL-VERSION": "What are the oc's thoughts towards their name?",
-        "translation": ""
-    },
-
-    "personal_thoughts_name_help_box_text": {
-        "ORIGINAL-VERSION": "What are the character's personal thoughts towards their name? Do they like the name or would they rather have another? Does having the name affects their life in any certain way? Does the name remind them of anything? Are they comfortable sharing their name with others or would they rather it in secrecy? Try to be the most descriptive possible and remember the usage of the five Ws (who, what, when, where, and why) when needed.",
-        "translation": ""
-    },
+    "code": "en-us",
+    "friendy": "English (US)",
+    "version": "v5.0.051",
+    "translator": "PUT YOUR USERNAME HERE",
     
-"a": "—————————————————[ RIGHT-CLICK-MENU ]———————————————————",
-    "generate_option": {
-        "ORIGINAL-VERSION": "🖊️ Generate Content",
-        "translation": "🖊️ "
-    },
-
-    "color_option": {
-        "ORIGINAL-VERSION": "🟡 Highlight Textbox, ⚪ Unhighlight Textbox",
-        "option_1": "🟡 ",
-        "option_2": "⚪ "
-    },
-
-    "source_option": {
-        "ORIGINAL-VERSION": "🔗 Link Source, 🔗 Unlink Source",
-        "option_1": "🔗 ",
-        "option_2": "🔗 "
-    },
-
-    "history_option": {
-        "ORIGINAL-VERSION": "📅 Hide History, 📅 Show History",
-        "option_1": "📅 ",
-        "option_2": "📅 "
-    },
-
-    "lock_option": {
-        "ORIGINAL-VERSION": "🔒 Lock Textbox, 🔓 Unlock Textbox",
-        "option_1": "🔒 ",
-        "option_2": "🔓 "
-    },
-
-    "disable_option": {
-        "ORIGINAL-VERSION": "❌ Disable Textbox, ✅ Enable Textbox",
-        "option_1": "❌ ",
-        "option_2": "✅ "
-    },
-
-    "language_option": {
-        "ORIGINAL-VERSION": "🌐 Change Language >",
-        "translation": "🌐  >"
-    },
-
-    "settings_option": {
-        "ORIGINAL-VERSION": "⚙️ Settings",
-        "translation": "⚙️ "
-    },
-
-"b": "———————————————————[ LANGUAGE-MENU ]————————————————————",
-
-    "coming-soon": {
-        "ORIGINAL-VERSION": "🗣️ Coming Soon",
-        "translation": "🗣️ "
+    "a": "——————————————————————[ POPUP-0 ]———————————————————————",
+        "popup_0_text1": {
+            "text_content": "Welcome to OpenProfile 5, a collaborative database application surrounding the immersive world of original characters! OP5 is still in early stages and this is the preview version, basically nightly updates with rough edges. Not recommended for production work!"
+        },
+    
+        "popup_0_text2": {
+            "text_content": "⚠️ DO NOT UPLOAD PERSONALLY IDENTIFIABLE INFORMATION ⚠️"
+        },
+    
+        "popup_0_text3": {
+            "text_content": "(click anywhere to dismiss)"
+        },
+    
+        "popup_0_text4": {
+            "text_content": "💡 Did you know there is currently over 10,000 lines of active code in the OP5?"
+        },
+    
+    "00": "————————————————[ TEXT-BOXES-SAME-00 ]—————————————————",
+        "page_author": {
+            "label_tab": "Page Author",
+            "placeholder": "Who is the page's author?",
+            "help_box": "What is your name or pseudonym? If you're working as part of a collaboration, include the fellow author's name or pseudonym next to yours."
+        },
+    
+        "written_date": {
+            "label_tab": "Written Date",
+            "placeholder": "When was this page written?",
+            "help_box": "What date was this page written on? You can include multiple dates in any format seperated by commas. This will prevent the last modified timestamp from showing."
+        },
+    
+    "0": "—————————————————[ TEXT-BOXES-PAGE-0 ]——————————————————",
+        "profile_image": {
+            "label_tab": "Image"
+        },
+    
+        "featured_name": {
+            "label_tab": "Featured Name",
+            "placeholder": "What is the oc's featured name?",
+            "help_box": "What name is the character commonly reconized by? This could be their real name, nickname, alias, alter ego, former name, or something else. Be sure to include their prefixes and suffixes if any."
+        },
+    
+        "oc_creator": {
+            "label_tab": "OC Creator",
+            "placeholder": "Who is the oc's creator?",
+            "help_box": "What is the name or pseudonym of the character's original creator? If multiple authors worked as part of a collaboration, include their name or pseudonym next to the original creator."
+        },
+    
+        "featured_description": {
+            "label_tab": "Description",
+            "placeholder": "What is the oc's description?",
+            "help_box": "What is the character's general description? This should contain at least some sentences long information of each category within the profile to showcase the character the most possible"
+        },
+    
+        "featured_bts": {
+            "label_tab": "Behind The Scenes",
+            "placeholder": "What happened behind the scenes?",
+            "help_box": "What happened during the character's development? Give some interesting prominent details or facts!"
+        },
+    
+    "1": "—————————————————[ TEXT-BOXES-PAGE-1 ]——————————————————",
+        "name_information": {
+            "value": "Name Information"
+        },
+    
+        "full_name": {
+            "label_tab": "Full Name",
+            "placeholder": "What is the oc's full name?",
+            "help_box": "What is the character's full name? Be sure to include their prefixes and suffixes if any."
+        },
+    
+        "first_name": {
+            "label_tab": "First Name",
+            "placeholder": "What is the oc's first name?",
+            "help_box": "What is the character's first name? While optional, first names should generally describe the character in some way based on it's meaning."
+        },
+    
+        "middle_name": {
+            "label_tab": "Middle Name",
+            "placeholder": "What is the oc's middle name?",
+            "help_box": "What is the character's middle name? Middle names aren't always required and are more often used for realisum or an alternate calling. If so, a middle name should generally describe the character in the view or likings of the person who assigned the character the name such as their parent or guardian."
+        },
+    
+        "last_name": {
+            "label_tab": "Last Name",
+            "placeholder": "What is the oc's last name?",
+            "help_box": "What is the character's last name? While optional, last names could be used to tell a lot about the character interests or values based on the name's ancestrial association. A last name is typically inherited from the character's father."
+        },
+    
+        "nickname": {
+            "label_tab": "Nickname",
+            "placeholder": "What is the oc's nickname?",
+            "help_box": "What is the character's nickname? Nicknames are meant to be fun lighthearted alternative callings for the character often created by their friends and family. Sometimes even enemies or other acquaintances may come up with nicknames for the character with negative intent."
+        },
+    
+        "alias": {
+            "label_tab": "Alias",
+            "placeholder": "What is the oc's alias?",
+            "help_box": "What is the character's alias? If any, aliases are alternative names useally for cyberspace or business purposes for seperating themselves from their real identity to remain anonymous. These can include personal self-made titles and public callings in which the character made their own."
+        },
+    
+        "alter_ego": {
+            "label_tab": "Alter Ego",
+            "placeholder": "What is the oc's alter ego?",
+            "help_box": "What is the character's alter ego? Alter egos are alternate personalities that the character possesses and becomes during certain situations. Alter egos are commonly used for characters with secret heroic or villainic identities."
+        },
+    
+        "prefix": {
+            "label_tab": "Prefix",
+            "placeholder": "What is the oc's prefix?",
+            "help_box": "What is the character's prefix? If the character is worldly notable then it's likely they might have a prefix or prefix based title apart from citizen standards. Prefixes are typically given by members of a higher ranking order than them for special ceremonies or accomplishments."
+        },
+    
+        "suffix": {
+            "label_tab": "Suffix",
+            "placeholder": "What is the oc's suffix?",
+            "help_box": "What is the character's suffix? Suffixes are commonly known to be inherited from family trees but can also be earned in military service and other professions."
+        },
+    
+        "former_name": {
+            "label_tab": "Former Name",
+            "placeholder": "What is the oc's former name?",
+            "help_box": "What is the character's former name? Reasons for a former name may be due to a once active alias or nickname the character was once known by. A former name can be useful for characters who changed their path in life and needed to let go the person they once were."
+        },
+    
+        "name_origin": {
+            "label_tab": "Name Origin",
+            "placeholder": "What is the origin behind the oc's name?",
+            "help_box": "What is the origin behind the character's name and what does it mean? Is it from a specifc region or hold a special tale to it? Who gave it to them or whom did they inherit it from? Any reason when and why the character got the name? Try to be the most descriptive possible and remember the usage of the five Ws (who, what, when, where, and why) when needed."
+        },
+    
+        "personal_thoughts_name": {
+            "label_tab": "Personal Thoughts",
+            "placeholder": "What are the oc's thoughts towards their name?",
+            "help_box": "What are the character's personal thoughts towards their name? Do they like the name or would they rather have another? Does having the name affects their life in any certain way? Does the name remind them of anything? Are they comfortable sharing their name with others or would they rather it in secrecy? Try to be the most descriptive possible and remember the usage of the five Ws (who, what, when, where, and why) when needed."
+        },
+    
+    "b": "—————————————————[ RIGHT-CLICK-MENU ]———————————————————",
+        "generate_option": {
+            "option_1": {
+            "text_content": "Generate Content"
+            }
+        },
+    
+        "color_option": {
+            "option_1": {
+              "text_content": "Highlight Textbox"
+            },
+            "option_2": {
+              "text_content": "Unhighlight Textbox"
+            }
+        },
+    
+        "source_option": {
+            "option_1": {
+              "text_content": "Link Source"
+            },
+            "option_2": {
+              "text_content": "Unlink Source"
+            }
+        },
+    
+        "history_option": {
+            "option_1": {
+              "text_content": "Hide History"
+            },
+            "option_2": {
+              "text_content": "Show History"
+            }
+        },
+    
+        "lock_option": {
+            "option_1": {
+              "text_content": "Lock Textbox"
+            },
+            "option_2": {
+              "text_content": "Unlock Textbox"
+            }
+        },
+    
+        "disable_option": {
+            "option_1": {
+              "text_content": "Disable Textbox"
+            },
+            "option_2": {
+              "text_content": "Enable Textbox"
+            }
+        }
     }
-}

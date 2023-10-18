@@ -29,54 +29,73 @@ document.addEventListener("contextmenu", (e) => {
         // Check if the textbox is disabled and update the context menu accordingly
             const textBox = document.getElementById(`${groupId}`);
             const disableOption = document.querySelector("#disable_option");
+            const disableOptionIcon = document.querySelector("#disable_option_icon");
             const lockOption = document.querySelector("#lock_option");
+            const lockOptionIcon = document.querySelector("#lock_option_icon");
             const generateOption = document.querySelector("#generate_option");
+            const generateOptionIcon = document.querySelector("#generate_option_icon");
             const colorOption = document.querySelector("#color_option");
+            const colorOptionIcon = document.querySelector("#color_option_icon");
             const source_option = document.querySelector("#source_option");
-            const source_history = document.querySelector("#history_option");
+            const source_optionIcon = document.querySelector("#source_option_icon");
+            const history_option = document.querySelector("#history_option");
+            const historyOptionIcon = document.querySelector("#history_option_icon");
             const settings_option = document.querySelector("#settings_option");
+
+            // Translate textbox options
+            translateIndividualElement('generate_option', false, selectedLanguage);
+            translateIndividualElement('color_option', textBox.highlighted, selectedLanguage);
+            translateIndividualElement('source_option', textBox.linked, selectedLanguage);
+            translateIndividualElement('history_option', textBox.history, selectedLanguage);
+            translateIndividualElement('lock_option', textBox.locked, selectedLanguage);
+            translateIndividualElement('disable_option', textBox.disabled, selectedLanguage);
 
             settings_option.style.opacity = "0.35";
 
             if (textBox.highlighted) {
                 colorOption.setAttribute('option', 'option_2');
-                translateToActive(selectedLanguage);
-              } else {
+            } else {
                 colorOption.setAttribute('option', 'option_1');
-                translateToActive(selectedLanguage);
-              }
+            }            
 
             if (textBox.locked) {
                 lockOption.setAttribute('option', 'option_2');
-                translateToActive(selectedLanguage);
                 generateOption.style.opacity = "0.35"; // Fade the generate option
                 generateOption.style.pointerEvents = "none"; // Disable pointer events
+                generateOptionIcon.style.opacity = "0.35";
+                disableOptionIcon.style.opacity = "0.35";
+                colorOptionIcon.style.opacity = "0.35";
+                source_optionIcon.style.opacity = "0.35";
+                historyOptionIcon.style.opacity = "0.35";
                 colorOption.style.opacity = "0.35"; // Fade the color option
                 colorOption.style.pointerEvents = "none"; // Disable pointer events
                 disableOption.style.opacity = "0.35"; // Fade the lock option
                 disableOption.style.pointerEvents = "none"; // Disable pointer events
                 source_option.style.opacity = "0.35"; // Fade the color option
                 source_option.style.pointerEvents = "none"; // Disable pointer events
-                source_history.style.opacity = "0.35"; // Fade the color option
-                source_history.style.pointerEvents = "none"; // Disable pointer events
+                history_option.style.opacity = "0.35"; // Fade the color option
+                history_option.style.pointerEvents = "none"; // Disable pointer events
             } else {
                 lockOption.setAttribute('option', 'option_1');
-                translateToActive(selectedLanguage);
                 generateOption.style.opacity = "1"; // Restore generate option opacity
                 generateOption.style.pointerEvents = "auto"; // Enable pointer events
+                generateOptionIcon.style.opacity = "1";
+                disableOptionIcon.style.opacity = "1";
+                colorOptionIcon.style.opacity = "1";
+                source_optionIcon.style.opacity = "1";
+                historyOptionIcon.style.opacity = "1";
                 colorOption.style.opacity = "1"; // Restore color option opacity
                 colorOption.style.pointerEvents = "auto"; // Enable pointer events
                 disableOption.style.opacity = "1"; // Restore lock option opacity
                 disableOption.style.pointerEvents = "auto"; // Enable pointer events
                 source_option.style.opacity = "1"; // Fade the color option
                 source_option.style.pointerEvents = "auto"; // Disable pointer events
-                source_history.style.opacity = "1"; // Fade the color option
-                source_history.style.pointerEvents = "auto"; // Disable pointer events
+                history_option.style.opacity = "1"; // Fade the color option
+                history_option.style.pointerEvents = "auto"; // Disable pointer events
             }
             
             if (textBox.disabled) {
                 disableOption.setAttribute('option', 'option_2');
-                translateToActive(selectedLanguage);
                 generateOption.style.opacity = "0.35"; // Fade the generate option
                 generateOption.style.pointerEvents = "none"; // Disable pointer events
                 colorOption.style.opacity = "0.35"; // Fade the color option
@@ -85,11 +104,15 @@ document.addEventListener("contextmenu", (e) => {
                 lockOption.style.pointerEvents = "none"; // Disable pointer events
                 source_option.style.opacity = "0.35"; // Fade the color option
                 source_option.style.pointerEvents = "none"; // Disable pointer events
-                source_history.style.opacity = "0.35"; // Fade the color option
-                source_history.style.pointerEvents = "none"; // Disable pointer events
+                history_option.style.opacity = "0.35"; // Fade the color option
+                history_option.style.pointerEvents = "none"; // Disable pointer events
+                generateOptionIcon.style.opacity = "0.35";
+                lockOptionIcon.style.opacity = "0.35";
+                colorOptionIcon.style.opacity = "0.35";
+                source_optionIcon.style.opacity = "0.35";
+                historyOptionIcon.style.opacity = "0.35";
             } else {
                 disableOption.setAttribute('option', 'option_1');
-                translateToActive(selectedLanguage);
                 generateOption.style.opacity = "1"; // Restore generate option opacity
                 generateOption.style.pointerEvents = "auto"; // Enable pointer events
                 colorOption.style.opacity = "1"; // Restore color option opacity
@@ -98,8 +121,13 @@ document.addEventListener("contextmenu", (e) => {
                 lockOption.style.pointerEvents = "auto"; // Enable pointer events
                 source_option.style.opacity = "1"; // Fade the color option
                 source_option.style.pointerEvents = "auto"; // Disable pointer events
-                source_history.style.opacity = "1"; // Fade the color option
-                source_history.style.pointerEvents = "auto"; // Disable pointer events
+                history_option.style.opacity = "1"; // Fade the color option
+                history_option.style.pointerEvents = "auto"; // Disable pointer events
+                generateOptionIcon.style.opacity = "1";
+                lockOptionIcon.style.opacity = "1";
+                colorOptionIcon.style.opacity = "1";
+                source_optionIcon.style.opacity = "1";
+                historyOptionIcon.style.opacity = "1";
             }
 
             if (textBox.locked) {
@@ -112,24 +140,20 @@ document.addEventListener("contextmenu", (e) => {
                 disableOption.style.pointerEvents = "none"; // Disable pointer events
                 source_option.style.opacity = "0.35"; // Fade the color option
                 source_option.style.pointerEvents = "none"; // Disable pointer events
-                source_history.style.opacity = "0.35"; // Fade the color option
-                source_history.style.pointerEvents = "none"; // Disable pointer events
+                history_option.style.opacity = "0.35"; // Fade the color option
+                history_option.style.pointerEvents = "none"; // Disable pointer events
             }
 
             if (textBox.linked) {
                 source_option.setAttribute('option', 'option_2');
-                translateToActive(selectedLanguage);
               } else {
-                translateToActive(selectedLanguage);
                 source_option.setAttribute('option', 'option_1');
               }
 
             if (textBox.history) {
-                source_history.setAttribute('option', 'option_2');
-                translateToActive(selectedLanguage);
+                history_option.setAttribute('option', 'option_2');
               } else {
-                source_history.setAttribute('option', 'option_1');
-                translateToActive(selectedLanguage);
+                history_option.setAttribute('option', 'option_1');
               }
         
         console.log("disabledGroupIDs:", disabledGroupIDs);

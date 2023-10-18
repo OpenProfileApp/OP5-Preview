@@ -5,9 +5,16 @@ const rmenu = document.getElementById("contextmenu")
 let language_menu_timer;
 
 languageOption.addEventListener("mouseover", () => {
+    // Assuming you have references to the elements
+  const languageSubMenu = document.getElementById('languageSubMenu');
+  const contextMenu = document.getElementById('contextMenu');
+
+  // Get the width of the contextMenu element
+  const contextMenuWidth = contextMenu.offsetWidth; // You can use offsetWidth or getBoundingClientRect().width
+
   clearTimeout(language_menu_timer);
-  languageSubMenu.style.left = "95.5px"; // Position to the right of the option
-  languageSubMenu.style.width = "100px";
+  languageSubMenu.style.left = `${contextMenuWidth + 0}px`;
+  languageSubMenu.style.width = "105px";
   languageSubMenu.style.top = "147px"; // Maintain the same vertical position
   languageSubMenu.style.display = "block";
 });

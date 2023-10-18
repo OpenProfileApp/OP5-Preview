@@ -1,119 +1,147 @@
-function translateTo(language) {
+// Automatically collect the IDs of elements with the "group" class
+const groupElements = Array.from(document.getElementsByClassName("group"));
+const groupIDs = groupElements.map(element => element.id);
+
+// Rest of the code remains the same
+function translateAllGroups(groupIDs, language) {
+    // Save the selected language in local storage
+    localStorage.setItem('selectedLanguage', language);
+
+    groupIDs.forEach((groupID) => {
+        // Define the translation file based on the selected language and group
+        const translationFile = `translations/${language}.json`;
+
+        // Fetch and use the translation data
+        fetch(translationFile)
+            .then((response) => {
+                if (!response.ok) {
+                    throw new Error('Failed to load translation file');
+                }                
+                return response.json();
+            })
+            .then((translations) => {
+                // Adjust groupID to remove "group" and add "ID_"
+                const adjustedGroupID = `${groupID.replace('_group', '')}`;
+
+                // Check if translation data exists for the adjusted group ID
+                if (translations[adjustedGroupID]) {
+                    const translation = translations[adjustedGroupID];
+
+                    // Replace text with translated text for the group
+                    document.getElementById(`${adjustedGroupID}_label_tab`).textContent = translation.label_tab;
+                    document.getElementById(`${adjustedGroupID}`).placeholder = translation.placeholder;
+                    document.getElementById(`${adjustedGroupID}_help_box`).textContent = translation.help_box;
+                } else {
+                    console.error(`Translation not found for group: ${adjustedGroupID}`);
+                }
+            })
+            .catch((error) => {
+                console.error(error);
+            });
+    });
+}
+
+
+
+// Predefined list of element IDs to translate
+const elementsToTranslate = ['popup_0_text1', 'popup_0_text2', 'popup_0_text3', 'popup_0_text4', 'name_information'];
+
+// Function to translate specific elements
+function translateSpecificElements(elementIDs, language) {
     // Define the translation file based on the selected language
     const translationFile = `translations/${language}.json`;
 
-    // Save the selected language in local storage
-    localStorage.setItem('selectedLanguage', language);
-    selectedLanguage = localStorage.getItem('selectedLanguage');
-
-    // Fetch the translations from the JSON file
+    // Fetch and use the translation data for the individual element
     fetch(translationFile)
-        .then((response) => response.json())
-        .then((translations) => {
-            // Loop through the translations and update the content
-            for (const id in translations) {
-                const element = document.getElementById(id);
-                if (element) {
-                    const { translation } = translations[id];
-                    const option = element.getAttribute('option');
-
-                    if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
-                        // If the element is an input or textarea, update the placeholder or value
-                        if (translation !== null) {
-                            isTranslating = true; // Set the flag to true when translating text
-
-                            if (element.tagName === 'INPUT') {
-                                // Fade out the old placeholder
-                                element.setAttribute('placeholder', '');
-                                // Update the placeholder with translation
-                                element.setAttribute('placeholder', translation);
-                            } else if (element.tagName === 'TEXTAREA') {
-                                // Update the textarea's placeholder with translation
-                                element.setAttribute('placeholder', translation);
-                            } else {
-                                // Update the value with translation
-                                element.setAttribute('value', translation);
-                            }
-                        }
-                    } else if (option && translation !== null) {
-                        // If the element has a data-option attribute and translation is not null, check if the data-option matches
-                        if (option in translations[id] && translations[id][option] !== undefined) {
-                            // Apply translation to the content with a fade effect
-                            isTranslating = true; // Set the flag to true when translating text
-
-                            // Fade out the old text
-                            element.style.opacity = 0;
-
-                            setTimeout(() => {
-                                // Update the content
-                                element.textContent = translations[id][option];
-                                // Fade in the new text
-                                element.style.opacity = 1;
-                                updateLabelPositions();
-                            }, 200); // Adjust the duration as needed
-                        }
-                    } else if (
-                        element.tagName !== 'INPUT' &&
-                        element.tagName !== 'TEXTAREA' &&
-                        translation !== null
-                    ) {
-                        // If the element is not an input or textarea and translation is not null, update the content with a fade effect
-                        isTranslating = true; // Set the flag to true when translating text
-
-                        // Fade out the old text
-                        element.style.opacity = 0;
-
-                        setTimeout(() => {
-                            // Update the content
-                            element.textContent = translation;
-                            // Fade in the new text
-                            element.style.opacity = 1;
-                            updateLabelPositions();
-                        }, 200); // Adjust the duration as needed
-                    }
-                }
+        .then((response) => {
+            if (!response.ok) {
+                throw Error('Failed to load translation file');
             }
+            return response.json();
+        })
+        .then((translations) => {
+            elementIDs.forEach((elementID) => {
+                // Check if translation data exists for the individual element
+                if (translations[elementID]) {
+                    const translation = translations[elementID];
+                    const element = document.getElementById(elementID);
 
-            // Check if any translations are being applied before updating the flag
-            if (isTranslating) {
-                // Your code to handle translation completion here
-                console.log('Translation completed.');
-                setTimeout(() => {
-                    updateLabelPositions();
-                }, 1000)
+                    // Replace the value of the individual element with the translation
+                    if (translation.value !== undefined) {
+                        element.value = translation.value;
+                    }
+                    element.textContent = translation.text_content;
+                } else {
+                    console.error(`Translation not found for element: ${elementID}`);
+                }
+            });
+        })
+        .catch((error) => {
+            console.error(error);
+        });
+}
+
+
+
+// Function to translate an individual element with options
+function translateIndividualElement(elementID, data, language) {
+    // Define the translation file based on the selected language and element
+    const translationFile = `translations/${language}.json`;
+
+    console.log("Fetching translation data for:", elementID);
+
+    // Fetch and use the translation data for the individual element
+    fetch(translationFile)
+        .then((response) => {
+            if (!response.ok) {
+                console.error("Failed to load translation file for:", elementID);
+                throw new Error('Failed to load translation file');
+            }
+            return response.json();
+        })
+        .then((translations) => {
+            console.log("Fetched translation data for:", elementID);
+            if (translations[elementID]) {
+                console.log("Found translation for:", elementID);
+
+                const translation = translations[elementID];
+                const optionKey = data ? 'option_2' : 'option_1';
+
+                if (translation[optionKey]) {
+                    console.log("Found translation for option:", optionKey);
+                    const optionTranslation = translation[optionKey];
+                    document.getElementById(elementID).textContent = optionTranslation.text_content;
+                } else {
+                    console.error(`Translation not found for option ${optionKey} of element: ${elementID}`);
+                }
+            } else {
+                console.error(`Translation not found for element: ${elementID}`);
             }
         })
         .catch((error) => {
-            console.error('Error fetching translations:', error);
+            console.error(error);
         });
 }
+
+
 
 // Get a reference to the language buttons by their IDs
 const EnUsButton = document.getElementById('en-us');
 const deDeButton = document.getElementById("de-de");
 const frChButton = document.getElementById("fr-ch");
 
-if (EnUsButton) {
-    EnUsButton.addEventListener('click', () => {
-        translateTo('en-us');
-        // Call onLoadEmojis() at the end when needed
-        setTimeout(() => {
-            onLoadEmojis();
-        }, 400); // Adjust the duration as needed
-    });
-}
+// Add event listeners to the language buttons
+EnUsButton.addEventListener('click', () => {
+    translateAllGroups(groupIDs, 'en-us');
+    translateAllElements('en-us');
+});
 
-//I dont see a need for a if statement soooo yaa.
 deDeButton.addEventListener('click', () => {
-    translateTo("de-de");
-    setTimeout(() => {
-        onLoadEmojis();
-    }, 400)
-})
+    translateAllGroups(groupIDs, 'de-de');
+    translateAllElements('de-de');
+});
 
 frChButton.addEventListener('click', () => {
-    translateTo("fr-ch");
-    setTimeout(() => {
-        onLoadEmojis();
-    }, 400)
-})
+    translateAllGroups(groupIDs, 'fr-ch');
+    translateAllElements('fr-ch');
+});

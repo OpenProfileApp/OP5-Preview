@@ -10,10 +10,15 @@ function lock_option() {
     // Use the ID to target the associated text box and group
     const textBox = document.getElementById(`${groupId}`);
     const disableOption = document.querySelector("#disable_option");
+    const disableOptionIcon = document.querySelector("#disable_option_icon");
     const lockOption = document.querySelector("#lock_option");
     const generateOption = document.querySelector("#generate_option");
+    const generateOptionIcon = document.querySelector("#generate_option_icon");
     const colorOption = document.querySelector("#color_option");
-    const source_history = document.querySelector("#history_option");
+    const colorOptionIcon = document.querySelector("#color_option_icon");
+    const history_option = document.querySelector("#history_option");
+    const historyOptionIcon = document.querySelector("#history_option_icon");
+    const sourceOptionIcon = document.querySelector("#source_option_icon");
 
     if (textBox) {
       // Toggle the locked property based on the current state
@@ -29,24 +34,34 @@ function lock_option() {
         textBox.value = (textBox.value + "🔒");
         generateOption.style.opacity = "0.35"; // Fade the generate option
         generateOption.style.pointerEvents = "none"; // Disable pointer events
+        generateOptionIcon.style.opacity = "0.35";
+        disableOptionIcon.style.opacity = "0.35";
+        colorOptionIcon.style.opacity = "0.35";
+        sourceOptionIcon.style.opacity = "0.35";
+        historyOptionIcon.style.opacity = "0.35";
         colorOption.style.opacity = "0.35"; // Fade the color option
         colorOption.style.pointerEvents = "none"; // Disable pointer events
         disableOption.style.opacity = "0.35"; // Fade the lock option
         disableOption.style.pointerEvents = "none"; // Disable pointer events
-        source_history.style.opacity = "0.35"; // Fade the color option
-        source_history.style.pointerEvents = "none"; // Disable pointer events
+        history_option.style.opacity = "0.35"; // Fade the color option
+        history_option.style.pointerEvents = "none"; // Disable pointer events
       } else {
         textBox.readOnly = false;
         lockOption.setAttribute('option', 'option_1')
         textBox.value = textBox.value.replace("🔒", "");
         generateOption.style.opacity = "1"; // Restore generate option opacity
         generateOption.style.pointerEvents = "auto"; // Enable pointer events
+        generateOptionIcon.style.opacity = "1";
+        disableOptionIcon.style.opacity = "1";
+        colorOptionIcon.style.opacity = "1";
+        sourceOptionIcon.style.opacity = "1";
+        historyOptionIcon.style.opacity = "1";
         colorOption.style.opacity = "1"; // Restore color option opacity
         colorOption.style.pointerEvents = "auto"; // Enable pointer events
         disableOption.style.opacity = "1"; // Restore lock option opacity
         disableOption.style.pointerEvents = "auto"; // Enable pointer events
-        source_history.style.opacity = "1"; // Fade the color option
-        source_history.style.pointerEvents = "auto"; // Disable pointer events
+        history_option.style.opacity = "1"; // Fade the color option
+        history_option.style.pointerEvents = "auto"; // Disable pointer events
       }
     }
     console.log("Locked/Unlocked Group ID:", groupId);
@@ -69,7 +84,7 @@ function lock_option2(groupId, locked) {
     const lockOption = document.querySelector("#lock_option");
     const generateOption = document.querySelector("#generate_option");
     const colorOption = document.querySelector("#color_option");
-    const source_history = document.querySelector("#history_option");
+    const history_option = document.querySelector("#history_option");
 
   if (textBox) {
 
@@ -90,8 +105,8 @@ function lock_option2(groupId, locked) {
         colorOption.style.pointerEvents = "none"; // Disable pointer events
         disableOption.style.opacity = "0.35"; // Fade the lock option
         disableOption.style.pointerEvents = "none"; // Disable pointer events
-        source_history.style.opacity = "0.35"; // Fade the color option
-        source_history.style.pointerEvents = "none"; // Disable pointer events
+        history_option.style.opacity = "0.35"; // Fade the color option
+        history_option.style.pointerEvents = "none"; // Disable pointer events
       } else {
         textBox.readOnly = false;
         lockOption.setAttribute('option', 'option_1')
@@ -102,8 +117,8 @@ function lock_option2(groupId, locked) {
         colorOption.style.pointerEvents = "auto"; // Enable pointer events
         disableOption.style.opacity = "1"; // Restore lock option opacity
         disableOption.style.pointerEvents = "auto"; // Enable pointer events
-        source_history.style.opacity = "1"; // Fade the color option
-        source_history.style.pointerEvents = "auto"; // Disable pointer events
+        history_option.style.opacity = "1"; // Fade the color option
+        history_option.style.pointerEvents = "auto"; // Disable pointer events
       }
 
     console.log("Locked Group ID:", groupId);

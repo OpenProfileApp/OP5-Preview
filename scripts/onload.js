@@ -25,8 +25,9 @@ function loadConfig() {
                     versionPlaceholder.textContent = configVersion;
                 }
                 // Translate to the selected language and change the theme using the config values
-                translateTo(selectedLanguage); // Use config language
-                changeTheme(selectedTheme); // Use config theme
+                 translateAllGroups(groupIDs, selectedLanguage) // Use config language later
+                 translateSpecificElements(elementsToTranslate, selectedLanguage);
+                changeTheme(selectedTheme); // Use config theme later
             }, 500); // Adjust the duration as needed
 
             // Load the selected language and theme from local storage
@@ -70,7 +71,7 @@ function changeTheme(theme) {
 
 // Example of how to change the language and save it
 function translateTo(language) {
-    translateTo(selectedLanguage)
+    translateAllElements(selectedLanguage)
 
     // Save the selected language to local storage
     saveSelectedLanguage(language);

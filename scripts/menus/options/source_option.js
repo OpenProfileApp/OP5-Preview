@@ -9,11 +9,11 @@ function source_option() {
 
     // Use the ID to target the associated text box and group
     const textBox = document.getElementById(`${groupId}`);
-    const source_group = document.getElementById(`${groupId}_verified_source_group`);
-    const source_icon = document.getElementById(`${groupId}_verified_source_icon`);
     const source_tab = document.getElementById(`${groupId}_verified_source_tab`);
+    const source_icon = document.getElementById(`${groupId}_verified_source_icon`);
     const source_option = document.querySelector("#source_option");
 
+    
     if (textBox) {
       if (!textBox.locked) {
         if (!textBoxStatesSource[textBox.id]) {
@@ -32,9 +32,8 @@ function source_option() {
 
             // Update the text and lock option accordingly
             source_option.setAttribute('option', 'option_2');
-            source_group.style.top = "6px";
-            source_icon.style.top = "4.5px";
-            source_group.style.opacity = "1";
+            source_tab.style.top = "6px";
+            source_tab.style.opacity = "1";
             source_tab.style.height = "15px";
           } else {
             alert("Invalid link. Please enter a valid URL.");
@@ -48,9 +47,8 @@ function source_option() {
 
           // Update the text and lock option accordingly
           source_option.setAttribute('option', 'option_1');
-          source_group.style.top = "18px";
-          source_icon.style.top = "2.5px";
-          source_group.style.opacity = "0";
+          source_tab.style.top = "18px";
+          source_tab.style.opacity = "0";
           source_tab.style.height = "11px"
         }
       } else {
@@ -68,6 +66,7 @@ function source_option() {
 
 // Add a click event listener to trigger source_option
 document.querySelector("#source_option").addEventListener("click", () => {
+  closeContextMenu();
   source_option();
 });
 
@@ -75,8 +74,6 @@ document.querySelector("#source_option").addEventListener("click", () => {
 function source_option2(groupId, linked, link) {
   // Use the ID to target the associated text box and group
   const textBox = document.getElementById(`${groupId}`);
-  const source_group = document.getElementById(`${groupId}_verified_source_group`);
-  const source_icon = document.getElementById(`${groupId}_verified_source_icon`);
   const source_tab = document.getElementById(`${groupId}_verified_source_tab`);
   const source_option = document.querySelector("#source_option");
   const faviconElement = document.getElementById(`${groupId}_verified_source_favicon`);
@@ -92,11 +89,12 @@ function source_option2(groupId, linked, link) {
       // Update the text and lock option accordingly
       if (textBox.linked) {
         source_option.setAttribute('option', 'option_2');
-        source_group.style.top = "6px";
-        source_icon.style.top = "4.5px";
-        source_group.style.opacity = "1";
+        translateIndividualElement('source_option', textBox.linked, selectedLanguage);
+        source_tab.style.top = "6px";
+        source_tab.style.opacity = "1";
         source_tab.style.height = "15px";
-        
+        closeContextMenu();
+
         if (isValidLink(link)) {
           // Display the favicon if the link is valid
           displayFavicon(link, faviconElement);
@@ -107,12 +105,13 @@ function source_option2(groupId, linked, link) {
         }
       } else {
         source_option.setAttribute('option', 'option_1');
-        source_group.style.top = "18px";
-        source_icon.style.top = "2.5px";
-        source_group.style.opacity = "0";
+        translateIndividualElement('source_option', textBox.linked, selectedLanguage);
+        source_tab.style.top = "18px";
+        source_tab.style.opacity = "0";
         source_tab.style.height = "11px";
         // Clear the favicon when unlocking
         faviconElement.src = "";
+        closeContextMenu();
       }
     } else {
       source_option.style.opacity = "0.35"; // Fade the color option

@@ -23,9 +23,11 @@ function color_option() {
         if (textBox.highlighted) {
           colorOption.setAttribute('option', 'option_2');
           textBox.style.backgroundColor = "#ffee93";
+          translateIndividualElement('color_option', textBox.highlighted, selectedLanguage);
         } else {
           colorOption.setAttribute('option', 'option_1');
           textBox.style.backgroundColor = "#596379";
+          translateIndividualElement('color_option', textBox.highlighted, selectedLanguage);
         }
       } else {
         colorOption.style.opacity = "0.35"; // Fade the color option

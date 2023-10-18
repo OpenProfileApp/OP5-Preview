@@ -34,9 +34,9 @@
     <!--————————————————————————————————————————————————————————-->
     <script src="scripts/clear_cache.js"></script>
     <script src="scripts/loader.js"></script>
-    <script src="scripts/popup.js"></script>
     <script src="scripts/history/generate_timestamp.js"></script>
     <script src="scripts/onload.js"></script>
+    <script src="scripts/popup.js"></script>
     <script src="scripts/print.js"></script>
 
     <!--————————————————————————————————————————————————————————-->
@@ -54,13 +54,13 @@
         <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.0.1"></script>
         <div class="popup">
             <div class="popup_text">
-            <p class="popup_text" style="font-size: 18px;">Welcome to OpenProfile 5, a collaborative database application surrounding the immersive world of original characters! OP5 is still in early stages and this is the preview version, basically nightly updates with rough edges. Not recommended for production work!</p>
-            <p class="popup_text" style="font-size: 24px;">⚠️ DO NOT UPLOAD PERSONALLY IDENTIFIABLE INFORMATION ⚠️</p>
+            <p class="popup_text" id="popup_0_text1" style="font-size: 18px;">Welcome to OpenProfile 5, a collaborative database application surrounding the immersive world of original characters! OP5 is still in early stages and this is the preview version, basically nightly updates with rough edges. Not recommended for production work!</p>
+            <p class="popup_text" id="popup_0_text2" style="font-size: 24px;">⚠️ DO NOT UPLOAD PERSONALLY IDENTIFIABLE INFORMATION ⚠️</p>
             <p class="popup_text" id="changelog_name" style="font-size: 18px;"></p>
             <script src="scripts/change_log.js"></script>
             <p class="popup_text" id="changelog"></p>
-            <p class="popup_text" style="font-size: 16px;" id="popup_text">(click anywhere to dismiss)</p>
-            <p class="popup_text" style="font-size: 14px;" id="popup_text">💡 Did you know there is currently over 10,000 lines of active code in the OP5?</p>
+            <p class="popup_text" id="popup_0_text3" style="font-size: 16px;" id="popup_text">(click anywhere to dismiss)</p>
+            <p class="popup_text" id="popup_0_text4" style="font-size: 14px;" id="popup_text">💡 Did you know there is currently over 10,000 lines of active code in the OP5?</p>
             </div>
             <div class="social_buttons" style="top: 305px; left: 20px; z-index: 5000; scale: 1.5;">
                 <a class="social_button" id="website_button" title="Website" href="https://bio.link/openprofile" target="_blank" style="background-color: #12141a;">
@@ -292,7 +292,7 @@
                         <div class="label_tab" id="profile_image_label_tab">Image</div>
                         <div><input type="file" id="profile_image_media_input" accept="image/*,video/*" style="display: none;">
                             <label for="profile_image_media_input">
-                                <div class="image_input" id="profile_image_container" style="width: 568px; height: 320px;">
+                                <div class="image_input" id="profile_image_container" style="width: 566px; height: 318px;">
                                     <img id="profile_image_icon_image" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); max-width: 100%; max-height: 100%; opacity: 0.35; cursor: pointer; z-index: 30;" src="media/icons/feather_icons/plus-square.svg">
                                     <img id="profile_image_blurred_image" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) scale(2); max-width: 100%; max-height: 100%; display: none; filter: blur(5px); z-index: 30;" alt="Blurred Image">
                                     <img id="profile_image_selected_image" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); max-width: 100%; max-height: 100%; display: none;  z-index: 30;" src="" alt="Selected Media">
@@ -301,7 +301,7 @@
                             </label>
                         </div>
 
-                        <div class="history_group" id="profile_image_history_group" style="top: 320px; left: 111px;">
+                        <div class="history_group" id="profile_image_history_group" style="top: 317px; left: 109px;">
                             <div class="history_tab" id="profile_image_history_tab" style="left: 433.5px;">
                                 <div class="last_modified_text" id="profile_image_time"></div>
                                 <div class="history_dot" id="profile_image_history_dot"></div>
@@ -311,34 +311,34 @@
                     </div>
                 </div>
 
-                <div class="row" style="top: 457px; left: 36px;">
+                <div class="row" style="top: 455px; left: 36px;">
                     <!--————————————————————————————————————————————————————————-->
-                    <!--—————————————————[ FULL-NAME-FEATURED ]—————————————————-->
+                    <!--———————————————————[ FEATURED-NAME ]————————————————————-->
                     <!--————————————————————————————————————————————————————————-->
-                    <div class="group" id="full_name_featured_group" style="top: 0px; left: 0px; z-index: 20;">
-                        <div class="label_tab" id="full_name_label_tab">Full Name</div>
-                        <div class="comment_group" id="full_name_featured_comment_group" style="left: 5px;">
+                    <div class="group" id="featured_name_group" style="top: 0px; left: 0px; z-index: 20;">
+                        <div class="label_tab" id="featured_name_label_tab">Featured Name</div>
+                        <div class="comment_group" id="featured_name_comment_group" style="left: 5px;">
                             <div class="comment_tab">
                                 <div class="comment_dot"></div>
                             </div>
                         </div>
-                        <div class="verified_source_tab" id="full_name_featured_verified_source_tab">
-                            <a class="verified_source_icon" id="full_name_featured_verified_source_icon" href="https://www.example.com" target="_blank" tabindex="-1">
-                                <img class="verified_source_favicon" id="full_name_featured_verified_source_favicon" src=""></img>
+                        <div class="verified_source_tab" id="featured_name_verified_source_tab">
+                            <a class="verified_source_icon" id="featured_name_verified_source_icon" href="https://www.example.com" target="_blank" tabindex="-1">
+                                <img class="verified_source_favicon" id="featured_name_verified_source_favicon" src=""></img>
                             </a>
                         </div>
-                        <div><input type="text" class="input_text" id="full_name_featured" style="width: 559px; height: 20px; font-size: 18px; text-align: center;" autocomplete="off" autocorrect="off" placeholder="What is the oc's full name?"></div>
-                        <div class="help_box" id="full_name_help_box" style="width: 557px; top: 14px;">What is the character's full name? Be sure to include their prefixes and suffixes.</div>
-                        <div class="history_group" id="full_name_history_group">
-                            <div class="history_tab" id="full_name_history_tab" style="left: 433.5px; top: 6px;">
-                                <div class="last_modified_text" id="full_name_time"></div>
-                                <div class="history_dot" id="full_name_history_dot"></div>
+                        <div><input type="text" class="input_text" id="featured_name" style="width: 559px; height: 20px; font-size: 18px; text-align: center;" autocomplete="off" autocorrect="off" placeholder="What is the oc's featured name?"></div>
+                        <div class="help_box" id="featured_name_help_box" style="width: 557px; top: 14px;">What name is the character reconized by? This could be their real name, nickname, alias, alter ego, former name, or something else. Be sure to include their prefixes and suffixes if any.</div>
+                        <div class="history_group" id="featured_name_history_group">
+                            <div class="history_tab" id="featured_name_history_tab" style="left: 433.5px; top: 6px;">
+                                <div class="last_modified_text" id="featured_name_time"></div>
+                                <div class="history_dot" id="featured_name_history_dot"></div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="row" style="top: 510px; left: 36px;">
+                <div class="row" style="top: 508px; left: 36px;">
                     <!--————————————————————————————————————————————————————————-->
                     <!--—————————————————————[ OC-CREATOR ]—————————————————————-->
                     <!--————————————————————————————————————————————————————————-->
@@ -365,7 +365,7 @@
                     </div>
                 </div>
 
-                <div class="row" style="top: 556px; left: 36px;">
+                <div class="row" style="top: 554px; left: 36px;">
                     <!--————————————————————————————————————————————————————————-->
                     <!--————————————————[ FEATURED-DESCRIPTION ]————————————————-->
                     <!--————————————————————————————————————————————————————————-->
@@ -381,10 +381,10 @@
                                 <img class="verified_source_favicon" id="featured_description_verified_source_favicon" src=""></img>
                             </a>
                         </div>
-                        <textarea id="featured_description" style="width: 559px; height: 252px;" autocomplete="off" autocorrect="off" placeholder="What is the oc's description?"></textarea>
-                        <div class="help_box" id="featured_description_help_box" style="width: 557px; top: 248px;">What is the character's general description? This should contain at least some sentences long information of each category within the profile to showcase the character the most possible.</div>
+                        <textarea id="featured_description" style="width: 559px; height: 251px;" autocomplete="off" autocorrect="off" placeholder="What is the oc's description?"></textarea>
+                        <div class="help_box" id="featured_description_help_box" style="width: 557px; top: 247px;">What is the character's general description? This should contain at least some sentences long information of each category within the profile to showcase the character the most possible.</div>
                         <div class="history_group" id="featured_description_history_group">
-                            <div class="history_tab" id="featured_description_history_tab" style="left: 433.5px; top: 240px;"">
+                            <div class="history_tab" id="featured_description_history_tab" style="left: 433.5px; top: 239px;">
                                 <div class="last_modified_text" id="featured_description_time"></div>
                                 <div class="history_dot" id="featured_description_history_dot"></div>
                             </div>
@@ -392,7 +392,7 @@
                     </div>
                 </div>
 
-                <div class="row" style="top: 890px; left: 36px;">
+                <div class="row" style="top: 888px; left: 36px;">
                     <!--————————————————————————————————————————————————————————-->
                     <!--————————————————————[ FEATURED-BTS ]————————————————————-->
                     <!--————————————————————————————————————————————————————————-->
@@ -408,10 +408,10 @@
                                 <img class="verified_source_favicon" id="featured_bts_verified_source_favicon" src=""></img>
                             </a>
                         </div>
-                        <textarea id="featured_bts" style="width: 559px; height: 97px;" autocomplete="off" autocorrect="off" placeholder="What happened behind the scenes?"></textarea>
-                        <div class="help_box" id="featured_bts_help_box" style="width: 557px; top: 92px;">What happened during the character's development? Give some interesting prominent details or facts!</div>
+                        <textarea id="featured_bts" style="width: 559px; height: 98px;" autocomplete="off" autocorrect="off" placeholder="What happened behind the scenes?"></textarea>
+                        <div class="help_box" id="featured_bts_help_box" style="width: 557px; top: 94px;">What happened during the character's development? Give some interesting prominent details or facts!</div>
                         <div class="history_group" id="featured_bts_history_group">
-                            <div class="history_tab" id="featured_bts_history_tab" style="left: 433.5px; top: 85px;"">
+                            <div class="history_tab" id="featured_bts_history_tab" style="left: 433.5px; top: 86px;">
                                 <div class="last_modified_text" id="featured_bts_time"></div>
                                 <div class="history_dot" id="featured_bts_history_dot"></div>
                             </div>
@@ -570,7 +570,7 @@
                             </a>
                         </div>
                         <div><input type="text" class="input_text" id="full_name" style="width: 559px;" autocomplete="off" autocorrect="off" placeholder="What is the oc's full name?"></div>
-                        <div class="help_box" id="full_name_help_box" style="width: 557px;">What is the character's full name? Be sure to include their prefixes and suffixes.</div>
+                        <div class="help_box" id="full_name_help_box" style="width: 557px;">What is the character's full name? Be sure to include their prefixes and suffixes if any.</div>
                         <div class="history_group" id="full_name_history_group">
                             <div class="history_tab" id="full_name_history_tab" style="left: 433.5px;">
                                 <div class="last_modified_text" id="full_name_time"></div>
@@ -862,10 +862,10 @@
                                 <img class="verified_source_favicon" id="name_origin_verified_source_favicon" src=""></img>
                             </a>
                         </div>
-                        <textarea id="name_origin" style="width: 559px; height: 252px;" autocomplete="off" autocorrect="off" placeholder="What is the origin behind the oc's name?"></textarea>
-                        <div class="help_box" id="name_origin_help_box" style="width: 557px; top: 248px;">What is the origin behind the character's name and what does it mean? Is it from a specifc region or hold a special tale to it? Who gave it to them or whom did they inherit it from? Any reason when and why the character got the name? Try to be the most descriptive possible and remember the usage of the five Ws (who, what, when, where, and why) when needed.</div>
+                        <textarea id="name_origin" style="width: 559px; height: 251px;" autocomplete="off" autocorrect="off" placeholder="What is the origin behind the oc's name?"></textarea>
+                        <div class="help_box" id="name_origin_help_box" style="width: 557px; top: 247px;">What is the origin behind the character's name and what does it mean? Is it from a specifc region or hold a special tale to it? Who gave it to them or whom did they inherit it from? Any reason when and why the character got the name? Try to be the most descriptive possible and remember the usage of the five Ws (who, what, when, where, and why) when needed.</div>
                         <div class="history_group" id="name_origin_history_group">
-                            <div class="history_tab" id="name_origin_history_tab" style="left: 433.5px; top: 240px;">
+                            <div class="history_tab" id="name_origin_history_tab" style="left: 433.5px; top: 239px;">
                                 <div class="last_modified_text" id="name_origin_time"></div>
                                 <div class="history_dot" id="name_origin_history_dot"></div>
                             </div>
@@ -874,7 +874,7 @@
                     </div>
                 </div>
 
-                <div class="row" style="top: 706px; left: 36px;">
+                <div class="row" style="top: 705px; left: 36px;">
                     <!--————————————————————————————————————————————————————————-->
                     <!--———————————————[ PERSONAL-THOUGHTS-NAME ]———————————————-->
                     <!--————————————————————————————————————————————————————————-->
@@ -892,10 +892,10 @@
                                 <img class="verified_source_favicon" id="personal_thoughts_name_verified_source_favicon" src=""></img>
                             </a>
                         </div>
-                        <textarea id="personal_thoughts_name" style="width: 559px; height: 252px;" autocomplete="off" autocorrect="off" placeholder="What are the oc's thoughts towards their name?"></textarea>
-                        <div class="help_box" id="personal_thoughts_name_help_box" style="width: 557px; top: 248px;">What are the character's personal thoughts towards their name? Do they like the name or would they rather have another? Does having the name affects their life in any certain way? Does the name remind them of anything? Are they comfortable sharing their name with others or would they rather it in secrecy? Try to be the most descriptive possible and remember the usage of the five Ws (who, what, when, where, and why) when needed.</div>
+                        <textarea id="personal_thoughts_name" style="width: 559px; height: 251px;" autocomplete="off" autocorrect="off" placeholder="What are the oc's thoughts towards their name?"></textarea>
+                        <div class="help_box" id="personal_thoughts_name_help_box" style="width: 557px; top: 247px;">What are the character's personal thoughts towards their name? Do they like the name or would they rather have another? Does having the name affects their life in any certain way? Does the name remind them of anything? Are they comfortable sharing their name with others or would they rather it in secrecy? Try to be the most descriptive possible and remember the usage of the five Ws (who, what, when, where, and why) when needed.</div>
                         <div class="history_group" id="personal_thoughts_name_history_group">
-                            <div class="history_tab" id="personal_thoughts_name_history_tab" style="left: 433.5px; top: 240px;"">
+                            <div class="history_tab" id="personal_thoughts_name_history_tab" style="left: 433.5px; top: 239px;">
                                 <div class="last_modified_text" id="personal_thoughts_name_time"></div>
                                 <div class="history_dot" id="personal_thoughts_name_history_dot"></div>
                             </div>
@@ -923,56 +923,49 @@
     <!--————————————————————————————————————————————————————————-->
     <!--——————————————————[ RIGHT-CLICK-MENU ]——————————————————-->
     <!--————————————————————————————————————————————————————————-->
-    <div id="contextMenu" class="context-menu">
+    <div class="context-menu" id="contextMenu">
         <script src="scripts/menus/right_click_menu.js"></script>
         <ul>
-        <li id="generate_option">🖊️ Generate Content</button>
-            <script src="scripts/menus/options/generate_option.js"></script>
-        <li id="color_option" option="option_1">🟡 Highlight Textbox</button>
-            <script src="scripts/menus/options/color_option.js"></script>
-        <li id="comments_option" style="opacity: 0.35;" option="option_1">💬 Disable Comments</button>
-        <li id="source_option" option="option_1">🔗 Link Source</button>
-            <script src="scripts/menus/options/source_option.js"></script>
-            <script src="scripts/source/source_position.js"></script>
-            <script src="scripts/source/source_icon.js"></script>
-        <li id="history_option" option="option_1">📅 Hide History</button>
-            <script src="scripts/menus/options/history_option.js"></script>
-        <li id="lock_option" option="option_1">🔒 Lock Textbox</li>
-            <script src="scripts/menus/options/lock_option.js"></script>
-        <li id="disable_option" option="option_1">❌ Disable Textbox</li>
-            <script src="scripts/menus/options/disable_option.js"></script>
-        
-            <li id="language_option">🌐 Change Language ></li> 
-        <div id="languageSubMenu" class="context-menu" style="scale: 100%;">
-            <script src="scripts/menus/language_menu.js"></script>
-            <ul>
-            <li id="en-us">🦅 English (US)</li>
-            <li id="de-de" style="opacity: 0.35;">🍺 Deutsch (DE)</li>
-            <li id="fr-ch" style="opacity: 0.35;">🥖 Suisse Français (CH)</li>
-            <li id="coming-soon">🗣️ Coming Soon</li>
-            </ul>
-            <script src="scripts/translate.js"></script>
-            <script src="scripts/translate_active.js"></script>
-        </div>
-
-        <li id="theme_option" style="opacity: 0.35;">🎨 Change Scheme ></li>
-        <div id="themeSubMenu" class="context-menu" style="scale: 100%;">
-            <script src="scripts/menus/theme_menu.js"></script>
-            <ul>
-            <li id="release" style="opacity: 0.35;">🔴 Release</li>
-            <li id="beta" style="opacity: 0.35;">🔵 Beta</li>
-            <li id="preview" style="opacity: 0.35;">🟣 Preview</li>
-            <li>
-                <label for="fileInput" id="labelCustomStyles" style="opacity: 0.35;">⚪ Import Custom</label>
-                <input type="file" id="customStyleInput" name="fileInput" style="display: none;">
-            </li>
-            </ul>
-            <script src="scripts/theme_changer.js"></script>
-        </div>
-
-        <li id="settings_option" style="opacity: 0.35;">⚙️ Settings</li>
+            <li class="context-text" id="generate_option">Generate Content</li>
+                <img id="generate_option_icon" src="media/icons/feather_icons/database.svg" style="position: absolute; top: 0px; left: 0px; scale: 0.11; transform-origin: top left; margin: 5px; z-index: 9001;">
+                <script src="scripts/menus/options/generate_option.js"></script>
+            <li class="context-text" id="color_option" option="option_1">Highlight Textbox</li>
+                <img id="color_option_icon" src="media/icons/feather_icons/edit-3.svg" style="position: absolute; top: 21px; left: 0px; scale: 0.11; transform-origin: top left; margin: 5px; z-index: 9001;">
+                <script src="scripts/menus/options/color_option.js"></script>
+            <li class="context-text" id="comments_option" style="opacity: 0.35;" option="option_1">Disable Comments</li>
+            <img id="comments_option_icon" src="media/icons/feather_icons/message-circle.svg" style="opacity: 0.35; position: absolute; top: 42px; left: 0px; scale: 0.11; transform-origin: top left; margin: 5px; z-index: 9001;">
+            <li class="context-text" id="source_option" option="option_1">Link Source</li>
+                <img id="source_option_icon" src="media/icons/feather_icons/link.svg" style="position: absolute; top: 63px; left: 0px; scale: 0.11; transform-origin: top left; margin: 5px; z-index: 9001;">
+                <script src="scripts/menus/options/source_option.js"></script>
+                <script src="scripts/source/source_position.js"></script>
+                <script src="scripts/source/source_icon.js"></script>
+            <li class="context-text" id="history_option" option="option_1">Hide History</li>
+                <img id="history_option_icon" src="media/icons/feather_icons/calendar.svg" style="position: absolute; top: 84px; left: 0px; scale: 0.11; transform-origin: top left; margin: 5px; z-index: 9001;">
+                <script src="scripts/menus/options/history_option.js"></script>
+            <li class="context-text" id="lock_option" option="option_1">Lock Textbox</li>
+                <img id="lock_option_icon" src="media/icons/feather_icons/lock.svg" style="position: absolute; top: 105px; left: 0px; scale: 0.11; transform-origin: top left; margin: 5px; z-index: 9001;">
+                <script src="scripts/menus/options/lock_option.js"></script>
+            <li class="context-text" id="disable_option" option="option_1">Disable Textbox</li>
+                <img id="disable_option_icon" src="media/icons/feather_icons/x.svg" style="position: absolute; top: 126px; left: 0px; scale: 0.11; transform-origin: top left; margin: 5px; z-index: 9001;">
+                <script src="scripts/menus/options/disable_option.js"></script>
+            
+            <li class="context-text" id="language_option">Change Language ></li>
+                <img id="language_option_icon" src="media/icons/feather_icons/flag.svg" style="position: absolute; top: 147px; left: 0px; scale: 0.11; transform-origin: top left; margin: 5px; z-index: 9001;">
+                <div id="languageSubMenu" class="context-menu" style="scale: 100%; z-index: 9001;">
+                    <script src="scripts/menus/language_menu.js"></script>
+                    <ul>
+                        <li class="context-text" id="en-us">English (US)</li>
+                            <img src="media/icons/feather_icons/flag.svg" style="position: absolute; top: 0px; left: 0px; scale: 0.11; transform-origin: top left; margin: 5px; z-index: 9001;">
+                        <li class="context-text" id="de-de" style="opacity: 0.35;">Deutsch (DE)</li>
+                            <img src="media/icons/feather_icons/flag.svg" style="opacity: 0.35; position: absolute; top: 21px; left: 0px; scale: 0.11; transform-origin: top left; margin: 5px; z-index: 9001;">
+                        <li class="context-text" id="fr-ch" style="opacity: 0.35;">Suisse Français (CH)</li>
+                            <img src="media/icons/feather_icons/flag.svg" style="opacity: 0.35; position: absolute; top: 42px; left: 0px; scale: 0.11; transform-origin: top left; margin: 5px; z-index: 9001;">
+                        <li class="context-text" id="coming-soon">Coming Soon</li>
+                            <img src="media/icons/feather_icons/clock.svg" style="position: absolute; top: 63px; left: 0px; scale: 0.11; transform-origin: top left; margin: 5px; z-index: 9001;">
+                    </ul>
+                </div>
         </ul>
-        <div class="tag" style="left: 41px; top: 197px; scale: 0.45; width: 85px; background: #5e329b;">PREVIEW</div>
+        <div class="tag" style="left: 46px; top: 156px; scale: 0.45; width: 85px; background: #5e329b; box-shadow: 0px 0px 8px #12141a;">PREVIEW</div>
     </div>
 
     <!--————————————————————————————————————————————————————————-->
@@ -984,6 +977,7 @@
     <script src="scripts/save_load.js"></script> <!-- Needs to be very last to save and load properly -->
     <script src="scripts/id_generator.js"></script>
     <script src="scripts/profile_manager.js"></script> <!-- Needs to be very last to save and load properly -->
+    <script src="scripts/translate.js"></script>
 
 
 <!--<button style="z-index: 500; position: absolute; top: 0; left: 0;" id="discord">Send Message to Discord</button>
@@ -1015,7 +1009,23 @@ socket.addEventListener('message', (event) => {
     
     // Update the page_author_0 textbox with the received text
     document.getElementById('page_author_0').value = newText;
-});-->
+});
+
+
+<li id="theme_option" style="opacity: 0.35;">🎨 Change Scheme ></li>
+        <div id="themeSubMenu" class="context-menu" style="scale: 100%;">
+            <script src="scripts/menus/theme_menu.js"></script>
+            <ul>
+            <li id="release" style="opacity: 0.35;">🔴 Release</li>
+            <li id="beta" style="opacity: 0.35;">🔵 Beta</li>
+            <li id="preview" style="opacity: 0.35;">🟣 Preview</li>
+            <li>
+                <label for="fileInput" id="labelCustomStyles" style="opacity: 0.35;">⚪ Import Custom</label>
+                <input type="file" id="customStyleInput" name="fileInput" style="display: none;">
+            </li>
+            </ul>
+            <script src="scripts/theme_changer.js"></script>
+        </div>-->
 
 </script>
 

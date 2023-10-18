@@ -562,7 +562,11 @@
     height: 14px;
     background: #596379;
     border-radius: 0px 5px 5px 5px;
-    border: 2px solid #596379;
+    border: none;
+    padding-top: 2.8px;
+    padding-bottom: 2.8px;
+    padding-left: 4px;
+    padding-right: 3.4px;
     outline: none;
     opacity: 1;
     transform-origin: center center;
@@ -601,7 +605,11 @@
     width: 559px;
     background: #272c39;
     border-radius: 5px;
-    border: 2px solid #272c39;
+    border: none;
+    padding-top: 2.8px;
+    padding-bottom: 2.8px;
+    padding-left: 4px;
+    padding-right: 3.4px;
     outline: none;
     opacity: 1;
     transform-origin: center;
@@ -650,7 +658,11 @@
     margin: 10px;
     background: #272c39;
     border-radius: 10px;
-    border: 2px solid #272c39;
+    border: none;
+    padding-top: 2.8px;
+    padding-bottom: 2.8px;
+    padding-left: 4px;
+    padding-right: 3.4px;
     outline: none;
     scale: 1.5;
     opacity: 1;
@@ -673,13 +685,11 @@
 
   .input_search:hover{
     background-color: #596379;
-    border: 2px solid #596379;
     box-shadow: 0px 0px 8px #272c39;
   }
 
   .input_search:focus {
     background-color: #596379;
-    border: 2px solid #596379;
     box-shadow: 0px 0px 8px #272c39;
   }
 
@@ -693,7 +703,11 @@
     height: 14px;
     background: #596379;
     border-radius: 0px 5px 5px 5px;
-    border: 2px solid #596379;
+    border: none;
+    padding-top: 1.2px;
+    padding-bottom: 6.8px;
+    padding-left: 4.2px;
+    padding-right: 3.2px;
     outline: none;
     opacity: 1;
     transform-origin: center;
@@ -722,7 +736,11 @@
     color: #ffffff;
     background: #272c39;
     border-radius: 0px 0px 5px 5px;
-    border: 2px solid #272c39;
+    border: none;
+    padding-top: 2.8px;
+    padding-bottom: 2.8px;
+    padding-left: 4px;
+    padding-right: 3.4px;
     outline: none;
     opacity: 1;
     transform-origin: center;
@@ -776,7 +794,11 @@
     height: 14px;
     background: #596379;
     border-radius: 5px 0px 5px 0px;
-    border: 2px solid #596379;
+    border: none;
+    padding-top: 2.8px;
+    padding-bottom: 2.8px;
+    padding-left: 4px;
+    padding-right: 3.4px;
     outline: none;
     opacity: 1;
     transform-origin: center;
@@ -792,14 +814,12 @@
 
   .input_text_author:hover {
     background-color: #768099;
-    border: 2px solid #768099;
     box-shadow: 0px 0px 8px #272c39;
   }
 
   .group:focus-within .input_text_author {
     border-radius: 5px 0px 0px 0px;
     background-color: #768099;
-    border: 2px solid #768099;
     box-shadow: 0px 0px 8px #272c39;
   }
 
@@ -813,7 +833,11 @@
     height: 14px;
     background: #596379;
     border-radius: 0px 5px 0px 5px;
-    border: 2px solid #596379;
+    border: none;
+    padding-top: 2.8px;
+    padding-bottom: 2.8px;
+    padding-left: 4px;
+    padding-right: 3.4px;
     outline: none;
     opacity: 1;
     transform-origin: center;
@@ -829,14 +853,12 @@
 
   .input_text_written:hover {
     background-color: #768099;
-    border: 2px solid #768099;
     box-shadow: 0px 0px 8px #272c39;
   }
 
   .group:focus-within .input_text_written {
     border-radius: 0px 5px 0px 0px;
     background-color: #768099;
-    border: 2px solid #768099;
     box-shadow: 0px 0px 8px #272c39;
   }
 
@@ -864,7 +886,6 @@
   .group:hover .input_text {
     border-radius: 0px 5px 0px 5px;
     background-color: #768099;
-    border: 2px solid #768099;
     box-shadow: 0px 0px 8px #272c39;
   }
 
@@ -886,41 +907,35 @@
 
   .group:hover .input_text_legal {
     background-color: #333a4d;
-    border: 2px solid #333a4d;
     box-shadow: 0px 0px 8px #1b1f28;
   }
 
   .group:focus-within .input_text_legal {
     background-color: #333a4d;
-    border: 2px solid #333a4d;
     box-shadow: 0px 0px 8px #1b1f28;
   }
 
   .group:focus-within .input_text {
     border-radius: 0px 5px 0px 0px;
     background-color: #768099;
-    border: 2px solid #768099;
     box-shadow: 0px 0px 8px #272c39;
   }
 
   .group:hover textarea {
     border-radius: 0px 5px 0px 5px;
     background-color: #768099;
-    border: 2px solid #768099;
     box-shadow: 0px 0px 8px #272c39;
   }
 
   .group:focus-within textarea {
     border-radius: 0px 5px 0px 0px;
     background-color: #768099;
-    border: 2px solid #768099;
     box-shadow: 0px 0px 8px #272c39;
   }
 
   textarea:focus {
     border-radius: 0px 5px 0px 0px;
     background-color: #768099;
-    border: 2px solid #768099;
     box-shadow: 0px 0px 8px #272c39;
   }
 
@@ -943,27 +958,28 @@
   /*/————————————————————————————————————————————————————————/*/
   .context-menu {
     display: none;
-    position: absolute;
+    position: fixed;
     font-family: "Open Sans";
     color: #ffffff;
     font-size: 8px;
+    width: fit-content;
     background-color: #1b1f28;
     border-radius: 0px 5px 5px 5px;
     border: none;
     scale: 1.4;
-    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 8px #12141a;
     opacity: 0;
     transform-origin: top left;
     transform: scale(0.5);
     animation:
       scaleUp 0.2s ease forwards,
       fadeIn 0.2s ease forwards;
-    z-index: 1000;
+    z-index: 8998;
   }
 
   .context-menu.show {
     display: block;
-    scale: 1.25;
+    scale: 1.35;
     font-size: 10px;
     opacity: 1;
     transition: 0.2s all;
@@ -971,27 +987,36 @@
 
   .context-menu ul {
     list-style: none;
-    border-radius: 0px 5px 5px 5px;
+    border-radius: 5px;
     margin: 0;
     padding: 0;
     opacity: 1;
     transition: 0.2s all;
     border: none;
+    z-index: 8999;
   }
 
   .context-menu li {
     padding: 5px;
     cursor: pointer;
-    border-radius: 0px 5px 5px 5px;
+    border-radius: 5px;
+    padding-left: 22px;
     transition: background-color 0.2s;
     opacity: 1;
     transition: 0.2s all;
     border: none;
+    z-index: 9000;
+  }
+
+  .context-text {
+    color: #ffffff;
+    font-size: 8px;
+    font: 'Open Sans';
   }
 
   .context-menu li:hover {
-    background: #bd9335;
-    border-radius: 0px 5px 5px 5px;
+    background: #272c39;
+    border-radius: 5px;
   }
 
   .context-menu::selection {

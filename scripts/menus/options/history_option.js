@@ -21,12 +21,13 @@ function history_option() {
         textBoxStatesHistory[textBox.id] = textBox.history;
 
         // Update the text and lock option accordingly
-        if (!textBox.history) {
+        if (textBox.history) {
           textBox.history = true;
           historyOption.setAttribute('option', 'option_2');
           history_group.style.top = "9px";
           history_group.style.opacity = "0";
-        } else {
+        }
+        if (!textBox.history) {
           textBox.history = false;
           historyOption.setAttribute('option', 'option_1');
           history_group.style.top = "19px";

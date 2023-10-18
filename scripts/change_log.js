@@ -8,7 +8,7 @@
       const name = release.name;
 
       // Replace "*" or "+" or "-" with "*<br>", "+<br>", or "-<br>"
-      const formattedChangelog = changelog.replace(/(\*|\+|\-|\()/g, '<br>$1');
+      const formattedChangelog = changelog.replace(/(\* |\+ |\- |\()/g, '<br>$1');
 
       // Split the changelog text by "<br>" to process each line
       const changelogLines = formattedChangelog.split('<br>');
