@@ -43,15 +43,12 @@ function translateAllGroups(groupIDs, language) {
 
 
 
-// Predefined list of element IDs to translate
-const elementsToTranslate = ['popup_0_text1', 'popup_0_text2', 'popup_0_text3', 'popup_0_text4', 'name_information'];
+function translateSpecificElements(language) {
+    const elementsToTranslate = ['loading_message_maintenance', 'loading_message_spooky_1', 'loading_message_spooky_2', 'loading_message_spooky_3', 'loading_message_spooky_4', 'loading_message_spooky_5', 'loading_message_spooky_6',
+    'popup_0_text1', 'popup_0_text2', 'popup_0_text3', 'popup_0_text4', 'name_information'];
 
-// Function to translate specific elements
-function translateSpecificElements(elementIDs, language) {
-    // Define the translation file based on the selected language
     const translationFile = `translations/${language}.json`;
 
-    // Fetch and use the translation data for the individual element
     fetch(translationFile)
         .then((response) => {
             if (!response.ok) {
@@ -60,19 +57,22 @@ function translateSpecificElements(elementIDs, language) {
             return response.json();
         })
         .then((translations) => {
-            elementIDs.forEach((elementID) => {
-                // Check if translation data exists for the individual element
-                if (translations[elementID]) {
-                    const translation = translations[elementID];
-                    const element = document.getElementById(elementID);
+            elementsToTranslate.forEach((elementID) => {
+                const element = document.getElementById(elementID);
 
-                    // Replace the value of the individual element with the translation
-                    if (translation.value !== undefined) {
-                        element.value = translation.value;
+                if (element) {
+                    if (translations[elementID]) {
+                        const translation = translations[elementID];
+
+                        if (translation.value !== undefined) {
+                            element.value = translation.value;
+                        }
+                        element.textContent = translation.text_content;
+                    } else {
+                        console.error(`Translation not found for element: ${elementID}`);
                     }
-                    element.textContent = translation.text_content;
                 } else {
-                    console.error(`Translation not found for element: ${elementID}`);
+                    console.error(`Element not found: ${elementID}`);
                 }
             });
         })

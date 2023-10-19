@@ -1,10 +1,39 @@
 {
 "code": "en-us",
 "friendy": "English (US)",
-"version": "v5.0.051",
+"version": "v5.0.052",
 "translator": "AvatarKage",
 
-"a": "——————————————————————[ POPUP-0 ]———————————————————————",
+"a": "———————————————————[ LOADING-SCREEN ]————————————————————",
+    "loading_message_maintenance": {
+        "text_content": "MAINTENANCE MODE ENABLED"
+    },
+
+    "loading_message_spooky_1": {
+        "text_content": "you hear bats surrounding you..."
+    },
+
+    "loading_message_spooky_2": {
+        "text_content": "Beware! Haunting in Progress..."
+    },
+
+    "loading_message_spooky_3": {
+        "text_content": "ghosts are stirring..."
+    },
+
+    "loading_message_spooky_4": {
+        "text_content": "witching you a spine-tingling wait..."
+    },
+
+    "loading_message_spooky_5": {
+        "text_content": "Zombies Approaching... Just Kidding!"
+    },
+
+    "loading_message_spooky_6": {
+        "text_content": "pumpkin spice loading..."
+    },
+
+"b": "——————————————————————[ POPUP-0 ]———————————————————————",
     "popup_0_text1": {
         "text_content": "Welcome to OpenProfile 5, a collaborative database application surrounding the immersive world of original characters! OP5 is still in early stages and this is the preview version, basically nightly updates with rough edges. Not recommended for production work!"
     },
@@ -32,6 +61,10 @@
         "label_tab": "Written Date",
         "placeholder": "When was this page written?",
         "help_box": "What date was this page written on? You can include multiple dates in any format seperated by commas. This will prevent the last modified timestamp from showing."
+    },
+
+    "legal_footer": {
+        "placeholder": "Who owns and what is the legal licensing of this character?"
     },
 
 "0": "—————————————————[ TEXT-BOXES-PAGE-0 ]——————————————————",
@@ -140,7 +173,7 @@
         "help_box": "What are the character's personal thoughts towards their name? Do they like the name or would they rather have another? Does having the name affects their life in any certain way? Does the name remind them of anything? Are they comfortable sharing their name with others or would they rather it in secrecy? Try to be the most descriptive possible and remember the usage of the five Ws (who, what, when, where, and why) when needed."
     },
 
-"b": "—————————————————[ RIGHT-CLICK-MENU ]———————————————————",
+"c": "—————————————————[ RIGHT-CLICK-MENU ]———————————————————",
     "generate_option": {
         "option_1": {
         "text_content": "Generate Content"

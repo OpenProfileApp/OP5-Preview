@@ -7,20 +7,17 @@
   /*/———————————————————[ EXTERNAL-ASSETS ]——————————————————/*/
   /*/————————————————————————————————————————————————————————/*/
   @font-face {
-    font-family: "Open Sans";
+    font-family: "NotoSans-Regular";
     src:
-      local("Open Sans Regular"),
-      local("OpenSans-Regular"),
-      url("fonts/opensans.ttf") format("truetype");
+      url("fonts/NotoSans-Regular.ttf") format("truetype");
     font-weight: 400;
     font-style: normal;
   }
 
   @font-face {
-    font-family: "Inconsolata";
+    font-family: "NotoSansMono-Medium";
     src:
-      local("Inconsolata"),
-      url("fonts/inconsolata.ttf") format("truetype");
+      url("fonts/NotoSansMono-Medium.ttf") format("truetype");
     font-weight: 400;
     font-style: normal;
   }
@@ -32,7 +29,7 @@
   body {
     background-color: #1b1f28;
     overflow-x: hidden;
-    font-family: "Open Sans";
+    font-family: "NotoSans-Regular";
   }
 
   .top {
@@ -233,7 +230,7 @@
     height: fit-content;
     width: fit-content;
     color: #ffffff;
-    font-family: "Open Sans";
+    font-family: "NotoSans-Regular";
     font-size: 7px;
     text-align: left;
     padding-top: 1px;
@@ -339,7 +336,7 @@
     height: 9px;
     border-radius: 5px 5px 0px 0px;
     color: #ffffff;
-    font-family: "Open Sans";
+    font-family: "NotoSans-Regular";
     font-size: 7px;
     text-align: center;
     display: flex;
@@ -401,7 +398,7 @@
     height: fit-content;
     width: fit-content;
     color: #ffffff;
-    font-family: "Open Sans";
+    font-family: "NotoSans-Regular";
     font-size: 7px;
     text-align: left;
     padding-top: 3px;
@@ -538,7 +535,7 @@
     width: 30px;
     height: 10px;
     color: #ffffff;
-    font-family: "Open Sans";
+    font-family: "NotoSans-Regular";
     font-size: 7px;
     font-weight: 400;
     text-align: center;
@@ -556,7 +553,7 @@
     position: absolute;
     left: 0px;
     top: 10px;
-    font-family: "Open Sans";
+    font-family: "NotoSans-Regular";
     font-size: 12px;
     color: white;
     height: 14px;
@@ -597,7 +594,7 @@
     position: absolute;
     left: 0px;
     top: 10px;
-    font-family: "Open Sans";
+    font-family: "NotoSans-Regular";
     font-size: 12px;
     color: white;
     height: 14px;
@@ -620,7 +617,7 @@
   .page_number {
     position: absolute;
     color: #ffffff;
-    font: 'Open Sans';
+    font: 'NotoSans-Regular';
     font-size: 20px;
     width: 40px;
     height: 40px;
@@ -651,7 +648,7 @@
     left: 65px;
     top: 19px;
     width: 195px;
-    font-family: "Open Sans";
+    font-family: "NotoSans-Regular";
     font-size: 12px;
     color: white;
     height: 14px;
@@ -697,7 +694,7 @@
     position: absolute;
     left: 0px;
     top: 10px;
-    font-family: "Open Sans";
+    font-family: "NotoSans-Regular";
     font-size: 12px;
     color: white;
     height: 14px;
@@ -731,7 +728,7 @@
     top: 9px;
     height: 28px;
     width: 175px;
-    font-family: "Open Sans";
+    font-family: "NotoSans-Regular";
     font-size: 14px;
     color: #ffffff;
     background: #272c39;
@@ -788,7 +785,7 @@
     position: absolute;
     left: 0px;
     top: 10px;
-    font-family: "Open Sans";
+    font-family: "NotoSans-Regular";
     font-size: 12px;
     color: white;
     height: 14px;
@@ -827,7 +824,7 @@
     position: absolute;
     left: 0px;
     top: 10px;
-    font-family: "Open Sans";
+    font-family: "NotoSans-Regular";
     font-size: 12px;
     color: white;
     height: 14px;
@@ -959,7 +956,7 @@
   .context-menu {
     display: none;
     position: fixed;
-    font-family: "Open Sans";
+    font-family: "NotoSans-Regular";
     color: #ffffff;
     font-size: 8px;
     width: fit-content;
@@ -1011,7 +1008,7 @@
   .context-text {
     color: #ffffff;
     font-size: 8px;
-    font: 'Open Sans';
+    font: 'NotoSans-Regular';
   }
 
   .context-menu li:hover {
@@ -1103,7 +1100,7 @@
     height: 200px;
     width: 600px;
     transform-origin: top center;
-    font-family: 'Inconsolata';
+    font-family: 'NotoSansMono-Medium';
     word-wrap: break-word;
     overflow-x: auto;
     overflow-y: auto;
@@ -1129,56 +1126,66 @@
   /*/————————————————————————————————————————————————————————/*/
   .loader_outer {
     position: fixed;
+    background-color: #1b1f28;
     top: 0px;
     left: 0px;
     height: 100vh;
     width: 100vw;
-    background-color: #1b1f28;
-    transition: 0.2s all;
+    z-index: 9997;
+    overflow: hidden; /* Hide overflowing content */
+}
+
+  .loader_background {
+    /* Set the background image */
+    background-image: url('');
+    background-size: cover;
+    background-position: center;
+    filter: blur(5px)brightness(35%);
+    height: 100%; /* Cover the entire container */
+    width: 100%;
+    scale: 1.05;
     z-index: 9998;
-  }
+}
 
   .loader_inner {
     position: fixed;
     border: 8px solid #ffffff;
-    border-top: 8px solid #ffffff;
-    border-radius: 50%;
-    border-style: dotted;
-    width: 100px;
-    height: 100px;
-    transform-origin: center center;
-    transition: 0.2s all;
-    animation: spin 3s linear infinite;
+    border-radius: 15px;
+    border-style: grove;
+    width: 200px;
+    height: 10px;
+    transform-origin: top left;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
     z-index: 9999;
   }
 
+  .loader_inner_color{
+    position: fixed;
+    background-color: #ffffff;
+    width: 0px;
+    transform: scaleY(1.1);
+    height: 10px;
+    scale: 1.05;
+    border-radius: 15px;
+    z-index: 9998;
+}
+
   .loading_message {
     position: fixed;
     transform-origin: center center;
     transition: 0.2s all;
     color: #ffffff;
-    font: 'Open Sans';
-    font-size: 36px;
+    font: 'NotoSans-Regular';
+    font-size: 32px;
     left: 50%;
-    top: 60%;
+    top: 50%;
+    display: none;
     transform: translate(-50%, -50%);
     z-index: 9999;
   }
 
-  @keyframes spin {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  }
-
-
-  
   /*/ Stuff /*/
 
   .side_button {
@@ -1447,7 +1454,7 @@
     margin: 5px;
     padding: 5px;
     color: #ffffff;
-    font-family: 'Inconsolata';
+    font-family: 'NotoSansMono-Medium';
   }
 
   .success {
@@ -1588,7 +1595,7 @@
     left: 124.4px;
     top: 13.8px;
     color: white;
-    font: 'Open Sans';
+    font: 'NotoSans-Regular';
   }
 
   .profile_tag {
@@ -1677,7 +1684,7 @@
     top: 0px;
     height: 10px;
     color: #ffffff;
-    font-family: "Open Sans";
+    font-family: "NotoSans-Regular";
     font-size: 7px;
     text-align: left;
     opacity: 1;
@@ -1814,7 +1821,7 @@
 
   body {
     overflow-x: hidden;
-    font-family: "Open Sans";
+    font-family: "NotoSans-Regular";
 }
 
 body::before {
@@ -1974,7 +1981,7 @@ body::before {
     height: fit-content;
     width: fit-content;
     color: #ffffff;
-    font-family: "Open Sans";
+    font-family: "NotoSans-Regular";
     font-size: 7px;
     text-align: left;
     padding-top: 2px;
@@ -2067,7 +2074,7 @@ body::before {
     height: 9px;
     border-radius: 5px 5px 0px 0px;
     color: #ffffff;
-    font-family: "Open Sans";
+    font-family: "NotoSans-Regular";
     font-size: 7px;
     text-align: center;
     display: flex;
@@ -2147,7 +2154,7 @@ body::before {
     left: 5px;
     top: 3px;
     color: #ffffff;
-    font-family: "Open Sans";
+    font-family: "NotoSans-Regular";
     font-size: 7px;
     font-weight: 400;
     text-align: left;
@@ -2211,7 +2218,7 @@ body::before {
     width: 30px;
     height: 10px;
     color: #ffffff;
-    font-family: "Open Sans";
+    font-family: "NotoSans-Regular";
     font-size: 7px;
     font-weight: 400;
     text-align: center;
@@ -2229,7 +2236,7 @@ body::before {
     position: absolute;
     left: 0px;
     top: 10px;
-    font-family: "Open Sans";
+    font-family: "NotoSans-Regular";
     font-size: 12px;
     color: white;
     height: 14px;
@@ -2254,7 +2261,7 @@ body::before {
     left: 65px;
     top: 19px;
     width: 195px;
-    font-family: "Open Sans";
+    font-family: "NotoSans-Regular";
     font-size: 12px;
     color: white;
     height: 14px;
@@ -2296,7 +2303,7 @@ body::before {
     position: absolute;
     left: 0px;
     top: 10px;
-    font-family: "Open Sans";
+    font-family: "NotoSans-Regular";
     font-size: 12px;
     color: white;
     height: 14px;
@@ -2404,7 +2411,7 @@ body::before {
   .context-menu {
     display: none;
     position: absolute;
-    font-family: "Open Sans";
+    font-family: "NotoSans-Regular";
     color: #ffffff;
     font-size: 8px;
     background-color: #1b1f28;
@@ -2859,7 +2866,7 @@ body::before {
     top: 0px;
     height: 10px;
     color: #ffffff;
-    font-family: "Open Sans";
+    font-family: "NotoSans-Regular";
     font-size: 7px;
     text-align: left;
     opacity: 1;
@@ -2954,7 +2961,7 @@ body::before {
     height: 9px;
     border-radius: 5px 5px 0px 0px;
     color: #ffffff;
-    font-family: "Open Sans";
+    font-family: "NotoSans-Regular";
     font-size: 7px;
     text-align: center;
     display: flex;
@@ -3034,7 +3041,7 @@ body::before {
     left: 5px;
     top: 3px;
     color: #ffffff;
-    font-family: "Open Sans";
+    font-family: "NotoSans-Regular";
     font-size: 7px;
     font-weight: 400;
     text-align: left;
@@ -3098,7 +3105,7 @@ body::before {
     width: 30px;
     height: 10px;
     color: #ffffff;
-    font-family: "Open Sans";
+    font-family: "NotoSans-Regular";
     font-size: 7px;
     font-weight: 400;
     text-align: center;
@@ -3116,7 +3123,7 @@ body::before {
     position: absolute;
     left: 0px;
     top: 10px;
-    font-family: "Open Sans";
+    font-family: "NotoSans-Regular";
     font-size: 12px;
     color: white;
     height: 14px;
@@ -3141,7 +3148,7 @@ body::before {
     position: absolute;
     left: 0px;
     top: 10px;
-    font-family: "Open Sans";
+    font-family: "NotoSans-Regular";
     font-size: 12px;
     color: white;
     height: 14px;
@@ -3283,9 +3290,9 @@ body::before {
   /*/———————————————————[ EXTERNAL-ASSETS ]——————————————————/*/
   /*/————————————————————————————————————————————————————————/*/
   @font-face {
-    font-family: "Open Sans";
+    font-family: "NotoSans-Regular";
     src:
-      local("Open Sans Regular"),
+      local("NotoSans-Regular Regular"),
       local("OpenSans-Regular"),
       url("fonts/opensans.ttf") format("truetype");
     font-weight: 400;
@@ -3383,7 +3390,7 @@ body::before {
     top: 0px;
     height: 10px;
     color: #ffffff;
-    font-family: "Open Sans";
+    font-family: "NotoSans-Regular";
     font-size: 7px;
     text-align: left;
     opacity: 1;
@@ -3478,7 +3485,7 @@ body::before {
     height: 9px;
     border-radius: 5px 5px 0px 0px;
     color: #ffffff;
-    font-family: "Open Sans";
+    font-family: "NotoSans-Regular";
     font-size: 7px;
     text-align: center;
     display: flex;
@@ -3558,7 +3565,7 @@ body::before {
     left: 5px;
     top: 3px;
     color: #ffffff;
-    font-family: "Open Sans";
+    font-family: "NotoSans-Regular";
     font-size: 7px;
     font-weight: 400;
     text-align: left;
@@ -3622,7 +3629,7 @@ body::before {
     width: 30px;
     height: 10px;
     color: #ffffff;
-    font-family: "Open Sans";
+    font-family: "NotoSans-Regular";
     font-size: 7px;
     font-weight: 400;
     text-align: center;
@@ -3640,7 +3647,7 @@ body::before {
     position: absolute;
     left: 0px;
     top: 10px;
-    font-family: "Open Sans";
+    font-family: "NotoSans-Regular";
     font-size: 12px;
     color: white;
     height: 14px;
@@ -3665,7 +3672,7 @@ body::before {
     position: absolute;
     left: 0px;
     top: 10px;
-    font-family: "Open Sans";
+    font-family: "NotoSans-Regular";
     font-size: 12px;
     color: white;
     height: 14px;
@@ -3792,7 +3799,7 @@ body::before {
     display: none;
     opacity: 0;
     position: absolute;
-    font-family: "Open Sans";
+    font-family: "NotoSans-Regular";
     color: #ffffff;
     font-size: 8px;
     background-color: #1b1f28;

@@ -6,7 +6,7 @@
     <!--——————————————————[ PAGE-INFORMATION ]——————————————————-->
     <!--————————————————————————————————————————————————————————-->
     <title>OpenProfile 5 Preview 🎃</title>
-    <link rel="icon" href="media/images/openprofile/halloween/op_halloween_favicon.png" type="image/x-icon">
+    <link rel="icon" href="media/images/openprofile/spooky/op_spooky_favicon.png" type="image/x-icon">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
 
@@ -17,7 +17,7 @@
     <meta property="og:title" content="OpenProfile 5 Preview 🎃" />
     <meta property="twitter:creator" content="@OpenProfileDevs" />
     <meta property="og:description" content="OpenProfile is the most advanced character profile template in the world and a GNU open source project. Created freely for writers by writers!" />
-    <meta property="og:image" content="https://raw.githubusercontent.com/OpenProfileDevs/OP5-Preview/web/media/images/openprofile/halloween/op_halloween_512.jpeg" />
+    <meta property="og:image" content="https://raw.githubusercontent.com/OpenProfileDevs/OP5-Preview/web/media/images/openprofile/spooky/op_spooky_512.jpeg" />
     <meta property="og:url" content="https://openprofiledevs.github.io/OP5-Preview/" />
     <meta property="theme-color" content="#d37343" />
 
@@ -33,6 +33,7 @@
     <!--————————————————————[ BASE-SCRIPTS ]————————————————————-->
     <!--————————————————————————————————————————————————————————-->
     <script src="scripts/clear_cache.js"></script>
+    <script src="scripts/seasonal_changes.js"></script>
     <script src="scripts/loader.js"></script>
     <script src="scripts/history/generate_timestamp.js"></script>
     <script src="scripts/onload.js"></script>
@@ -43,8 +44,44 @@
     <!--————————————————————[ PAGE-LOADER ]—————————————————————-->
     <!--————————————————————————————————————————————————————————-->
     <div class="loader_outer">
-        <div class="loader_inner"></div>
-        <!--<div class="loading_message">Loading</div>-->
+        <div class="loader_background"></div>
+        <div style="position: fixed; top: 50%; left: 50%; transform-origin: center; transform: translate(-50%, -50%); z-index: 9999;">
+            <img id="loading_image" src="media/images/openprofile/preview/op_preview_favicon.png" style="position: fixed; transform-origin: center; transform: translate(-50%, -58%)scale(0.35); z-index: 9999;">
+            <div class="loader_inner" style="transform: translate(-50%, 150%)">
+                <div class="loader_inner_color"></div>
+            </div>
+        </div>
+        <div class="loading_message" id="loading_message_maintenance" style="top: 75%;">MAINTENANCE MODE ENABLED</div>
+        <div class="loading_message" id="loading_message_spooky_1" style="top: 75%; font-style: italic;">you hear bats surrounding you...</div>
+        <div class="loading_message" id="loading_message_spooky_2" style="top: 75%;">Beware! Haunting in Progress...</div>
+        <div class="loading_message" id="loading_message_spooky_3" style="top: 75%; font-style: italic;">ghosts are stirring...</div>
+        <div class="loading_message" id="loading_message_spooky_4" style="top: 75%; font-style: italic;">witching you a spine-tingling wait...</div>
+        <div class="loading_message" id="loading_message_spooky_5" style="top: 75%;">Zombies Approaching... Just Kidding!</div>
+        <div class="loading_message" id="loading_message_spooky_6" style="top: 75%; font-style: italic;">pumpkin spice loading...</div>
+
+        <div class="social_buttons" style="bottom: 6px; left: 50%; transform: translate(-50%, -50%)scale(1.75); flex-direction: row; gap: 5px; transition: 0s; z-index: 9999;">
+            <a class="social_button" id="website_button" title="Website" href="https://bio.link/openprofile" target="_blank" style="background-color: #12141a;">
+                <img src="media/icons/feather_icons/globe.svg" style="position: absolute; scale: 0.171; transform-origin: top left; margin: 4px;">
+            </a>
+            <a class="social_button" id="youtube_button" title="YouTube" href="https://www.youtube.com/@openprofile" target="_blank" style="background-color: #12141a;">
+                <img src="media/icons/media_icons/youtube.png" style="position: absolute; scale: 0.01; transform-origin: top left; margin: 5px;">
+            </a>
+            <a class="social_button" id="x_button" title="X (Twitter)" href="https://x.com/OpenProfileDevs" target="_blank" style="background-color: #12141a;">
+                <img src="media/icons/media_icons/x_twitter.svg" style="position: absolute; scale: 0.0122; transform-origin: top left; margin: 5px;">
+            </a>
+            <a class="social_button" id="facebook_button" title="Facebook" href="https://www.facebook.com/OpenProfileDevs/" target="_blank" style="background-color: #12141a;">
+                <img src="media/icons/media_icons/facebook.png" style="position: absolute; scale: 0.00823; transform-origin: top left; margin: 4px;">
+            </a>
+            <a class="social_button" id="instagram_button" title="Instagram" href="https://instagram.com/openprofiledevs" target="_blank" style="background-color: #12141a;">
+                <img src="media/icons/media_icons/instagram.svg" style="position: absolute; scale: 1; transform-origin: top left; margin: 5px;">
+            </a>
+            <a class="social_button" id="pinterest_button" title="Pinterest" href="https://www.pinterest.com/openprofiledevs/" target="_blank" style="background-color: #12141a;">
+                <img src="media/icons/media_icons/pinterest.png" style="position: absolute; scale: 0.021; transform-origin: top left; margin: 4px;">
+            </a>
+            <a class="social_button" id="discord_button" title="Discord" href="https://www.discord.com/invite/w6aV9gkz8g" target="_blank" style="background-color: #12141a;">
+                <img src="media/icons/media_icons/discord.svg" style="position: absolute; scale: 0.74; transform-origin: top left; margin-top: 7px; margin-left: 5px;">
+            </a>
+        </div>
     </div>
 
     <!--————————————————————————————————————————————————————————-->
@@ -89,10 +126,10 @@
     </div>
 
     <!--————————————————————————————————————————————————————————-->
-    <!--—————————————————[ HALLOWEEN-ELEMENTS ]—————————————————-->
+    <!--—————————————————[ SEASONAL-ELEMENTS ]——————————————————-->
     <!--————————————————————————————————————————————————————————-->
-    <img style="position: fixed; left: 0px; top: 0px; scale: 0.1; transform-origin: top left; z-index: 8000; opacity: 0.85; pointer-events: none;"src="media/images/openprofile/halloween/cobweb.png">
-    <img style="position: fixed; right: -475px; top: 0px; scale: 0.1; transform: scaleX(-1); transform-origin: top left; z-index: 8000; opacity: 0.85; pointer-events: none;"src="media/images/openprofile/halloween/cobweb.png">
+    <img style="position: fixed; left: 0px; top: 0px; scale: 0.1; transform-origin: top left; z-index: 8000; opacity: 0.85; pointer-events: none;"src="media/images/openprofile/spooky/cobweb.png">
+    <img style="position: fixed; right: -475px; top: 0px; scale: 0.1; transform: scaleX(-1); transform-origin: top left; z-index: 8000; opacity: 0.85; pointer-events: none;"src="media/images/openprofile/spooky/cobweb.png">
     
     <!--————————————————————————————————————————————————————————-->
     <!--————————————————————[ TOP-ELEMENTS ]————————————————————-->
