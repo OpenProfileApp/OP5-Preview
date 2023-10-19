@@ -45,7 +45,7 @@ function translateAllGroups(groupIDs, language) {
 
 function translateSpecificElements(language) {
     const elementsToTranslate = ['loading_message_maintenance', 'loading_message_spooky_1', 'loading_message_spooky_2', 'loading_message_spooky_3', 'loading_message_spooky_4', 'loading_message_spooky_5', 'loading_message_spooky_6',
-    'popup_0_text1', 'popup_0_text2', 'popup_0_text3', 'popup_0_text4', 'name_information'];
+    'banner_0_text', 'popup_0_text1', 'popup_0_text2', 'popup_0_text3', 'popup_0_text4', 'name_information'];
 
     const translationFile = `translations/${language}.json`;
 
@@ -123,7 +123,11 @@ function translateIndividualElement(elementID, data, language) {
         });
 }
 
-
+// Helper function to close the context menu
+function closeContextMenu() {
+    const contextMenu = document.querySelector("#contextMenu");
+    contextMenu.style.display = "none";
+}
 
 // Get a reference to the language buttons by their IDs
 const EnUsButton = document.getElementById('en-us');
@@ -132,16 +136,19 @@ const frChButton = document.getElementById("fr-ch");
 
 // Add event listeners to the language buttons
 EnUsButton.addEventListener('click', () => {
+    closeContextMenu()
     translateAllGroups(groupIDs, 'en-us');
     translateAllElements('en-us');
 });
 
 deDeButton.addEventListener('click', () => {
+    closeContextMenu()
     translateAllGroups(groupIDs, 'de-de');
     translateAllElements('de-de');
 });
 
 frChButton.addEventListener('click', () => {
+    closeContextMenu()
     translateAllGroups(groupIDs, 'fr-ch');
     translateAllElements('fr-ch');
 });

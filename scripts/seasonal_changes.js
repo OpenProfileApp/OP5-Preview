@@ -30,6 +30,7 @@ function updateElementsByTimeOfYear() {
         const loading_image = document.querySelector('#loading_image')
         const loading_message = document.querySelectorAll('.loading_message');
         const social_button = document.querySelectorAll('.social_button')
+        const seasonal_spooky = document.querySelectorAll('.seasonal_spooky');
         const page_outer = document.querySelectorAll('.page_outer');
         const page_inner = document.querySelectorAll('.page_inner');
         const top = document.querySelector('.top');
@@ -53,6 +54,20 @@ function updateElementsByTimeOfYear() {
         const input_text_author = document.querySelectorAll('.input_text_author');
         const input_text_written = document.querySelectorAll('.input_text_written');
         const group = document.querySelectorAll('.group');
+        const context_menu = document.querySelectorAll('.context-menu');
+        const popup = document.querySelectorAll('.popup');
+        const changelog = document.querySelector('#changelog');
+        const side_button = document.querySelectorAll('.side_button');
+        const side_button_2 = document.querySelectorAll('.side_button_2');
+        const watch_button = document.querySelectorAll('.watch_button');
+        const top_button = document.querySelectorAll('.top_button');
+        const top_button_2 = document.querySelectorAll('.top_button_2');
+        const profile_group = document.querySelectorAll('.profile_group');
+        const profile_universe = document.querySelectorAll('.profile_universe');
+        const delete_button = document.querySelectorAll('.delete_button');
+        const delete_button_2 = document.querySelectorAll('.delete_button_2');
+        //const scrollbar_thumb = document.querySelector('::-webkit-scrollbar-thumb');
+        //const scrollbar_track = document.querySelector('::-webkit-scrollbar-track');
 
         // Enable seasonal features
         const messageElement = document.querySelector(`#loading_message_spooky_${randomNumber}`);
@@ -71,12 +86,16 @@ function updateElementsByTimeOfYear() {
             social_button.style.backgroundColor = "#302b44";
             social_button.addEventListener('mouseover', () => {
                 social_button.style.backgroundColor = '#514B67';
+                social_button.style.boxShadow = '0px 0px 8px #171228';
             });
             social_button.addEventListener('mouseout', () => {
                 social_button.style.backgroundColor = '#302b44';
+                social_button.style.boxShadow = '';
             });
         });
-
+        seasonal_spooky.forEach((seasonal_spooky) => {
+            seasonal_spooky.style.display = "block";
+        });
         page_outer.forEach((page_outer) => {
             page_outer.style.backgroundColor = "#242036";
         });
@@ -118,12 +137,49 @@ function updateElementsByTimeOfYear() {
         });
         history_tab.forEach((history_tab) => {
             history_tab.style.backgroundColor = "#242036";
+            history_tab.style.boxShadow = '0px 0px 8px #242036';
         });
         input_text.forEach((input_text) => {
             input_text.style.backgroundColor = "#514B67";
+            input_text.addEventListener('mouseover', () => {
+                input_text.style.backgroundColor = "#726c87";
+                input_text.style.boxShadow = '0px 0px 8px #242036';
+            });
+            input_text.addEventListener('mouseout', () => {
+                if (!input_text.matches(':focus')) {
+                    input_text.style.backgroundColor = "#514B67";
+                    input_text.style.boxShadow = "";
+                }
+            });
+            input_text.addEventListener('focus', () => {
+                input_text.style.backgroundColor = "#726c87";
+                input_text.style.boxShadow = '0px 0px 8px #242036';
+            });
+            input_text.addEventListener('blur', () => {
+                input_text.style.backgroundColor = '#514B67';
+                input_text.style.boxShadow = '';
+            });
         });
         input_text_legal.forEach((input_text_legal) => {
             input_text_legal.style.backgroundColor = "#242036";
+            input_text_legal.addEventListener('mouseover', () => {
+                input_text_legal.style.backgroundColor = "#302b44";
+                input_text_legal.style.boxShadow = '0px 0px 8px #171228';
+            });
+            input_text_legal.addEventListener('mouseout', () => {
+                if (!input_text_legal.matches(':focus')) {
+                    input_text_legal.style.backgroundColor = "#242036";
+                    input_text_legal.style.boxShadow = "";
+                }
+            });
+            input_text_legal.addEventListener('focus', () => {
+                input_text_legal.style.backgroundColor = "#302b44";
+                input_text_legal.style.boxShadow = '0px 0px 8px #171228';
+            });
+            input_text_legal.addEventListener('blur', () => {
+                input_text_legal.style.backgroundColor = '#242036';
+                input_text_legal.style.boxShadow = '';
+            });
         });
         input_search.forEach((input_search) => {
             input_search.style.backgroundColor = "#242036";
@@ -148,6 +204,26 @@ function updateElementsByTimeOfYear() {
         });
         textarea.forEach((textarea) => {
             textarea.style.backgroundColor = "#514B67";
+            textarea.style.setProperty("--scrollbar-thumb-color", "#242036");
+            textarea.style.setProperty("--scrollbar-track-color", "#171228");
+            textarea.addEventListener('mouseover', () => {
+                textarea.style.backgroundColor = "#726c87";
+                textarea.style.boxShadow = '0px 0px 8px #242036';
+            });
+            textarea.addEventListener('mouseout', () => {
+                if (!textarea.matches(':focus')) {
+                    textarea.style.backgroundColor = "#514B67";
+                    textarea.style.boxShadow = "";
+                }
+            });
+            textarea.addEventListener('focus', () => {
+                textarea.style.backgroundColor = "#726c87";
+                textarea.style.boxShadow = '0px 0px 8px #242036';
+            });
+            textarea.addEventListener('blur', () => {
+                textarea.style.backgroundColor = '#514B67';
+                textarea.style.boxShadow = '';
+            });
         });
         page_indicator.forEach((page_indicator) => {
             page_indicator.style.backgroundColor = "#242036";
@@ -216,47 +292,114 @@ function updateElementsByTimeOfYear() {
 
         group.forEach((group) => {
             group.addEventListener('mouseover', () => {
-                input_text.style.backgroundColor = "#726c87";
-                input_text.style.boxShadow = '0px 0px 8px #242036';
+                const label_tab = group.querySelector('.label_tab');            
                 label_tab.style.boxShadow = '0px 0px 8px #242036';
-                history_tab.style.boxShadow = '0px 0px 8px #242036';
-                input_text_legal.style.backgroundColor = "#726c87";
-                input_text_legal.style.boxShadow = '0px 0px 8px #171228';
-                textarea.style.backgroundColor = "#726c87";
-                textarea.style.boxShadow = '0px 0px 8px #242036';
             });
             group.addEventListener('mouseout', () => {
                 if (!group.matches(':focus')) {
-                    input_text.style.backgroundColor = "#514B67";
-                    input_text.style.boxShadow = '';
+                    const label_tab = group.querySelector('.label_tab');
                     label_tab.style.boxShadow = '';
-                    history_tab.style.boxShadow = '';
-                    input_text_legal.style.backgroundColor = "#242036";
-                    input_text_legal.style.boxShadow = '';
-                    textarea.style.backgroundColor = "#514B67";
-                    textarea.style.boxShadow = '';
                 }
             });
             group.addEventListener('focus', () => {
-                input_text.style.backgroundColor = "#726c87";
-                input_text.style.boxShadow = '0px 0px 8px #242036';
+                const label_tab = group.querySelector('.label_tab');
                 label_tab.style.boxShadow = '0px 0px 8px #242036';
-                history_tab.style.boxShadow = '0px 0px 8px #242036';
-                input_text_legal.style.backgroundColor = "#726c87";
-                input_text_legal.style.boxShadow = '0px 0px 8px #171228';
-                textarea.style.backgroundColor = "#726c87";
-                textarea.style.boxShadow = '0px 0px 8px #242036';
             });
             group.addEventListener('blur', () => {
-                input_text.style.backgroundColor = "#514B67";
-                input_text.style.boxShadow = '';
+                const label_tab = group.querySelector('.label_tab');
                 label_tab.style.boxShadow = '';
-                history_tab.style.boxShadow = '';
-                input_text_legal.style.backgroundColor = "#242036";
-                input_text_legal.style.boxShadow = '';
-                textarea.style.backgroundColor = "#514B67";
-                textarea.style.boxShadow = '';
+            });            
+        });
+        context_menu.forEach((context_menu) => {
+            context_menu.style.backgroundColor = "#171228";
+            context_menu.style.boxShadow = '0px 0px 8px #0f0c1a';
+        });
+        popup.forEach((popup) => {
+            popup.style.backgroundColor = "#171228";
+        });
+        changelog.style.backgroundColor = "#0f0c1a";
+        side_button.forEach((side_button) => {
+            side_button.style.backgroundColor = "#171228";
+            side_button.addEventListener('mouseover', () => {
+                side_button.style.backgroundColor = '#302b44';
+                side_button.style.boxShadow = '0px 0px 8px #171228';
+            });
+            side_button.addEventListener('mouseout', () => {
+                side_button.style.backgroundColor = '#171228';
+                side_button.style.boxShadow = '';
             });
         });
+        side_button_2.forEach((side_button_2) => {
+            side_button_2.style.backgroundColor = "#242036";
+            side_button_2.addEventListener('mouseover', () => {
+                side_button_2.style.backgroundColor = '#514B67';
+                side_button_2.style.boxShadow = '0px 0px 8px #242036';
+            });
+            side_button_2.addEventListener('mouseout', () => {
+                side_button_2.style.backgroundColor = '#242036';
+                side_button_2.style.boxShadow = '';
+            });
+        });
+        watch_button.forEach((watch_button) => {
+            watch_button.style.backgroundColor = "#302b44";
+            watch_button.addEventListener('mouseover', () => {
+                watch_button.style.backgroundColor = '#514B67';
+                watch_button.style.boxShadow = '0px 0px 8px #171228';
+            });
+            watch_button.addEventListener('mouseout', () => {
+                watch_button.style.backgroundColor = '#302b44';
+                watch_button.style.boxShadow = '';
+            });
+        });
+        top_button.forEach((top_button) => {
+            top_button.style.backgroundColor = "#171228";
+            top_button.addEventListener('mouseover', () => {
+                top_button.style.backgroundColor = '#302b44';
+                top_button.style.boxShadow = '0px 0px 8px #242036';
+            });
+            top_button.addEventListener('mouseout', () => {
+                top_button.style.backgroundColor = '#171228';
+                top_button.style.boxShadow = '';
+            });
+        });
+        top_button_2.forEach((top_button_2) => {
+            top_button_2.style.backgroundColor = "#171228";
+        });
+        profile_group.forEach((profile_group) => {
+            profile_group.addEventListener('mouseover', () => {
+                profile_group.style.boxShadow = '0px 0px 8px #171228';
+            });
+            profile_group.addEventListener('mouseout', () => {
+                profile_group.style.boxShadow = '';
+            });
+        });
+        profile_universe.forEach((profile_universe) => {
+            profile_universe.addEventListener('mouseover', () => {
+                profile_universe.style.boxShadow = '0px 0px 8px #242036';
+            });
+            profile_universe.addEventListener('mouseout', () => {
+                profile_universe.style.boxShadow = '';
+            });
+        });
+        delete_button.forEach((delete_button) => {
+            delete_button.style.backgroundColor = "#302b44"
+            delete_button.addEventListener('mouseover', () => {
+                delete_button.style.backgroundColor = "#514B67";
+            });
+            delete_button.addEventListener('mouseout', () => {
+                delete_button.style.backgroundColor = "#302b44";
+            });
+        });
+        delete_button_2.forEach((delete_button_2) => {
+            delete_button_2.style.backgroundColor = "#242036"
+            delete_button_2.addEventListener('mouseover', () => {
+                delete_button_2.style.backgroundColor = "#514B67";
+            });
+            delete_button_2.addEventListener('mouseout', () => {
+                delete_button_2.style.backgroundColor = "#242036";
+            });
+        });
+        //scrollbar_thumb.style.backgroundColor = "#242036";
+        //scrollbar_track.style.backgroundColor = "#171228";
     }
 }

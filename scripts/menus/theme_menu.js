@@ -1,6 +1,6 @@
 const themeOption = document.getElementById("theme_option");
 const themeSubMenu = document.getElementById("themeSubMenu");
-const rmenutheme = document.getElementById("contextmenu")
+const rmenutheme = document.getElementById("right_click_menu")
 
 let theme_menu_timer;
 

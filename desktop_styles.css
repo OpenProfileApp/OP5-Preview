@@ -34,37 +34,38 @@
 
   .top {
     position: fixed;
+    display: none;
     top: 0;
     left: 0;
     width: 100%;
     height: 40px;
     background: #272c39;
     border-radius: 2px;
+    transition: 0.2s transform;
     z-index: 4;
     box-shadow: 0px 0px 8px #12141a;
-
   }
 
   .left {
     position: fixed;
+    display: none;
     top: 80px;
     left: 0;
     width: 433px;
     height: 100vh;
     background-color: #272c39;
     border-radius: 0px 25px 0px 0px;
-    transition: 0.2s display;
-    animation: load_in_slide_left 0.3s forwards;
+    animation: load_in_slide_left 0.2s forwards;
     display: block;
     overflow: hidden;
+    transition: 0.2s transform;
     z-index: 3;
     box-shadow: 0px 0px 8px #12141a;
-
   }
 
   .left_bar {
-    position: fixed;
-    top: 80px;
+    position: absolute;
+    top: 0px;
     left: 0;
     width: 79px;
     height: 100vh;
@@ -75,8 +76,8 @@
   }
 
    .left_top {
-    position: fixed;
-    top: 80px;
+    position: absolute;
+    top: 0px;
     left: 79px;
     width: 354px;
     height: 75px;
@@ -88,8 +89,8 @@
   }
 
   .left_top_2 {
-    position: fixed;
-    top: 154px;
+    position: absolute;
+    top: 74px;
     left: 79px;
     width: 354px;
     height: 80px;
@@ -103,6 +104,7 @@
 
   .center {
     position: absolute;
+    display: none;
     left: calc(50% + 276px);
     top: 782px;
     transform-origin: top center;
@@ -111,19 +113,20 @@
     height: 11.7in;
     scale: 1.25;
     border-radius: 25px;
-    background: #272c3900;
+    transition: 0.2s transform;
     z-index: 0;
   }
 
   .right {
     position: fixed;
+    display: none;
     top: 80px;
     right: 0;
     width: 80px;
     height: 100vh;
     background: #272c39;
     border-radius: 25px 0px 0px 0px;
-    transition: 0.2s display;
+    transition: 0.2s transform;
     animation: load_in_slide_right 0.3s forwards;
     display: block;
     z-index: 2;
@@ -132,7 +135,9 @@
   }
 
   .bottom {
+    position: fixed;
     display: none;
+    transition: 0.2s transform;
     z-index: 1;
   }
 
@@ -239,8 +244,6 @@
     padding-right: 4px;
     border-radius: 5px 5px 0px 0px;
     background: #272c39;
-    align-items: left;
-    justify-content: center;
     opacity: 1;
     transition: 0.2s all;
     /*/animation: label_tab_rise 0.5s ease;/*/
@@ -513,6 +516,7 @@
     opacity: 1;
     transition: 0.2s all;
     z-index: 6;
+    box-shadow: 0px 0px 8px #272c39;
   }
 
   .history_dot {
@@ -894,10 +898,6 @@
     box-shadow: 0px 0px 8px #272c39;
   }
 
-  .group:hover .history_tab {
-    box-shadow: 0px 0px 8px #272c39;
-  }
-
   .group:focus-within .history_tab {
     box-shadow: 0px 0px 8px #272c39;
   }
@@ -1101,10 +1101,16 @@
     width: 600px;
     transform-origin: top center;
     font-family: 'NotoSansMono-Medium';
+    scrollbar-color: #242036 #171228;
     word-wrap: break-word;
     overflow-x: auto;
     overflow-y: auto;
   }  
+
+  #changelog::-webkit-scrollbar {
+    display: block;
+    width: 10px;
+  }
 
   @keyframes close_popup {
     0% {
@@ -1122,6 +1128,46 @@
   }
 
   /*/————————————————————————————————————————————————————————/*/
+  /*/————————————————[ PAGE-BANNER-ELEMENTS ]————————————————/*/
+  /*/————————————————————————————————————————————————————————/*/
+  .banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    display: none;
+    background: #f76b2f;
+    transition: 0.2s all;
+    z-index: 2999;
+  }
+
+  .banner_text {
+    position: absolute;
+    padding: 8px;
+    text-align: center;
+    font-size: 16px;
+    width: 100vw;
+    font: 'NotoSans-Regular';
+    color: #ffffff;
+    opacity: 1;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.2s opacity;
+    transform-origin: center;
+    z-index: 3000;
+}
+
+  .banner_close {
+    position: absolute;
+    top: -35px;
+    right: -32px;
+    scale: 0.3;
+    z-index: 3000;
+  }
+
+  /*/————————————————————————————————————————————————————————/*/
   /*/————————————————[ PAGE-LOADER-ELEMENTS ]————————————————/*/
   /*/————————————————————————————————————————————————————————/*/
   .loader_outer {
@@ -1132,20 +1178,28 @@
     height: 100vh;
     width: 100vw;
     z-index: 9997;
+    transition: 0.2s opacity, 0.3s scale;
+    opacity: 1;
     overflow: hidden; /* Hide overflowing content */
 }
 
-  .loader_background {
-    /* Set the background image */
-    background-image: url('');
-    background-size: cover;
-    background-position: center;
-    filter: blur(5px)brightness(35%);
-    height: 100%; /* Cover the entire container */
-    width: 100%;
-    scale: 1.05;
+  .loader_container {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    transition: 0.2s opacity, 0.4s transform;
+    opacity: 1;
     z-index: 9998;
-}
+  }
+
+  .loader_container_2 {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    transition: 0.2s opacity;
+    opacity: 1;
+    z-index: 9998;
+  }
 
   .loader_inner {
     position: fixed;
@@ -1311,6 +1365,20 @@
     height: 25px;
     margin-right: 10px;
     background: #1b1f28;
+    border-radius: 50%;
+    transform-origin: center center;
+    transition: 0.2s all;
+    z-index: 6;
+  }
+
+  .top_button_3 {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
     border-radius: 50%;
     transform-origin: center center;
     transition: 0.2s all;
@@ -2325,6 +2393,11 @@ body::before {
     transition: 0.2s all;
   }
 
+  textarea::-webkit-scrollbar {
+    display: block;
+    width: 10px;
+  }
+
   .image_input {
     position: absolute;
     background-color: #596379;
@@ -2531,7 +2604,9 @@ body::before {
   }
 
   #changelog {
+    position: absolute;
     display: block;
+    left: 50%;
     align-items: center;
     justify-content: center;
     height: 200px;
@@ -2557,7 +2632,8 @@ body::before {
   /*/————————————————————————————————————————————————————————/*/
   .loader_outer {
     background-color: #1b1f28;
-    transition: 0.2s all;
+    transition: 0.2s opacity;
+    opacity: 1;
     z-index: 9999;
   }
 
@@ -2569,14 +2645,17 @@ body::before {
     width: 100px;
     height: 100px;
     transform-origin: center center;
-    transition: 0.2s all;
     animation: spin 3s linear infinite;
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    transition: 0.2s opacity;
+    opacity: 1;
     z-index: 10000;
   }
+
+  
 
   @keyframes spin {
     0% {

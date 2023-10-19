@@ -1,10 +1,10 @@
 {
     "code": "en-us",
     "friendy": "English (US)",
-    "version": "v5.0.052",
+    "version": "v5.0.053",
     "translator": "PUT YOUR USERNAME HERE",
     
-    "a": "———————————————————[ LOADING-SCREEN ]————————————————————",
+    "ls": "———————————————————[ LOADING-SCREEN ]————————————————————",
         "loading_message_maintenance": {
             "text_content": "MAINTENANCE MODE ENABLED"
         },
@@ -33,7 +33,12 @@
             "text_content": "pumpkin spice loading..."
         },
     
-    "b": "——————————————————————[ POPUP-0 ]———————————————————————",
+    "b0": "——————————————————————[ BANNER-0 ]———————————————————————",
+        "banner_0_text": {
+            "text_content": "Saving and loading is not yet compatible with page 0 and glitched on page 1 as well as themed profiles glitching with seasonal schemes"
+        },
+    
+    "pu0": "——————————————————————[ POPUP-0 ]———————————————————————",
         "popup_0_text1": {
             "text_content": "Welcome to OpenProfile 5, a collaborative database application surrounding the immersive world of original characters! OP5 is still in early stages and this is the preview version, basically nightly updates with rough edges. Not recommended for production work!"
         },
@@ -173,7 +178,7 @@
             "help_box": "What are the character's personal thoughts towards their name? Do they like the name or would they rather have another? Does having the name affects their life in any certain way? Does the name remind them of anything? Are they comfortable sharing their name with others or would they rather it in secrecy? Try to be the most descriptive possible and remember the usage of the five Ws (who, what, when, where, and why) when needed."
         },
     
-    "c": "—————————————————[ RIGHT-CLICK-MENU ]———————————————————",
+    "rcm": "—————————————————[ RIGHT-CLICK-MENU ]———————————————————",
         "generate_option": {
             "option_1": {
             "text_content": "Generate Content"

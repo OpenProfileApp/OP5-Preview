@@ -4,7 +4,9 @@ document.addEventListener('DOMContentLoaded', loadConfig);
 
 window.addEventListener('load', function () {
     updateElementsByTimeOfYear();
+    triggerConfettiLoad(5, 5);
     translateSpecificElements(selectedLanguage); // Use config language later
+    showBanner0() // Save error banner
 });
 
 // Define global variables to store config data

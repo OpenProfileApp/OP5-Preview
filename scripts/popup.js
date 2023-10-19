@@ -27,6 +27,7 @@ function triggerConfetti() {
     particleCount: 200, // Number of confetti particles
     spread: 1000, // Spread of the particles
     origin: { y: 0.5 }, // Origin point (top of the screen)
+    zIndex: 2000,
   };
 
   // Trigger the confetti animation

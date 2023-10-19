@@ -34,53 +34,58 @@
     <!--————————————————————————————————————————————————————————-->
     <script src="scripts/clear_cache.js"></script>
     <script src="scripts/seasonal_changes.js"></script>
-    <script src="scripts/loader.js"></script>
-    <script src="scripts/history/generate_timestamp.js"></script>
-    <script src="scripts/onload.js"></script>
+    <script src="scripts/banner.js"></script>
     <script src="scripts/popup.js"></script>
+    <script src="scripts/loader.js"></script>
+    <script src="scripts/onload.js"></script>
+    <script src="scripts/history/generate_timestamp.js"></script>
     <script src="scripts/print.js"></script>
 
     <!--————————————————————————————————————————————————————————-->
     <!--————————————————————[ PAGE-LOADER ]—————————————————————-->
     <!--————————————————————————————————————————————————————————-->
     <div class="loader_outer">
-        <div class="loader_background"></div>
-        <div style="position: fixed; top: 50%; left: 50%; transform-origin: center; transform: translate(-50%, -50%); z-index: 9999;">
-            <img id="loading_image" src="media/images/openprofile/preview/op_preview_favicon.png" style="position: fixed; transform-origin: center; transform: translate(-50%, -58%)scale(0.35); z-index: 9999;">
+        <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.0.1"></script>
+        <div class="loader_container">
+            <div style="position: fixed; top: 50%; left: 50%; transform-origin: center; transform: translate(-50%, -50%); z-index: 9999;">
+                <img id="loading_image" src="media/images/openprofile/preview/op_preview_favicon.png" style="position: fixed; transform-origin: center; transform: translate(-50%, -58%)scale(0.35); z-index: 9999;">
+            </div>
+        </div>
+        <div class="loader_container_2">
             <div class="loader_inner" style="transform: translate(-50%, 150%)">
                 <div class="loader_inner_color"></div>
             </div>
-        </div>
-        <div class="loading_message" id="loading_message_maintenance" style="top: 75%;">MAINTENANCE MODE ENABLED</div>
-        <div class="loading_message" id="loading_message_spooky_1" style="top: 75%; font-style: italic;">you hear bats surrounding you...</div>
-        <div class="loading_message" id="loading_message_spooky_2" style="top: 75%;">Beware! Haunting in Progress...</div>
-        <div class="loading_message" id="loading_message_spooky_3" style="top: 75%; font-style: italic;">ghosts are stirring...</div>
-        <div class="loading_message" id="loading_message_spooky_4" style="top: 75%; font-style: italic;">witching you a spine-tingling wait...</div>
-        <div class="loading_message" id="loading_message_spooky_5" style="top: 75%;">Zombies Approaching... Just Kidding!</div>
-        <div class="loading_message" id="loading_message_spooky_6" style="top: 75%; font-style: italic;">pumpkin spice loading...</div>
+            <div class="loading_message" id="loading_message_maintenance" style="top: 75%;">MAINTENANCE MODE ENABLED</div>
+            <div class="loading_message" id="loading_message_spooky_1" style="top: 75%; font-style: italic;">you hear bats surrounding you...</div>
+            <div class="loading_message" id="loading_message_spooky_2" style="top: 75%;">Beware! Haunting in Progress...</div>
+            <div class="loading_message" id="loading_message_spooky_3" style="top: 75%; font-style: italic;">ghosts are stirring...</div>
+            <div class="loading_message" id="loading_message_spooky_4" style="top: 75%; font-style: italic;">witching you a spine-tingling wait...</div>
+            <div class="loading_message" id="loading_message_spooky_5" style="top: 75%;">Zombies Approaching... Just Kidding!</div>
+            <div class="loading_message" id="loading_message_spooky_6" style="top: 75%; font-style: italic;">pumpkin spice loading...</div>
 
-        <div class="social_buttons" style="bottom: 6px; left: 50%; transform: translate(-50%, -50%)scale(1.75); flex-direction: row; gap: 5px; transition: 0s; z-index: 9999;">
-            <a class="social_button" id="website_button" title="Website" href="https://bio.link/openprofile" target="_blank" style="background-color: #12141a;">
-                <img src="media/icons/feather_icons/globe.svg" style="position: absolute; scale: 0.171; transform-origin: top left; margin: 4px;">
-            </a>
-            <a class="social_button" id="youtube_button" title="YouTube" href="https://www.youtube.com/@openprofile" target="_blank" style="background-color: #12141a;">
-                <img src="media/icons/media_icons/youtube.png" style="position: absolute; scale: 0.01; transform-origin: top left; margin: 5px;">
-            </a>
-            <a class="social_button" id="x_button" title="X (Twitter)" href="https://x.com/OpenProfileDevs" target="_blank" style="background-color: #12141a;">
-                <img src="media/icons/media_icons/x_twitter.svg" style="position: absolute; scale: 0.0122; transform-origin: top left; margin: 5px;">
-            </a>
-            <a class="social_button" id="facebook_button" title="Facebook" href="https://www.facebook.com/OpenProfileDevs/" target="_blank" style="background-color: #12141a;">
-                <img src="media/icons/media_icons/facebook.png" style="position: absolute; scale: 0.00823; transform-origin: top left; margin: 4px;">
-            </a>
-            <a class="social_button" id="instagram_button" title="Instagram" href="https://instagram.com/openprofiledevs" target="_blank" style="background-color: #12141a;">
-                <img src="media/icons/media_icons/instagram.svg" style="position: absolute; scale: 1; transform-origin: top left; margin: 5px;">
-            </a>
-            <a class="social_button" id="pinterest_button" title="Pinterest" href="https://www.pinterest.com/openprofiledevs/" target="_blank" style="background-color: #12141a;">
-                <img src="media/icons/media_icons/pinterest.png" style="position: absolute; scale: 0.021; transform-origin: top left; margin: 4px;">
-            </a>
-            <a class="social_button" id="discord_button" title="Discord" href="https://www.discord.com/invite/w6aV9gkz8g" target="_blank" style="background-color: #12141a;">
-                <img src="media/icons/media_icons/discord.svg" style="position: absolute; scale: 0.74; transform-origin: top left; margin-top: 7px; margin-left: 5px;">
-            </a>
+            <div class="social_buttons" style="bottom: 6px; left: 50%; transform: translate(-50%, -50%)scale(1.75); flex-direction: row; gap: 5px; transition: 0s; z-index: 9999;">
+                <a class="social_button" id="website_button" title="Website" href="https://bio.link/openprofile" target="_blank" style="background-color: #12141a;">
+                    <img src="media/icons/feather_icons/globe.svg" style="position: absolute; scale: 0.171; transform-origin: top left; margin: 4px;">
+                </a>
+                <a class="social_button" id="youtube_button" title="YouTube" href="https://www.youtube.com/@openprofile" target="_blank" style="background-color: #12141a;">
+                    <img src="media/icons/media_icons/youtube.png" style="position: absolute; scale: 0.01; transform-origin: top left; margin: 5px;">
+                </a>
+                <a class="social_button" id="x_button" title="X (Twitter)" href="https://x.com/OpenProfileDevs" target="_blank" style="background-color: #12141a;">
+                    <img src="media/icons/media_icons/x_twitter.svg" style="position: absolute; scale: 0.0122; transform-origin: top left; margin: 5px;">
+                </a>
+                <a class="social_button" id="facebook_button" title="Facebook" href="https://www.facebook.com/OpenProfileDevs/" target="_blank" style="background-color: #12141a;">
+                    <img src="media/icons/media_icons/facebook.png" style="position: absolute; scale: 0.00823; transform-origin: top left; margin: 4px;">
+                </a>
+                <a class="social_button" id="instagram_button" title="Instagram" href="https://instagram.com/openprofiledevs" target="_blank" style="background-color: #12141a;">
+                    <img src="media/icons/media_icons/instagram.svg" style="position: absolute; scale: 1; transform-origin: top left; margin: 5px;">
+                </a>
+                <a class="social_button" id="pinterest_button" title="Pinterest" href="https://www.pinterest.com/openprofiledevs/" target="_blank" style="background-color: #12141a;">
+                    <img src="media/icons/media_icons/pinterest.png" style="position: absolute; scale: 0.021; transform-origin: top left; margin: 4px;">
+                </a>
+                <a class="social_button" id="discord_button" title="Discord" href="https://www.discord.com/invite/w6aV9gkz8g" target="_blank" style="background-color: #12141a;">
+                    <img src="media/icons/media_icons/discord.svg" style="position: absolute; scale: 0.74; transform-origin: top left; margin-top: 7px; margin-left: 5px;">
+                </a>
+            </div>
         </div>
     </div>
 
@@ -88,7 +93,6 @@
     <!--——————————————————[ POP-UP-ELEMENTS ]———————————————————-->
     <!--————————————————————————————————————————————————————————-->
     <div class="popup_background" id="popup_0">
-        <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.0.1"></script>
         <div class="popup">
             <div class="popup_text">
             <p class="popup_text" id="popup_0_text1" style="font-size: 18px;">Welcome to OpenProfile 5, a collaborative database application surrounding the immersive world of original characters! OP5 is still in early stages and this is the preview version, basically nightly updates with rough edges. Not recommended for production work!</p>
@@ -98,7 +102,8 @@
             <p class="popup_text" id="changelog"></p>
             <p class="popup_text" id="popup_0_text3" style="font-size: 16px;" id="popup_text">(click anywhere to dismiss)</p>
             <p class="popup_text" id="popup_0_text4" style="font-size: 14px;" id="popup_text">💡 Did you know there is currently over 10,000 lines of active code in the OP5?</p>
-            </div>
+            <p class="popup_text" id="popup_0_text5" style="font-size: 10px;" id="popup_text">OpenProfile 5 is a <a href="https://www.gnu.org/licenses/gpl-3.0.en.html#license-text" target="_blank" style="text-decoration: none; color: #5C6AE3;">GNU</a> licensed application owned by the OpenProfile Organization and actively developed by <a href="https://www.avatarkage.com" target="_blank" style="text-decoration: none; color: #5C6AE3;">AvatarKage<a>.</p>
+        </div>
             <div class="social_buttons" style="top: 305px; left: 20px; z-index: 5000; scale: 1.5;">
                 <a class="social_button" id="website_button" title="Website" href="https://bio.link/openprofile" target="_blank" style="background-color: #12141a;">
                     <img src="media/icons/feather_icons/globe.svg" style="position: absolute; scale: 0.171; transform-origin: top left; margin: 4px;">
@@ -126,23 +131,31 @@
     </div>
 
     <!--————————————————————————————————————————————————————————-->
-    <!--—————————————————[ SEASONAL-ELEMENTS ]——————————————————-->
+    <!--——————————————————[ BANNER-ELEMENTS ]———————————————————-->
     <!--————————————————————————————————————————————————————————-->
-    <img style="position: fixed; left: 0px; top: 0px; scale: 0.1; transform-origin: top left; z-index: 8000; opacity: 0.85; pointer-events: none;"src="media/images/openprofile/spooky/cobweb.png">
-    <img style="position: fixed; right: -475px; top: 0px; scale: 0.1; transform: scaleX(-1); transform-origin: top left; z-index: 8000; opacity: 0.85; pointer-events: none;"src="media/images/openprofile/spooky/cobweb.png">
-    
+    <div class="banner" id="banner_0">
+        <div class="banner_text" id="banner_0_text">Saving and loading is not yet compatible with page 0 and glitched on page 1 as well as themed profiles glitching with seasonal schemes</div>
+        <div class="banner_close" id="banner_0_close">
+            <img src="media/icons/feather_icons/x.svg" style="position: relative; top: 10px; right: 10px; scale: 1; transform-origin: top left; z-index: 3000;">
+        </div>
+    </div>
+
     <!--————————————————————————————————————————————————————————-->
     <!--————————————————————[ TOP-ELEMENTS ]————————————————————-->
     <!--————————————————————————————————————————————————————————-->
     <div class="top">
+        <div class="seasonal_spooky" style="display: none;">
+            <img style="position: fixed; left: 0px; top: 0px; scale: 0.1; transform-origin: top left; z-index: 8000; opacity: 0.85; pointer-events: none;"src="media/images/openprofile/spooky/cobweb.png">
+            <img style="position: fixed; right: -475px; top: 0px; scale: 0.1; transform: scaleX(-1); transform-origin: top left; z-index: 8000; opacity: 0.85; pointer-events: none;"src="media/images/openprofile/spooky/cobweb.png">
+        </div>
         <!--<button id="logoutButton" style="position: absolute; left: 500px; top: 10px;">Logout</button>-->
         <div class="top_button" style="width: 75px; border-radius: 10px;"></div>
         <div class="top_button" style="width: 75px; border-radius: 10px;"></div>
         <div class="top_button" style="width: 100px; border-radius: 10px;"></div>
         <div class="top_button" style="width: 125px; border-radius: 10px;"></div>
-        <div class="top_button_2" style="background-color: #ac2222;"></div>
-        <div class="top_button_2" style="transform: translateX(-35px)translateY(-50%); background-color: #d5a728;"></div>
-        <div class="top_button_2" style="transform: translateX(-70px)translateY(-50%); background-color: #2d8018;"></div>
+        <div class="top_button_3" style="background-color: #ac2222;"></div>
+        <div class="top_button_3" style="transform: translateX(-35px)translateY(-50%); background-color: #d5a728;"></div>
+        <div class="top_button_3" style="transform: translateX(-70px)translateY(-50%); background-color: #2d8018;"></div>
         <div class="top_button_2" id="button_scheme" title="Schemes" style="transform: translateX(-105px)translateY(-50%); border-radius: 10px;">
             <img id="icon_scheme" src="media/icons/feather_icons/sun.svg" style="scale: 0.15; transform-origin: top left; margin: 5px;">
         </div>
@@ -988,7 +1001,7 @@
             
             <li class="context-text" id="language_option">Change Language ></li>
                 <img id="language_option_icon" src="media/icons/feather_icons/flag.svg" style="position: absolute; top: 147px; left: 0px; scale: 0.11; transform-origin: top left; margin: 5px; z-index: 9001;">
-                <div id="languageSubMenu" class="context-menu" style="scale: 100%; z-index: 9001;">
+                <div class="context-menu" id="languageSubMenu" style="scale: 100%; z-index: 9001;">
                     <script src="scripts/menus/language_menu.js"></script>
                     <ul>
                         <li class="context-text" id="en-us">English (US)</li>
