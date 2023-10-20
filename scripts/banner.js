@@ -7,9 +7,14 @@ function showBanner0() {
     const bannerClose = document.getElementById('banner_0_close');
 
     banner_0.style.display = 'block';
-    top.style.transform = 'translateY(40px)';
+    if (window.innerWidth < 768) {
+    top.style.transform = 'translateY(60px)';
+    center.style.transform = 'translate(-50%, calc(-50% + 42px))';
+    } else {
+        top.style.transform = 'translateY(40px)';
+        center.style.transform = 'translate(-50%, calc(-50% + 32px))';
+    }
     left.style.transform = 'translateY(40px)';
-    center.style.transform = 'translate(-50%, calc(-50% + 32px))';
     right.style.transform = 'translateY(40px)';
 
     // Handle the close button click event

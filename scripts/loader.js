@@ -24,9 +24,15 @@ document.addEventListener("DOMContentLoaded", function () {
             if (progress === 100) {
                 // Hide the loaders and show app when loading is complete
                 top.style.display = "block"
-                left.style.display = "block"
+                // Prevent display on mobile mode
+                if (window.innerWidth > 768) {
+                    left.style.display = "block"
+                }
                 center.style.display = "block"
-                right.style.display = "block"
+                // Prevent display on mobile mode
+                if (window.innerWidth > 768) {
+                    right.style.display = "block"
+                }
                 loader4.style.opacity = "0";
                 loader2.style.transform = "translateY(40px)";
                 setTimeout(() => {
