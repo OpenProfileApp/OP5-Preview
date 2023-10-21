@@ -67,7 +67,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 const brand_icon_mediaType = brand_icon_selectedFile.type;
                 if (brand_icon_mediaType.startsWith('image/')) {
                     // Handle images
-
                     brand_icon_container.forEach((imageElement) => {
                         imageElement.style.backgroundColor = '#00000000';
                     });

@@ -45,7 +45,7 @@ function translateAllGroups(groupIDs, language) {
 
 function translateSpecificElements(language) {
     const elementsToTranslate = ['loading_message_maintenance', 'loading_message_spooky_1', 'loading_message_spooky_2', 'loading_message_spooky_3', 'loading_message_spooky_4', 'loading_message_spooky_5', 'loading_message_spooky_6',
-    'banner_0_text', 'popup_0_text1', 'popup_0_text2', 'popup_0_text3', 'popup_0_text4', 'name_information'];
+    'banner_0_text', 'popup_0_text1', 'popup_0_text2', 'popup_0_text3', 'popup_0_text4', 'scheme_name_midnight', 'scheme_name_daylight', 'scheme_name_spooky', 'name_information'];
 
     const translationFile = `translations/${language}.json`;
 

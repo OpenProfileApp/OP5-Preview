@@ -1,8 +1,8 @@
 // Function to update elements based on the time of year
 function updateElementsByTimeOfYear() {
     const currentDate = new Date();
-    const currentMonth = currentDate.getMonth() + 1; // Months are 0-based
-
+    const currentMonth = currentDate.getMonth() + 1; // Months are 0-
+    
     // Define the date ranges for each season (you can adjust these)
     const January = 1;
     const February = 2;
@@ -30,6 +30,7 @@ function updateElementsByTimeOfYear() {
         const loading_image = document.querySelector('#loading_image')
         const loading_message = document.querySelectorAll('.loading_message');
         const social_button = document.querySelectorAll('.social_button')
+        const loader_social_button = document.querySelectorAll('.loader_social_button')
         const seasonal_spooky = document.querySelectorAll('.seasonal_spooky');
         const page_outer = document.querySelectorAll('.page_outer');
         const page_inner = document.querySelectorAll('.page_inner');
@@ -66,8 +67,9 @@ function updateElementsByTimeOfYear() {
         const profile_universe = document.querySelectorAll('.profile_universe');
         const delete_button = document.querySelectorAll('.delete_button');
         const delete_button_2 = document.querySelectorAll('.delete_button_2');
-        //const scrollbar_thumb = document.querySelector('::-webkit-scrollbar-thumb');
-        //const scrollbar_track = document.querySelector('::-webkit-scrollbar-track');
+        const schemes_manager = document.querySelector('.schemes_manager');
+        const schemes_backdrop = document.querySelectorAll('.schemes_backdrop');
+        const schemes_front = document.querySelectorAll('.schemes_front');
 
         // Enable seasonal features
         const messageElement = document.querySelector(`#loading_message_spooky_${randomNumber}`);
@@ -82,25 +84,19 @@ function updateElementsByTimeOfYear() {
         loading_message.forEach((loadingMessage) => {
             loadingMessage.style.color = "#ffffff";
         });
-        social_button.forEach((social_button) => {
-            social_button.style.backgroundColor = "#302b44";
-            social_button.addEventListener('mouseover', () => {
-                social_button.style.backgroundColor = '#514B67';
-                social_button.style.boxShadow = '0px 0px 8px #171228';
+        loader_social_button.forEach((loader_social_button) => {
+            loader_social_button.style.backgroundColor = "#242036";
+            loader_social_button.addEventListener('mouseover', () => {
+                loader_social_button.style.backgroundColor = '#302b44';
+                loader_social_button.style.boxShadow = '0px 0px 8px #0f0c1a';
             });
-            social_button.addEventListener('mouseout', () => {
-                social_button.style.backgroundColor = '#302b44';
-                social_button.style.boxShadow = '';
+            loader_social_button.addEventListener('mouseout', () => {
+                loader_social_button.style.backgroundColor = '#242036';
+                loader_social_button.style.boxShadow = '';
             });
         });
         seasonal_spooky.forEach((seasonal_spooky) => {
             seasonal_spooky.style.display = "block";
-        });
-        page_outer.forEach((page_outer) => {
-            page_outer.style.backgroundColor = "#242036";
-        });
-        page_inner.forEach((page_inner) => {
-            page_inner.style.backgroundColor = "#302b44";
         });
         top.style.backgroundColor = "#242036";
         top.style.boxShadow = "0px 0px 8px #0f0c1a";
@@ -114,73 +110,6 @@ function updateElementsByTimeOfYear() {
         left_top_2.style.boxShadow = "0px 0px 8px #171228";
         right.style.backgroundColor = "#242036";
         right.style.boxShadow = "0px 0px 8px #0f0c1a";
-        label_tab.forEach((label_tab) => {
-            label_tab.style.backgroundColor = "#242036";
-        });
-        verified_source_tab.forEach((verified_source_tab) => {
-            verified_source_tab.style.backgroundColor = "#242036";
-            verified_source_tab.style.boxShadow = "0px 0px 8px #242036";
-        });
-        verified_source_favicon.forEach((verified_source_favicon) => {
-            verified_source_favicon.addEventListener('mouseover', () => {
-                verified_source_favicon.style.boxShadow = "0px 0px 8px #171228";
-                verified_source_favicon.style.scale = "1.15";
-            });
-            verified_source_favicon.addEventListener('mouseout', () => {
-                verified_source_favicon.style.boxShadow = "";
-                verified_source_favicon.style.scale = "1";
-            });
-        });
-        help_box.forEach((help_box) => {
-            help_box.style.backgroundColor = "#242036";
-            help_box.style.boxShadow = "0px 0px 8px #171228";
-        });
-        history_tab.forEach((history_tab) => {
-            history_tab.style.backgroundColor = "#242036";
-            history_tab.style.boxShadow = '0px 0px 8px #242036';
-        });
-        input_text.forEach((input_text) => {
-            input_text.style.backgroundColor = "#514B67";
-            input_text.addEventListener('mouseover', () => {
-                input_text.style.backgroundColor = "#726c87";
-                input_text.style.boxShadow = '0px 0px 8px #242036';
-            });
-            input_text.addEventListener('mouseout', () => {
-                if (!input_text.matches(':focus')) {
-                    input_text.style.backgroundColor = "#514B67";
-                    input_text.style.boxShadow = "";
-                }
-            });
-            input_text.addEventListener('focus', () => {
-                input_text.style.backgroundColor = "#726c87";
-                input_text.style.boxShadow = '0px 0px 8px #242036';
-            });
-            input_text.addEventListener('blur', () => {
-                input_text.style.backgroundColor = '#514B67';
-                input_text.style.boxShadow = '';
-            });
-        });
-        input_text_legal.forEach((input_text_legal) => {
-            input_text_legal.style.backgroundColor = "#242036";
-            input_text_legal.addEventListener('mouseover', () => {
-                input_text_legal.style.backgroundColor = "#302b44";
-                input_text_legal.style.boxShadow = '0px 0px 8px #171228';
-            });
-            input_text_legal.addEventListener('mouseout', () => {
-                if (!input_text_legal.matches(':focus')) {
-                    input_text_legal.style.backgroundColor = "#242036";
-                    input_text_legal.style.boxShadow = "";
-                }
-            });
-            input_text_legal.addEventListener('focus', () => {
-                input_text_legal.style.backgroundColor = "#302b44";
-                input_text_legal.style.boxShadow = '0px 0px 8px #171228';
-            });
-            input_text_legal.addEventListener('blur', () => {
-                input_text_legal.style.backgroundColor = '#242036';
-                input_text_legal.style.boxShadow = '';
-            });
-        });
         input_search.forEach((input_search) => {
             input_search.style.backgroundColor = "#242036";
             input_search.addEventListener('mouseover', () => {
@@ -201,114 +130,6 @@ function updateElementsByTimeOfYear() {
                 input_search.style.backgroundColor = '#242036';
                 input_search.style.boxShadow = '';
             });
-        });
-        textarea.forEach((textarea) => {
-            textarea.style.backgroundColor = "#514B67";
-            textarea.style.setProperty("--scrollbar-thumb-color", "#242036");
-            textarea.style.setProperty("--scrollbar-track-color", "#171228");
-            textarea.addEventListener('mouseover', () => {
-                textarea.style.backgroundColor = "#726c87";
-                textarea.style.boxShadow = '0px 0px 8px #242036';
-            });
-            textarea.addEventListener('mouseout', () => {
-                if (!textarea.matches(':focus')) {
-                    textarea.style.backgroundColor = "#514B67";
-                    textarea.style.boxShadow = "";
-                }
-            });
-            textarea.addEventListener('focus', () => {
-                textarea.style.backgroundColor = "#726c87";
-                textarea.style.boxShadow = '0px 0px 8px #242036';
-            });
-            textarea.addEventListener('blur', () => {
-                textarea.style.backgroundColor = '#514B67';
-                textarea.style.boxShadow = '';
-            });
-        });
-        page_indicator.forEach((page_indicator) => {
-            page_indicator.style.backgroundColor = "#242036";
-        });
-        image_input.forEach((image_input) => {
-            image_input.style.backgroundColor = "#514B67";
-            image_input.addEventListener('mouseover', () => {
-                image_input.style.backgroundColor = '#726c87';
-            });
-            image_input.addEventListener('mouseout', () => {
-                image_input.style.backgroundColor = '#514B67';
-            });
-        });
-        image_input_2.forEach((image_input_2) => {
-            image_input_2.style.backgroundColor = "#302b44";
-            image_input_2.addEventListener('mouseover', () => {
-                image_input_2.style.backgroundColor = '#514B67';
-            });
-            image_input_2.addEventListener('mouseout', () => {
-                image_input_2.style.backgroundColor = '#302b44';
-            });
-        });
-        input_text_author.forEach((input_text_author) => {
-            input_text_author.style.backgroundColor = "#514B67";
-            input_text_author.addEventListener('mouseover', () => {
-                input_text_author.style.backgroundColor = "#726c87";
-                input_text_author.style.boxShadow = "0px 0px 8px #242036";
-            });
-            input_text_author.addEventListener('mouseout', () => {
-                if (!input_text_author.matches(':focus')) {
-                    input_text_author.style.backgroundColor = "#514B67";
-                    input_text_author.style.boxShadow = "";
-                }
-            });
-            input_text_author.addEventListener('focus', () => {
-                input_text_author.style.backgroundColor = '#726c87';
-                input_text_author.style.boxShadow = '0px 0px 8px #242036';
-            });
-            input_text_author.addEventListener('blur', () => {
-                input_text_author.style.backgroundColor = '#514B67';
-                input_text_author.style.boxShadow = '';
-            });
-        });
-
-        input_text_written.forEach((input_text_written) => {
-            input_text_written.style.backgroundColor = "#514B67";
-            input_text_written.addEventListener('mouseover', () => {
-                input_text_written.style.backgroundColor = "#726c87";
-                input_text_written.style.boxShadow = "0px 0px 8px #242036";
-            });
-            input_text_written.addEventListener('mouseout', () => {
-                if (!input_text_written.matches(':focus')) {
-                    input_text_written.style.backgroundColor = "#514B67";
-                    input_text_written.style.boxShadow = "";
-                }
-            });
-            input_text_written.addEventListener('focus', () => {
-                input_text_written.style.backgroundColor = '#726c87';
-                input_text_written.style.boxShadow = '0px 0px 8px #242036';
-            });
-            input_text_written.addEventListener('blur', () => {
-                input_text_written.style.backgroundColor = '#514B67';
-                input_text_written.style.boxShadow = '';
-            });
-        });
-
-        group.forEach((group) => {
-            group.addEventListener('mouseover', () => {
-                const label_tab = group.querySelector('.label_tab');            
-                label_tab.style.boxShadow = '0px 0px 8px #242036';
-            });
-            group.addEventListener('mouseout', () => {
-                if (!group.matches(':focus')) {
-                    const label_tab = group.querySelector('.label_tab');
-                    label_tab.style.boxShadow = '';
-                }
-            });
-            group.addEventListener('focus', () => {
-                const label_tab = group.querySelector('.label_tab');
-                label_tab.style.boxShadow = '0px 0px 8px #242036';
-            });
-            group.addEventListener('blur', () => {
-                const label_tab = group.querySelector('.label_tab');
-                label_tab.style.boxShadow = '';
-            });            
         });
         context_menu.forEach((context_menu) => {
             context_menu.style.backgroundColor = "#171228";
@@ -338,17 +159,6 @@ function updateElementsByTimeOfYear() {
             side_button_2.addEventListener('mouseout', () => {
                 side_button_2.style.backgroundColor = '#242036';
                 side_button_2.style.boxShadow = '';
-            });
-        });
-        watch_button.forEach((watch_button) => {
-            watch_button.style.backgroundColor = "#302b44";
-            watch_button.addEventListener('mouseover', () => {
-                watch_button.style.backgroundColor = '#514B67';
-                watch_button.style.boxShadow = '0px 0px 8px #171228';
-            });
-            watch_button.addEventListener('mouseout', () => {
-                watch_button.style.backgroundColor = '#302b44';
-                watch_button.style.boxShadow = '';
             });
         });
         top_button.forEach((top_button) => {
@@ -401,5 +211,229 @@ function updateElementsByTimeOfYear() {
         });
         //scrollbar_thumb.style.backgroundColor = "#242036";
         //scrollbar_track.style.backgroundColor = "#171228";
+        schemes_manager.style.backgroundColor = "#242036";
+        schemes_manager.style.boxShadow = "0px 0px 8px #0f0c1a";
+        schemes_backdrop.forEach((schemes_backdrop) => {
+            schemes_backdrop.style.boxShadow = "0px 0px 8px #171228";
+        });
+        schemes_front.forEach((schemes_front) => {
+            schemes_front.addEventListener('mouseover', () => {
+                schemes_front.style.boxShadow = "0px 0px 8px #171228";
+            });
+            schemes_front.addEventListener('mouseout', () => {
+                schemes_front.style.boxShadow = '';
+            });
+        });
+
+        // IF NO BRAND SCHEME ACTIVE
+        const stoppagetheme = "true"
+        if (stoppagetheme === "false") {
+            page_outer.forEach((page_outer) => {
+                page_outer.style.backgroundColor = "#242036";
+            });
+            page_inner.forEach((page_inner) => {
+                page_inner.style.backgroundColor = "#302b44";
+            });
+            label_tab.forEach((label_tab) => {
+                label_tab.style.backgroundColor = "#242036";
+            });
+            verified_source_tab.forEach((verified_source_tab) => {
+                verified_source_tab.style.backgroundColor = "#242036";
+                verified_source_tab.style.boxShadow = "0px 0px 8px #242036";
+            });
+            verified_source_favicon.forEach((verified_source_favicon) => {
+                verified_source_favicon.addEventListener('mouseover', () => {
+                    verified_source_favicon.style.boxShadow = "0px 0px 8px #171228";
+                    verified_source_favicon.style.scale = "1.15";
+                });
+                verified_source_favicon.addEventListener('mouseout', () => {
+                    verified_source_favicon.style.boxShadow = "";
+                    verified_source_favicon.style.scale = "1";
+                });
+            });
+            help_box.forEach((help_box) => {
+                help_box.style.backgroundColor = "#242036";
+                help_box.style.boxShadow = "0px 0px 8px #171228";
+            });
+            history_tab.forEach((history_tab) => {
+                history_tab.style.backgroundColor = "#242036";
+                history_tab.style.boxShadow = '0px 0px 8px #242036';
+            });
+            input_text.forEach((input_text) => {
+                input_text.style.backgroundColor = "#514B67";
+                input_text.addEventListener('mouseover', () => {
+                    input_text.style.backgroundColor = "#726c87";
+                    input_text.style.boxShadow = '0px 0px 8px #242036';
+                });
+                input_text.addEventListener('mouseout', () => {
+                    if (!input_text.matches(':focus')) {
+                        input_text.style.backgroundColor = "#514B67";
+                        input_text.style.boxShadow = "";
+                    }
+                });
+                input_text.addEventListener('focus', () => {
+                    input_text.style.backgroundColor = "#726c87";
+                    input_text.style.boxShadow = '0px 0px 8px #242036';
+                });
+                input_text.addEventListener('blur', () => {
+                    input_text.style.backgroundColor = '#514B67';
+                    input_text.style.boxShadow = '';
+                });
+            });
+            input_text_legal.forEach((input_text_legal) => {
+                input_text_legal.style.backgroundColor = "#242036";
+                input_text_legal.addEventListener('mouseover', () => {
+                    input_text_legal.style.backgroundColor = "#302b44";
+                    input_text_legal.style.boxShadow = '0px 0px 8px #171228';
+                });
+                input_text_legal.addEventListener('mouseout', () => {
+                    if (!input_text_legal.matches(':focus')) {
+                        input_text_legal.style.backgroundColor = "#242036";
+                        input_text_legal.style.boxShadow = "";
+                    }
+                });
+                input_text_legal.addEventListener('focus', () => {
+                    input_text_legal.style.backgroundColor = "#302b44";
+                    input_text_legal.style.boxShadow = '0px 0px 8px #171228';
+                });
+                input_text_legal.addEventListener('blur', () => {
+                    input_text_legal.style.backgroundColor = '#242036';
+                    input_text_legal.style.boxShadow = '';
+                });
+            });
+            textarea.forEach((textarea) => {
+                textarea.style.backgroundColor = "#514B67";
+                textarea.style.setProperty("--scrollbar-thumb-color", "#242036");
+                textarea.style.setProperty("--scrollbar-track-color", "#171228");
+                textarea.addEventListener('mouseover', () => {
+                    textarea.style.backgroundColor = "#726c87";
+                    textarea.style.boxShadow = '0px 0px 8px #242036';
+                });
+                textarea.addEventListener('mouseout', () => {
+                    if (!textarea.matches(':focus')) {
+                        textarea.style.backgroundColor = "#514B67";
+                        textarea.style.boxShadow = "";
+                    }
+                });
+                textarea.addEventListener('focus', () => {
+                    textarea.style.backgroundColor = "#726c87";
+                    textarea.style.boxShadow = '0px 0px 8px #242036';
+                });
+                textarea.addEventListener('blur', () => {
+                    textarea.style.backgroundColor = '#514B67';
+                    textarea.style.boxShadow = '';
+                });
+            });
+            page_indicator.forEach((page_indicator) => {
+                page_indicator.style.backgroundColor = "#242036";
+            });
+            image_input.forEach((image_input) => {
+                image_input.style.backgroundColor = "#514B67";
+                image_input.addEventListener('mouseover', () => {
+                    image_input.style.backgroundColor = '#726c87';
+                });
+                image_input.addEventListener('mouseout', () => {
+                    image_input.style.backgroundColor = '#514B67';
+                });
+            });
+            image_input_2.forEach((image_input_2) => {
+                image_input_2.style.backgroundColor = "#302b44";
+                image_input_2.addEventListener('mouseover', () => {
+                    image_input_2.style.backgroundColor = '#514B67';
+                });
+                image_input_2.addEventListener('mouseout', () => {
+                    image_input_2.style.backgroundColor = '#302b44';
+                });
+            });
+            input_text_author.forEach((input_text_author) => {
+                input_text_author.style.backgroundColor = "#514B67";
+                input_text_author.addEventListener('mouseover', () => {
+                    input_text_author.style.backgroundColor = "#726c87";
+                    input_text_author.style.boxShadow = "0px 0px 8px #242036";
+                });
+                input_text_author.addEventListener('mouseout', () => {
+                    if (!input_text_author.matches(':focus')) {
+                        input_text_author.style.backgroundColor = "#514B67";
+                        input_text_author.style.boxShadow = "";
+                    }
+                });
+                input_text_author.addEventListener('focus', () => {
+                    input_text_author.style.backgroundColor = '#726c87';
+                    input_text_author.style.boxShadow = '0px 0px 8px #242036';
+                });
+                input_text_author.addEventListener('blur', () => {
+                    input_text_author.style.backgroundColor = '#514B67';
+                    input_text_author.style.boxShadow = '';
+                });
+            });
+
+            input_text_written.forEach((input_text_written) => {
+                input_text_written.style.backgroundColor = "#514B67";
+                input_text_written.addEventListener('mouseover', () => {
+                    input_text_written.style.backgroundColor = "#726c87";
+                    input_text_written.style.boxShadow = "0px 0px 8px #242036";
+                });
+                input_text_written.addEventListener('mouseout', () => {
+                    if (!input_text_written.matches(':focus')) {
+                        input_text_written.style.backgroundColor = "#514B67";
+                        input_text_written.style.boxShadow = "";
+                    }
+                });
+                input_text_written.addEventListener('focus', () => {
+                    input_text_written.style.backgroundColor = '#726c87';
+                    input_text_written.style.boxShadow = '0px 0px 8px #242036';
+                });
+                input_text_written.addEventListener('blur', () => {
+                    input_text_written.style.backgroundColor = '#514B67';
+                    input_text_written.style.boxShadow = '';
+                });
+            });
+
+            group.forEach((group) => {
+                group.addEventListener('mouseover', () => {
+                    const label_tab = group.querySelector('.label_tab');            
+                    label_tab.style.boxShadow = '0px 0px 8px #242036';
+                });
+                group.addEventListener('mouseout', () => {
+                    if (!group.matches(':focus')) {
+                        const label_tab = group.querySelector('.label_tab');
+                        label_tab.style.boxShadow = '';
+                    }
+                });
+                group.addEventListener('focus', () => {
+                    const label_tab = group.querySelector('.label_tab');
+                    label_tab.style.boxShadow = '0px 0px 8px #242036';
+                });
+                group.addEventListener('blur', () => {
+                    const label_tab = group.querySelector('.label_tab');
+                    label_tab.style.boxShadow = '';
+                });            
+            });
+            social_button.forEach((social_button) => {
+                social_button.style.backgroundColor = "#302b44";
+                social_button.addEventListener('mouseover', () => {
+                    social_button.style.backgroundColor = '#514B67';
+                    social_button.style.boxShadow = '0px 0px 8px #171228';
+                });
+                social_button.addEventListener('mouseout', () => {
+                    social_button.style.backgroundColor = '#302b44';
+                    social_button.style.boxShadow = '';
+                });
+            });
+            watch_button.forEach((watch_button) => {
+                watch_button.style.backgroundColor = "#302b44";
+                watch_button.addEventListener('mouseover', () => {
+                    watch_button.style.backgroundColor = '#514B67';
+                    watch_button.style.boxShadow = '0px 0px 8px #171228';
+                });
+                watch_button.addEventListener('mouseout', () => {
+                    watch_button.style.backgroundColor = '#302b44';
+                    watch_button.style.boxShadow = '';
+                });
+            });
+            schemes_manager.style.backgroundColor = '#242036';
+            schemes_manager.style.boxShadow = '0px 0px 8px #0f0c1a';
+
+        }
     }
 }

@@ -1090,7 +1090,7 @@ function updateProfileList(activeuniverse) {
                 <div class="profile_image">
                     <img src="${profile.image || 'media/images/openprofile/preview/op_preview_512.jpeg'}" style="min-width: 100px; min-height: 100px; max-width: 100px; max-height: 100px; transform-origin: top left; border-radius: 5px;">
                 </div>
-                <div class="side_button_2" id="load_database_profile" onclick="loadProfile(${index})" title="Load Profile" style="left: 246px; top: 9px; scale: 0.75; background-color: ${profile.card_accent}; z-index: 3;" onmouseover="this.style.backgroundColor='${profile.card_accent_hover}'" onmouseout="this.style.backgroundColor='${profile.card_accent}'">
+                <div class="profile_button" id="load_database_profile" onclick="loadProfile(${index})" title="Load Profile" style="left: 246px; top: 9px; scale: 0.75; background-color: ${profile.card_accent}; z-index: 3;" onmouseover="this.style.backgroundColor='${profile.card_accent_hover}'" onmouseout="this.style.backgroundColor='${profile.card_accent}'">
                     <img src="media/icons/feather_icons/download.svg" style="scale: 0.30; transform-origin: top left; margin: 10px;">
                 </div>
                 <div class="delete_button" onclick="removeProfile(${index})" title="Delete Profile">

@@ -105,7 +105,7 @@
     position: absolute;
     display: none;
     left: calc(50% - 160px);
-    top: 420px;
+    top: 160px;
     transform-origin: top center;
     transform: translate(-50%, -50%);
     width: 8.3in;
@@ -1659,6 +1659,125 @@
   }
 
   .profile_tag:hover {
+    background-color: #596379;
+  }
+
+  /*/————————————————————————————————————————————————————————/*/
+  /*/——————————————————[ SCHEMES-MANAGER ]———————————————————/*/
+  /*/————————————————————————————————————————————————————————/*/
+  .schemes_manager {
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    right: 10px;
+    top: 40px;
+    height: 447px;
+    width: 627px;
+    padding: 7.5px;
+    scale: 0.75;
+    opacity: 0;
+    transform-origin: top right;
+    border-radius: 20px 0px 20px 20px;
+    transition: 0.2s opacity, 0.2s transform, 0.2s display;
+    background: #272c39;
+    box-shadow: 0px 0px 8px #12141a;
+    z-index: 300;
+  }
+
+  .schemes_backdrop {
+    margin: 7.5px;
+    width: 180px;
+    height: 120px;
+    border-radius: 10px;
+    transition: 0.2s all;
+    background: #1b1f28;
+    box-shadow: 0px 0px 8px #1b1f28;
+    z-index: 298;
+  }
+
+  .schemes_front {
+    position: relative;
+    top: 10px;
+    left: 10px;
+    width: 180px;
+    height: 120px;
+    border-radius: 10px;
+    transition: 0.2s all;
+    background: #333a4d;
+    z-index: 299;
+  }
+
+  .schemes_backdrop:hover {
+    scale: 1.025;
+  }
+
+  .schemes_backdrop:hover .schemes_front {
+    box-shadow: 0px 0px 8px #1b1f28;
+  }
+
+  .scheme_button {
+    position: absolute;
+    left: 120px;
+    top: 10px;
+    width: 50px;
+    height: 50px;
+    scale: 0.9;
+    border-radius: 6px;
+    background: #333a4d;
+    margin-bottom: 10px;
+    transform-origin: center center;
+    transition: 0.2s all;
+    z-index: 300;
+  }
+
+  .scheme_image {
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    width: 75px;
+    height: 75px;
+    border-radius: 5px;
+    background: #272c39;
+  }
+  
+  .scheme_text {
+    position: absolute;
+    background-color: #272c39;
+    border-radius: 6px;
+    right: 10px;
+    top: 68px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 8px;
+    padding-right: 8px;
+    color: #ffffff;
+    font-size: 24px;
+    text-align: right;
+    font: 'NotoSans-Regular';
+    z-index: 300;
+  }
+
+  .scheme_tag {
+    position: relative;
+    display: inline-block;
+    color: #ffffff;
+    text-align: center;
+    font-size: 12px;
+    top: 54.5px;
+    left: 13px;
+    height: 18px;
+    margin: 2px;
+    padding-right: 8px;
+    padding-left: 8px;
+    padding-bottom: 2px;
+    background-color: #272c39;
+    border-radius: 10px;
+    transform-origin: center center;
+    transition: 0.2s all;
+    z-index: 3;
+  }
+
+  .scheme_tag:hover {
     background-color: #596379;
   }
 
