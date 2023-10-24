@@ -3,12 +3,12 @@
 document.addEventListener('DOMContentLoaded', loadConfig);
 
 window.addEventListener('load', function () {
-    //simulateAppLoading()
-    //updateElementsByTimeOfYear();
-    //triggerConfettiLoad(5, 5);
-    //translateSpecificElements(selectedLanguage); // Use config language later
-    //showTextPopup()
-    //showBanner0() // Save error banner
+    simulateAppLoading()
+    load_local_scheme()
+    updateElementsByTimeOfYear();
+    translateSpecificElements(selectedLanguage); // Use config language later
+    showTextPopup()
+    showBanner0() // Save error banner
 });
 
 // Define global variables to store config data
@@ -35,7 +35,6 @@ function loadConfig() {
                 }
                 // Translate to the selected language and change the theme using the config values
                 translateAllGroups(groupIDs, selectedLanguage) // Use config language later
-                changeTheme(selectedTheme); // Use config theme later
             }, 500); // Adjust the duration as needed
 
             // Load the selected language and theme from local storage

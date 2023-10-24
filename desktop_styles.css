@@ -8,16 +8,14 @@
   /*/————————————————————————————————————————————————————————/*/
   @font-face {
     font-family: "NotoSans-Regular";
-    src:
-      url("fonts/NotoSans-Regular.ttf") format("truetype");
+    src: url("fonts/NotoSans-Regular.ttf") format("truetype");
     font-weight: 400;
     font-style: normal;
   }
 
   @font-face {
     font-family: "NotoSansMono-Medium";
-    src:
-      url("fonts/NotoSansMono-Medium.ttf") format("truetype");
+    src: url("fonts/NotoSansMono-Medium.ttf") format("truetype");
     font-weight: 400;
     font-style: normal;
   }
@@ -34,7 +32,7 @@
 
   .top {
     position: fixed;
-    display: block; /*/NONE/*/
+    display: none;
     top: 0;
     left: 0;
     width: 100%;
@@ -42,12 +40,13 @@
     background: #1C1F2A;
     border-radius: 2px;
     transition: 0.2s transform;
+    box-shadow: 0px 0px 0px 4px #00000010;
     z-index: 4;
     }
 
   .left {
     position: fixed;
-    display: block; /*/NONE/*/
+    display: none;
     top: 80px;
     left: 0;
     width: 433px;
@@ -57,6 +56,7 @@
     animation: load_in_slide_left 0.2s forwards;
     overflow: hidden;
     transition: 0.2s transform;
+    box-shadow: 0px 0px 0px 4px #00000010;
     z-index: 3;
   }
 
@@ -67,8 +67,9 @@
     width: 79px;
     height: 100vh;
     background-color: #1C1F2A;
+    transition: 0.2s transform;
     z-index: 4;
-    box-shadow: 4px 76px 0px 0px #14161E;
+    box-shadow: 4px 76px 0px 0px #00000050;
   }
 
    .left_top {
@@ -79,7 +80,8 @@
     height: 75px;
     border-radius: 0px 25px 0px 0px;
     background-color: #1C1F2A;
-    box-shadow: 0px 4px 0px 0px #14161E;
+    transition: 0.2s transform;
+    box-shadow: 0px 4px 0px 0px #00000050;
     z-index: 4;
   }
 
@@ -92,13 +94,14 @@
     background-color: #222635;
     overflow-y: hidden;
     overflow-x: auto;
+    transition: 0.2s transform;
     z-index: 2;
-    box-shadow: 0px 4px 0px 0px #1C1F2A;
+    box-shadow: 0px 4px 0px 0px #00000025;
   }
 
   .center {
     position: absolute;
-    display: block; /*/NONE/*/
+    display: none;
     left: calc(50% + 276px);
     top: 782px;
     transform-origin: top center;
@@ -124,13 +127,13 @@
   }
 
   .center_video_yt {
-    box-shadow: 0px 0px 8px #12141a;
+    box-shadow: 0px 0px 0px 4px #00000010;
     transition: 0.2s scale;
   }
 
   .right {
     position: fixed;
-    display: block; /*/NONE/*/
+    display: none;
     top: 80px;
     right: 0;
     width: 80px;
@@ -139,6 +142,7 @@
     border-radius: 25px 0px 0px 0px;
     transition: 0.2s transform;
     animation: load_in_slide_right 0.3s forwards;
+    box-shadow: 0px 0px 0px 4px #00000010;
     z-index: 2;
   }
 
@@ -146,11 +150,17 @@
     position: fixed;
     display: none;
     transition: 0.2s transform;
+    box-shadow: 0px 0px 0px 4px #00000010;
     z-index: 1;
   }
 
   ul, ol {
     list-style-type: none;
+  }
+
+  a {
+    color: #2a4ede;
+    text-decoration: none;
   }
 
   ::-webkit-scrollbar {
@@ -246,7 +256,7 @@
     height: 11.7in;
     border-radius: 25px;
     background-color: #1C1F2A;
-    box-shadow: 0px 0px 8px #12141a;
+    box-shadow: 0px 0px 0px 4px #00000010;
     z-index: 0;
   }
 
@@ -428,7 +438,6 @@
     align-items: center;
     justify-content: center;
     transition: 0.2s all;
-    box-shadow: 0px 0px 8px #1C1F2A;
     z-index: 4;
   }
 
@@ -473,7 +482,6 @@
 
   .verified_source_favicon:hover {
     scale: 1.15;
-    box-shadow: 0px 0px 4px #14161E;
   }
 
   .group:hover .verified_source_tab {
@@ -615,7 +623,6 @@
     opacity: 1;
     transition: 0.2s all;
     z-index: 6;
-    box-shadow: 0px 0px 8px #1C1F2A;
   }
 
   .history_popup {
@@ -981,7 +988,6 @@
   }
 
   #seperator:selection {
-    box-shadow: 0px 0px 8px #1C1F2A;
     border-radius: 5px;
     color: #ffffff;
   }
@@ -1047,7 +1053,7 @@
     border-radius: 0px 5px 5px 5px;
     border: none;
     scale: 1.4;
-    box-shadow: 0px 0px 8px #12141a;
+    box-shadow: 3px 3px 0px 0px #00000010;
     opacity: 0;
     transform-origin: top left;
     transform: scale(0.5);
@@ -1086,6 +1092,10 @@
     transition: 0.2s all;
     border: none;
     z-index: 9000;
+  }
+
+  .context-menu .tag {
+    box-shadow: 3px 3px 0px #00000010;
   }
 
   .context-text {
@@ -1173,6 +1183,24 @@
     z-index: 5000;
   }
 
+  .popup_social_button {
+    position: relative;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #14161E;
+    margin-bottom: 5px;
+    transform-origin: center center;
+    transition: 0.2s all;
+    z-index: 9999;
+  }
+
+  .popup_social_button:hover {
+    scale: 1.1;
+    background-color: #303548;
+    box-shadow: 2px 2px 0px #00000010;
+  }
+
   #changelog {
     align-items: center;
     justify-content: center;
@@ -1220,7 +1248,7 @@
     width: 100%;
     height: 40px;
     display: none;
-    background: #f76b2f;
+    background: #2a4ede;
     transition: 0.2s all;
     z-index: 2999;
   }
@@ -1255,9 +1283,7 @@
   /*/————————————————————————————————————————————————————————/*/
   .loader_outer {
     position: fixed;
-
-    display: none; /*/REMOVE/*/
-
+    display: block;
     background-color: #14161E;
     top: 0px;
     left: 0px;
@@ -1332,7 +1358,7 @@
     width: 25px;
     height: 25px;
     border-radius: 50%;
-    background: #14161E;
+    background: #222635;
     margin-bottom: 5px;
     transform-origin: center center;
     transition: 0.2s all;
@@ -1404,7 +1430,7 @@
 
   .notification_dot {
     position: absolute;
-    background-color: #2A4EDE;
+    background-color: #2a4ede;
     bottom: -1px;
     right: -1px;
     width: 10px;
@@ -1451,6 +1477,10 @@
     box-shadow: 4px 4px 0px #00000010;
   }
 
+  .side_button:hover .tag {
+    box-shadow: 3px 3px 0px #00000010;
+  }
+
   /*/————————————————————————————————————————————————————————/*/
   /*/———————————————[ SOCIAL-BUTTON-ELEMENTS ]———————————————/*/
   /*/————————————————————————————————————————————————————————/*/
@@ -1467,7 +1497,7 @@
     width: 25px;
     height: 25px;
     border-radius: 50%;
-    background: #12141a;
+    background: #14161E;
     margin-bottom: 5px;
     transform-origin: center center;
     transition: 0.2s all;
@@ -1487,7 +1517,7 @@
     width: 25px;
     height: 25px;
     border-radius: 50%;
-    background: #12141a;
+    background: #14161E;
     margin-bottom: 5px;
     transform-origin: center center;
     transition: 0.2s all;
@@ -1517,32 +1547,10 @@
     height: 50px;
     scale: 0.5;
     border-radius: 50%;
-    background: #222635;
+    background: #2a4ede;
     transform-origin: center center;
     transition: 0.2s all;
     z-index: 5;
-  }
-
-  .delete_button:hover {
-    background-color: #303548;
-  }
-
-  .delete_button_2 {
-    position: absolute;
-    left: -19px;
-    top: -19px;
-    width: 50px;
-    height: 50px;
-    scale: 0.35;
-    border-radius: 50%;
-    background: #1C1F2A;
-    transform-origin: center center;
-    transition: 0.2s all;
-    z-index: 5;
-  }
-
-  .delete_button_2:hover {
-    background-color: #303548;
   }
 
   /*/————————————————————————————————————————————————————————/*/
@@ -1586,6 +1594,11 @@
     box-shadow: 4px 4px 0px #00000010;
   }
 
+  .profile_universe:hover .tag {
+    scale: 1.075;
+    box-shadow: 4px 4px 0px #00000010;
+  }
+
   .profile_universe.selected-universe {
     scale: 1.075;
     box-shadow: 4px 4px 0px #00000010;
@@ -1619,8 +1632,13 @@
 
   .profile_group:hover {
     scale: 1.025;
-    box-shadow: 4px 4px 0px #00000010;
+    box-shadow: 5px 5px 0px #00000010;
   }
+
+  .profile_group:hover .tag {
+    box-shadow: 3px 3px 0px #00000010;
+  }
+
   
   .profile_image {
     position: absolute;
@@ -1696,7 +1714,9 @@
     border-radius: 20px 0px 20px 20px;
     transition: 0.2s opacity, 0.2s transform, 0.2s display;
     background: #1C1F2A;
-    box-shadow: 0px 0px 8px #12141a;
+    box-shadow: 0px 0px 0px 4px #00000010;
+    overflow-y: auto;
+    overflow-x: hidden;
     z-index: 300;
   }
 
@@ -1707,7 +1727,7 @@
     border-radius: 10px;
     transition: 0.2s all;
     background: #14161E;
-    box-shadow: 0px 0px 8px #14161E;
+    box-shadow: 0px 0px 0px 4px #00000010;
     z-index: 298;
   }
 
@@ -1728,7 +1748,11 @@
   }
 
   .schemes_backdrop:hover .schemes_front {
-    box-shadow: 0px 0px 8px #14161E;
+    box-shadow: 4px 4px 0px #00000010;
+  }
+
+  .schemes_backdrop:hover .tag {
+    box-shadow: 3px 3px 0px #00000010;
   }
 
   .scheme_button {
@@ -1827,11 +1851,7 @@
     opacity: 1;
     z-index: 59;
     overflow: auto;
-    box-shadow:
-      0px 0px 10px #00000050, /* Top shadow */
-      0px 0px 10px #00000050, /* Right shadow */
-      0px 0px 10px #00000050, /* Bottom shadow */
-      0px 0px 10px #00000050; /* Left shadow */
+    box-shadow: 0px 0px 0px 4px #00000010;
   }
 
   .log_entry {
@@ -1863,21 +1883,21 @@
     font-weight: bold;
     text-align: center;
     text-justify: distribute;
-    font-size: 16px;
-    top: 36px;
-    left: 0px;
-    padding-top: 2px;
-    padding-bottom: 1px;
-    padding-left: 10px;
-    padding-right: 10px;
+    font-size: 9px;
+    top: 42px;
+    right: 0px;
+    padding-top: 1px;
+    padding-bottom: 2px;
+    padding-left: 6px;
+    padding-right: 6px;
     width: fit-content;
-    height: 25px;
+    height: fit-content;
     margin-right: 10px;
-    background: #2A4EDE;
+    background: #2a4ede;
     border-radius: 75px;
-    transform-origin: center center;
-    transition: 0.2s all;
-    z-index: 25;
+    transform-origin: center right;
+    transform: translateX(16px);
+    z-index: 500;
   }
 
   .circle_outer {

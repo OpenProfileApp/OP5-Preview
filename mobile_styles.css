@@ -8,16 +8,14 @@
   /*/————————————————————————————————————————————————————————/*/
   @font-face {
     font-family: "NotoSans-Regular";
-    src:
-      url("fonts/NotoSans-Regular.ttf") format("truetype");
+    src: url("fonts/NotoSans-Regular.ttf") format("truetype");
     font-weight: 400;
     font-style: normal;
   }
 
   @font-face {
     font-family: "NotoSansMono-Medium";
-    src:
-      url("fonts/NotoSansMono-Medium.ttf") format("truetype");
+    src: url("fonts/NotoSansMono-Medium.ttf") format("truetype");
     font-weight: 400;
     font-style: normal;
   }
@@ -1193,6 +1191,24 @@
     z-index: 5000;
   }
 
+  .popup_social_button {
+    position: relative;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #14161E;
+    margin-bottom: 5px;
+    transform-origin: center center;
+    transition: 0.2s all;
+    z-index: 9999;
+  }
+
+  .popup_social_button:hover {
+    scale: 1.1;
+    background-color: #303548;
+    box-shadow: 2px 2px 0px #00000010;
+  }
+
   #changelog {
     align-items: center;
     justify-content: center;
@@ -1351,52 +1367,80 @@
   .top_button {
     position: relative;
     display: none;
+    font-family: "NotoSans-Regular";
+    font-size: 14px;
+    color: #ffffff;
+    text-align: center;
     top: 50%;
     left: 14px;
+    transform: translateY(-50%);
+    width: fit-content;
+    height: 25px;
+    padding-top: 5px;
+    padding-bottom: 0px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-right: 5px;
+    background: #14161E;
+    border-radius: 6px;
+    transform-origin: center center;
+    transition: 0.2s all;
+    z-index: 5;
+}
+
+
+  .top_button:hover {
+    scale: 1.075;
+    background-color: #303548;
+    transform: translateY(-46%);
+  }
+
+  .control_buttons {
+    position: relative;
+    float: right;
+    top: 50%;
+    right: 0px;
     transform: translateY(-50%);
     width: 25px;
     height: 25px;
     margin-right: 10px;
-    background: #1b1f28;
+    background: #14161E;
     border-radius: 50%;
     transform-origin: center center;
     transition: 0.2s all;
     z-index: 5;
   }
 
-  .top_button:hover {
+  .control_buttons:hover {
     scale: 1.075;
-    background-color: #333a4d;
-    box-shadow: 0px 0px 8px #272c39;
+    background-color: #303548;
+    transform: translateY(-46%);
   }
 
-  .top_button_2 {
+  .notification_dot {
     position: absolute;
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%);
-    width: 25px;
-    height: 25px;
-    margin-right: 10px;
-    background: #1b1f28;
+    background-color: #2a4ede;
+    bottom: -1px;
+    right: -1px;
+    width: 10px;
+    height: 10px;
     border-radius: 50%;
     transform-origin: center center;
     transition: 0.2s all;
-    z-index: 6;
+    z-index: 25;
   }
 
-  .top_button_3 {
+  .notification_count {
     position: absolute;
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%);
+    font-family: "NotoSans-Regular";
+    font-size: 12px;
+    color: #ffffff;
+    text-align: center;
+    top: 48%;
+    left: 16px;
     width: 25px;
-    height: 25px;
-    margin-right: 10px;
-    border-radius: 50%;
-    transform-origin: center center;
-    transition: 0.2s all;
-    z-index: 6;
+    transform: translateY(-50%);
+    z-index: 25;
   }
 
   /*/————————————————————————————————————————————————————————/*/
@@ -1847,16 +1891,20 @@
     font-weight: bold;
     text-align: center;
     text-justify: distribute;
-    font-size: 16px;
-    top: 36px;
-    left: 14px;
-    width: 60px;
-    height: 25px;
+    font-size: 9px;
+    top: 42px;
+    right: 0px;
+    padding-top: 1px;
+    padding-bottom: 2px;
+    padding-left: 6px;
+    padding-right: 6px;
+    width: fit-content;
+    height: fit-content;
     margin-right: 10px;
-    background: #2775ba;
-    border-radius: 10px;
-    transform-origin: center center;
-    transition: 0.2s all;
-    z-index: 25;
+    background: #2a4ede;
+    border-radius: 75px;
+    transform-origin: center right;
+    transform: translateX(16px);
+    z-index: 500;
   }
 }

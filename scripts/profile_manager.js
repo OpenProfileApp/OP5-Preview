@@ -85,10 +85,10 @@ function updateuniverseList() {
     universeList.innerHTML = universes.map((universe, index) => `
                 <div class="profile_universe" id="" title="${universe.name || '<i>Unknown Universe</i>'}" onclick="selectuniverse(${index})";>
                     <img src="${universe.url || 'media/images/openprofile/preview/op_preview_512.jpeg'}" style="transform-origin: top left; min-width: 50px; min-height: 50px; max-width: 50px; max-height: 50px; border-radius: 50%;">
-                    <div class="delete_button_2" onclick="removeuniverse(${index})" title="Delete Universe">
+                    <div class="delete_button" style="scale: 0.35;" onclick="removeuniverse(${index})" title="Delete Universe">
                         <img src="media/icons/feather_icons/x.svg" style="scale: 0.30; transform-origin: top left; margin: 10px;">
                     </div>
-                    <div class="tag" id="" style="left: -8px; scale: 0.55; width: 85px; background: #5e329b;">PREVIEW</div>
+                    <div class="tag" id="" style="scale: 0.8; top: 39px;">PREVIEW</div>
                 </div>
     `).join("");
 }
@@ -1100,13 +1100,14 @@ function updateProfileList(activeuniverse) {
                 <div class="profile_text" style="top: 36px; font-size: 12px; opacity: 0.85; max-width: 125px; max-height: 18px;">${profile.card_creator || '<i>Unknown</i>'}</div>
                 <div class="profile_text" style="top: 55px; font-size: 10px; opacity: 0.65; max-width: 166px; max-height: 58px;">${profile.card_description || '<i>This character does not have a description.</i>'}</div>
                 <div class="profile_tag" id="" style="width: 60; background-color: ${profile.card_accent};" onmouseover="this.style.backgroundColor='${profile.card_accent_hover}'" onmouseout="this.style.backgroundColor='${profile.card_accent}'">#${profile.card_tag_1 || 'uncategorized'}</div>
-                <div class="tag" id="" style="left: 246px; top: 139px; scale: 0.55; width: 85px; background: #5e329b; z-index: 4;">PREVIEW</div>
+                <div class="tag" id="" style="top: 142px; scale: 1.1;">8% Completed</div>
                 <div class="profile_text" style="top: 113px; left: 18px; font-size: 8px; opacity: 0.85; max-width: 166px; max-height: 18px;">${profile.card_id}</div>
             </div>
             `;
             profileList.appendChild(listItem);
         });
     }
+    load_dynamic_elements_scheme(current_scheme);
 }
 
 function clearProfileForm() {
