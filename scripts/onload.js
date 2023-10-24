@@ -5,10 +5,10 @@ document.addEventListener('DOMContentLoaded', loadConfig);
 window.addEventListener('load', function () {
     simulateAppLoading()
     load_local_scheme()
-    //updateElementsByTimeOfYear();
-    //translateSpecificElements(selectedLanguage); // Use config language later
-    //showTextPopup()
-    //showBanner0() // Save error banner
+    updateElementsByTimeOfYear();
+    translateSpecificElements(selectedLanguage); // Use config language later
+    showTextPopup()
+    showBanner0() // Save error banner
 });
 
 // Define global variables to store config data
