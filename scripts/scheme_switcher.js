@@ -166,6 +166,10 @@ function scheme_apply(scheme_id, scheme_icon, scheme_text, scheme_accent, scheme
     // The below IDs are all used for changing the colors of
     // the non-profile page elements based off the active
     // scheme.
+
+    // The below IDs are all used for changing the colors of
+    // the non-profile page elements based off the active
+    // scheme.
     const body = document.querySelector('body');
     const schemes_layer = document.querySelector('.schemes_layer');
     const a = document.querySelectorAll('a');
