@@ -17,7 +17,7 @@ function simulateAppLoading() {
         const updateProgress = () => {
             if (progress <= 100) {
                 loader3.style.width = `${progress}%`;
-                progress += (interval / totalDuration) * 50;
+                progress += (interval / totalDuration) * 500;
                 setTimeout(updateProgress, interval);
             }
 

@@ -47,7 +47,9 @@ document.addEventListener("DOMContentLoaded", function () {
         } else {
             schemes_manager.style.opacity = '0';
             setTimeout(function () {
+                // Hides the scheme manager.
                 schemes_manager.style.display = 'none';
+                // Clears the scheme manager.
                 schemes_manager.innerHTML = '';
             }, 200);
         }
@@ -97,17 +99,52 @@ document.addEventListener("DOMContentLoaded", function () {
         scheme_manager_html += `
             <div class="schemes_backdrop" style="background-color: #111111; z-index: 0;">
                 <div class="schemes_front" style="background-color: #333333;">
-                    <div class="scheme_button" id="import_custom_scheme" title="Import Scheme" style="background-color: #222222" 
+                    <label for="import_custom_scheme" class="scheme_button" title="Import Scheme" style="background-color: #222222"
                         onmouseover="this.style.backgroundColor='#444444'" onmouseout="this.style.backgroundColor='#222222'">
-                        <img id="import_custom_scheme" src="media/icons/feather_icons/upload.svg" style="scale: 0.30; transform-origin: top left; margin: 10px;">
-                    </div>
-                    <img src="media/icons/feather_icons/plus.svg" style="scale: 0.50; transform-origin: top left; margin: 10px;">
+                        <input type="file" id="import_custom_scheme" accept=".sch" style="display: none;">
+                        <img id="import_custom_scheme" src="media/icons/feather_icons/upload.svg" style="transform: scale(0.30); transform-origin: top left; margin: 10px;">
+                    </label>
+                    <img src="media/icons/feather_icons/plus.svg" style="transform: scale(0.50); transform-origin: top left; margin: 10px;">
                     <div class="scheme_text" id="import_custom_scheme_text" style="background-color: #222222;">Add Scheme</div>
-                    <div class="tag" style="scale: 1.4; top: 110px; transform: translateX(14px);">PREVIEW</div>
+                    <div class="tag" style="transform: scale(1.4); top: 110px; transform: translateX(14px);">PREVIEW</div>
                 </div>
             </div>
         `;
-        schemes_manager.innerHTML = scheme_manager_html;
+        schemes_manager.innerHTML += scheme_manager_html;
+
+        //————————————————————————————————————————————————————————//
+        //———————————————————[ IMPORT-SCHEME ]————————————————————//
+        //————————————————————————————————————————————————————————//
+        // When a scheme gets imported via the above html import
+        // elements, the imported JSON file gets broken down into
+        // variables based on the file's registered values and loads
+        // these values into the apply scheme function which updates
+        // the scheme base on the imported file (.sch).
+        document.querySelector('#import_custom_scheme').addEventListener('change', function() {
+            const fileInput = this;
+            const selectedFile = fileInput.files[0];
+            
+            if (selectedFile) {
+                const reader = new FileReader();
+
+                reader.onload = function(event) {
+                    imported_scheme = JSON.parse(event.target.result);
+                    
+                    if (imported_scheme) {
+                        scheme_apply(imported_scheme.id, imported_scheme.icon, imported_scheme.text, imported_scheme.accent, imported_scheme.shade_1, imported_scheme.shade_2, imported_scheme.shade_3, imported_scheme.shade_4, imported_scheme.shade_5, imported_scheme.custom_html)
+
+                        // This saves the imported scheme to local storage so it can
+                        // be automatically reloaded on refresh using the
+                        // "load_local_scheme()" function at the end of the script.
+                        const scheme_json = JSON.stringify(imported_scheme);
+                        localStorage.setItem('local_selected_scheme', scheme_json);
+                        console.log("Selected scheme saved locally!");
+                    }
+                };
+
+                reader.readAsText(selectedFile);
+            }
+        });
     }
 
     //————————————————————————————————————————————————————————//
@@ -127,8 +164,8 @@ document.addEventListener("DOMContentLoaded", function () {
         // This saves the selected scheme to local storage so it can
         // be automatically reloaded on refresh using the
         // "load_local_scheme()" function at the end of the script.
-        const SchemeJSON = JSON.stringify(selected_scheme);
-        localStorage.setItem('local_selected_scheme', SchemeJSON);
+        const scheme_json = JSON.stringify(selected_scheme);
+        localStorage.setItem('local_selected_scheme', scheme_json);
         console.log("Selected scheme saved locally!");
         }
     });
@@ -437,110 +474,111 @@ function scheme_apply(scheme_id, scheme_icon, scheme_text, scheme_accent, scheme
 const schemes = [
     {
         // Official dark mode
-        name: 'Midnight',
-        id: 'scheme_midnight',
-        author: 'OpenProfile',
-        version: 'v5.0.057',
-        tag: 'BETA',            
-        icon: 'moon',
-        text: '#ffffff',
-        accent: '#2A4EDE',
-        shade_1: '#14161E',
-        shade_2: '#1C1F2A',
-        shade_3: '#222635',
-        shade_4: '#303548',
-        shade_5: '#394057',
-        custom_html: '',
+        "name": "Midnight",
+        "id": "scheme_midnight",
+        "author": "OpenProfile",
+        "version": "v5.0.058",
+        "tag": "BETA",
+        "icon": "moon",
+        "text": "#ffffff",
+        "accent": "#2A4EDE",
+        "shade_1": "#14161E",
+        "shade_2": "#1C1F2A",
+        "shade_3": "#222635",
+        "shade_4": "#303548",
+        "shade_5": "#394057",
+        "custom_html": ""
     },
     {
         // Official light mode
-        name: 'Daylight',
-        id: 'scheme_daylight',
-        author: 'OpenProfile',
-        version: 'v5.0.057',
-        tag: 'PREVIEW',
-        icon: 'sun',
-        text: '#000000',
-        accent: '#2A4EDE',
-        shade_1: '#FFFFFF',
-        shade_2: '#E0E0E0',
-        shade_3: '#CCCCCC',
-        shade_4: '#B0B0B0',
-        shade_5: '#A0A0A0',
-        custom_html: '',
+        "name": "Daylight",
+        "id": "scheme_daylight",
+        "author": "OpenProfile",
+        "version": "v5.0.058",
+        "tag": "PREVIEW",
+        "icon": "sun",
+        "text": "#000000",
+        "accent": "#2A4EDE",
+        "shade_1": "#FFFFFF",
+        "shade_2": "#E0E0E0",
+        "shade_3": "#CCCCCC",
+        "shade_4": "#B0B0B0",
+        "shade_5": "#A0A0A0",
+        "custom_html": ""
     },
     {
         // Original classic scheme
-        name: 'Classic',
-        id: 'scheme_classic',
-        author: 'OpenProfile',
-        version: 'v5.0.057',
-        tag: 'PREVIEW',
-        icon: 'watch',
-        text: '#ffffff',
-        accent: '#bd3332',
-        shade_1: '#1b1f28',
-        shade_2: '#bd3332',
-        shade_3: '#333a4d',
-        shade_4: '#596379',
-        shade_5: '#768099',
-        custom_html: '',
-    },
+        "name": "Classic",
+        "id": "scheme_classic",
+        "author": "OpenProfile",
+        "version": "v5.0.058",
+        "tag": "PREVIEW",
+        "icon": "watch",
+        "text": "#ffffff",
+        "accent": "#bd3332",
+        "shade_1": "#1b1f28",
+        "shade_2": "#bd3332",
+        "shade_3": "#333a4d",
+        "shade_4": "#596379",
+        "shade_5": "#768099",
+        "custom_html": ""
+    },    
     {
         // Premium scheme
-        name: 'Coffee',
-        id: 'scheme_premium',
-        author: 'OpenProfile',
-        version: 'v5.0.057',
-        tag: 'BETA',
-        icon: 'coffee',
-        text: '#ffffff',
-        accent: '#D4A20C',
-        shade_1: '#0A0903',
-        shade_2: '#1E1D1A',
-        shade_3: '#2D2A23',
-        shade_4: '#3C372D',
-        shade_5: '#4D4635',
-        custom_html: '',
+        "name": "Coffee",
+        "id": "scheme_premium",
+        "author": "OpenProfile",
+        "version": "v5.0.058",
+        "tag": "BETA",
+        "icon": "coffee",
+        "text": "#ffffff",
+        "accent": "#D4A20C",
+        "shade_1": "#0A0903",
+        "shade_2": "#1E1D1A",
+        "shade_3": "#2D2A23",
+        "shade_4": "#3C372D",
+        "shade_5": "#4D4635",
+        "custom_html": ""
     },
     {
         // Anime scheme
-        name: 'Kawaii',
-        id: 'scheme_kawaii',
-        author: 'OpenProfile',
-        version: 'v5.0.057',
-        tag: 'PREVIEW',
-        icon: 'mail',
-        text: '#ffffff',
-        accent: '#FF99CC',
-        shade_1: '#FFEBF1',
-        shade_2: '#FFD6E4',
-        shade_3: '#FFC0D7',
-        shade_4: '#FFABCA',
-        shade_5: '#FF95BD',
-        custom_html: '',
+        "name": "Kawaii",
+        "id": "scheme_kawaii",
+        "author": "OpenProfile",
+        "version": "v5.0.058",
+        "tag": "PREVIEW",
+        "icon": "mail",
+        "text": "#ffffff",
+        "accent": "#FF99CC",
+        "shade_1": "#FFEBF1",
+        "shade_2": "#FFD6E4",
+        "shade_3": "#FFC0D7",
+        "shade_4": "#FFABCA",
+        "shade_5": "#FF95BD",
+        "custom_html": ""
     },
     {
-        name: 'Spooky',
-        id: 'scheme_spooky',
-        author: 'OpenProfile',
-        version: 'v5.0.057',
-        tag: 'BETA',            
-        icon: 'cloud-lightning',
-        text: '#ffffff',
-        accent: '#F77117',
-        shade_1: '#100C1C',
-        shade_2: '#210F2B',
-        shade_3: '#2D1A37',
-        shade_4: '#392245',
-        shade_5: '#472B55',
-        custom_html: `
+        // Seasonal October scheme
+        "name": "Spooky",
+        "id": "scheme_spooky",
+        "author": "OpenProfile",
+        "version": "v5.0.058",
+        "tag": "BETA",
+        "icon": "cloud-lightning",
+        "text": "#ffffff",
+        "accent": "#F77117",
+        "shade_1": "#100C1C",
+        "shade_2": "#210F2B",
+        "shade_3": "#2D1A37",
+        "shade_4": "#392245",
+        "shade_5": "#472B55",
+        "custom_html": `
             <div class="seasonal_spooky" style="display: block;">
-                <img style="position: fixed; left: 0px; top: 0px; scale: 0.1; transform-origin: top left; z-index: 8000; opacity: 0.85; pointer-events: none;"src="media/images/openprofile/spooky/cobweb.png">
-                <img style="position: fixed; right: -475px; top: 0px; scale: 0.1; transform: scaleX(-1); transform-origin: top left; z-index: 8000; opacity: 0.85; pointer-events: none;"src="media/images/openprofile/spooky/cobweb.png">
+                <img style="position: fixed; left: 0px; top: 0px; scale: 0.1; transform-origin: top left; z-index: 8000; opacity: 0.85; pointer-events: none;" src="media/images/openprofile/spooky/cobweb.png">
+                <img style="position: fixed; right: -475px; top: 0px; scale: 0.1; transform: scaleX(-1); transform-origin: top left; z-index: 8000; opacity: 0.85; pointer-events: none;" src="media/images/openprofile/spooky/cobweb.png">
             </div>
-        `,
-    },
+        `
+    },    
     // When registering a new scheme, position your 
     // typing indicator above this comment to the right
     // of the comma, press enter, then paste the scheme
