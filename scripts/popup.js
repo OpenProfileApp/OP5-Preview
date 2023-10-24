@@ -38,6 +38,3 @@ function triggerConfetti() {
     confetti.reset();
   }, duration);
 }
-
-// Add an event listener to run the showTextPopup() function when the page loads
-document.addEventListener('DOMContentLoaded', showTextPopup);

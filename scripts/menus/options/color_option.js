@@ -45,36 +45,3 @@ function color_option() {
 document.querySelector("#color_option").addEventListener("click", () => {
   color_option();
 });
-
-// Handle "Lock" option click
-function color_option2(groupId, highlighted) {
-  // Use the ID to target the associated text box and group
-  const textBox = document.getElementById(`${groupId}`);
-  const colorOption = document.querySelector("#color_option");
-
-  if (textBox) {
-    if (!textBox.locked) {
-      // Toggle the locked property based on the provided highlighted parameter
-      textBox.highlighted = highlighted;
-
-      // Update the state for this textbox
-      textBoxStatesColored[textBox.id] = textBox.highlighted;
-
-      // Update the text and lock option accordingly
-      if (textBox.highlighted) {
-        colorOption.setAttribute('option', 'option_2');
-        textBox.style.backgroundColor = "#ffee93";
-      } else {
-        colorOption.setAttribute('option', 'option_1');
-        textBox.style.backgroundColor = "#596379";
-      }
-    } else {
-      colorOption.style.opacity = "0.35"; // Fade the color option
-      colorOption.style.pointerEvents = "none"; // Disable pointer events
-    }
-    console.log("Color Group ID:", groupId);
-    console.log("Color TextBox:", textBox.highlighted);
-
-    closeContextMenu();
-  }
-}

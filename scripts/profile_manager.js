@@ -1086,7 +1086,7 @@ function updateProfileList(activeuniverse) {
                 <button onclick="renameProfile(${index})" style="display: none;">Rename</button>
                 <button onclick="removeProfile(${index})" style="display: none;">Remove</button>
 
-            <div class="profile_group" style="background-color: ${profile.card_background};">
+            <div class="profile_group" style="background-color: ${profile.card_background}; z-index: 5">
                 <div class="profile_image">
                     <img src="${profile.image || 'media/images/openprofile/preview/op_preview_512.jpeg'}" style="min-width: 100px; min-height: 100px; max-width: 100px; max-height: 100px; transform-origin: top left; border-radius: 5px;">
                 </div>
