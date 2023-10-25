@@ -3,12 +3,12 @@
 document.addEventListener('DOMContentLoaded', loadConfig);
 
 window.addEventListener('load', function () {
-    simulateAppLoading("500") // The number is to change speed, put 500 for dev and 50 for release
+    simulateAppLoading("50") // The number is to change speed, put 500 for dev and 50 for release
     load_local_scheme()
-    //updateElementsByTimeOfYear();
-    //translateSpecificElements(selectedLanguage); // Use config language later
-    //showTextPopup()
-    //showBanner0() // Save error banner
+    updateElementsByTimeOfYear();
+    translateSpecificElements(selectedLanguage); // Use config language later
+    showTextPopup()
+    showBanner0() // Save error banner
 });
 
 // Define global variables to store config data
