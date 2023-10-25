@@ -8,4 +8,4 @@ function reloadJavaScriptCache() {
   }
 }
 
-window.addEventListener('load', reloadJavaScriptCache);
+//window.addEventListener('load', reloadJavaScriptCache);
