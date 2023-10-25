@@ -1,7 +1,7 @@
 /*/————————————————————————————————————————————————————————/*/
 /*/——————————————————[ DESKTOP-FRONTEND ]——————————————————/*/
 /*/————————————————————————————————————————————————————————/*/
-@media screen and (min-width: 1500px) {
+@media screen and (min-width: 768px) {
 
   /*/————————————————————————————————————————————————————————/*/
   /*/———————————————————[ EXTERNAL-ASSETS ]——————————————————/*/
@@ -42,53 +42,55 @@
     transition: 0.2s transform;
     box-shadow: 0px 0px 0px 4px #00000010;
     z-index: 4;
-    }
+  }
 
   .left {
     position: fixed;
     display: none;
     top: 80px;
     left: 0;
-    width: 433px;
+    width: 80px;
+    height: 100vh;
+    background-color: #1C1F2A;
+    transition: 0.2s transform, 0.2s border-radius;
+    z-index: 5;
+    box-shadow: 0px 0px 0px 4px #00000010;
+  }
+
+  .left_inner {
+    position: fixed;
+    display: block;
+    top: 80px;
+    left: 0px;
+    width: 354px;
     height: 100vh;
     background-color: #222635;
     border-radius: 0px 25px 0px 0px;
     animation: load_in_slide_left 0.2s forwards;
     overflow: hidden;
-    transition: 0.2s transform;
+    transition: 0.2s transform, 0.2s opacity;
+    transform: translateX(80px);
     box-shadow: 0px 0px 0px 4px #00000010;
-    z-index: 3;
-  }
-
-  .left_bar {
-    position: absolute;
-    top: 0px;
-    left: 0;
-    width: 79px;
-    height: 100vh;
-    background-color: #1C1F2A;
-    transition: 0.2s transform;
-    z-index: 4;
-    box-shadow: 4px 76px 0px 0px #00000050;
+    z-index: 1;
   }
 
    .left_top {
     position: absolute;
     top: 0px;
-    left: 79px;
+    left: 0px;
     width: 354px;
     height: 75px;
     border-radius: 0px 25px 0px 0px;
     background-color: #1C1F2A;
     transition: 0.2s transform;
     box-shadow: 0px 4px 0px 0px #00000050;
-    z-index: 4;
+    z-index: 3;
   }
 
-  .left_top_2 {
+  .left_top_list {
     position: absolute;
     top: 74px;
-    left: 79px;
+    left: 0px;
     width: 354px;
     height: 80px;
     background-color: #222635;
@@ -110,7 +112,7 @@
     height: 11.7in;
     scale: 1.25;
     border-radius: 25px;
-    transition: 0.2s transform;
+    transition: 0.2s transform, 0.2s left;
     z-index: 0;
   }
 
@@ -154,8 +156,10 @@
     z-index: 1;
   }
 
-  ul, ol {
+  ul, ol, li {
     list-style-type: none;
+    list-style: none;
+    text-decoration: none;
   }
 
   a {
@@ -1483,6 +1487,35 @@
   }
 
   /*/————————————————————————————————————————————————————————/*/
+  /*/———————————————[ BOTTOM-BUTTON-ELEMENTS ]———————————————/*/
+  /*/————————————————————————————————————————————————————————/*/
+  .bottom_button {
+    display: none;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    background: #14161E;
+    margin-bottom: 15px;
+    transform-origin: center center;
+    transition: 0.2s all;
+    z-index: 5;
+  }
+
+  .bottom_button:hover {
+    scale: 1.075;
+    background-color: #303548;
+    box-shadow: 4px 4px 0px #00000010;
+  }
+
+  .bottom_button:hover .tag {
+    box-shadow: 3px 3px 0px #00000010;
+  }
+
+  /*/————————————————————————————————————————————————————————/*/
   /*/———————————————[ SOCIAL-BUTTON-ELEMENTS ]———————————————/*/
   /*/————————————————————————————————————————————————————————/*/
   .social_buttons {
@@ -1896,7 +1929,7 @@
     margin-right: 10px;
     background: #2a4ede;
     border-radius: 50px;
-    transition: 0.2s opacity, 0.2s transform;
+    transition: 0.2s transform;
     transform-origin: center right;
     transform: translate(-50%, -50%)scale(0);
     box-shadow: 4px 4px 0px 0px #00000010;
@@ -1909,6 +1942,11 @@
   .side_button:hover .label_left {
     transform: translate(58px, -50%) scale(1);
     opacity: 1;
+  }
+
+  .side_button:hover .label_left:hover {
+    transform: translate(-46px, -50%) scale(0);
+    opacity: 0;
   }
 
   .label_right {
@@ -1929,7 +1967,7 @@
     margin-right: 10px;
     background: #2a4ede;
     border-radius: 50px;
-    transition: 0.2s opacity, 0.2s transform;
+    transition: 0.2s transform;
     transform-origin: center right;
     transform: translate(-50%, -50%)scale(0);
     box-shadow: 4px 4px 0px 0px #00000010;
@@ -1942,6 +1980,11 @@
   .side_button:hover .label_right {
     transform: translate(-46px, -50%) scale(1);
     opacity: 1;
+  }
+
+  .side_button:hover .label_right:hover {
+    transform: translate(-46px, -50%) scale(0);
+    opacity: 0;
   }
 
   /*/————————————————————————————————————————————————————————/*/

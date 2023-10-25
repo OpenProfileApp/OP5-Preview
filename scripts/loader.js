@@ -3,6 +3,7 @@ function simulateAppLoading(speed) {
     const left = document.querySelector('.left');
     const center = document.querySelector('.center');
     const right = document.querySelector('.right');
+    const bottom = document.querySelector('.bottom');
     const loader = document.querySelector(".loader_outer");
     const loader2 = document.querySelector(".loader_container");
     const loader3 = document.querySelector(".loader_inner_color");
@@ -24,13 +25,10 @@ function simulateAppLoading(speed) {
             if (progress === 100) {
                 // Hide the loaders and show app when loading is complete
                 top.style.display = "block";
-                if (window.innerWidth > 768) {
-                    left.style.display = "block";
-                }
+                left.style.display = "block";
                 center.style.display = "block";
-                if (window.innerWidth > 768) {
-                    right.style.display = "block";
-                }
+                right.style.display = "block";
+                bottom.style.display = "grid";
                 loader4.style.opacity = "0";
                 loader2.style.transform = "translateY(40px)";
                 setTimeout(() => {
