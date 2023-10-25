@@ -24,6 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // The scheme manager trigger button ID.
     const button_scheme = document.querySelector('#button_scheme');
+    const icon_scheme = document.querySelector('#icon_scheme');
 
     //————————————————————————————————————————————————————————//
     //———————————————————[ SCHEME-MANAGER ]———————————————————//
@@ -32,19 +33,36 @@ document.addEventListener("DOMContentLoaded", function () {
     // scheme manager and set it's display to grid. The 
     // registered schemes will also display themselves within
     // the manager based on the HTML code below. Cicking it
-    // again will cause it to close.
+    // again or outside of the manager will cause it to close.
     button_scheme.addEventListener('click', function () {
         if (schemes_manager.style.display !== 'grid') {
             // This loads in the schemes.
             generate_schemes();
             // This ensures the dynamic elements are schemed.
-            load_dynamic_elements_scheme(current_scheme);
+            load_dynamic_elements_scheme();
             // This displays the schemes in the manager.
             schemes_manager.style.display = 'grid';
             setTimeout(function () {
                 schemes_manager.style.opacity = '1';
             }, 50);
+    
+            // Adds a click event listener to the document.
+            const closeSchemeManager = function (event) {
+                if (schemes_manager.style.display === 'grid' && !schemes_manager.contains(event.target) && event.target !== button_scheme && event.target !== icon_scheme) {
+                    schemes_manager.style.opacity = '0';
+                    setTimeout(function () {
+                        // Hides the scheme manager.
+                        schemes_manager.style.display = 'none';
+                        // Clears the scheme manager.
+                        schemes_manager.innerHTML = '';
+                    }, 200);
+                    document.removeEventListener('click', closeSchemeManager);
+                }
+            };
+    
+            document.addEventListener('click', closeSchemeManager);
         } else {
+            // Close the scheme manager if it's already open.
             schemes_manager.style.opacity = '0';
             setTimeout(function () {
                 // Hides the scheme manager.
@@ -53,7 +71,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 schemes_manager.innerHTML = '';
             }, 200);
         }
-    });    
+    });
+    
 
     // This function will load the schemes into the manager
     // based on what has been registered at the end of the
@@ -67,32 +86,71 @@ document.addEventListener("DOMContentLoaded", function () {
         let scheme_zindex = 999;
         schemes.forEach((scheme) => {
 
-            //————————————————————————————————————————————————————————//
-            //—————————————————————[ HTML-CODE ]——————————————————————//
-            //————————————————————————————————————————————————————————//
-            // Once the scheme manager has been opened the following
-            // code will be displayed within the
-            // (class="schemes_manager") element in the HTML file. This
-            // code will duplicate itself until all registered schemes
-            // have been properly loaded into the manager.
-            scheme_manager_html += `
-                <div class="schemes_backdrop" style="background-color: ${scheme.shade_1}; z-index: ${scheme_zindex};">
-                    <div class="schemes_front" style="background-color: ${scheme.shade_3};">
-                        <div class="scheme_button" id="${scheme.id}" title="Apply Scheme" style="background-color: ${scheme.shade_2}" 
-                            onmouseover="this.style.backgroundColor='${scheme.shade_4}'" onmouseout="this.style.backgroundColor='${scheme.shade_2}'">
-                            <img id="${scheme.id}" src="media/icons/feather_icons/download.svg" style="scale: 0.30; transform-origin: top left; margin: 10px;">
-                        </div>
-                        <img src="media/icons/feather_icons/${scheme.icon}.svg" style="scale: 0.50; transform-origin: top left; margin: 10px;">
-                        <div class="scheme_text" id="scheme_name_${scheme.name}" style="background-color: ${scheme.shade_2};">${scheme.name}</div>
-                        ${scheme.tag !== "BETA" && scheme.tag !== "PREVIEW" ? '' : `<div class="tag" style="scale: 1.4; top: 110px; transform: translateX(14px);">${scheme.tag}</div>`}
-                    </div>
-                </div>
-            `;
+            // This checks the current month.
+            const currentDate = new Date();
+            const currentMonth = currentDate.getMonth() + 1; // Months are 0.
+        
+            // Defines the date ranges for each month.
+            const January = 1;
+            const February = 2;
+            const March = 3;
+            const April = 4;
+            const May = 5;
+            const June = 6;
+            const July = 7;
+            const August = 8;
+            const September = 9;
+            const October = 10;
+            const November = 11;
+            const December = 12;
+                
+            // Checks the current month and if not matching to seasonal
+            // schemes to skip them until the month arrives.
+            if (currentMonth !== October && scheme.id === "scheme_spooky") {
+                // Blank html code when skipping schemes.
+                scheme_manager_html += ``;
+            } else {
+                // Checks if the text color is closer to white or black
+                // and sets the icon brightness based on the results.
+                // Closer to white is 0% and closer to black is 100%.
+                const luminance = (parseInt(scheme.text.slice(1, 3), 16) * 299 + parseInt(scheme.text.slice(3, 5), 16) * 587 + parseInt(scheme.text.slice(5, 7), 16) * 114) / 1000;
+                let icon_brightness = '';
 
-            // This negates a number from the current z-index to
-            // prevent overlapping so the next scheme can be fully
-            // seen. The max supported schemes is currently 999.
-            scheme_zindex--;    
+                if (luminance >= 128) {
+                    // Text color is closer to white, set brightness to 100%
+                    icon_brightness = 'brightness(100%)';
+                } else {
+                    // Text color is closer to black, set brightness to 0%
+                    icon_brightness = 'brightness(0%)';
+                }
+
+                //————————————————————————————————————————————————————————//
+                //—————————————————————[ HTML-CODE ]——————————————————————//
+                //————————————————————————————————————————————————————————//
+                // Once the scheme manager has been opened the following
+                // code will be displayed within the
+                // (class="schemes_manager") element in the HTML file. This
+                // code will duplicate itself until all registered schemes
+                // have been properly loaded into the manager.
+                scheme_manager_html += `
+                    <div class="schemes_backdrop" style="background-color: ${scheme.shade_1}; z-index: ${scheme_zindex};">
+                        <div class="schemes_front" style="background-color: ${scheme.shade_3};">
+                            <div class="scheme_button" id="${scheme.id}" title="Apply Scheme" style="background-color: ${scheme.shade_2}" 
+                                onmouseover="this.style.backgroundColor='${scheme.shade_4}'" onmouseout="this.style.backgroundColor='${scheme.shade_2}'">
+                                <img id="${scheme.id}" src="media/icons/feather_icons/download.svg" style="scale: 0.30; transform-origin: top left; margin: 10px; filter: ${icon_brightness};">
+                            </div>
+                            <img src="media/icons/feather_icons/${scheme.icon}.svg" style="scale: 0.50; transform-origin: top left; margin: 10px; filter: ${icon_brightness};">
+                            <div class="scheme_text" id="scheme_name_${scheme.name}" style="background-color: ${scheme.shade_2}; color: ${scheme.text}">${scheme.name}</div>
+                            ${scheme.tag !== "BETA" && scheme.tag !== "PREVIEW" ? '' : `<div class="tag" style="scale: 1.4; top: 110px; transform: translateX(14px);">${scheme.tag}</div>`}
+                        </div>
+                    </div>
+                `;
+
+                // This negates a number from the current z-index to
+                // prevent overlapping so the next scheme can be fully
+                // seen. The max supported schemes is currently 999.
+                scheme_zindex--;
+            }
         });
 
         // This displays the custom scheme import option.
@@ -106,7 +164,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     </label>
                     <img src="media/icons/feather_icons/plus.svg" style="transform: scale(0.50); transform-origin: top left; margin: 10px;">
                     <div class="scheme_text" id="import_custom_scheme_text" style="background-color: #222222;">Add Scheme</div>
-                    <div class="tag" style="transform: scale(1.4); top: 110px; transform: translateX(14px);">PREVIEW</div>
+                    <div class="tag" style="scale: 1.4; top: 110px; transform: translateX(14px);">PREVIEW</div>
                 </div>
             </div>
         `;
@@ -183,7 +241,24 @@ document.addEventListener("DOMContentLoaded", function () {
 function scheme_apply(scheme_id, scheme_icon, scheme_text, scheme_accent, scheme_shade_1, scheme_shade_2, scheme_shade_3, scheme_shade_4, scheme_shade_5, scheme_custom_html) {
 
     // Sets current scheme variable.
-    current_scheme = scheme_id
+    current_scheme = {
+        id: scheme_id,
+        icon: scheme_icon,
+        text: scheme_text,
+        accent: scheme_accent,
+        shade_1: scheme_shade_1,
+        shade_2: scheme_shade_2,
+        shade_3: scheme_shade_3,
+        shade_4: scheme_shade_4,
+        shade_5: scheme_shade_5,
+        custom_html: scheme_custom_html,
+    };
+    
+    // Convert current_scheme to JSON string
+    current_scheme = JSON.stringify(current_scheme);
+    
+    console.log(current_scheme);
+    
 
     //————————————————————————————————————————————————————————//
     //—————————————————[ ELEMENT-VARIABLES ]——————————————————//
@@ -204,12 +279,16 @@ function scheme_apply(scheme_id, scheme_icon, scheme_text, scheme_accent, scheme
     // the non-profile page elements based off the active
     // scheme.
     const body = document.querySelector('body');
-    const schemes_layer = document.querySelector('.schemes_layer');
     const a = document.querySelectorAll('a');
+    const li = document.querySelectorAll('.context-menu li');
+    const schemes_layer = document.querySelector('.schemes_layer');
     const loader_outer = document.querySelector('.loader_outer');
+    const loader_inner = document.querySelector('.loader_inner');
+    const loader_inner_color = document.querySelector('.loader_inner_color');
     const loading_image = document.querySelector('#loading_image')
     const loading_message = document.querySelectorAll('.loading_message');
     const loader_social_button = document.querySelectorAll('.loader_social_button')
+    const icon = document.querySelectorAll('.icon')
     const banner = document.querySelectorAll('.banner')
     const top = document.querySelector('.top');
     const left = document.querySelector('.left');
@@ -233,6 +312,8 @@ function scheme_apply(scheme_id, scheme_icon, scheme_text, scheme_accent, scheme
     const circle_outer = document.querySelectorAll('.circle_outer');
     const circle_inner = document.querySelectorAll('.circle_inner');
     const information_text = document.querySelectorAll('.information_text');
+    const label_left = document.querySelectorAll('.label_left');
+    const label_right = document.querySelectorAll('.label_right');
     
     //————————————————————————————————————————————————————————//
     //————————————————————[ SCHEME-APPLY ]————————————————————//
@@ -252,6 +333,9 @@ function scheme_apply(scheme_id, scheme_icon, scheme_text, scheme_accent, scheme
 
     // Sets the scheme of the loader elements.
     loader_outer.style.backgroundColor = scheme_shade_1;
+    loader_inner.style.border = `8px solid ${scheme_text}`;
+    loader_inner_color.style.backgroundColor = scheme_text;
+
 
     loader_social_button.forEach((loader_social_button) => {
         loader_social_button.style.backgroundColor = scheme_shade_3;
@@ -262,6 +346,23 @@ function scheme_apply(scheme_id, scheme_icon, scheme_text, scheme_accent, scheme
             loader_social_button.style.backgroundColor = scheme_shade_3;
         });
     });
+
+    // Checks if the text color is closer to white or black
+    // and sets the icon brightness based on the results.
+    // Closer to white is 0% and closer to black is 100%.
+    const luminance = (parseInt(scheme_text.slice(1, 3), 16) * 299 + parseInt(scheme_text.slice(3, 5), 16) * 587 + parseInt(scheme_text.slice(5, 7), 16) * 114) / 1000;
+
+    if (luminance >= 128) {
+        // Text color is closer to white, set brightness to 100%
+        icon.forEach((icon) => {
+            icon.style.filter = 'brightness(100%)';
+        });
+    } else {
+        // Text color is closer to black, set brightness to 0%
+        icon.forEach((icon) => {
+            icon.style.filter = 'brightness(0%)';
+        });
+    }
 
     // Checks if an image associated with the selected scheme
     // exists using the scheme ID to access the media directory
@@ -427,6 +528,27 @@ function scheme_apply(scheme_id, scheme_icon, scheme_text, scheme_accent, scheme
         information_text.style.color = scheme_text;
     });
 
+    // Sets the scheme of the label elements.
+    label_left.forEach((label_left) => {
+        label_left.style.backgroundColor = scheme_accent;
+    });
+
+    label_right.forEach((label_right) => {
+        label_right.style.backgroundColor = scheme_accent;
+    });
+
+    // Sets the scheme of the menu elements.
+    li.forEach((li) => {
+        li.style.backgroundColor = scheme_shade_1;
+        li.style.color = scheme_text;
+        li.addEventListener('mouseover', () => {
+            li.style.backgroundColor = scheme_accent;
+        });
+        li.addEventListener('mouseout', () => {
+            li.style.backgroundColor = scheme_shade_1;
+        });
+    });
+
     // Sets and clears the scheme custom html code if any.
     let schemes_layer_html = ``;
     schemes_layer_html = `
@@ -450,25 +572,25 @@ function scheme_apply(scheme_id, scheme_icon, scheme_text, scheme_accent, scheme
 // the bottom of the registered schemes.
 //
 // {
-//     name: 'NAME',
-//     id: 'scheme_NAME',
-//     author: 'YOUR_USERNAME',
-//     version: 'v5.0.054', (match current app version)
-//     tag: 'TYPE', (put either RELEASE, BETA, or PREVIEW)
-//     icon: 'ICON_NAME', (https://feathericons.com/)
-//     text: 'HEX_CODE',
-//     accent: 'HEX_CODE',
-//     shade_1: 'HEX_CODE',
-//     shade_2: 'HEX_CODE',
-//     shade_3: 'HEX_CODE',
-//     shade_4: 'HEX_CODE',
-//     shade_5: 'HEX_CODE',
-//     custom_html: 'CODE', (experienced users only)
+//     "name": "NAME",
+//     "id": "scheme_NAME",
+//     "author": "YOUR_USERNAME",
+//     "version": "v5.0.054", (match current app version)
+//     "tag": "TYPE", (put either RELEASE, BETA, or PREVIEW)
+//     "icon": "ICON_NAME", (https://feathericons.com/)
+//     "text": "HEX_CODE",
+//     "accent": "HEX_CODE",
+//     "shade_1": "HEX_CODE",
+//     "shade_2": "HEX_CODE",
+//     "shade_3": "HEX_CODE",
+//     "shade_4": "HEX_CODE",
+//     "shade_5": "HEX_CODE",
+//     "custom_html": "<div></div>", (experienced users only)
 // },
 //
 // When customizing your scheme, replace all in capital
 // letters with your own custom value based on the text.
-// Do not include the parenthesis outside of " ', ".
+// Do not include the parenthesis outside of " ", ".
 
 // This JSON contains the list of registered schemes.
 const schemes = [
@@ -487,7 +609,7 @@ const schemes = [
         "shade_3": "#222635",
         "shade_4": "#303548",
         "shade_5": "#394057",
-        "custom_html": ""
+        "custom_html": "<div></div>"
     },
     {
         // Official light mode
@@ -504,7 +626,7 @@ const schemes = [
         "shade_3": "#CCCCCC",
         "shade_4": "#B0B0B0",
         "shade_5": "#A0A0A0",
-        "custom_html": ""
+        "custom_html": "<div></div>"
     },
     {
         // Original classic scheme
@@ -521,7 +643,7 @@ const schemes = [
         "shade_3": "#333a4d",
         "shade_4": "#596379",
         "shade_5": "#768099",
-        "custom_html": ""
+        "custom_html": "<div></div>"
     },    
     {
         // Premium scheme
@@ -538,7 +660,7 @@ const schemes = [
         "shade_3": "#2D2A23",
         "shade_4": "#3C372D",
         "shade_5": "#4D4635",
-        "custom_html": ""
+        "custom_html": "<div></div>"
     },
     {
         // Anime scheme
@@ -555,7 +677,7 @@ const schemes = [
         "shade_3": "#FFC0D7",
         "shade_4": "#FFABCA",
         "shade_5": "#FF95BD",
-        "custom_html": ""
+        "custom_html": "<div></div>"
     },
     {
         // Seasonal October scheme
@@ -623,14 +745,12 @@ function load_specific_scheme(schemeId) {
 // creation will prevent that and ensure scheming gets
 // applied to them. This function will NOT overwrite the
 // local save.
-function load_dynamic_elements_scheme(schemeId) {
-    const load_dynamic_elements_scheme = schemes.find((scheme) => scheme.id === schemeId);
-
+function load_dynamic_elements_scheme() {
+    const loaded_dynamic_scheme_json = current_scheme;
+    
     if (load_dynamic_elements_scheme) {
+        const load_dynamic_elements_scheme = JSON.parse(loaded_dynamic_scheme_json);
         scheme_apply_dynamic(load_dynamic_elements_scheme.id, load_dynamic_elements_scheme.icon, load_dynamic_elements_scheme.text, load_dynamic_elements_scheme.accent, load_dynamic_elements_scheme.shade_1, load_dynamic_elements_scheme.shade_2, load_dynamic_elements_scheme.shade_3, load_dynamic_elements_scheme.shade_4, load_dynamic_elements_scheme.shade_5, load_dynamic_elements_scheme.custom_html);
-
-    } else {
-        console.log(`Scheme with ID ${schemeId} not found.`);
     }
 }
 
@@ -657,13 +777,23 @@ function scheme_apply_dynamic(scheme_id, scheme_icon, scheme_text, scheme_accent
     // there are more than one of the same element in the
     // JavaScript file.
     const delete_button = document.querySelectorAll('.delete_button');
+    const a = document.querySelectorAll('a');
     const tag = document.querySelectorAll('.tag');
+    const li = document.querySelectorAll('.context-menu li');
+    const icon = document.querySelectorAll('.icon')
+    const label_left = document.querySelectorAll('.label_left')
+    const label_right = document.querySelectorAll('.label_right')
 
     //————————————————————————————————————————————————————————//
     //————————————————————[ SCHEME-APPLY ]————————————————————//
     //————————————————————————————————————————————————————————//
     // Here is where the scheme application process visually
     // starts using the above variables.
+
+    // Sets the scheme of the default elements.
+    a.forEach((a) => {
+        a.style.color = scheme_accent;
+    });
 
     // Sets the scheme of the dynamic button elements.
     delete_button.forEach((delete_button) => {
@@ -673,7 +803,45 @@ function scheme_apply_dynamic(scheme_id, scheme_icon, scheme_text, scheme_accent
     // Sets the scheme of the dynamic tag elements.
     tag.forEach((tag) => {
         tag.style.backgroundColor = scheme_accent;
+    })
+
+    // Sets the scheme of the dynamic label elements.
+    label_left.forEach((label_left) => {
+        label_left.style.backgroundColor = scheme_accent;
     });
+
+    label_right.forEach((label_right) => {
+        label_right.style.backgroundColor = scheme_accent;
+    });
+
+    // Sets the scheme of the dynamic menu elements.
+    li.forEach((li) => {
+        li.style.backgroundColor = scheme_shade_1;
+        li.style.color = scheme_text;
+        li.addEventListener('mouseover', () => {
+            li.style.backgroundColor = scheme_accent;
+        });
+        li.addEventListener('mouseout', () => {
+            li.style.backgroundColor = scheme_shade_1;
+        });
+    });
+
+    // Checks if the text color is closer to white or black
+    // and sets the icon brightness based on the results.
+    // Closer to white is 0% and closer to black is 100%.
+    const luminance = (parseInt(scheme_text.slice(1, 3), 16) * 299 + parseInt(scheme_text.slice(3, 5), 16) * 587 + parseInt(scheme_text.slice(5, 7), 16) * 114) / 1000;
+
+    if (luminance >= 128) {
+        // Text color is closer to white, set brightness to 100%
+        icon.forEach((icon) => {
+            icon.style.filter = 'brightness(100%)';
+        });
+    } else {
+        // Text color is closer to black, set brightness to 0%
+        icon.forEach((icon) => {
+            icon.style.filter = 'brightness(0%)';
+        });
+    }
 }
 
 // YOU HAVE REACHED THE END OF THE SCRIPT! IF YOU BELIEVE

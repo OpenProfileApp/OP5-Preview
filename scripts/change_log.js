@@ -35,6 +35,7 @@
       const changelogName = document.getElementById('changelog_name');
       changelogDiv.innerHTML = `${formattedHTML}`;
       changelogName.innerHTML = `What's new in <a href="${releaseLink}" target="_blank">${name}</a>?`;
+      load_dynamic_elements_scheme();
     } else {
       console.error('Error fetching latest release:', response.statusText);
     }

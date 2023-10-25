@@ -22,7 +22,7 @@ languageOption.addEventListener("mouseover", () => {
 languageOption.addEventListener("mouseout", () => {
   language_menu_timer = setTimeout(() => {
     languageSubMenu.style.display = "none";
-  }, 0); // 0.1 seconds
+  }, 100); // 0.1 seconds
 });
 
 languageSubMenu.addEventListener("mouseover", () => {

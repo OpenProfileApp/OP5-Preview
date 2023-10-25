@@ -3,7 +3,7 @@
 document.addEventListener('DOMContentLoaded', loadConfig);
 
 window.addEventListener('load', function () {
-    simulateAppLoading()
+    simulateAppLoading("50") // The number is to change speed, put 500 for dev and 50 for release
     load_local_scheme()
     updateElementsByTimeOfYear();
     translateSpecificElements(selectedLanguage); // Use config language later

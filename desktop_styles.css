@@ -1049,8 +1049,9 @@
     color: #ffffff;
     font-size: 8px;
     width: fit-content;
+    padding: 4px;
     background-color: #14161E;
-    border-radius: 0px 5px 5px 5px;
+    border-radius: 5px;
     border: none;
     scale: 1.4;
     box-shadow: 3px 3px 0px 0px #00000010;
@@ -1073,7 +1074,7 @@
 
   .context-menu ul {
     list-style: none;
-    border-radius: 5px;
+    border-radius: 3px;
     margin: 0;
     padding: 0;
     opacity: 1;
@@ -1085,7 +1086,7 @@
   .context-menu li {
     padding: 5px;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 3px;
     padding-left: 22px;
     transition: background-color 0.2s;
     opacity: 1;
@@ -1106,12 +1107,12 @@
 
   .context-menu li:hover {
     background: #1C1F2A;
-    border-radius: 5px;
+    border-radius: 3px;
   }
 
   .context-menu::selection {
     background-color: #bd9335;
-    border-radius: 5px;
+    border-radius: 3px;
     opacity: 1;
     transition: 0.2s all;
     color: #ffffff;
@@ -1874,6 +1875,76 @@
   }
 
   /*/————————————————————————————————————————————————————————/*/
+  /*/———————————————————[ LABEL-ELEMENTS ]———————————————————/*/
+  /*/————————————————————————————————————————————————————————/*/
+  .label_left {
+    position: absolute;
+    display: inline-block;
+    color: white;
+    text-align: center;
+    text-justify: distribute;
+    font-size: 14px;
+    text-indent: 8px;
+    top: 50%;
+    left: 0px;
+    padding-top: 1px;
+    padding-bottom: 2px;
+    padding-left: 6px;
+    padding-right: 8px;
+    width: max-content;
+    height: fit-content;
+    margin-right: 10px;
+    background: #2a4ede;
+    border-radius: 50px;
+    transition: 0.2s opacity, 0.2s transform;
+    transform-origin: center right;
+    transform: translate(-50%, -50%)scale(0);
+    box-shadow: 4px 4px 0px 0px #00000010;
+    opacity: 0;
+    -webkit-clip-path: polygon(10% 0, 100% 0%, 100% 100%, 10% 100%, 0 50%, 0 50%);
+    clip-path: polygon(10% 0, 100% 0%, 100% 100%, 10% 100%, 0 50%, 0 50%);
+    z-index: 600;
+  }
+
+  .side_button:hover .label_left {
+    transform: translate(58px, -50%) scale(1);
+    opacity: 1;
+  }
+
+  .label_right {
+    position: absolute;
+    display: inline-block;
+    color: white;
+    text-align: center;
+    text-justify: distribute;
+    font-size: 14px;
+    top: 50%;
+    right: 0px;
+    padding-top: 1px;
+    padding-bottom: 2px;
+    padding-left: 8px;
+    padding-right: 16px;
+    width: max-content;
+    height: fit-content;
+    margin-right: 10px;
+    background: #2a4ede;
+    border-radius: 50px;
+    transition: 0.2s opacity, 0.2s transform;
+    transform-origin: center right;
+    transform: translate(-50%, -50%)scale(0);
+    box-shadow: 4px 4px 0px 0px #00000010;
+    opacity: 0;
+    -webkit-clip-path: polygon(90% 0, 0 0, 0 100%, 90% 100%, 100% 50%, 100% 50%);
+    clip-path: polygon(90% 0, 0 0, 0 100%, 90% 100%, 100% 50%, 100% 50%);    
+    z-index: 600;
+  }
+
+  .side_button:hover .label_right {
+    transform: translate(-46px, -50%) scale(1);
+    opacity: 1;
+  }
+
+  /*/————————————————————————————————————————————————————————/*/
   /*/————————————————[ ADDITIONAL-ELEMENTS ]—————————————————/*/
   /*/————————————————————————————————————————————————————————/*/
   .tag {
@@ -1950,5 +2021,9 @@
     transform-origin: top center;
     transition: 0.2s all;
     z-index: 4;
+  }
+
+  .icon {
+    filter: brightness(100%);
   }
 }

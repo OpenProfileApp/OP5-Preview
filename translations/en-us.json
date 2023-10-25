@@ -1,7 +1,7 @@
 {
 "code": "en-us",
 "friendy": "English (US)",
-"version": "v5.0.054",
+"version": "v5.0.058",
 "translator": "AvatarKage",
 
 "ls": "———————————————————[ LOADING-SCREEN ]————————————————————",
@@ -35,7 +35,7 @@
 
 "b0": "——————————————————————[ BANNER-0 ]———————————————————————",
     "banner_0_text": {
-        "text_content": "Saving and loading is not yet compatible with page 0 and glitched on page 1"
+        "text_content": "Saving and loading not yet compatible with page 0 and glitched on page 1  - [NEW] Schemes Manager!"
     },
 
 "pu0": "——————————————————————[ POPUP-0 ]———————————————————————",

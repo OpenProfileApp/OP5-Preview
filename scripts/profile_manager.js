@@ -1107,7 +1107,7 @@ function updateProfileList(activeuniverse) {
             profileList.appendChild(listItem);
         });
     }
-    load_dynamic_elements_scheme(current_scheme);
+    load_dynamic_elements_scheme();
 }
 
 function clearProfileForm() {
