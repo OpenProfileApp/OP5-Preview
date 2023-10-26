@@ -6,9 +6,9 @@
     <!--——————————————————[ PAGE-INFORMATION ]——————————————————-->
     <!--————————————————————————————————————————————————————————-->
     <title>OpenProfile 5 Preview 🎃</title>
-    <link rel="icon" href="media/images/openprofile/spooky/op_spooky_favicon.png" type="image/x-icon">
+    <link rel="icon" href="media/images/openprofile/preview/op_preview_favicon.png" type="image/x-icon">
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0, user-scalable=yes">
 
     <!--————————————————————————————————————————————————————————-->
     <!--—————————————————————[ META-TAGS ]——————————————————————-->
@@ -26,6 +26,7 @@
     <!--————————————————————————————————————————————————————————-->
     <link rel="stylesheet" type="text/css" href="desktop_styles.css">
     <link rel="stylesheet" type="text/css" href="mobile_styles.css">
+    <link rel="stylesheet" type="text/css" media="print" href="print_styles.css">
 </head>
 <body>
 
@@ -152,7 +153,10 @@
         <div class="top_button">Help</div>
         <div class="top_button">Settings</div>
         <a href="https://ko-fi.com/openprofile" target="_blank">
-            <div class="top_button" id="premium_button" style="background-color: #D4A20C; border-radius: 25px; text-indent: 15px; left: 30px;">Go Premium
+            <div class="top_button" id="upgrade_button" style="border: 2px solid #2A4EDE; border-radius: 25px; text-indent: 15px; left: 22px; box-shadow: 0px 0px 0px #2A4EDE;">Upgrade
+                <img src="media/images/openprofile/preview/op_preview_favicon.png" style="top: 0px; left: 0px; position: absolute; transform: scale(0.065); transform-origin: top left; margin: 5px;">
+            </div>
+            <div class="top_button" id="premium_button" style="border: 2px solid #D4A20C; border-radius: 25px; text-indent: 15px; left: 28px; box-shadow: 0px 0px 0px #D4A20C;">Go Premium
                 <img src="media/images/openprofile/premium/op_premium_favicon.png" style="top: 0px; left: 0px; position: absolute; transform: scale(0.065); transform-origin: top left; margin: 5px;">
             </div>
         </a>          
@@ -1105,6 +1109,7 @@
     <script src="scripts/id_generator.js"></script>
     <script src="scripts/profile_manager.js"></script> <!-- Needs to be very last to save and load properly -->
     <script src="scripts/translate.js"></script>
+    <script src="scripts/copy_all.js"></script>
 
 
 <!--<button style="z-index: 500; position: absolute; top: 0; left: 0;" id="discord">Send Message to Discord</button>

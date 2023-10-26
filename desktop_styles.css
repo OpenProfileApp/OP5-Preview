@@ -28,6 +28,7 @@
     background-color: #14161E;
     overflow-x: hidden;
     font-family: "NotoSans-Regular";
+    user-select: none;
   }
 
   .top {
@@ -361,7 +362,6 @@
     background: #1C1F2A;
     opacity: 1;
     transition: 0.2s all;
-    /*/animation: label_tab_rise 0.5s ease;/*/
     z-index: 2;
   }
 
@@ -369,16 +369,6 @@
     background-color: #14161E;
     color: #ffffff;
     border-radius: 5px;
-  }
-
-  @keyframes label_tab_rise{
-    0% {
-      transform: translateY(10px);
-    }
-    100% {
-      border-radius: 0px 5px 5px 5px;
-      transform: translateY(0px);
-    }
   }
 
   /*/————————————————————————————————————————————————————————/*/
@@ -1165,7 +1155,7 @@
     height: fit-content;
     width: fit-content;
     opacity: 1;
-    border-radius: 10px;
+    border-radius: 20px;
     transition: 0.2s all;
     background-color: #1C1F2A;
     animation: load_in_opacity 0.2s all;
@@ -1190,6 +1180,7 @@
 
   .popup_social_button {
     position: relative;
+    top: 18px;
     width: 25px;
     height: 25px;
     border-radius: 50%;
@@ -1213,7 +1204,8 @@
     border-radius: 7px;
     text-align: left;
     left: 90px;
-    height: 200px;
+    font-size: 13px;
+    height: 250px;
     width: 600px;
     transform-origin: top center;
     font-family: 'NotoSansMono-Medium';
@@ -1367,6 +1359,7 @@
     margin-bottom: 5px;
     transform-origin: center center;
     transition: 0.2s all;
+    cursor: pointer;
     z-index: 9999;
   }
 
@@ -1401,6 +1394,7 @@
     border-radius: 6px;
     transform-origin: center center;
     transition: 0.2s all;
+    cursor: pointer;
     z-index: 5;
 }
 
@@ -1424,6 +1418,7 @@
     border-radius: 50%;
     transform-origin: center center;
     transition: 0.2s all;
+    cursor: pointer;
     z-index: 5;
   }
 
@@ -1473,6 +1468,7 @@
     margin-bottom: 15px;
     transform-origin: center center;
     transition: 0.2s all;
+    cursor: pointer;
     z-index: 5;
   }
 
@@ -1502,6 +1498,7 @@
     margin-bottom: 15px;
     transform-origin: center center;
     transition: 0.2s all;
+    cursor: pointer;
     z-index: 5;
   }
 

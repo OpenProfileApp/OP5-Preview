@@ -275,6 +275,7 @@ function scheme_apply(scheme_id, scheme_icon, scheme_text, scheme_accent, scheme
     // The below IDs are all used for changing the colors of
     // the non-profile page elements based off the active
     // scheme.
+    const link = document.querySelector('link');
     const body = document.querySelector('body');
     const a = document.querySelectorAll('a');
     const li = document.querySelectorAll('.context-menu li');
@@ -373,6 +374,7 @@ function scheme_apply(scheme_id, scheme_icon, scheme_text, scheme_accent, scheme
     // This removes "scheme_" from the beginning of the scheme
     // ID then uses the raw name to search the media directory
     // for an existing icon.
+
     const scheme_raw_name = scheme_id.replace(/^scheme_/, '');
     const loading_image_check = `media/schemes/${scheme_raw_name}/${scheme_raw_name}_app_icon.png`;
 
@@ -381,6 +383,7 @@ function scheme_apply(scheme_id, scheme_icon, scheme_text, scheme_accent, scheme
         if (this.complete) {
             // If the image exists, apply it to loading_image.
             loading_image.src = loading_image_check;
+            link.href = loading_image_check;
         }
         // Continue with the code, whether the image exists or not.
         callback(true);
@@ -464,16 +467,14 @@ function scheme_apply(scheme_id, scheme_icon, scheme_text, scheme_accent, scheme
     });
 
     top_button.forEach((top_button) => {
-        if (top_button.id !== 'premium_button') {
+        top_button.style.backgroundColor = scheme_shade_1;
+        top_button.style.color = scheme_text;
+        top_button.addEventListener('mouseover', () => {
+            top_button.style.backgroundColor = scheme_shade_4;
+        });
+        top_button.addEventListener('mouseout', () => {
             top_button.style.backgroundColor = scheme_shade_1;
-            top_button.style.color = scheme_text;
-            top_button.addEventListener('mouseover', () => {
-                top_button.style.backgroundColor = scheme_shade_4;
-            });
-            top_button.addEventListener('mouseout', () => {
-                top_button.style.backgroundColor = scheme_shade_1;
-            });
-        }
+        });
     });
 
     bottom_button.forEach((bottom_button) => {
