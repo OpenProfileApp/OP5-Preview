@@ -35,7 +35,7 @@
 
 "b0": "——————————————————————[ BANNER-0 ]———————————————————————",
     "banner_0_text": {
-        "text_content": "Saving and loading not yet compatible with page 0 and glitched on page 1  - [NEW] Schemes Manager!"
+        "text_content": "Warning: profile saving and loading is currently unsupported."
     },
 
 "pu0": "——————————————————————[ POPUP-0 ]———————————————————————",

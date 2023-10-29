@@ -27,6 +27,7 @@
   body {
     background-color: #14161E;
     overflow-x: hidden;
+    color: #ffffff;
     font-family: "NotoSans-Regular";
     user-select: none;
   }
@@ -62,14 +63,14 @@
     position: fixed;
     display: block;
     top: 80px;
-    left: 0px;
+    left: 80px;
     width: 354px;
     height: 100vh;
     background-color: #222635;
     border-radius: 0px 25px 0px 0px;
     animation: load_in_slide_left 0.2s forwards;
     overflow: hidden;
-    transition: 0.2s transform, 0.2s opacity;
+    transition: 0.2s top, 0.2s opacity, 0.2s transform;
     transform: translateX(80px);
     box-shadow: 0px 0px 0px 4px #00000010;
     z-index: 1;
@@ -166,6 +167,35 @@
   a {
     color: #2a4ede;
     text-decoration: none;
+  }
+
+  button {
+    position: relative;
+    display: inline-flex;
+    font-family: "NotoSans-Regular";
+    font-size: 18px;
+    color: #ffffff;
+    text-align: center;
+    top: 0px;
+    left: 0px;
+    width: fit-content;
+    height: 25px;
+    padding-top: 5px;
+    padding-bottom: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-right: 5px;
+    background: #14161E;
+    border-radius: 6px;
+    border: none;
+    transform-origin: center center;
+    transition: 0.2s all;
+    cursor: pointer;
+    z-index: 5;
+  }
+
+  button:hover {
+    background-color: #303548;
   }
 
   ::-webkit-scrollbar {
@@ -365,10 +395,47 @@
     z-index: 2;
   }
 
-  .label_tab::selection {
-    background-color: #14161E;
+  .label_tab_popup_prompt {
+    position: relative;
+    left: 50%;
+    top: -2px;
+    height: 20px;
+    width: fit-content;
     color: #ffffff;
-    border-radius: 5px;
+    font-family: "NotoSans-Regular";
+    font-size: 7px;
+    text-align: left;
+    padding-top: 1px;
+    padding-bottom: 2px;
+    padding-left: 12px;
+    padding-right: 12px;
+    border-radius: 5px 5px 0px 0px;
+    transform: translateX(-50%);
+    background: #303548;
+    opacity: 1;
+    transition: 0.2s all;
+    z-index: 2;
+  }
+
+  .label_tab_app {
+    position: relative;
+    left: 0px;
+    top: 10px;
+    height: fit-content;
+    width: fit-content;
+    color: #ffffff;
+    font-family: "NotoSans-Regular";
+    font-size: 14px;
+    text-align: left;
+    padding-top: 1px;
+    padding-bottom: 2px;
+    padding-left: 4px;
+    padding-right: 4px;
+    border-radius: 5px 5px 0px 0px;
+    background: #1C1F2A;
+    opacity: 1;
+    transition: 0.2s all;
+    z-index: 2;
   }
 
   /*/————————————————————————————————————————————————————————/*/
@@ -683,26 +750,7 @@
     opacity: 1;
     transform-origin: center center;
     transition: 0.2s all;
-    /*/animation: input_text_exit 0.35s linear;/*/
     z-index: 10;
-  }
-
-  @keyframes input_text_exit {
-    0% {
-      border-radius: 0px 5px 0px 0px;
-    }
-    35% {
-      border-radius: 0px 5px 0px 0px;
-    }
-    70% {
-      border-radius: 0px 5px 0px 0px;
-    }
-    85% {
-      border-radius: 0px 5px 0px 0px;
-    }
-    100% {
-      border-radius: 0px 5px 5px 5px;
-    }
   }
 
   .input_text_legal {
@@ -744,6 +792,29 @@
     justify-content: center;
     display: flex;
     z-index: 50;
+  }
+
+  .input_text_popup_prompt {
+    position: absolute;
+    left: 50%;
+    top: 10px;
+    font-family: "NotoSans-Regular";
+    font-size: 12px;
+    color: white;
+    height: 14px;
+    background: #303548;
+    border-radius: 50px;
+    border: none;
+    padding-top: 2.8px;
+    padding-bottom: 2.8px;
+    padding-left: 4px;
+    padding-right: 3.4px;
+    transform: translateX(-50%);
+    outline: none;
+    opacity: 1;
+    transform-origin: center center;
+    transition: 0.2s all;
+    z-index: 10;
   }
 
   .input_text::placeholder {
@@ -986,6 +1057,16 @@
     color: #ffffff;
   }
 
+  .group:hover .input_text_popup_prompt {
+    background-color: #394057;
+  }
+
+  .input_text_popup_prompt::placeholder {
+    color: #ffffff;
+    opacity: 0.35;
+    transition: 0.2s all;
+  }
+
   .group:hover .input_text {
     border-radius: 0px 5px 0px 5px;
     background-color: #394057;
@@ -1036,7 +1117,7 @@
   /*/————————————————————————————————————————————————————————/*/
   /*/—————————————————[ RIGHT-MENU-ELEMENTS ]————————————————/*/
   /*/————————————————————————————————————————————————————————/*/
-  .context-menu {
+  .menu {
     display: none;
     position: fixed;
     font-family: "NotoSans-Regular";
@@ -1058,7 +1139,7 @@
     z-index: 8998;
   }
 
-  .context-menu.show {
+  .menu.show {
     display: block;
     scale: 1.35;
     font-size: 10px;
@@ -1066,7 +1147,7 @@
     transition: 0.2s all;
   }
 
-  .context-menu ul {
+  .menu ul {
     list-style: none;
     border-radius: 3px;
     margin: 0;
@@ -1077,11 +1158,12 @@
     z-index: 8999;
   }
 
-  .context-menu li {
+  .menu li {
     padding: 5px;
     cursor: pointer;
+    background-color: #14161E;
     border-radius: 3px;
-    padding-left: 22px;
+    text-indent: 16px;
     transition: background-color 0.2s;
     opacity: 1;
     transition: 0.2s all;
@@ -1089,22 +1171,23 @@
     z-index: 9000;
   }
 
-  .context-menu .tag {
+  .menu .tag {
     box-shadow: 3px 3px 0px #00000010;
   }
 
-  .context-text {
+  .menu_option {
+    display: flex;
     color: #ffffff;
     font-size: 8px;
     font: 'NotoSans-Regular';
   }
 
-  .context-menu li:hover {
-    background: #1C1F2A;
+  .menu li:hover {
+    background: #2a4ede;
     border-radius: 3px;
   }
 
-  .context-menu::selection {
+  .menu::selection {
     background-color: #bd9335;
     border-radius: 3px;
     opacity: 1;
@@ -1135,12 +1218,12 @@
   /*/————————————————————————————————————————————————————————/*/
   .popup_background {
     position: fixed;
+    display: none;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     height: 100vh;
     width: 100vw;
-    display: none;
     transition: 0.2s opacity;
     background-color: #00000099;
     animation: load_in_opacity 0.2s all;
@@ -1149,6 +1232,9 @@
 
   .popup {
     position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -1156,13 +1242,38 @@
     width: fit-content;
     opacity: 1;
     border-radius: 20px;
+    padding: 20px;
     transition: 0.2s all;
     background-color: #1C1F2A;
     animation: load_in_opacity 0.2s all;
     transform-origin: center;
-    box-shadow: 0px 0px 8px #00000050;
+    box-shadow: 0px 0px 0px 4px #00000010;
     z-index: 4999;
-  }  
+  }
+
+  .popup_prompt {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    top: calc(50% + 100px);
+    left: calc(50% + 107px);
+    transform: translate(-50%, -50%);
+    transform-origin: center;
+    height: 400px;
+    width: 400px;
+    opacity: 1;
+    border-radius: 20px;
+    padding: 15px;
+    scale: 1.5;
+    transition: 0.2s all;
+    background-color: #1C1F2A;
+    animation: load_in_opacity 0.2s all;
+    transform-origin: center;
+    box-shadow: 0px 0px 0px 4px #00000010;
+    z-index: 4998;
+  }
 
   .popup_text {
     position: relative;
@@ -1568,9 +1679,9 @@
   }
 
   /*/————————————————————————————————————————————————————————/*/
-  /*/———————————————[ DELETE-BUTTON-ELEMENTS ]———————————————/*/
+  /*/———————————————[ MANAGE-BUTTON-ELEMENTS ]———————————————/*/
   /*/————————————————————————————————————————————————————————/*/
-  .delete_button {
+  .modify_button {
     position: absolute;
     left: -19px;
     top: -19px;
@@ -1611,7 +1722,7 @@
     top: 5px;
     width: 50px;
     height: 50px;
-    margin-right: 5px;
+    margin-right: 10px;
     margin-bottom: 50px;
     border-radius: 50%;
     background: #1C1F2A;
@@ -2055,7 +2166,7 @@
     padding-left: 10px;
     padding-right: 10px;
     border-radius: 5px 5px;
-    background: #1C1F2A;
+    background: #14161E;
     align-items: left;
     justify-content: center;
     transform-origin: top center;
@@ -2065,5 +2176,36 @@
 
   .icon {
     filter: brightness(100%);
+  }
+
+  .circular_image {
+    position: absolute;
+    background-color: #303548;
+    top: 50%;
+    left: 50%;
+    max-height: 250px;
+    max-width: 250px;
+    transform: translate(-50%, -50%);
+    width: 200px; /* Adjust the size as needed */
+    height: 200px; /* Adjust the size as needed */
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.2s all;
+    z-index: 10;
+  }
+
+  .circular_image img {
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+    justify-items: center;
+    width: 100%;
+    height: auto;
+}
+
+
+  .circular_image:hover {
+    background-color: #394057;
   }
 }

@@ -1,6 +1,6 @@
 (async () => {
   try {
-    const response = await fetch(`https://api.github.com/repos/openprofiledevs/op5-preview/releases/latest`);
+    const response = await fetch(`https://api.github.com/repos/openprofileapp/op5-preview/releases/latest`);
 
     if (response.status === 200) {
       const release = await response.json();
@@ -10,7 +10,7 @@
       // Only take the version ID
       const versionString = `${name}`;
       const releaseId = versionString.replace(/ Preview$/, '');
-      const releaseLink = `https://github.com/OpenProfileDevs/OP5-Preview/releases/tag/${releaseId}`;
+      const releaseLink = `https://github.com/OpenProfileApp/OP5-Preview/releases/tag/${releaseId}`;
 
       // Function to format the date as requested
     function formatDate(date) {
@@ -26,7 +26,7 @@
           const day = date.getDate().toString().padStart(2, '0');
           const month = (date.getMonth() + 1).toString().padStart(2, '0');
           const year = date.getFullYear();
-          return `on ${day}-${month}-${year}`;
+          return `on ${month}/${day}/${year}`;
       }
   }
 

@@ -20,10 +20,10 @@ document.addEventListener("contextmenu", (e) => {
             return; // Exit the function for disabled groups
         }
 
-        const contextMenu = document.querySelector("#contextMenu");
-        contextMenu.style.left = `${e.clientX}px`;
-        contextMenu.style.top = `${e.clientY}px`;
-        contextMenu.style.display = "block";
+        const right_click_menu = document.querySelector("#right_click_menu");
+        right_click_menu.style.left = `${e.clientX}px`;
+        right_click_menu.style.top = `${e.clientY}px`;
+        right_click_menu.style.display = "block";
         bodyContext.classList.remove("show");
 
         // Check if the textbox is disabled and update the context menu accordingly
@@ -172,25 +172,25 @@ document.addEventListener("contextmenu", (e) => {
 // Add global event listeners to close the context menu
 document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") {
-        closeContextMenu();
+        closeright_click_menu();
     }
 });
 
 document.addEventListener("click", (e) => {
-    const contextMenu = document.querySelector("#contextMenu");
-    if (contextMenu.style.display === "block" && !contextMenu.contains(e.target)) {
+    const right_click_menu = document.querySelector("#right_click_menu");
+    if (right_click_menu.style.display === "block" && !right_click_menu.contains(e.target)) {
         e.preventDefault();
-        closeContextMenu();
+        closeright_click_menu();
     }
 });
 
     // Event listener to close the context menu when scrolling
 window.addEventListener("scroll", () => {
-    closeContextMenu();
+    closeright_click_menu();
 });
 
 // Helper function to close the context menu
-function closeContextMenu() {
-    const contextMenu = document.querySelector("#contextMenu");
-    contextMenu.style.display = "none";
+function closeright_click_menu() {
+    const right_click_menu = document.querySelector("#right_click_menu");
+    right_click_menu.style.display = "none";
 }

@@ -404,3 +404,5 @@ package-lock.json
 tokens.txt
 discord_bot_assistant.js
 scripts/discord/
+ca.crt
+ca.key

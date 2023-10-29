@@ -2,7 +2,7 @@
 function showTextPopup() {
   const modal = document.getElementById('popup_0');
   modal.style.display = 'block';
-  load_dynamic_elements_scheme();
+  load_current_scheme();
 
   // Close the modal with delay and opacity transition on left-click
   modal.addEventListener('click', (event) => {

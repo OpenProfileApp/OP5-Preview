@@ -10,15 +10,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0, user-scalable=yes">
 
+    <!-- Dynamic domain -->
+    <base href="">
+
     <!--————————————————————————————————————————————————————————-->
     <!--—————————————————————[ META-TAGS ]——————————————————————-->
     <!--————————————————————————————————————————————————————————-->
     <meta property="og:type" content="website" />
     <meta property="og:title" content="OpenProfile 5 Preview 🎃" />
-    <meta property="twitter:creator" content="@OpenProfileDevs" />
+    <meta property="twitter:creator" content="@OpenProfileApp" />
     <meta property="og:description" content="OpenProfile is the most advanced character profile template in the world and a GNU open source project. Created freely for writers by writers!" />
-    <meta property="og:image" content="https://raw.githubusercontent.com/OpenProfileDevs/OP5-Preview/web/media/images/openprofile/spooky/op_spooky_512.jpeg" />
-    <meta property="og:url" content="https://openprofiledevs.github.io/OP5-Preview/" />
+    <meta property="og:image" content="https://raw.githubusercontent.com/OpenProfileApp/OP5-Preview/web/media/images/openprofile/spooky/op_spooky_512.jpeg" />
+    <meta property="og:url" content="https://OpenProfileApp.github.io/OP5-Preview/" />
     <meta property="theme-color" content="#d37343" />
 
     <!--————————————————————————————————————————————————————————-->
@@ -34,7 +37,9 @@
     <!--————————————————————[ BASE-SCRIPTS ]————————————————————-->
     <!--————————————————————————————————————————————————————————-->
     <script src="scripts/clear_cache.js" type="text/javascript"></script>
-    <script src="scripts/scheme_switcher.js"></script>
+    <script src="https://apis.google.com/js/api.js"></script>
+    <script src="scripts/google_api.js"></script>
+    <script src="scripts/scheme_manager.js"></script>
     <script src="scripts/seasonal_changes.js"></script>
     <script src="scripts/banner.js"></script>
     <script src="scripts/popup.js"></script>
@@ -42,11 +47,18 @@
     <script src="scripts/onload.js"></script>
     <script src="scripts/history/generate_timestamp.js"></script>
     <script src="scripts/print.js"></script>
-
     <!--————————————————————————————————————————————————————————-->
     <!--————————————————————[ PAGE-LOADER ]—————————————————————-->
     <!--————————————————————————————————————————————————————————-->
     <div class="loader_outer">
+
+
+    
+        
+
+
+
+
         <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.0.1"></script>
         <div class="loader_container">            
             <div style="position: fixed; top: 50%; left: 50%; transform-origin: center; transform: translate(-50%, -50%); z-index: 9999;">
@@ -72,16 +84,16 @@
                 <a class="loader_social_button" id="youtube_button" title="YouTube" href="https://www.youtube.com/@openprofile" target="_blank">
                     <img class="icon" src="media/icons/media_icons/youtube.png" style="position: absolute; scale: 0.01; transform-origin: top left; margin: 5px;">
                 </a>
-                <a class="loader_social_button" id="x_button" title="X (Twitter)" href="https://x.com/OpenProfileDevs" target="_blank">
+                <a class="loader_social_button" id="x_button" title="X (Twitter)" href="https://x.com/openprofileapp" target="_blank">
                     <img class="icon" src="media/icons/media_icons/x_twitter.svg" style="position: absolute; scale: 0.0122; transform-origin: top left; margin: 5px;">
                 </a>
-                <a class="loader_social_button" id="facebook_button" title="Facebook" href="https://www.facebook.com/OpenProfileDevs/" target="_blank">
+                <a class="loader_social_button" id="facebook_button" title="Facebook" href="https://www.facebook.com/openprofileapp/" target="_blank">
                     <img class="icon" src="media/icons/media_icons/facebook.png" style="position: absolute; scale: 0.00823; transform-origin: top left; margin: 4px;">
                 </a>
-                <a class="loader_social_button" id="instagram_button" title="Instagram" href="https://instagram.com/openprofiledevs" target="_blank">
+                <a class="loader_social_button" id="instagram_button" title="Instagram" href="https://instagram.com/openprofileapp" target="_blank">
                     <img class="icon" src="media/icons/media_icons/instagram.svg" style="position: absolute; scale: 1; transform-origin: top left; margin: 5px;">
                 </a>
-                <a class="loader_social_button" id="pinterest_button" title="Pinterest" href="https://www.pinterest.com/openprofiledevs/" target="_blank">
+                <a class="loader_social_button" id="pinterest_button" title="Pinterest" href="https://www.pinterest.com/openprofileapp/" target="_blank">
                     <img class="icon" src="media/icons/media_icons/pinterest.png" style="position: absolute; scale: 0.021; transform-origin: top left; margin: 4px;">
                 </a>
                 <a class="loader_social_button" id="discord_button" title="Discord" href="https://www.discord.com/invite/w6aV9gkz8g" target="_blank">
@@ -98,7 +110,7 @@
         <div class="popup">
             <div class="popup_text">
             <p class="popup_text" id="popup_0_text1" style="font-size: 18px;">Welcome to OpenProfile 5, a collaborative database application surrounding the immersive world of original characters! OP5 is still in early stages and this is the preview version, basically nightly updates with rough edges. Not recommended for production work!</p>
-            <p class="popup_text" id="popup_0_text2" style="font-size: 24px;">⚠️ DO NOT UPLOAD PERSONALLY IDENTIFIABLE INFORMATION ⚠️</p>
+            <p class="popup_text" id="popup_0_text2" style="font-size: 22px;">⚠️ DO NOT UPLOAD PERSONALLY IDENTIFIABLE INFORMATION ⚠️</p>
             <p class="popup_text" id="changelog_name" style="font-size: 18px;"></p>
             <script src="scripts/change_log.js"></script>
             <p class="popup_text" id="changelog"></p>
@@ -106,23 +118,23 @@
             <p class="popup_text" id="popup_0_text4" style="font-size: 14px;" id="popup_text">💡 Did you know there is currently over 10,000 lines of active code in the OP5?</p>
             <p class="popup_text" id="popup_0_text5" style="font-size: 10px;" id="popup_text">OpenProfile 5 is a <a href="https://www.gnu.org/licenses/gpl-3.0.en.html#license-text" target="_blank">GNU</a> licensed application owned by the OpenProfile Organization and actively developed by <a href="https://www.avatarkage.com" target="_blank">AvatarKage<a>.</p>
         </div>
-            <div class="social_buttons" style="top: 305px; left: 20px; z-index: 5000; scale: 1.5;">
+            <div class="social_buttons" style="top: 342px; left: 45px; z-index: 5000; scale: 1.5;">
                 <a class="popup_social_button" id="website_button" title="Website" href="https://bio.link/openprofile" target="_blank">
                     <img class="icon" src="media/icons/feather_icons/globe.svg" style="position: absolute; scale: 0.171; transform-origin: top left; margin: 4px;">
                 </a>
                 <a class="popup_social_button" id="youtube_button" title="YouTube" href="https://www.youtube.com/@openprofile" target="_blank">
                     <img class="icon" src="media/icons/media_icons/youtube.png" style="position: absolute; scale: 0.01; transform-origin: top left; margin: 5px;">
                 </a>
-                <a class="popup_social_button" id="x_button" title="X (Twitter)" href="https://x.com/OpenProfileDevs" target="_blank">
+                <a class="popup_social_button" id="x_button" title="X (Twitter)" href="https://x.com/openprofileapp" target="_blank">
                     <img class="icon" src="media/icons/media_icons/x_twitter.svg" style="position: absolute; scale: 0.0122; transform-origin: top left; margin: 5px;">
                 </a>
-                <a class="popup_social_button" id="facebook_button" title="Facebook" href="https://www.facebook.com/OpenProfileDevs/" target="_blank">
+                <a class="popup_social_button" id="facebook_button" title="Facebook" href="https://www.facebook.com/openprofileapp/" target="_blank">
                     <img class="icon" src="media/icons/media_icons/facebook.png" style="position: absolute; scale: 0.00823; transform-origin: top left; margin: 4px;">
                 </a>
-                <a class="popup_social_button" id="instagram_button" title="Instagram" href="https://instagram.com/openprofiledevs" target="_blank">
+                <a class="popup_social_button" id="instagram_button" title="Instagram" href="https://instagram.com/openprofileapp" target="_blank">
                     <img class="icon" src="media/icons/media_icons/instagram.svg" style="position: absolute; scale: 1; transform-origin: top left; margin: 5px;">
                 </a>
-                <a class="popup_social_button" id="pinterest_button" title="Pinterest" href="https://www.pinterest.com/openprofiledevs/" target="_blank">
+                <a class="popup_social_button" id="pinterest_button" title="Pinterest" href="https://www.pinterest.com/openprofileapp/" target="_blank">
                     <img class="icon" src="media/icons/media_icons/pinterest.png" style="position: absolute; scale: 0.021; transform-origin: top left; margin: 4px;">
                 </a>
                 <a class="popup_social_button" id="discord_button" title="Discord" href="https://www.discord.com/invite/w6aV9gkz8g" target="_blank">
@@ -132,11 +144,18 @@
         </div>
     </div>
 
+    <!-- The universe manager (id="popup_universe_manage") and 
+    (id="popup_universe_manage_more") HTML IDs are managed by
+    the universe manager script which can be found under the
+    following path (src="scripts/universe_manager.js") -->
+    <div id="popup_universe_manager"></div>
+    <div id="popup_universe_manager_more"></div>
+
     <!--————————————————————————————————————————————————————————-->
     <!--——————————————————[ BANNER-ELEMENTS ]———————————————————-->
     <!--————————————————————————————————————————————————————————-->
     <div class="banner" id="banner_0">
-        <div class="banner_text" id="banner_0_text">Saving and loading not yet compatible with page 0 and glitched on page 1  - [NEW] Schemes Manager!</div>
+        <div class="banner_text" id="banner_0_text">Warning: profile saving and loading is currently unsupported.</div>
         <div class="banner_close" id="banner_0_close">
             <img class="icon" src="media/icons/feather_icons/x.svg" style="position: relative; top: 10px; right: 10px; scale: 1; transform-origin: top left; z-index: 3000;">
         </div>
@@ -198,7 +217,7 @@
         <!-- The scheme manager (class="schemes_manager") and the
         scheme layer (class="schemes_layer") HTML is managed by the
         scheme manager script which can be found under the following
-        path (src="scripts/scheme_switcher.js") -->
+        path (src="scripts/scheme_manager.js") -->
         <div class="schemes_manager"></div>
         <div class="schemes_layer"></div>
     </div>
@@ -210,7 +229,7 @@
         <script src="scripts/menus/left_menu.js"></script>
         <div class="side_button" id="toggle_left_menu">
             <img class="icon" src="media/icons/feather_icons/menu.svg" style="scale: 0.30; transform-origin: top left; margin: 10px;">
-            <div class="label_left" id="toggle_left_menu_text" option="option_1">Hide Menu</div>
+            <div class="label_left" id="toggle_left_menu_option" option="option_1">Hide Menu</div>
             <div class="tag">BETA</div>
         </div>
         <div class="side_button">
@@ -256,10 +275,10 @@
             <div class="label_left">Create Profile</div>
             <div class="tag">PREVIEW</div>
         </div>
-        <div class="side_button" id="add_universe" onclick="createuniverse()";>
+        <div class="side_button" id="add_universe";>
             <img class="icon" src="media/icons/feather_icons/plus-circle.svg" style="transform-origin: top left; min-width: 50px; min-height: 50px; max-width: 50px; max-height: 50px; border-radius: 50%;">
             <div class="label_left">Create Universe</div>
-            <div class="tag">PREVIEW</div>
+            <div class="tag">BETA</div>
         </div>
         <div class="side_button" style="opacity: 0;"></div>
         <div class="side_button" id="next_page" onclick="";>
@@ -282,15 +301,28 @@
                 <div class="tag" style="top: 45px; left: 268px;">PREVIEW</div>
             </div>
         </div>
+
         <div class="left_top_list">
-            <div id="universe-list" style="width: max-content; transform: translateY(12px);"></div>
+            <!-- The universe list (id="universe_list") HTML ID is
+            managed by the universe manager script which can be
+            found under the following path
+            (src="scripts/universe_manager.js") -->
+            <div id="universe_list" style="width: max-content; transform: translateY(12px);"></div>
         </div>
         
-        <div class="circle_outer" title="No Wifi" style="top: 55%; left: 50%;">
+        <div class="circle_outer" style="top: 55%; left: 50%; display: none;">
             <div class="circle_inner">
                 <img class="icon" src="media/icons/feather_icons/wifi-off.svg" style="scale: 1; opacity: 0.1; transform-origin: top left; margin: 50px;">
             </div>
             <div class="information_text" id="information_text_wifi">Oops! It seems like you're not connected to the internet. Please check your connection and try again.</div>
+        </div>
+
+
+        <div class="circle_outer" style="top: 55%; left: 50%;">
+            <div class="circle_inner">
+                <img class="icon" src="media/icons/feather_icons/cloud-off.svg" style="scale: 1; opacity: 0.1; transform-origin: top left; margin: 50px;">
+            </div>
+            <div class="information_text" id="information_text_wifi">Yikes! It looks like we couldn't find any profiles that match your search. Please double-check your entry and try again.</div>
         </div>
         
         <div class="profiles_scroll" id="profile-list"></div>
@@ -624,7 +656,8 @@
                     <div><input class="brand_icon_media_input" id="brand_icon_media_input" type="file" accept="image/*,video/*" style="display: none;">
                         <label for="brand_icon_media_input">
                             <div class="image_input_2" id="brand_icon_container" style="width: 81px; height: 22.5px; border-radius: 2.5px;">
-                                <img class="brand_icon_selected_image" id="brand_icon_selected_image" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); max-width: 100%; max-height: 100%; opacity: 0.35; cursor: pointer; z-index: 30;" src="media/icons/feather_icons/plus-square.svg">                                <img id="brand_icon_selected_image" style="border-radius: 2.5px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); max-width: 100%; max-height: 100%; display: none;  z-index: 30;" src="" alt="Selected Media">
+                                <img class="brand_icon_selected_image" id="brand_icon_selected_image" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); max-width: 100%; max-height: 100%; opacity: 0.35; cursor: pointer; z-index: 30;" src="media/icons/feather_icons/plus-square.svg">
+                                <img id="brand_icon_selected_image" style="border-radius: 2.5px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); max-width: 100%; max-height: 100%; display: none;  z-index: 30;" src="" alt="Selected Media">
                                 <video class="brand_icon_selected_video" id="brand_icon_selected_video" controls style="border-radius: 2.5px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); max-width: 100%; max-height: 100%; display: none; z-index: 30;"></video>
                             </div>
                         </label>
@@ -1055,50 +1088,55 @@
     <!--————————————————————————————————————————————————————————-->
     <!--——————————————————[ RIGHT-CLICK-MENU ]——————————————————-->
     <!--————————————————————————————————————————————————————————-->
-    <div class="context-menu" id="contextMenu">
+    <div class="menu" id="right_click_menu">
         <script src="scripts/menus/right_click_menu.js"></script>
         <ul>
-            <li class="context-text" id="generate_option">Generate Content</li>
+            <li class="menu_option" id="generate_option">Generate Content</li>
                 <img class="icon" id="generate_option_icon" src="media/icons/feather_icons/database.svg" style="position: absolute; top: 0px; left: 0px; scale: 0.11; transform-origin: top left; margin: 9px; z-index: 9001;">
                 <script src="scripts/menus/options/generate_option.js"></script>
-            <li class="context-text" id="color_option" option="option_1">Highlight Textbox</li>
+            <li class="menu_option" id="color_option" option="option_1">Highlight Textbox</li>
                 <img class="icon" id="color_option_icon" src="media/icons/feather_icons/edit-3.svg" style="position: absolute; top: 21px; left: 0px; scale: 0.11; transform-origin: top left; margin: 9px; z-index: 9001;">
                 <script src="scripts/menus/options/color_option.js"></script>
-            <li class="context-text" id="comments_option" style="opacity: 0.35;" option="option_1">Disable Comments</li>
+            <li class="menu_option" id="comments_option" style="opacity: 0.35;" option="option_1">Disable Comments</li>
                 <img class="icon" id="comments_option_icon" src="media/icons/feather_icons/message-circle.svg" style="opacity: 0.35; position: absolute; top: 42px; left: 0px; scale: 0.11; transform-origin: top left; margin: 9px; z-index: 9001;">
-            <li class="context-text" id="source_option" option="option_1">Link Source</li>
+            <li class="menu_option" id="source_option" option="option_1">Link Source</li>
                 <img class="icon" id="source_option_icon" src="media/icons/feather_icons/link.svg" style="position: absolute; top: 63px; left: 0px; scale: 0.11; transform-origin: top left; margin: 9px; z-index: 9001;">
                 <script src="scripts/menus/options/source_option.js"></script>
                 <script src="scripts/source/source_position.js"></script>
                 <script src="scripts/source/source_icon.js"></script>
-            <li class="context-text" id="history_option" option="option_1">Hide History</li>
+            <li class="menu_option" id="history_option" option="option_1">Hide History</li>
                 <img class="icon" id="history_option_icon" src="media/icons/feather_icons/calendar.svg" style="position: absolute; top: 84px; left: 0px; scale: 0.11; transform-origin: top left; margin: 9px; z-index: 9001;">
                 <script src="scripts/menus/options/history_option.js"></script>
-            <li class="context-text" id="lock_option" option="option_1">Lock Textbox</li>
+            <li class="menu_option" id="lock_option" option="option_1">Lock Textbox</li>
                 <img class="icon" id="lock_option_icon" src="media/icons/feather_icons/lock.svg" style="position: absolute; top: 105px; left: 0px; scale: 0.11; transform-origin: top left; margin: 9px; z-index: 9001;">
                 <script src="scripts/menus/options/lock_option.js"></script>
-            <li class="context-text" id="disable_option" option="option_1">Disable Textbox</li>
+            <li class="menu_option" id="disable_option" option="option_1">Disable Textbox</li>
                 <img class="icon" id="disable_option_icon" src="media/icons/feather_icons/x.svg" style="position: absolute; top: 126px; left: 0px; scale: 0.11; transform-origin: top left; margin: 9px; z-index: 9001;">
                 <script src="scripts/menus/options/disable_option.js"></script>
             
-            <li class="context-text" id="language_option">Change Language ></li>
+            <li class="menu_option" id="language_option">Change Language ></li>
                 <img class="icon" id="language_option_icon" src="media/icons/feather_icons/flag.svg" style="position: absolute; top: 147px; left: 0px; scale: 0.11; transform-origin: top left; margin: 9px; z-index: 9001;">
-                <div class="context-menu" id="languageSubMenu" style="scale: 100%; z-index: 9001;">
+                <div class="menu" id="languageSubMenu" style="scale: 100%; z-index: 9001;">
                     <script src="scripts/menus/language_menu.js"></script>
                     <ul>
-                        <li class="context-text" id="en-us">English (US)</li>
+                        <li class="menu_option" id="en-us">English (US)</li>
                             <img class="icon" src="media/icons/feather_icons/flag.svg" style="position: absolute; top: 0px; left: 0px; scale: 0.11; transform-origin: top left; margin: 9px; z-index: 9001;">
-                        <li class="context-text" id="de-de" style="opacity: 0.35;">Deutsch (DE)</li>
+                        <li class="menu_option" id="de-de" style="opacity: 0.35;">Deutsch (DE)</li>
                             <img class="icon" src="media/icons/feather_icons/flag.svg" style="opacity: 0.35; position: absolute; top: 21px; left: 0px; scale: 0.11; transform-origin: top left; margin: 9px; z-index: 9001;">
-                        <li class="context-text" id="fr-ch" style="opacity: 0.35;">Suisse Français (CH)</li>
+                        <li class="menu_option" id="fr-ch" style="opacity: 0.35;">Suisse Français (CH)</li>
                             <img class="icon" src="media/icons/feather_icons/flag.svg" style="opacity: 0.35; position: absolute; top: 42px; left: 0px; scale: 0.11; transform-origin: top left; margin: 9px; z-index: 9001;">
-                        <li class="context-text" id="coming-soon">Coming Soon</li>
+                        <li class="menu_option" id="coming-soon">Coming Soon</li>
                             <img class="icon" src="media/icons/feather_icons/clock.svg" style="position: absolute; top: 63px; left: 0px; scale: 0.11; transform-origin: top left; margin: 9px; z-index: 9001;">
                     </ul>
                 </div>
         </ul>
         <div class="tag" style="scale: 0.7; top: 168px; left: 53px;">PREVIEW</div>
     </div>
+
+
+
+
+    <div class="menu" id="universe_menu"></div>
 
     <!--————————————————————————————————————————————————————————-->
     <!--—————————————————[ DEVELOPER-ELEMENTS ]—————————————————-->
@@ -1107,9 +1145,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.0/color-thief.umd.js"></script>
     <script src="scripts/save_load.js"></script> <!-- Needs to be very last to save and load properly -->
     <script src="scripts/id_generator.js"></script>
+    <script src="scripts/universe_manager.js"></script>
     <script src="scripts/profile_manager.js"></script> <!-- Needs to be very last to save and load properly -->
     <script src="scripts/translate.js"></script>
-    <script src="scripts/copy_all.js"></script>
+    <script src="scripts/quick_share.js"></script>
 
 
 <!--<button style="z-index: 500; position: absolute; top: 0; left: 0;" id="discord">Send Message to Discord</button>
@@ -1145,7 +1184,7 @@ socket.addEventListener('message', (event) => {
 
 
 <li id="theme_option" style="opacity: 0.35;">🎨 Change Scheme ></li>
-        <div id="themeSubMenu" class="context-menu" style="scale: 100%;">
+        <div id="themeSubMenu" class="menu" style="scale: 100%;">
             <script src="scripts/menus/theme_menu.js"></script>
             <ul>
             <li id="release" style="opacity: 0.35;">🔴 Release</li>

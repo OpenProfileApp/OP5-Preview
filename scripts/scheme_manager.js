@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
             // This loads in the schemes.
             generate_schemes();
             // This ensures the dynamic elements are schemed.
-            load_dynamic_elements_scheme();
+            load_current_scheme()
             // This displays the schemes in the manager.
             schemes_manager.style.display = 'grid';
             setTimeout(function () {
@@ -278,7 +278,8 @@ function scheme_apply(scheme_id, scheme_icon, scheme_text, scheme_accent, scheme
     const link = document.querySelector('link');
     const body = document.querySelector('body');
     const a = document.querySelectorAll('a');
-    const li = document.querySelectorAll('.context-menu li');
+    const button = document.querySelectorAll('button');
+    const li = document.querySelectorAll('.menu li');
     const schemes_layer = document.querySelector('.schemes_layer');
     const loader_outer = document.querySelector('.loader_outer');
     const loader_inner = document.querySelector('.loader_inner');
@@ -296,7 +297,7 @@ function scheme_apply(scheme_id, scheme_icon, scheme_text, scheme_accent, scheme
     const right = document.querySelector('.right');
     const bottom = document.querySelector('.bottom');
     const input_search = document.querySelectorAll('.input_search');
-    const context_menu = document.querySelectorAll('.context-menu');
+    const menu = document.querySelectorAll('.menu');
     const popup = document.querySelectorAll('.popup');
     const changelog = document.querySelector('#changelog');
     const popup_social_button = document.querySelectorAll('.popup_social_button')
@@ -305,7 +306,7 @@ function scheme_apply(scheme_id, scheme_icon, scheme_text, scheme_accent, scheme
     const bottom_button = document.querySelectorAll('.bottom_button');
     const control_buttons = document.querySelectorAll('.control_buttons');
     const notification_count = document.querySelectorAll('.notification_count');
-    const delete_button = document.querySelectorAll('.delete_button');
+    const modify_button = document.querySelectorAll('.modify_button');
     const schemes_manager = document.querySelector('.schemes_manager');
     const tag = document.querySelectorAll('.tag');
     const notification_dot = document.querySelectorAll('.notification_dot');
@@ -314,6 +315,12 @@ function scheme_apply(scheme_id, scheme_icon, scheme_text, scheme_accent, scheme
     const information_text = document.querySelectorAll('.information_text');
     const label_left = document.querySelectorAll('.label_left');
     const label_right = document.querySelectorAll('.label_right');
+    const popup_prompt = document.querySelectorAll('.popup_prompt');
+    const label_tab_popup_prompt = document.querySelectorAll('.label_tab_popup_prompt');
+    const input_text_popup_prompt = document.querySelectorAll('.input_text_popup_prompt');
+    const circular_image = document.querySelectorAll('.circular_image');
+    const profile_universe = document.querySelectorAll('.profile_universe');
+    const universe_image = document.querySelectorAll('#universe_image');
     
     //————————————————————————————————————————————————————————//
     //————————————————————[ SCHEME-APPLY ]————————————————————//
@@ -428,9 +435,27 @@ function scheme_apply(scheme_id, scheme_icon, scheme_text, scheme_accent, scheme
         });
     });
 
+    input_text_popup_prompt.forEach((input_text_popup_prompt) => {
+        input_text_popup_prompt.style.backgroundColor = scheme_shade_4;
+        input_text_popup_prompt.addEventListener('mouseover', () => {
+            input_text_popup_prompt.style.backgroundColor = scheme_shade_5;
+        });
+        input_text_popup_prompt.addEventListener('mouseout', () => {
+            if (!input_text_popup_prompt.matches(':focus')) {
+                input_text_popup_prompt.style.backgroundColor = scheme_shade_4;
+            }
+        });
+        input_text_popup_prompt.addEventListener('focus', () => {
+            input_text_popup_prompt.style.backgroundColor = scheme_shade_5;
+        });
+        input_text_popup_prompt.addEventListener('blur', () => {
+            input_text_popup_prompt.style.backgroundColor = scheme_shade_4;
+        });
+    });
+
     // Sets the scheme of the menu elements.
-    context_menu.forEach((context_menu) => {
-        context_menu.style.backgroundColor = scheme_shade_1;
+    menu.forEach((menu) => {
+        menu.style.backgroundColor = scheme_shade_1;
     });
 
     // Sets the scheme of the banner elements.
@@ -455,7 +480,26 @@ function scheme_apply(scheme_id, scheme_icon, scheme_text, scheme_accent, scheme
         });
     });
 
+    popup_prompt.forEach((popup_prompt) => {
+        popup_prompt.style.backgroundColor = scheme_shade_2;
+    });
+
+    label_tab_popup_prompt.forEach((label_tab_popup_prompt) => {
+        label_tab_popup_prompt.style.backgroundColor = scheme_shade_4;
+    });
+
+
     // Sets the scheme of the button elements.
+    button.forEach((button) => {
+        button.style.backgroundColor = scheme_shade_1;
+        button.addEventListener('mouseover', () => {
+            button.style.backgroundColor = scheme_shade_4;
+        });
+        button.addEventListener('mouseout', () => {
+            button.style.backgroundColor = scheme_shade_1;
+        });
+    });
+
     side_button.forEach((side_button) => {
         side_button.style.backgroundColor = scheme_shade_1;
         side_button.addEventListener('mouseover', () => {
@@ -506,8 +550,8 @@ function scheme_apply(scheme_id, scheme_icon, scheme_text, scheme_accent, scheme
         }
     });
 
-    delete_button.forEach((delete_button) => {
-        delete_button.style.backgroundColor = scheme_accent;
+    modify_button.forEach((modify_button) => {
+        modify_button.style.backgroundColor = scheme_accent;
     });
 
     // Sets the scheme of the scheme manager elements.
@@ -531,7 +575,7 @@ function scheme_apply(scheme_id, scheme_icon, scheme_text, scheme_accent, scheme
     });
 
     information_text.forEach((information_text) => {
-        information_text.style.backgroundColor = scheme_shade_2;
+        information_text.style.backgroundColor = scheme_shade_1;
         information_text.style.color = scheme_text;
     });
 
@@ -553,6 +597,28 @@ function scheme_apply(scheme_id, scheme_icon, scheme_text, scheme_accent, scheme
         });
         li.addEventListener('mouseout', () => {
             li.style.backgroundColor = scheme_shade_1;
+        });
+    });
+
+    // Sets the scheme of profile elements.
+    profile_universe.forEach((profile_universe) => {
+        profile_universe.style.backgroundColor = scheme_shade_2;
+    });
+
+    universe_image.forEach((universe_image) => {
+        universe_image.style.border = `3px solid ${scheme_accent}`;
+    });
+
+    // Sets the scheme of additional elements.
+    circular_image.forEach((circular_image) => {
+        circular_image.style.backgroundColor = scheme_shade_4;
+        circular_image.style.border = `3px solid ${scheme_accent}`;
+        circular_image.style.color = scheme_text;
+        circular_image.addEventListener('mouseover', () => {
+            circular_image.style.backgroundColor = scheme_shade_5;
+        });
+        circular_image.addEventListener('mouseout', () => {
+            circular_image.style.backgroundColor = scheme_shade_4;
         });
     });
 
@@ -730,8 +796,20 @@ function load_local_scheme() {
     }
 }
 
-// This function is made to be used externally to apply a
-// specific scheme via ID. This function will NOT overwrite
+// This function is made to be used externally to load the
+// active scheme for dynamic elements. Each time a scheme
+// is applied it will NOT overwrite the previous save.
+function load_current_scheme() {
+    const loaded_scheme_json = current_scheme
+
+    if (loaded_scheme_json) {
+        const loaded_scheme = JSON.parse(loaded_scheme_json);
+        scheme_apply(loaded_scheme.id, loaded_scheme.icon, loaded_scheme.text, loaded_scheme.accent, loaded_scheme.shade_1, loaded_scheme.shade_2, loaded_scheme.shade_3, loaded_scheme.shade_4, loaded_scheme.shade_5, loaded_scheme.custom_html);
+    }
+}
+
+// This function is made to be used externally to apply an
+// official scheme via ID. This function will NOT overwrite
 // the local save.
 function load_specific_scheme(schemeId) {
     const loaded_specific_scheme = schemes.find((scheme) => scheme.id === schemeId);
@@ -744,198 +822,8 @@ function load_specific_scheme(schemeId) {
     }
 }
 
-// This function is made to be used externally to apply a
-// specific scheme via ID for dynamic elements. Dynamic
-// elements are those added after the initial scheme
-// application in which they rely on the raw CSS file over
-// schemes. Running this function on dynamic element
-// creation will prevent that and ensure scheming gets
-// applied to them. This function will NOT overwrite the
-// local save.
-function load_dynamic_elements_scheme() {
-    const loaded_dynamic_scheme_json = current_scheme;
-    
-    if (load_dynamic_elements_scheme) {
-        const load_dynamic_elements_scheme = JSON.parse(loaded_dynamic_scheme_json);
-        scheme_apply_dynamic(load_dynamic_elements_scheme.id, load_dynamic_elements_scheme.icon, load_dynamic_elements_scheme.text, load_dynamic_elements_scheme.accent, load_dynamic_elements_scheme.shade_1, load_dynamic_elements_scheme.shade_2, load_dynamic_elements_scheme.shade_3, load_dynamic_elements_scheme.shade_4, load_dynamic_elements_scheme.shade_5, load_dynamic_elements_scheme.custom_html);
-    }
-}
-
-//————————————————————————————————————————————————————————//
-//——————————————[ SCHEME-DYNAMIC-FUNCTION ]———————————————//
-//————————————————————————————————————————————————————————//
-// This function is made to be used externally to apply a
-// specific scheme via ID for dynamic elements using the
-// above function. When the above function has been
-// triggered the selected scheme fetches the data from the
-// JSON and loads it into this function which replaces the
-// color of all the elements listed in the element variables
-// section below.
-function scheme_apply_dynamic(scheme_id, scheme_icon, scheme_text, scheme_accent, scheme_shade_1, scheme_shade_2, scheme_shade_3, scheme_shade_4, scheme_shade_5, scheme_custom_html) {
-
-    //————————————————————————————————————————————————————————//
-    //—————————————[ DYNAMIC-ELEMENT-VARIABLES ]——————————————//
-    //————————————————————————————————————————————————————————//
-    // This collects the document's dynamic element IDs that
-    // will be modified based on the current scheme. If further
-    // dynamic elements are added to a JavaScript file and you
-    // want them to be modified by schemes, add their IDs on a
-    // new line using the same format as below. Use "All" if
-    // there are more than one of the same element in the
-    // JavaScript file.
-    const delete_button = document.querySelectorAll('.delete_button');
-    const a = document.querySelectorAll('a');
-    const tag = document.querySelectorAll('.tag');
-    const li = document.querySelectorAll('.context-menu li');
-    const icon = document.querySelectorAll('.icon')
-    const label_left = document.querySelectorAll('.label_left')
-    const label_right = document.querySelectorAll('.label_right')
-    const bottom_button = document.querySelectorAll('.bottom_button')
-
-    //————————————————————————————————————————————————————————//
-    //————————————————————[ SCHEME-APPLY ]————————————————————//
-    //————————————————————————————————————————————————————————//
-    // Here is where the scheme application process visually
-    // starts using the above variables.
-
-    // Sets the scheme of the default elements.
-    a.forEach((a) => {
-        a.style.color = scheme_accent;
-    });
-
-    // Sets the scheme of the dynamic button elements.
-    delete_button.forEach((delete_button) => {
-        delete_button.style.backgroundColor = scheme_accent;
-    });
-
-    if (selected_bottom_button) {
-        bottom_button.forEach((bottom_button) => {
-            if (bottom_button.id !== 'premium_button') {
-                bottom_button.style.backgroundColor = scheme_accent;
-            }
-        });
-    }
-
-    // Sets the scheme of the dynamic tag elements.
-    tag.forEach((tag) => {
-        tag.style.backgroundColor = scheme_accent;
-    })
-
-    // Sets the scheme of the dynamic label elements.
-    label_left.forEach((label_left) => {
-        label_left.style.backgroundColor = scheme_accent;
-    });
-
-    label_right.forEach((label_right) => {
-        label_right.style.backgroundColor = scheme_accent;
-    });
-
-    // Sets the scheme of the dynamic menu elements.
-    li.forEach((li) => {
-        li.style.backgroundColor = scheme_shade_1;
-        li.style.color = scheme_text;
-        li.addEventListener('mouseover', () => {
-            li.style.backgroundColor = scheme_accent;
-        });
-        li.addEventListener('mouseout', () => {
-            li.style.backgroundColor = scheme_shade_1;
-        });
-    });
-
-    // Checks if the text color is closer to white or black
-    // and sets the icon brightness based on the results.
-    // Closer to white is 0% and closer to black is 100%.
-    const luminance = (parseInt(scheme_text.slice(1, 3), 16) * 299 + parseInt(scheme_text.slice(3, 5), 16) * 587 + parseInt(scheme_text.slice(5, 7), 16) * 114) / 1000;
-
-    if (luminance >= 128) {
-        // Text color is closer to white, set brightness to 100%
-        icon.forEach((icon) => {
-            icon.style.filter = 'brightness(100%)';
-        });
-    } else {
-        // Text color is closer to black, set brightness to 0%
-        icon.forEach((icon) => {
-            icon.style.filter = 'brightness(0%)';
-        });
-    }
-}
-
-
-
-
-
-
-
-
-
-
-// This function is made to be used externally to apply a
-// specific scheme via ID for dynamic elements. Dynamic
-// elements are those added after the initial scheme
-// application in which they rely on the raw CSS file over
-// schemes. Running this function on dynamic element
-// creation will prevent that and ensure scheming gets
-// applied to them. This function will NOT overwrite the
-// local save.
-function load_individual_element_scheme(element_id, scheme_data) {
-    const loaded_individual_scheme_json = current_scheme;
-    
-    if (load_individual_element_scheme) {
-        const load_individual_element_scheme = JSON.parse(loaded_individual_scheme_json);
-
-        if (scheme_data === "accent") {
-        scheme_apply_individual(element_id, load_individual_element_scheme.accent);
-        }
-    }
-}
-
-//————————————————————————————————————————————————————————//
-//——————————————[ SCHEME-DYNAMIC-FUNCTION ]———————————————//
-//————————————————————————————————————————————————————————//
-// This function is made to be used externally to apply a
-// specific scheme via ID for dynamic elements using the
-// above function. When the above function has been
-// triggered the selected scheme fetches the data from the
-// JSON and loads it into this function which replaces the
-// color of all the elements listed in the element variables
-// section below.
-function scheme_apply_individual(element_id, scheme_data) {
-
-    //————————————————————————————————————————————————————————//
-    //—————————————[ DYNAMIC-ELEMENT-VARIABLES ]——————————————//
-    //————————————————————————————————————————————————————————//
-    // This collects the document's dynamic element IDs that
-    // will be modified based on the current scheme. If further
-    // dynamic elements are added to a JavaScript file and you
-    // want them to be modified by schemes, add their IDs on a
-    // new line using the same format as below. Use "All" if
-    // there are more than one of the same element in the
-    // JavaScript file.
-    const element = document.querySelectorAll(`#${element_id}`)
-
-    //————————————————————————————————————————————————————————//
-    //————————————————————[ SCHEME-APPLY ]————————————————————//
-    //————————————————————————————————————————————————————————//
-    // Here is where the scheme application process visually
-    // starts using the above variables.
-
-    // Sets the scheme of the dynamic button elements.
-    element.forEach((element) => {
-        element.style.backgroundColor = scheme_data;
-    });
-}
-
-
-
-
-
-
-
-
-
-
 // YOU HAVE REACHED THE END OF THE SCRIPT! IF YOU BELIEVE
 // ERRORS ARE PRESENT, PLEASE REPORT IT TO US OR CONTRIBUTE
 // A FIX TO IT. THANK YOU!
 //
-// GITHUB: https://github.com/OpenProfileDevs/OP5-Preview
+// GITHUB: https://github.com/OpenProfileApp/OP5-Preview

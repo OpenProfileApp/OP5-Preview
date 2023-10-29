@@ -1,19 +1,19 @@
 const languageOption = document.getElementById("language_option");
 const languageSubMenu = document.getElementById("languageSubMenu");
-const rmenu = document.getElementById("contextmenu")
+const rmenu = document.getElementById("right_click_menu")
 
 let language_menu_timer;
 
 languageOption.addEventListener("mouseover", () => {
     // Assuming you have references to the elements
   const languageSubMenu = document.getElementById('languageSubMenu');
-  const contextMenu = document.getElementById('contextMenu');
+  const right_click_menu = document.getElementById('right_click_menu');
 
-  // Get the width of the contextMenu element
-  const contextMenuWidth = contextMenu.offsetWidth; // You can use offsetWidth or getBoundingClientRect().width
+  // Get the width of the right_click_menu element
+  const right_click_menuWidth = right_click_menu.offsetWidth; // You can use offsetWidth or getBoundingClientRect().width
 
   clearTimeout(language_menu_timer);
-  languageSubMenu.style.left = `${contextMenuWidth + 0}px`;
+  languageSubMenu.style.left = `${right_click_menuWidth + 0}px`;
   languageSubMenu.style.width = "105px";
   languageSubMenu.style.top = "147px"; // Maintain the same vertical position
   languageSubMenu.style.display = "block";
