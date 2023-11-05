@@ -22,12 +22,12 @@ function updateElementsByTimeOfYear() {
   
     // Determine the current season
     if (currentMonth === October) {
-        // Enable seasonal features
-        const messageElement = document.querySelector(`#loading_message_spooky_${randomNumber}`);
-        if (messageElement) {
-        messageElement.style.display = "block";
+            // Enable seasonal features
+            const messageElement = document.querySelector(`#loading_message_spooky_${randomNumber}`);
+            if (messageElement) {
+            messageElement.style.display = "block";
         }
-        
+
         const loaded_scheme_json = localStorage.getItem('local_selected_scheme');
         if (loaded_scheme_json !== null) {
             // The 'local_selected_scheme' value is not empty
@@ -37,5 +37,8 @@ function updateElementsByTimeOfYear() {
             // You can handle this case or run other code here
             load_specific_scheme("scheme_spooky");
         }
+    } else {
+        const messageElement = document.querySelector(`#loading_message_default`);
+        messageElement.style.display = "block";
     }
 }

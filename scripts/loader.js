@@ -75,7 +75,7 @@ function simulateAppLoading(speed) {
     if (currentMonth == October) {
         colors = "'#e47125'"
     } else {
-        colors = "'#ffffff'"
+        colors = "''"
     }
 
     var defaults = {

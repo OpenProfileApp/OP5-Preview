@@ -569,6 +569,7 @@
     left: 0px;
     top: 8px;
     height: fit-content;
+    max-height: 100px;
     width: fit-content;
     color: #ffffff;
     font-family: "NotoSans-Regular";
@@ -586,6 +587,8 @@
     transition: 0.2s all;
     opacity: 0;
     display: none;
+    overflow-y: auto;
+    overflow-x: none;
     animation: help_box_slide_up 0.35s linear;
     z-index: 5;
   }
@@ -596,6 +599,21 @@
     color: #ffffff;
     display: block;
     opacity: 1;
+  }
+
+  .help_box::-webkit-scrollbar {
+    display: block;
+    width: 5px;
+  }
+
+  .help_box::-webkit-scrollbar-thumb {
+    background-color: #222635;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .help_box::-webkit-scrollbar-track {
+    background-color: #1C1F2A;
   }
 
   @keyframes help_box_slide_up {

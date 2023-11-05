@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', loadConfig);
 window.addEventListener('load', function () {
     var currentDomain = window.location.origin;
     var baseTag = document.querySelector("base");
-    baseTag.href = currentDomain;
+    //baseTag.href = currentDomain;
 
 
     simulateAppLoading("50") // The number is to change speed, put 500 for dev and 50 for release
