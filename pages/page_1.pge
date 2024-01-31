@@ -1,0 +1,495 @@
+{
+  "brand_tag": "PREVIEW",
+  "page_indicator": "Name Information",
+  "page_indicator_tag": "PREVIEW",
+  "page_number": 1,
+  
+  "page_author": "",
+  "page_author_tag": "PREVIEW",
+  "written_date": "",
+  "written_date_tag": "PREVIEW",
+
+  "row1": {
+    "slot1": {
+      "type": 3,
+      "id": "full_name",
+      "label": "Full Name",
+      "placeholder": "What is the oc's full name?",
+      "help": "What is the character's full name? Be sure to include their prefixes and suffixes if any."
+    },
+    "slot2": {
+      "type": 0,
+      "id": "",
+      "label": "",
+      "placeholder": "",
+      "help": ""
+    },
+    "slot3": {
+      "type": 0,
+      "id": "",
+      "label": "",
+      "placeholder": "",
+      "help": ""
+    }
+  },
+  "row2": {
+    "slot1": {
+      "type": 1,
+      "id": "first_name",
+      "label": "First Name",
+      "placeholder": "What is the oc's first name?",
+      "help": "What is the character's first name? While optional, first names should generally describe the character in some way based on it's meaning."
+    },
+    "slot2": {
+      "type": 1,
+      "id": "middle_name",
+      "label": "Middle Name",
+      "placeholder": "What is the oc's middle name?",
+      "help": "What is the character's middle name? Middle names aren't always required and are more often used for realisum or an alternate calling. If so, a middle name should generally describe the character in the view or likings of the person who assigned the character the name such as their parent or guardian."
+    },
+    "slot3": {
+      "type": 1,
+      "id": "last_name",
+      "label": "Last Name",
+      "placeholder": "What is the oc's last name?",
+      "help": "What is the character's last name? While optional, last names could be used to tell a lot about the character interests or values based on the name's ancestrial association. A last name is typically inherited from the character's father."
+    }
+  },
+  "row3": {
+    "slot1": {
+      "type": 3,
+      "id": "nickname",
+      "label": "Nickname",
+      "placeholder": "What is the oc's nickname?",
+      "help": "What is the character's nickname? Nicknames are meant to be fun lighthearted alternative callings for the character often created by their friends and family. Sometimes even enemies or other acquaintances may come up with nicknames for the character with negative intent."
+    },
+    "slot2": {
+      "type": 0,
+      "id": "",
+      "label": "",
+      "placeholder": "",
+      "help": ""
+    },
+    "slot3": {
+      "type": 0,
+      "id": "",
+      "label": "",
+      "placeholder": "",
+      "help": ""
+    }
+  },
+  "row4": {
+    "slot1": {
+      "type": 3,
+      "id": "alias",
+      "label": "Alias",
+      "placeholder": "What is the oc's alias?",
+      "help": "What is the character's alias? If any, aliases are alternative names useally for cyberspace or business purposes for seperating themselves from their real identity to remain anonymous. These can include personal self-made titles and public callings in which the character made their own."
+    },
+    "slot2": {
+      "type": 0,
+      "id": "",
+      "label": "",
+      "placeholder": "",
+      "help": ""
+    },
+    "slot3": {
+      "type": 0,
+      "id": "",
+      "label": "",
+      "placeholder": "",
+      "help": ""
+    }
+  },
+  "row5": {
+    "slot1": {
+      "type": 3,
+      "id": "alter_ego",
+      "label": "Alter Ego",
+      "placeholder": "What is the oc's alter ego?",
+      "help": "What is the character's alter ego? Alter egos are alternate personalities that the character possesses and becomes during certain situations. Alter egos are commonly used for characters with secret heroic or villainic identities."
+    },
+    "slot2": {
+      "type": 0,
+      "id": "",
+      "label": "",
+      "placeholder": "",
+      "help": ""
+    },
+    "slot3": {
+      "type": 0,
+      "id": "",
+      "label": "",
+      "placeholder": "",
+      "help": ""
+    }
+  },
+  "row6": {
+    "slot1": {
+      "type": 2,
+      "id": "prefix",
+      "label": "Prefix",
+      "placeholder": "What is the oc's prefix?",
+      "help": "What is the character's prefix? If the character is worldly notable then it's likely they might have a prefix or prefix based title apart from citizen standards. Prefixes are typically given by members of a higher ranking order than them for special ceremonies or accomplishments."
+    },
+    "slot2": {
+      "type": 0,
+      "id": "",
+      "label": "",
+      "placeholder": "",
+      "help": ""
+    },
+    "slot3": {
+      "type": 1,
+      "id": "suffix",
+      "label": "Suffix",
+      "placeholder": "What is the oc's suffix?",
+      "help": "What is the character's suffix? Suffixes are commonly known to be inherited from family trees but can also be earned in military service and other professions."
+    }
+  },
+  "row7": {
+    "slot1": {
+      "type": 3,
+      "id": "former_name",
+      "label": "Former Name",
+      "placeholder": "What was the oc's former name?",
+      "help": "What is the character's former name? Reasons for a former name may be due to a once active alias or nickname the character was once known by. A former name can be useful for characters who changed their path in life and needed to let go the person they once were."
+    },
+    "slot2": {
+      "type": 0,
+      "id": "",
+      "label": "",
+      "placeholder": "",
+      "help": ""
+    },
+    "slot3": {
+      "type": 0,
+      "id": "",
+      "label": "",
+      "placeholder": "",
+      "help": ""
+    }
+  },
+  "row8": {
+    "slot1": {
+      "type": 5,
+      "id": "name_origin",
+      "label": "Name Origin",
+      "placeholder": "What is the origin behind the oc's name?",
+      "help": "What is the origin behind the character's name and what does it mean? Is it from a specifc region or hold a special tale to it? Who gave it to them or whom did they inherit it from? Any reason when and why the character got the name? Try to be the most descriptive possible and remember the usage of the five Ws (who, what, when, where, and why) when needed."
+    },
+    "slot2": {
+      "type": 0,
+      "id": "",
+      "label": "",
+      "placeholder": "",
+      "help": ""
+    },
+    "slot3": {
+      "type": 0,
+      "id": "",
+      "label": "",
+      "placeholder": "",
+      "help": ""
+    }
+  },
+  "row9": {
+    "slot1": {
+      "type": 0,
+      "id": "",
+      "label": "",
+      "placeholder": "",
+      "help": ""
+    },
+    "slot2": {
+      "type": 0,
+      "id": "",
+      "label": "",
+      "placeholder": "",
+      "help": ""
+    },
+    "slot3": {
+      "type": 0,
+      "id": "",
+      "label": "",
+      "placeholder": "",
+      "help": ""
+    }
+  },
+  "row10": {
+    "slot1": {
+      "type": 0,
+      "id": "",
+      "label": "",
+      "placeholder": "",
+      "help": ""
+    },
+    "slot2": {
+      "type": 0,
+      "id": "",
+      "label": "",
+      "placeholder": "",
+      "help": ""
+    },
+    "slot3": {
+      "type": 0,
+      "id": "",
+      "label": "",
+      "placeholder": "",
+      "help": ""
+    }
+  },
+  "row11": {
+    "slot1": {
+      "type": 0,
+      "id": "",
+      "label": "",
+      "placeholder": "",
+      "help": ""
+    },
+    "slot2": {
+      "type": 0,
+      "id": "",
+      "label": "",
+      "placeholder": "",
+      "help": ""
+    },
+    "slot3": {
+      "type": 0,
+      "id": "",
+      "label": "",
+      "placeholder": "",
+      "help": ""
+    }
+  },
+  "row12": {
+    "slot1": {
+      "type": 0,
+      "id": "",
+      "label": "",
+      "placeholder": "",
+      "help": ""
+    },
+    "slot2": {
+      "type": 0,
+      "id": "",
+      "label": "",
+      "placeholder": "",
+      "help": ""
+    },
+    "slot3": {
+      "type": 0,
+      "id": "",
+      "label": "",
+      "placeholder": "",
+      "help": ""
+    }
+  },
+  "row13": {
+    "slot1": {
+      "type": 0,
+      "id": "",
+      "label": "",
+      "placeholder": "",
+      "help": ""
+    },
+    "slot2": {
+      "type": 0,
+      "id": "",
+      "label": "",
+      "placeholder": "",
+      "help": ""
+    },
+    "slot3": {
+      "type": 0,
+      "id": "",
+      "label": "",
+      "placeholder": "",
+      "help": ""
+    }
+  },
+  "row14": {
+    "slot1": {
+      "type": 0,
+      "id": "",
+      "label": "",
+      "placeholder": "",
+      "help": ""
+    },
+    "slot2": {
+      "type": 0,
+      "id": "",
+      "label": "",
+      "placeholder": "",
+      "help": ""
+    },
+    "slot3": {
+      "type": 0,
+      "id": "",
+      "label": "",
+      "placeholder": "",
+      "help": ""
+    }
+  },
+  "row15": {
+    "slot1": {
+      "type": 5,
+      "id": "personal_thoughts_name",
+      "label": "Personal Thoughts",
+      "placeholder": "What are the oc's personal thoughts towards their names?",
+      "help": "What are the character's personal thoughts towards their names? Do they like their names or would they rather have had different ones? Does having the names affects their life in any certain way? Do the names remind them of anything? Are they comfortable sharing their names with others or would they rather keep them in secrecy? Try to be the most descriptive possible and remember the usage of the five Ws (who, what, when, where, and why) when needed."
+    },
+    "slot2": {
+      "type": 0,
+      "id": "",
+      "label": "s",
+      "placeholder": "",
+      "help": ""
+    },
+    "slot3": {
+      "type": 0,
+      "id": "",
+      "label": "",
+      "placeholder": "",
+      "help": ""
+    }
+  },
+  "row16": {
+    "slot1": {
+      "type": 0,
+      "id": "",
+      "label": "",
+      "placeholder": "",
+      "help": ""
+    },
+    "slot2": {
+      "type": 0,
+      "id": "",
+      "label": "",
+      "placeholder": "",
+      "help": ""
+    },
+    "slot3": {
+      "type": 0,
+      "id": "",
+      "label": "",
+      "placeholder": "",
+      "help": ""
+    }
+  },
+  "row17": {
+    "slot1": {
+      "type": 0,
+      "id": "",
+      "label": "",
+      "placeholder": "",
+      "help": ""
+    },
+    "slot2": {
+      "type": 0,
+      "id": "",
+      "label": "",
+      "placeholder": "",
+      "help": ""
+    },
+    "slot3": {
+      "type": 0,
+      "id": "",
+      "label": "",
+      "placeholder": "",
+      "help": ""
+    }
+  },
+  "row18": {
+    "slot1": {
+      "type": 0,
+      "id": "",
+      "label": "",
+      "placeholder": "",
+      "help": ""
+    },
+    "slot2": {
+      "type": 0,
+      "id": "",
+      "label": "",
+      "placeholder": "",
+      "help": ""
+    },
+    "slot3": {
+      "type": 0,
+      "id": "",
+      "label": "",
+      "placeholder": "",
+      "help": ""
+    }
+  },
+  "row19": {
+    "slot1": {
+      "type": 0,
+      "id": "",
+      "label": "",
+      "placeholder": "",
+      "help": ""
+    },
+    "slot2": {
+      "type": 0,
+      "id": "",
+      "label": "",
+      "placeholder": "",
+      "help": ""
+    },
+    "slot3": {
+      "type": 0,
+      "id": "",
+      "label": "",
+      "placeholder": "",
+      "help": ""
+    }
+  },
+  "row20": {
+    "slot1": {
+      "type": 0,
+      "id": "",
+      "label": "",
+      "placeholder": "",
+      "help": ""
+    },
+    "slot2": {
+      "type": 0,
+      "id": "",
+      "label": "",
+      "placeholder": "",
+      "help": ""
+    },
+    "slot3": {
+      "type": 0,
+      "id": "",
+      "label": "",
+      "placeholder": "",
+      "help": ""
+    }
+  },
+  "row21": {
+    "slot1": {
+      "type": 0,
+      "id": "",
+      "label": "",
+      "placeholder": "",
+      "help": ""
+    },
+    "slot2": {
+      "type": 0,
+      "id": "",
+      "label": "",
+      "placeholder": "",
+      "help": ""
+    },
+    "slot3": {
+      "type": 0,
+      "id": "",
+      "label": "",
+      "placeholder": "",
+      "help": ""
+    }
+  }
+}
