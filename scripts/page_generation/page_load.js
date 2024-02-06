@@ -1,4 +1,4 @@
-const fileListEndpoint = 'http://localhost:3000/fileList';
+const fileListEndpoint = '/fileList';
 const element = document.getElementById('your_element_id');
 var current_page = -1;
 var current_z = 100;
@@ -58,7 +58,7 @@ fetch(fileListEndpoint)
             <!--————————————————————————————————————————————————————————-->
             <!--———————————————————[ PAGE-AUTHOR-1 ]————————————————————-->
             <!--————————————————————————————————————————————————————————-->
-            <div class="group" id="page_author_${data.page_number}_group" style="top: 0px; left: -1px; z-index: 24;">
+            <div class="group" id="page_author_${data.page_number}_group" style="top: 0px; left: -1px; z-index: 10001;">
                 <div class="tag" style="left: 95%; transform: translateX(-50%)translateY(-40px)scale(0.7);">${data.page_author_tag}</div>
                 <div class="label_tab" id="page_author_label_tab" style="top: 29px; border-radius: 0px 0px 5px 0px; z-index: 2;">Page Author</div>
                 <div><input type="text" class="input_text_author" id="page_author_${data.page_number}" style="width: 175px;" autocomplete="off" autocorrect="off" placeholder="Who is the page's author?"></div>
@@ -68,14 +68,14 @@ fetch(fileListEndpoint)
             <!--————————————————————————————————————————————————————————-->
             <!--——————————————————[ NAME-INFORMATION ]——————————————————-->
             <!--————————————————————————————————————————————————————————-->
-            <div class="group" id="name_information_group" style="top: 0px; left: 249px; z-index: 23;">
+            <div class="group" id="name_information_group" style="top: 0px; left: 249px; z-index: 10002;">
                 <div><input type="text" class="page_indicator" id="name_information" autocomplete="off" autocorrect="off" value="${data.page_indicator}" tabindex="-1" readonly></div>
             </div>
 
             <!--————————————————————————————————————————————————————————-->
             <!--———————————————————[ WRITTEN-DATE-1 ]———————————————————-->
             <!--————————————————————————————————————————————————————————-->
-            <div class="group" id="written_date_${data.page_number}_group" style="top: 0px; left: 498px; z-index: 22;">
+            <div class="group" id="written_date_${data.page_number}_group" style="top: 0px; left: 498px; z-index: 10003;">
                 <div class="tag" style="left: 100%; transform: translateX(-50%)translateY(-40px)scale(0.7);">${data.written_date_tag}</div>
                 <div class="label_tab" id="written_date_label_tab" option="page_date" style="top: 29px; border-radius: 0px 0px 0px 5px; left: 134px;">Written Date</div>
                 <div><input type="text" class="input_text_written" id="written_date_${data.page_number}" style="width: 175px; text-align: right;" autocomplete="off" autocorrect="off" placeholder="When was this page written?"></div>

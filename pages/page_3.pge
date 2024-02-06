@@ -1,0 +1,495 @@
+{
+    "brand_tag": "PREVIEW",
+    "page_indicator": "Physical Information",
+    "page_indicator_tag": "PREVIEW",
+    "page_number": 3,
+    
+    "page_author": "",
+    "page_author_tag": "PREVIEW",
+    "written_date": "",
+    "written_date_tag": "PREVIEW",
+  
+    "row1": {
+      "slot1": {
+        "type": 1,
+        "id": "body_height",
+        "label": "Body Height",
+        "placeholder": "What is the oc's body height?",
+        "help": "What is the character's body height? The body height should be primarily calculated from head to feet and not include any sort of wearables or extra features such as horns or antennas. Be sure to include any units of measurement you are using so it can be easily translated. It's recommended to use both feet (ft.) and centimeters (cm.) for a universal understanding."
+      },
+      "slot2": {
+        "type": 1,
+        "id": "body_length",
+        "label": "Body Length",
+        "placeholder": "What is the oc's body length?",
+        "help": "What is the character's body length? The body length should be primarily calculated from side to side and not include any sort of wearables or extra features such as spikes or wings. Be sure to include any units of measurement you are using so it can be easily translated. It's recommended to use both feet (ft.) and centimeters (cm.) for a universal understanding."
+      },
+      "slot3": {
+        "type": 1,
+        "id": "body_width",
+        "label": "Body Width",
+        "placeholder": "What is the oc's body width?",
+        "help": "What is the character's body width? The body width should be primarily calculated from front to back and not include any sort of wearables or extra features such as spikes or tails. Be sure to include any units of measurement you are using so it can be easily translated. It's recommended to use both feet (ft.) and centimeters (cm.) for a universal understanding."
+      }
+    },
+    "row2": {
+      "slot1": {
+        "type": 1,
+        "id": "body_type",
+        "label": "Body Type",
+        "placeholder": "What is the oc's body type?",
+        "help": "What is the character's body type?\n\n<u>Endomorph</u>\nEndomorph are the most common body types and tend to have larger bone structures and a higher percentage of body fat.\n\n<u>Mesomorph</u>\nMesomorph body type are naturally muscular and has an average sized bone structure.\n\n<u>Ectomorph</u>\nEctomorph has a light body build, slightly muscular development, and little body fat."
+      },
+      "slot2": {
+        "type": 1,
+        "id": "body_mass",
+        "label": "Body Mass",
+        "placeholder": "What is the oc's body mass?",
+        "help": "What is the oc's body mass? Body mass index (BMI) is calculated based on the character's weight and height. To calculate BMI, convert their height to square inches then divide their weight in pounds by that. Multiply the outcome by 703 and the result is the character's BMI. A BMI of 18.5 to 24.9 is considered healthy while anything above 25.0 is considered overweight and passed 30.0 can lead to heath complications."
+      },
+      "slot3": {
+        "type": 1,
+        "id": "body_weight",
+        "label": "Body Weight",
+        "placeholder": "What is the oc's body weight?",
+        "help": "What is the character's body weight? The body weight should be calculated without including any sort of wearables. Be sure to include any units of measurement you are using so it can be easily translated. It's recommended to use both pounds (lb.) and kilograms (kg.) for a universal understanding."
+      }
+    },
+    "row3": {
+      "slot1": {
+        "type": 2,
+        "id": "species",
+        "label": "Species",
+        "placeholder": "What is the oc's species?",
+        "help": "What is the character's species? They could be a human, elf, type of alien, hybrid of creatures, or even something totally unique. Include the scientific name if necessary."
+      },
+      "slot2": {
+        "type": 0,
+        "id": "",
+        "label": "",
+        "placeholder": "",
+        "help": ""
+      },
+      "slot3": {
+        "type": 1,
+        "id": "gender",
+        "label": "Gender",
+        "placeholder": "What is the oc's gender?",
+        "help": "What is the character's gender at birth? If the character is transgendered, specify by what."
+      }
+    },
+    "row4": {
+      "slot1": {
+        "type": 2,
+        "id": "ethnicity",
+        "label": "Ethnicity",
+        "placeholder": "What is the oc's ethnicity?",
+        "help": "What is the character's ethnicity? For humans, common ethnicities include Caucasians, Africans, Asians, Hispanics, and Natives."
+      },
+      "slot2": {
+        "type": 0,
+        "id": "",
+        "label": "",
+        "placeholder": "",
+        "help": ""
+      },
+      "slot3": {
+        "type": 1,
+        "id": "body_color",
+        "label": "Body Color",
+        "placeholder": "What is the oc's body color?",
+        "help": "What is the character's body color? Body colors are typically determined by the outer face of the body. Body colors could incude patterns like stripes or spots and other interesting visuals. You can get into detail using the box below, where as this box is mainly for common color names and hex '#000000' or rgb '0,0,0' values if any."
+      }
+    },
+    "row5": {
+      "slot1": {
+        "type": 5,
+        "id": "external_physical_appearance",
+        "label": "External Physical Appearance",
+        "placeholder": "What does the oc's external physical appearance look like?",
+        "help": "What does the character's external physical appearance look like without including any sort of non-permanent wearables? Do they have skin, fur, scales, or something else? What does their face sculpture looks like? Include their hair, eyes, nose, ears, mouth, teeth, tongue, etc. if necessary. What about their body structure? Are they thin, average, muscular, or overweight? Does the character have any additional features such as horns, wings, spikes, tails, etc.? What about prominent marks like scars, tattoos, piercings, birth marks, irritations etc.? If the character has ever been in an injury, do they have prosthetics? Try to be the most descriptive possible and remember to include any color or patterns and material, size and weight, and other additional information that gives more on their physical features when needed."
+      },
+      "slot2": {
+        "type": 0,
+        "id": "",
+        "label": "",
+        "placeholder": "",
+        "help": ""
+      },
+      "slot3": {
+        "type": 0,
+        "id": "",
+        "label": "",
+        "placeholder": "",
+        "help": ""
+      }
+    },
+    "row6": {
+      "slot1": {
+        "type": 0,
+        "id": "",
+        "label": "",
+        "placeholder": "",
+        "help": ""
+      },
+      "slot2": {
+        "type": 0,
+        "id": "",
+        "label": "",
+        "placeholder": "",
+        "help": ""
+      },
+      "slot3": {
+        "type": 0,
+        "id": "",
+        "label": "",
+        "placeholder": "",
+        "help": ""
+      }
+    },
+    "row7": {
+      "slot1": {
+        "type": 0,
+        "id": "",
+        "label": "",
+        "placeholder": "",
+        "help": ""
+      },
+      "slot2": {
+        "type": 0,
+        "id": "",
+        "label": "",
+        "placeholder": "",
+        "help": ""
+      },
+      "slot3": {
+        "type": 0,
+        "id": "",
+        "label": "",
+        "placeholder": "",
+        "help": ""
+      }
+    },
+    "row8": {
+      "slot1": {
+        "type": 0,
+        "id": "",
+        "label": "",
+        "placeholder": "",
+        "help": ""
+      },
+      "slot2": {
+        "type": 0,
+        "id": "",
+        "label": "",
+        "placeholder": "",
+        "help": ""
+      },
+      "slot3": {
+        "type": 0,
+        "id": "",
+        "label": "",
+        "placeholder": "",
+        "help": ""
+      }
+    },
+    "row9": {
+      "slot1": {
+        "type": 0,
+        "id": "",
+        "label": "",
+        "placeholder": "",
+        "help": ""
+      },
+      "slot2": {
+        "type": 0,
+        "id": "",
+        "label": "",
+        "placeholder": "",
+        "help": ""
+      },
+      "slot3": {
+        "type": 0,
+        "id": "",
+        "label": "",
+        "placeholder": "",
+        "help": ""
+      }
+    },
+    "row10": {
+      "slot1": {
+        "type": 0,
+        "id": "",
+        "label": "",
+        "placeholder": "",
+        "help": ""
+      },
+      "slot2": {
+        "type": 0,
+        "id": "",
+        "label": "",
+        "placeholder": "",
+        "help": ""
+      },
+      "slot3": {
+        "type": 0,
+        "id": "",
+        "label": "",
+        "placeholder": "",
+        "help": ""
+      }
+    },
+    "row11": {
+      "slot1": {
+        "type": 0,
+        "id": "",
+        "label": "",
+        "placeholder": "",
+        "help": ""
+      },
+      "slot2": {
+        "type": 0,
+        "id": "",
+        "label": "",
+        "placeholder": "",
+        "help": ""
+      },
+      "slot3": {
+        "type": 0,
+        "id": "",
+        "label": "",
+        "placeholder": "",
+        "help": ""
+      }
+    },
+    "row12": {
+      "slot1": {
+        "type": 5,
+        "id": "internal_physical_appearance",
+        "label": "Internal Physical Appearance",
+        "placeholder": "What does the oc's internal physical appearance look like?",
+        "help": "What does the character's internal physical appearance look like without including any sort of non-permanent wearables? This is only necessary if your character goes trought some medical procedures or if you character is a machine with certain capabilities. If so, what does their blood look like? What about their main tissues, organs, and bones? Are they thick or thin? Do they have any prominent marks like scarring or maybe an irritation? Try to be the most descriptive possible and remember to include any color or patterns and material, size and weight, and other additional information that gives more on their physical features when needed."
+      },
+      "slot2": {
+        "type": 0,
+        "id": "",
+        "label": "",
+        "placeholder": "",
+        "help": ""
+      },
+      "slot3": {
+        "type": 0,
+        "id": "",
+        "label": "",
+        "placeholder": "",
+        "help": ""
+      }
+    },
+    "row13": {
+      "slot1": {
+        "type": 0,
+        "id": "",
+        "label": "",
+        "placeholder": "",
+        "help": ""
+      },
+      "slot2": {
+        "type": 0,
+        "id": "",
+        "label": "",
+        "placeholder": "",
+        "help": ""
+      },
+      "slot3": {
+        "type": 0,
+        "id": "",
+        "label": "",
+        "placeholder": "",
+        "help": ""
+      }
+    },
+    "row14": {
+      "slot1": {
+        "type": 0,
+        "id": "",
+        "label": "",
+        "placeholder": "",
+        "help": ""
+      },
+      "slot2": {
+        "type": 0,
+        "id": "",
+        "label": "",
+        "placeholder": "",
+        "help": ""
+      },
+      "slot3": {
+        "type": 0,
+        "id": "",
+        "label": "",
+        "placeholder": "",
+        "help": ""
+      }
+    },
+    "row15": {
+      "slot1": {
+        "type": 0,
+        "id": "",
+        "label": "",
+        "placeholder": "",
+        "help": ""
+      },
+      "slot2": {
+        "type": 0,
+        "id": "",
+        "label": "",
+        "placeholder": "",
+        "help": ""
+      },
+      "slot3": {
+        "type": 0,
+        "id": "",
+        "label": "",
+        "placeholder": "",
+        "help": ""
+      }
+    },
+    "row16": {
+      "slot1": {
+        "type": 0,
+        "id": "",
+        "label": "",
+        "placeholder": "",
+        "help": ""
+      },
+      "slot2": {
+        "type": 0,
+        "id": "",
+        "label": "",
+        "placeholder": "",
+        "help": ""
+      },
+      "slot3": {
+        "type": 0,
+        "id": "",
+        "label": "",
+        "placeholder": "",
+        "help": ""
+      }
+    },
+    "row17": {
+      "slot1": {
+        "type": 0,
+        "id": "",
+        "label": "",
+        "placeholder": "",
+        "help": ""
+      },
+      "slot2": {
+        "type": 0,
+        "id": "",
+        "label": "",
+        "placeholder": "",
+        "help": ""
+      },
+      "slot3": {
+        "type": 0,
+        "id": "",
+        "label": "",
+        "placeholder": "",
+        "help": ""
+      }
+    },
+    "row18": {
+      "slot1": {
+        "type": 0,
+        "id": "",
+        "label": "",
+        "placeholder": "",
+        "help": ""
+      },
+      "slot2": {
+        "type": 0,
+        "id": "",
+        "label": "",
+        "placeholder": "",
+        "help": ""
+      },
+      "slot3": {
+        "type": 0,
+        "id": "",
+        "label": "",
+        "placeholder": "",
+        "help": ""
+      }
+    },
+    "row19": {
+      "slot1": {
+        "type": 4,
+        "id": "personal_thoughts_physical_appearance",
+        "label": "Personal Thoughts",
+        "placeholder": "What are the oc's personal thoughts towards their physical appearance?",
+        "help": "What are the character's personal thoughts towards their physical appearance? Do they like their physical appearance and details or would they rather have had whole different look? Does their physical appearance or details affects their life in any certain way? Do their physical appearance or details remind them of anything? Are they comfortable sharing their physical appearance or details with others or would they rather keep them in secrecy? Apart from what they are meant to do, does the character uses any of their physical features to help them in everyday life? Try to be the most descriptive possible and remember the usage of the five Ws (who, what, when, where, and why) when needed."
+      },
+      "slot2": {
+        "type": 0,
+        "id": "",
+        "label": "",
+        "placeholder": "",
+        "help": ""
+      },
+      "slot3": {
+        "type": 0,
+        "id": "",
+        "label": "",
+        "placeholder": "",
+        "help": ""
+      }
+    },
+    "row20": {
+      "slot1": {
+        "type": 0,
+        "id": "",
+        "label": "",
+        "placeholder": "",
+        "help": ""
+      },
+      "slot2": {
+        "type": 0,
+        "id": "",
+        "label": "",
+        "placeholder": "",
+        "help": ""
+      },
+      "slot3": {
+        "type": 0,
+        "id": "",
+        "label": "",
+        "placeholder": "",
+        "help": ""
+      }
+    },
+    "row21": {
+      "slot1": {
+        "type": 0,
+        "id": "",
+        "label": "",
+        "placeholder": "",
+        "help": ""
+      },
+      "slot2": {
+        "type": 0,
+        "id": "",
+        "label": "",
+        "placeholder": "",
+        "help": ""
+      },
+      "slot3": {
+        "type": 0,
+        "id": "",
+        "label": "",
+        "placeholder": "",
+        "help": ""
+      }
+    }
+  }

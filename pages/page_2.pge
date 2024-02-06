@@ -84,7 +84,7 @@
       "id": "birth_event",
       "label": "Birth Event",
       "placeholder": "What happened during the oc's birth event?",
-      "help": "What happened during the oc's birth event and why did it happen? Describe the scene and location of where the character was born. What was the character's thought of mind at the moment of this event? Try to be the most descriptive possible and remember the usage of the five Ws (who, what, when, where, and why) when needed."
+      "help": "What happened during the character's birth event and why did it happen? Describe the scene and location of where the character was born. What was the character's thought of mind at the moment of this event? Try to be the most descriptive possible and remember the usage of the five Ws (who, what, when, where, and why) when needed."
     },
     "slot2": {
       "type": 0,
@@ -245,7 +245,7 @@
       "id": "death_event",
       "label": "Death Event",
       "placeholder": "What happened during the oc's death event?",
-      "help": "What happened during the oc's death event and why did it happen? Describe the scene and location of where the character died. What was the character's thought of mind at the moment of this event? Try to be the most descriptive possible and remember the usage of the five Ws (who, what, when, where, and why) when needed."
+      "help": "What happened during the character's death event and why did it happen? Describe the scene and location of where the character died. What was the character's thought of mind at the moment of this event? Try to be the most descriptive possible and remember the usage of the five Ws (who, what, when, where, and why) when needed."
     },
     "slot2": {
       "type": 0,
@@ -406,7 +406,7 @@
       "id": "personal_thoughts_astrology",
       "label": "Personal Thoughts",
       "placeholder": "What are the oc's personal thoughts towards their astrology details and events?",
-      "help": "What are the character's personal thoughts towards their astrology details and birth and/or death events? Do they like the details and events or would they rather have had different ones? Does being connected to these astrology details or events affects their life in any certain way? Do the details or events remind them of anything? Are they comfortable sharing their details or events with others or would they rather keep them in secrecy? Try to be the most descriptive possible and remember the usage of the five Ws (who, what, when, where, and why) when needed."
+      "help": "What are the character's personal thoughts towards their astrology details and birth and/or death events? Do they like the details and events or would they rather have had different ones? Does being connected to these astrology details or events affects their life in any certain way? Do the details or events remind them of anything? Are they comfortable sharing their details or events with others or would they rather keep them in secrecy? Apart from what they are meant to do, does the character uses any of their astrological details to help them in everyday life? Try to be the most descriptive possible and remember the usage of the five Ws (who, what, when, where, and why) when needed."
     },
     "slot2": {
       "type": 0,

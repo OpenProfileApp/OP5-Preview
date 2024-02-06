@@ -12,7 +12,7 @@
   "row1": {
     "slot1": {
       "type": 3,
-      "id": "full_name",
+      "id": "uw",
       "label": "Full Name",
       "placeholder": "What is the oc's full name?",
       "help": "What is the character's full name? Be sure to include their prefixes and suffixes if any."
@@ -337,7 +337,7 @@
       "id": "personal_thoughts_name",
       "label": "Personal Thoughts",
       "placeholder": "What are the oc's personal thoughts towards their names?",
-      "help": "What are the character's personal thoughts towards their names? Do they like their names or would they rather have had different ones? Does having the names affects their life in any certain way? Do the names remind them of anything? Are they comfortable sharing their names with others or would they rather keep them in secrecy? Try to be the most descriptive possible and remember the usage of the five Ws (who, what, when, where, and why) when needed."
+      "help": "What are the character's personal thoughts towards their names? Do they like their names or would they rather have had different ones? Does having the names affects their life in any certain way? Do the names remind them of anything? Are they comfortable sharing their names with others or would they rather keep them in secrecy? Apart from what they are meant to do, does the character uses any of their names to help them in everyday life? Try to be the most descriptive possible and remember the usage of the five Ws (who, what, when, where, and why) when needed."
     },
     "slot2": {
       "type": 0,
