@@ -401,8 +401,8 @@ FodyWeavers.xsd
 server.js
 package.json
 package-lock.json
-tokens.txt
+token.txt
+webhook.txt
 discord_bot_assistant.js
-scripts/discord/
 ca.crt
 ca.key

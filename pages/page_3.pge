@@ -429,7 +429,7 @@
         "id": "personal_thoughts_physical_appearance",
         "label": "Personal Thoughts",
         "placeholder": "What are the oc's personal thoughts towards their physical appearance?",
-        "help": "What are the character's personal thoughts towards their physical appearance? Do they like their physical appearance and details or would they rather have had whole different look? Does their physical appearance or details affects their life in any certain way? Do their physical appearance or details remind them of anything? Are they comfortable sharing their physical appearance or details with others or would they rather keep them in secrecy? Apart from what they are meant to do, does the character uses any of their physical features to help them in everyday life? Try to be the most descriptive possible and remember the usage of the five Ws (who, what, when, where, and why) when needed."
+        "help": "What are the character's personal thoughts towards their physical appearance? Do they like their physical appearance and details or would they rather have had whole different look? Does their physical appearance or details affects their life in any certain way? Do their physical appearance or details remind them of anything? Are they comfortable sharing their physical appearance or details with others or would they rather keep them in secrecy? Apart from what they are meant to do, does the character uses any of their physical features to help them in everyday life? Is the character even aware of some of their physical features? Try to be the most descriptive possible and remember the usage of the five Ws (who, what, when, where, and why) when needed."
       },
       "slot2": {
         "type": 0,

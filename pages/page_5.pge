@@ -1,0 +1,495 @@
+{
+    "brand_tag": "PREVIEW",
+    "page_indicator": "Personality Information",
+    "page_indicator_tag": "PREVIEW",
+    "page_number": 5,
+    
+    "page_author": "",
+    "page_author_tag": "PREVIEW",
+    "written_date": "",
+    "written_date_tag": "PREVIEW",
+  
+    "row1": {
+      "slot1": {
+        "type": 1,
+        "id": "primary_personality_trait_1",
+        "label": "Primary Personality Trait",
+        "placeholder": "What is the oc's primary trait?",
+        "help": "What is the character's primary personality trait? A personality trait should define how a person generally acts in life and situations"
+      },
+      "slot2": {
+        "type": 1,
+        "id": "secondary_personality_trait_1",
+        "label": "Secondary Personality Trait",
+        "placeholder": "What is the oc's secondary trait?",
+        "help": "What is the character's secondary personality trait? A personality trait should define how a person generally acts in life and situations"
+      },
+      "slot3": {
+        "type": 1,
+        "id": "tertiary_personality_trait_1",
+        "label": "Tertiary Personality Trait",
+        "placeholder": "What is the oc's tertiary trait?",
+        "help": "What is the character's tertiary personality trait? A personality trait should define how a person generally acts in life and situations"
+      }
+    },
+    "row2": {
+      "slot1": {
+        "type": 1,
+        "id": "primary_personality_trait_1",
+        "label": "Primary Personality Trait",
+        "placeholder": "What is the oc's primary trait?",
+        "help": "What is the character's primary personality trait? A personality trait should define how a person generally acts in life and situations"
+      },
+      "slot2": {
+        "type": 1,
+        "id": "secondary_personality_trait_2",
+        "label": "Secondary Personality Trait",
+        "placeholder": "What is the oc's secondary trait?",
+        "help": "What is the character's secondary personality trait? A personality trait should define how a person generally acts in life and situations"
+      },
+      "slot3": {
+        "type": 1,
+        "id": "tertiary_personality_trait_2",
+        "label": "Tertiary Personality Trait",
+        "placeholder": "What is the oc's tertiary trait?",
+        "help": "What is the character's tertiary personality trait? A personality trait should define how a person generally acts in life and situations"
+      }
+    },
+    "row3": {
+      "slot1": {
+        "type": 4,
+        "id": "personal_thoughts_personality_trait",
+        "label": "Personal Thoughts",
+        "placeholder": "What are the oc's personal thoughts towards their personality trait?",
+        "help": "What are the character's personal thoughts towards their personality trait? Do they like their personality trait or would they rather have had different one? Does their personality trait affects their life in any certain way? Do their personality trait remind them of anything? Are they comfortable sharing their personality trait with others or would they rather keep them in secrecy? Apart from what they are meant to do, does the character uses their personality trait to help them in everyday life? Is the character even aware of some of their personality trait? Try to be the most descriptive possible and remember the usage of the five Ws (who, what, when, where, and why) when needed."
+      },
+      "slot2": {
+        "type": 0,
+        "id": "",
+        "label": "",
+        "placeholder": "",
+        "help": ""
+      },
+      "slot3": {
+        "type": 0,
+        "id": "",
+        "label": "",
+        "placeholder": "",
+        "help": ""
+      }
+    },
+    "row4": {
+      "slot1": {
+        "type": 0,
+        "id": "",
+        "label": "",
+        "placeholder": "",
+        "help": ""
+      },
+      "slot2": {
+        "type": 0,
+        "id": "",
+        "label": "",
+        "placeholder": "",
+        "help": ""
+      },
+      "slot3": {
+        "type": 0,
+        "id": "",
+        "label": "",
+        "placeholder": "",
+        "help": ""
+      }
+    },
+    "row5": {
+      "slot1": {
+        "type": 0,
+        "id": "",
+        "label": "",
+        "placeholder": "",
+        "help": ""
+      },
+      "slot2": {
+        "type": 0,
+        "id": "",
+        "label": "",
+        "placeholder": "",
+        "help": ""
+      },
+      "slot3": {
+        "type": 0,
+        "id": "",
+        "label": "",
+        "placeholder": "",
+        "help": ""
+      }
+    },
+    "row6": {
+      "slot1": {
+        "type": 0,
+        "id": "",
+        "label": "",
+        "placeholder": "",
+        "help": ""
+      },
+      "slot2": {
+        "type": 0,
+        "id": "",
+        "label": "",
+        "placeholder": "",
+        "help": ""
+      },
+      "slot3": {
+        "type": 0,
+        "id": "",
+        "label": "",
+        "placeholder": "",
+        "help": ""
+      }
+    },
+    "row7": {
+      "slot1": {
+        "type": 1,
+        "id": "topic_knowledge_1",
+        "label": "Topic Knowledge",
+        "placeholder": "What topic does the oc knows well?",
+        "help": "What topic does the character knows well? That topic could be a skill such as fixing stuff, a talent such as art, or even something they studied for a long time such as a language."
+      },
+      "slot2": {
+        "type": 1,
+        "id": "topic_knowledge_2",
+        "label": "Topic Knowledge",
+        "placeholder": "What topic does the oc knows well?",
+        "help": "What topic does the character knows well? That topic could be a skill such as fixing stuff, a talent such as art, or even something they studied for a long time such as a language."
+      },
+      "slot3": {
+        "type": 1,
+        "id": "topic_knowledge_3",
+        "label": "Topic Knowledge",
+        "placeholder": "What topic does the oc knows well?",
+        "help": "What topic does the character knows well? That topic could be a skill such as fixing stuff, a talent such as art, or even something they studied for a long time such as a language."
+      }
+    },
+    "row8": {
+      "slot1": {
+        "type": 1,
+        "id": "topic_knowledge_4",
+        "label": "Topic Knowledge",
+        "placeholder": "What topic does the oc knows well?",
+        "help": "What topic does the character knows well? That topic could be a skill such as fixing stuff, a talent such as art, or even something they studied for a long time such as a language."
+      },
+      "slot2": {
+        "type": 1,
+        "id": "topic_knowledge_5",
+        "label": "Topic Knowledge",
+        "placeholder": "What topic does the oc knows well?",
+        "help": "What topic does the character knows well? That topic could be a skill such as fixing stuff, a talent such as art, or even something they studied for a long time such as a language."
+      },
+      "slot3": {
+        "type": 1,
+        "id": "topic_knowledge_6",
+        "label": "Topic Knowledge",
+        "placeholder": "What topic does the oc knows well?",
+        "help": "What topic does the character knows well? That topic could be a skill such as fixing stuff, a talent such as art, or even something they studied for a long time such as a language."
+      }
+    },
+    "row9": {
+      "slot1": {
+        "type": 1,
+        "id": "topic_knowledge_7",
+        "label": "Topic Knowledge",
+        "placeholder": "What topic does the oc knows well?",
+        "help": "What topic does the character knows well? That topic could be a skill such as fixing stuff, a talent such as art, or even something they studied for a long time such as a language."
+      },
+      "slot2": {
+        "type": 1,
+        "id": "topic_knowledge_8",
+        "label": "Topic Knowledge",
+        "placeholder": "What topic does the oc knows well?",
+        "help": "What topic does the character knows well? That topic could be a skill such as fixing stuff, a talent such as art, or even something they studied for a long time such as a language."
+      },
+      "slot3": {
+        "type": 1,
+        "id": "topic_knowledge_9",
+        "label": "Topic Knowledge",
+        "placeholder": "What topic does the oc knows well?",
+        "help": "What topic does the character knows well? That topic could be a skill such as fixing stuff, a talent such as art, or even something they studied for a long time such as a language."
+      }
+    },
+    "row10": {
+      "slot1": {
+        "type": 1,
+        "id": "topic_knowledge_10",
+        "label": "Topic Knowledge",
+        "placeholder": "What topic does the oc knows well?",
+        "help": "What topic does the character knows well? That topic could be a skill such as fixing stuff, a talent such as art, or even something they studied for a long time such as a language."
+      },
+      "slot2": {
+        "type": 1,
+        "id": "topic_knowledge_11",
+        "label": "Topic Knowledge",
+        "placeholder": "What topic does the oc knows well?",
+        "help": "What topic does the character knows well? That topic could be a skill such as fixing stuff, a talent such as art, or even something they studied for a long time such as a language."
+      },
+      "slot3": {
+        "type": 1,
+        "id": "topic_knowledge_12",
+        "label": "Topic Knowledge",
+        "placeholder": "What topic does the oc knows well?",
+        "help": "What topic does the character knows well? That topic could be a skill such as fixing stuff, a talent such as art, or even something they studied for a long time such as a language."
+      }
+    },
+    "row11": {
+      "slot1": {
+        "type": 4,
+        "id": "personal_thoughts_knowledge",
+        "label": "Personal Thoughts",
+        "placeholder": "What are the oc's personal thoughts towards their knowledge?",
+        "help": "What are the character's personal thoughts towards their knowledge? Do they like their knowledge or would they rather have had different one? Does their knowledge affects their life in any certain way? Do their knowledge remind them of anything? Are they comfortable sharing their knowledge with others or would they rather keep them in secrecy? Apart from what they are meant to do, does the character uses their knowledge to help them in everyday life? Is the character even aware of their knowledge? Try to be the most descriptive possible and remember the usage of the five Ws (who, what, when, where, and why) when needed."
+      },
+      "slot2": {
+        "type": 0,
+        "id": "",
+        "label": "",
+        "placeholder": "",
+        "help": ""
+      },
+      "slot3": {
+        "type": 0,
+        "id": "",
+        "label": "",
+        "placeholder": "",
+        "help": ""
+      }
+    },
+    "row12": {
+      "slot1": {
+        "type": 0,
+        "id": "",
+        "label": "",
+        "placeholder": "",
+        "help": ""
+      },
+      "slot2": {
+        "type": 0,
+        "id": "",
+        "label": "",
+        "placeholder": "",
+        "help": ""
+      },
+      "slot3": {
+        "type": 0,
+        "id": "",
+        "label": "",
+        "placeholder": "",
+        "help": ""
+      }
+    },
+    "row13": {
+      "slot1": {
+        "type": 0,
+        "id": "",
+        "label": "",
+        "placeholder": "",
+        "help": ""
+      },
+      "slot2": {
+        "type": 0,
+        "id": "",
+        "label": "",
+        "placeholder": "",
+        "help": ""
+      },
+      "slot3": {
+        "type": 0,
+        "id": "",
+        "label": "",
+        "placeholder": "",
+        "help": ""
+      }
+    },
+    "row14": {
+      "slot1": {
+        "type": 0,
+        "id": "",
+        "label": "",
+        "placeholder": "",
+        "help": ""
+      },
+      "slot2": {
+        "type": 0,
+        "id": "",
+        "label": "",
+        "placeholder": "",
+        "help": ""
+      },
+      "slot3": {
+        "type": 0,
+        "id": "",
+        "label": "",
+        "placeholder": "",
+        "help": ""
+      }
+    },
+    "row15": {
+      "slot1": {
+        "type": 1,
+        "id": "hobby_1",
+        "label": "Hobby",
+        "placeholder": "What is the oc's hobby?",
+        "help": "What is the character's hobby? The hobby should be something they do frequently in their spare time and enjoy doing it."
+      },
+      "slot2": {
+        "type": 1,
+        "id": "hobby_2",
+        "label": "Hobby",
+        "placeholder": "What is the oc's hobby?",
+        "help": "What is the character's hobby? The hobby should be something they do frequently in their spare time and enjoy doing it."
+      },
+      "slot3": {
+        "type": 1,
+        "id": "hobby_3",
+        "label": "Hobby",
+        "placeholder": "What is the oc's hobby?",
+        "help": "What is the character's hobby? The hobby should be something they do frequently in their spare time and enjoy doing it."
+      }
+    },
+    "row16": {
+      "slot1": {
+        "type": 1,
+        "id": "hobby_4",
+        "label": "Hobby",
+        "placeholder": "What is the oc's hobby?",
+        "help": "What is the character's hobby? The hobby should be something they do frequently in their spare time and enjoy doing it."
+      },
+      "slot2": {
+        "type": 1,
+        "id": "hobby_5",
+        "label": "Hobby",
+        "placeholder": "What is the oc's hobby?",
+        "help": "What is the character's hobby? The hobby should be something they do frequently in their spare time and enjoy doing it."
+      },
+      "slot3": {
+        "type": 1,
+        "id": "hobby_6",
+        "label": "Hobby",
+        "placeholder": "What is the oc's hobby?",
+        "help": "What is the character's hobby? The hobby should be something they do frequently in their spare time and enjoy doing it."
+      }
+    },
+    "row17": {
+      "slot1": {
+        "type": 1,
+        "id": "hobby_7",
+        "label": "Hobby",
+        "placeholder": "What is the oc's hobby?",
+        "help": "What is the character's hobby? The hobby should be something they do frequently in their spare time and enjoy doing it."
+      },
+      "slot2": {
+        "type": 1,
+        "id": "hobby_8",
+        "label": "Hobby",
+        "placeholder": "What is the oc's hobby?",
+        "help": "What is the character's hobby? The hobby should be something they do frequently in their spare time and enjoy doing it."
+      },
+      "slot3": {
+        "type": 1,
+        "id": "hobby_9",
+        "label": "Hobby",
+        "placeholder": "What is the oc's hobby?",
+        "help": "What is the character's hobby? The hobby should be something they do frequently in their spare time and enjoy doing it."
+      }
+    },
+    "row18": {
+      "slot1": {
+        "type": 1,
+        "id": "hobby_10",
+        "label": "Hobby",
+        "placeholder": "What is the oc's hobby?",
+        "help": "What is the character's hobby? The hobby should be something they do frequently in their spare time and enjoy doing it."
+      },
+      "slot2": {
+        "type": 1,
+        "id": "hobby_11",
+        "label": "Hobby",
+        "placeholder": "What is the oc's hobby?",
+        "help": "What is the character's hobby? The hobby should be something they do frequently in their spare time and enjoy doing it."
+      },
+      "slot3": {
+        "type": 1,
+        "id": "hobby_12",
+        "label": "Hobby",
+        "placeholder": "What is the oc's hobby?",
+        "help": "What is the character's hobby? The hobby should be something they do frequently in their spare time and enjoy doing it."
+      }
+    },
+    "row19": {
+      "slot1": {
+        "type": 4,
+        "id": "personal_thoughts_hobby",
+        "label": "Personal Thoughts",
+        "placeholder": "What are the oc's personal thoughts towards their hobby?",
+        "help": "What are the character's personal thoughts towards their hobby? Do they like their hobby or would they rather have had different one? Does their hobby affects their life in any certain way? Do their hobby remind them of anything? Are they comfortable sharing their hobby with others or would they rather keep them in secrecy? Apart from what they are meant to do, does the character uses their hobby to help them in everyday life? Is the character even aware of their knowledge? Try to be the most descriptive possible and remember the usage of the five Ws (who, what, when, where, and why) when needed."
+      },
+      "slot2": {
+        "type": 0,
+        "id": "",
+        "label": "",
+        "placeholder": "",
+        "help": ""
+      },
+      "slot3": {
+        "type": 0,
+        "id": "",
+        "label": "",
+        "placeholder": "",
+        "help": ""
+      }
+    },
+    "row20": {
+      "slot1": {
+        "type": 0,
+        "id": "",
+        "label": "",
+        "placeholder": "",
+        "help": ""
+      },
+      "slot2": {
+        "type": 0,
+        "id": "",
+        "label": "",
+        "placeholder": "",
+        "help": ""
+      },
+      "slot3": {
+        "type": 0,
+        "id": "",
+        "label": "",
+        "placeholder": "",
+        "help": ""
+      }
+    },
+    "row21": {
+      "slot1": {
+        "type": 0,
+        "id": "",
+        "label": "",
+        "placeholder": "",
+        "help": ""
+      },
+      "slot2": {
+        "type": 0,
+        "id": "",
+        "label": "",
+        "placeholder": "",
+        "help": ""
+      },
+      "slot3": {
+        "type": 0,
+        "id": "",
+        "label": "",
+        "placeholder": "",
+        "help": ""
+      }
+    }
+  }
