@@ -103,7 +103,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 
             // Checks the current month and if not matching to seasonal
             // schemes to skip them until the month arrives.
-            if (currentMonth !== October && scheme.id === "scheme_spooky") {
+            if (currentMonth !== October && scheme.id === "scheme_spooky" || currentMonth !== February && scheme.id  === "scheme_lunar" ) {
                 // Blank html code when skipping schemes.
                 scheme_manager_html += ``;
             } else {
@@ -773,7 +773,24 @@ const schemes = [
                 <img style="position: fixed; right: -475px; top: 0px; scale: 0.1; transform: scaleX(-1); transform-origin: top left; z-index: 8000; opacity: 0.85; pointer-events: none;" src="media/images/openprofile/spooky/cobweb.png">
             </div>
         `
-    },    
+    },
+    {
+        // Lunar scheme
+        "name": "Lunar",
+        "id": "scheme_lunar",
+        "author": "OpenProfile",
+        "version": "v5.0.075",
+        "tag": "PREVIEW",
+        "icon": "wind",
+        "text": "#ffffff",
+        "accent": "#f2b932",
+        "shade_1": "#1B0303",
+        "shade_2": "#4f0d0d",
+        "shade_3": "#6a0f0f",
+        "shade_4": "#851717",
+        "shade_5": "#9d1818",
+        "custom_html": "<div></div>"
+    },
     // When registering a new scheme, position your 
     // typing indicator above this comment to the right
     // of the comma, press enter, then paste the scheme

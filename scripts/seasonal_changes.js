@@ -37,6 +37,22 @@ function updateElementsByTimeOfYear() {
             // You can handle this case or run other code here
             load_specific_scheme("scheme_spooky");
         }
+    } if (currentMonth === February) {
+        // Enable seasonal features
+        const messageElement = document.querySelector(`#loading_message_lunar`);
+        if (messageElement) {
+        messageElement.style.display = "block";
+    }
+
+    const loaded_scheme_json = localStorage.getItem('local_selected_scheme');
+    if (loaded_scheme_json !== null) {
+        // The 'local_selected_scheme' value is not empty
+        // You can run code here
+    } else {
+        // The 'local_selected_scheme' value is empty
+        // You can handle this case or run other code here
+        load_specific_scheme("scheme_lunar");
+    }
     } else {
         const messageElement = document.querySelector(`#loading_message_default`);
         messageElement.style.display = "block";

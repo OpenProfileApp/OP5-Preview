@@ -406,3 +406,8 @@ webhook.txt
 discord_bot_assistant.js
 ca.crt
 ca.key
+used_ids.txt
+nopassword.txt
+
+# Custom Folders
+users/
