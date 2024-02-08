@@ -75,7 +75,7 @@ function simulateAppLoading(speed) {
     if (currentMonth == October) {
         colors = "'#e47125'"
     } if (currentMonth == February) {
-        colors = "'#f2b932'"
+        colors = "'#e4b336'"
     } else {
         colors = "''"
     }

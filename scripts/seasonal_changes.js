@@ -51,7 +51,7 @@ function updateElementsByTimeOfYear() {
     } else {
         // The 'local_selected_scheme' value is empty
         // You can handle this case or run other code here
-        load_specific_scheme("scheme_lunar");
+        load_specific_scheme("scheme_lunar_red");
     }
     } else {
         const messageElement = document.querySelector(`#loading_message_default`);

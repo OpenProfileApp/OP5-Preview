@@ -103,7 +103,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 
             // Checks the current month and if not matching to seasonal
             // schemes to skip them until the month arrives.
-            if (currentMonth !== October && scheme.id === "scheme_spooky" || currentMonth !== February && scheme.id  === "scheme_lunar" ) {
+            if (currentMonth !== October && scheme.id === "scheme_spooky" || currentMonth !== February && scheme.id  === "scheme_lunar_red"  || currentMonth !== February && scheme.id  === "scheme_lunar_green" ) {
                 // Blank html code when skipping schemes.
                 scheme_manager_html += ``;
             } else {
@@ -775,20 +775,37 @@ const schemes = [
         `
     },
     {
-        // Lunar scheme
-        "name": "Lunar",
-        "id": "scheme_lunar",
+        // Lunar red scheme
+        "name": "Lunar Red",
+        "id": "scheme_lunar_red",
         "author": "OpenProfile",
-        "version": "v5.0.075",
+        "version": "v5.0.076",
         "tag": "PREVIEW",
         "icon": "wind",
         "text": "#ffffff",
-        "accent": "#f2b932",
-        "shade_1": "#1B0303",
-        "shade_2": "#4f0d0d",
-        "shade_3": "#6a0f0f",
-        "shade_4": "#851717",
-        "shade_5": "#9d1818",
+        "accent": "#e4b336",
+        "shade_1": "#2c0000",
+        "shade_2": "#530000",
+        "shade_3": "#720000",
+        "shade_4": "#8c0102",
+        "shade_5": "#ad0000",
+        "custom_html": "<div></div>"
+    },
+    {
+        // Lunar green scheme
+        "name": "Lunar Green",
+        "id": "scheme_lunar_green",
+        "author": "OpenProfile",
+        "version": "v5.0.076",
+        "tag": "PREVIEW",
+        "icon": "wind",
+        "text": "#ffffff",
+        "accent": "#e4b336",
+        "shade_1": "#001A18",
+        "shade_2": "#002924",
+        "shade_3": "#00332c",
+        "shade_4": "#003e38",
+        "shade_5": "#004e46",
         "custom_html": "<div></div>"
     },
     // When registering a new scheme, position your 
