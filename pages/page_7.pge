@@ -1,0 +1,495 @@
+{
+    "brand_tag": "PREVIEW",
+    "page_indicator": "Likeness Information",
+    "page_indicator_tag": "PREVIEW",
+    "page_number": 7,
+    
+    "page_author": "",
+    "page_author_tag": "PREVIEW",
+    "written_date": "",
+    "written_date_tag": "PREVIEW",
+  
+    "row1": {
+      "slot1": {
+        "type": 1,
+        "id": "love_1",
+        "label": "Love +900",
+        "placeholder": "What does the oc love?",
+        "help": "What does the character love? This is based on a rateable scale from love to hate where the highest most left option is most loved and the lowest most right option is the most hated option."
+      },
+      "slot2": {
+        "type": 1,
+        "id": "love_2",
+        "label": "Love +800",
+        "placeholder": "What does the oc love?",
+        "help": "What does the character love? This is based on a rateable scale from love to hate where the highest most left option is most loved and the lowest most right option is the most hated option."
+      },
+      "slot3": {
+        "type": 1,
+        "id": "love_3",
+        "label": "Love +700",
+        "placeholder": "What does the oc love?",
+        "help": "What does the character love? This is based on a rateable scale from love to hate where the highest most left option is most loved and the lowest most right option is the most hated option."
+      }
+    },
+    "row2": {
+      "slot1": {
+        "type": 1,
+        "id": "love_4",
+        "label": "Love +600",
+        "placeholder": "What does the oc love?",
+        "help": "What does the character love? This is based on a rateable scale from love to hate where the highest most left option is most loved and the lowest most right option is the most hated option."
+      },
+      "slot2": {
+        "type": 1,
+        "id": "love_5",
+        "label": "Love +500",
+        "placeholder": "What does the oc love?",
+        "help": "What does the character love? This is based on a rateable scale from love to hate where the highest most left option is most loved and the lowest most right option is the most hated option."
+      },
+      "slot3": {
+        "type": 1,
+        "id": "love_6",
+        "label": "Love +400",
+        "placeholder": "What does the oc love?",
+        "help": "What does the character love? This is based on a rateable scale from love to hate where the highest most left option is most loved and the lowest most right option is the most hated option."
+      }
+    },
+    "row3": {
+      "slot1": {
+        "type": 1,
+        "id": "love_7",
+        "label": "Love +300",
+        "placeholder": "What does the oc love?",
+        "help": "What does the character love? This is based on a rateable scale from love to hate where the highest most left option is most loved and the lowest most right option is the most hated option."
+      },
+      "slot2": {
+        "type": 1,
+        "id": "love_8",
+        "label": "Love +200",
+        "placeholder": "What does the oc love?",
+        "help": "What does the character love? This is based on a rateable scale from love to hate where the highest most left option is most loved and the lowest most right option is the most hated option."
+      },
+      "slot3": {
+        "type": 1,
+        "id": "love_9",
+        "label": "Love +100",
+        "placeholder": "What does the oc love?",
+        "help": "What does the character love? This is based on a rateable scale from love to hate where the highest most left option is most loved and the lowest most right option is the most hated option."
+      }
+    },
+    "row4": {
+      "slot1": {
+        "type": 0,
+        "id": "",
+        "label": "",
+        "placeholder": "",
+        "help": ""
+      },
+      "slot2": {
+        "type": 0,
+        "id": "",
+        "label": "",
+        "placeholder": "",
+        "help": ""
+      },
+      "slot3": {
+        "type": 0,
+        "id": "",
+        "label": "",
+        "placeholder": "",
+        "help": ""
+      }
+    },
+    "row5": {
+      "slot1": {
+        "type": 1,
+        "id": "like_1",
+        "label": "Like +90",
+        "placeholder": "What does the oc like?",
+        "help": "What does the character hate? This is based on a rateable scale from love to hate where the highest most left option is most loved and the lowest most right option is the most hated option."
+      },
+      "slot2": {
+        "type": 1,
+        "id": "like_2",
+        "label": "Like +80",
+        "placeholder": "What does the oc like?",
+        "help": "What does the character hate? This is based on a rateable scale from love to hate where the highest most left option is most loved and the lowest most right option is the most hated option."
+      },
+      "slot3": {
+        "type": 1,
+        "id": "like_3",
+        "label": "Like +70",
+        "placeholder": "What does the oc like?",
+        "help": "What does the character hate? This is based on a rateable scale from love to hate where the highest most left option is most loved and the lowest most right option is the most hated option."
+      }
+    },
+    "row6": {
+      "slot1": {
+        "type": 1,
+        "id": "like_4",
+        "label": "Like +60",
+        "placeholder": "What does the oc like?",
+        "help": "What does the character hate? This is based on a rateable scale from love to hate where the highest most left option is most loved and the lowest most right option is the most hated option."
+      },
+      "slot2": {
+        "type": 1,
+        "id": "like_5",
+        "label": "Like +50",
+        "placeholder": "What does the oc like?",
+        "help": "What does the character hate? This is based on a rateable scale from love to hate where the highest most left option is most loved and the lowest most right option is the most hated option."
+      },
+      "slot3": {
+        "type": 1,
+        "id": "like_6",
+        "label": "Like +40",
+        "placeholder": "What does the oc like?",
+        "help": "What does the character hate? This is based on a rateable scale from love to hate where the highest most left option is most loved and the lowest most right option is the most hated option."
+      }
+    },
+    "row7": {
+      "slot1": {
+        "type": 1,
+        "id": "like_7",
+        "label": "Like +30",
+        "placeholder": "What does the oc like?",
+        "help": "What does the character hate? This is based on a rateable scale from love to hate where the highest most left option is most loved and the lowest most right option is the most hated option."
+      },
+      "slot2": {
+        "type": 1,
+        "id": "like_8",
+        "label": "Like +20",
+        "placeholder": "What does the oc like?",
+        "help": "What does the character hate? This is based on a rateable scale from love to hate where the highest most left option is most loved and the lowest most right option is the most hated option."
+      },
+      "slot3": {
+        "type": 1,
+        "id": "like_9",
+        "label": "Like +10",
+        "placeholder": "What does the oc like?",
+        "help": "What does the character hate? This is based on a rateable scale from love to hate where the highest most left option is most loved and the lowest most right option is the most hated option."
+      }
+    },
+    "row8": {
+      "slot1": {
+        "type": 0,
+        "id": "",
+        "label": "",
+        "placeholder": "",
+        "help": ""
+      },
+      "slot2": {
+        "type": 0,
+        "id": "",
+        "label": "",
+        "placeholder": "",
+        "help": ""
+      },
+      "slot3": {
+        "type": 0,
+        "id": "",
+        "label": "",
+        "placeholder": "",
+        "help": ""
+      }
+    },
+    "row9": {
+      "slot1": {
+        "type": 1,
+        "id": "dislike_1",
+        "label": "Dislike -10",
+        "placeholder": "What does the oc dislike?",
+        "help": "What does the character dislike? This is based on a rateable scale from love to hate where the highest most left option is most loved and the lowest most right option is the most hated option."
+      },
+      "slot2": {
+        "type": 1,
+        "id": "dislike_2",
+        "label": "Dislike -20",
+        "placeholder": "What does the oc dislike?",
+        "help": "What does the character dislike? This is based on a rateable scale from love to hate where the highest most left option is most loved and the lowest most right option is the most hated option."
+      },
+      "slot3": {
+        "type": 1,
+        "id": "dislike_3",
+        "label": "Dislike -30",
+        "placeholder": "What does the oc dislike?",
+        "help": "What does the character dislike? This is based on a rateable scale from love to hate where the highest most left option is most loved and the lowest most right option is the most hated option."
+      }
+    },
+    "row10": {
+      "slot1": {
+        "type": 1,
+        "id": "dislike_4",
+        "label": "Dislike -40",
+        "placeholder": "What does the oc dislike?",
+        "help": "What does the character dislike? This is based on a rateable scale from love to hate where the highest most left option is most loved and the lowest most right option is the most hated option."
+      },
+      "slot2": {
+        "type": 1,
+        "id": "dislike_5",
+        "label": "Dislike -50",
+        "placeholder": "What does the oc dislike?",
+        "help": "What does the character dislike? This is based on a rateable scale from love to hate where the highest most left option is most loved and the lowest most right option is the most hated option."
+      },
+      "slot3": {
+        "type": 1,
+        "id": "dislike_6",
+        "label": "Dislike -60",
+        "placeholder": "What does the oc dislike?",
+        "help": "What does the character dislike? This is based on a rateable scale from love to hate where the highest most left option is most loved and the lowest most right option is the most hated option."
+      }
+    },
+    "row11": {
+      "slot1": {
+        "type": 1,
+        "id": "dislike_7",
+        "label": "Dislike -70",
+        "placeholder": "What does the oc dislike?",
+        "help": "What does the character dislike? This is based on a rateable scale from love to hate where the highest most left option is most loved and the lowest most right option is the most hated option."
+      },
+      "slot2": {
+        "type": 1,
+        "id": "dislike_8",
+        "label": "Dislike -80",
+        "placeholder": "What does the oc dislike?",
+        "help": "What does the character dislike? This is based on a rateable scale from love to hate where the highest most left option is most loved and the lowest most right option is the most hated option."
+      },
+      "slot3": {
+        "type": 1,
+        "id": "dislike_9",
+        "label": "Dislike -90",
+        "placeholder": "What does the oc dislike?",
+        "help": "What does the character dislike? This is based on a rateable scale from love to hate where the highest most left option is most loved and the lowest most right option is the most hated option."
+      }
+    },
+    "row12": {
+      "slot1": {
+        "type": 0,
+        "id": "",
+        "label": "",
+        "placeholder": "",
+        "help": ""
+      },
+      "slot2": {
+        "type": 0,
+        "id": "",
+        "label": "",
+        "placeholder": "",
+        "help": ""
+      },
+      "slot3": {
+        "type": 0,
+        "id": "",
+        "label": "",
+        "placeholder": "",
+        "help": ""
+      }
+    },
+    "row13": {
+      "slot1": {
+        "type": 1,
+        "id": "hate_1",
+        "label": "Hate -100",
+        "placeholder": "What does the oc hate?",
+        "help": "What does the character hate? This is based on a rateable scale from love to hate where the highest most left option is most loved and the lowest most right option is the most hated option."
+      },
+      "slot2": {
+        "type": 1,
+        "id": "hate_2",
+        "label": "Hate -200",
+        "placeholder": "What does the oc hate?",
+        "help": "What does the character hate? This is based on a rateable scale from love to hate where the highest most left option is most loved and the lowest most right option is the most hated option."
+      },
+      "slot3": {
+        "type": 1,
+        "id": "hate_3",
+        "label": "Hate -300",
+        "placeholder": "What does the oc hate?",
+        "help": "What does the character hate? This is based on a rateable scale from love to hate where the highest most left option is most loved and the lowest most right option is the most hated option."
+      }
+    },
+    "row14": {
+      "slot1": {
+        "type": 1,
+        "id": "hate_4",
+        "label": "Hate -400",
+        "placeholder": "What does the oc hate?",
+        "help": "What does the character hate? This is based on a rateable scale from love to hate where the highest most left option is most loved and the lowest most right option is the most hated option."
+      },
+      "slot2": {
+        "type": 1,
+        "id": "hate_5",
+        "label": "Hate -500",
+        "placeholder": "What does the oc hate?",
+        "help": "What does the character hate? This is based on a rateable scale from love to hate where the highest most left option is most loved and the lowest most right option is the most hated option."
+      },
+      "slot3": {
+        "type": 1,
+        "id": "hate_6",
+        "label": "Hate -600",
+        "placeholder": "What does the oc hate?",
+        "help": "What does the character hate? This is based on a rateable scale from love to hate where the highest most left option is most loved and the lowest most right option is the most hated option."
+      }
+    },
+    "row15": {
+      "slot1": {
+        "type": 1,
+        "id": "hate_7",
+        "label": "Hate -700",
+        "placeholder": "What does the oc hate?",
+        "help": "What does the character hate? This is based on a rateable scale from love to hate where the highest most left option is most loved and the lowest most right option is the most hated option."
+      },
+      "slot2": {
+        "type": 1,
+        "id": "hate_8",
+        "label": "Hate -800",
+        "placeholder": "What does the oc hate?",
+        "help": "What does the character hate? This is based on a rateable scale from love to hate where the highest most left option is most loved and the lowest most right option is the most hated option."
+      },
+      "slot3": {
+        "type": 1,
+        "id": "hate_9",
+        "label": "Hate -900",
+        "placeholder": "What does the oc hate?",
+        "help": "What does the character hate? This is based on a rateable scale from love to hate where the highest most left option is most loved and the lowest most right option is the most hated option."
+      }
+    },
+    "row16": {
+        "slot1": {
+        "type": 5,
+        "id": "personal_thoughts_likeness_scale",
+        "label": "Personal Thoughts",
+        "placeholder": "What are the oc's personal thoughts towards their likeness scale?",
+        "help": "What are the character's personal thoughts towards their likeness scale? Do they like their likeness scale or would they rather have had different one? Does their likeness scale affects their life in any certain way? Do their likeness scale remind them of anything? Are they comfortable sharing their likeness scale with others or would they rather keep them in secrecy? Apart from what they are meant to do, does the character uses their likeness scale to help them in everyday life? Is the character even aware of their likeness scale? Try to be the most descriptive possible and remember the usage of the five Ws (who, what, when, where, and why) when needed."
+      },
+      "slot2": {
+        "type": 0,
+        "id": "",
+        "label": "",
+        "placeholder": "",
+        "help": ""
+      },
+      "slot3": {
+        "type": 0,
+        "id": "",
+        "label": "",
+        "placeholder": "",
+        "help": ""
+      }
+    },
+    "row17": {
+      "slot1": {
+        "type": 0,
+        "id": "",
+        "label": "",
+        "placeholder": "",
+        "help": ""
+      },
+      "slot2": {
+        "type": 0,
+        "id": "",
+        "label": "",
+        "placeholder": "",
+        "help": ""
+      },
+      "slot3": {
+        "type": 0,
+        "id": "",
+        "label": "",
+        "placeholder": "",
+        "help": ""
+      }
+    },
+    "row18": {
+      "slot1": {
+        "type": 0,
+        "id": "",
+        "label": "",
+        "placeholder": "",
+        "help": ""
+      },
+      "slot2": {
+        "type": 0,
+        "id": "",
+        "label": "",
+        "placeholder": "",
+        "help": ""
+      },
+      "slot3": {
+        "type": 0,
+        "id": "",
+        "label": "",
+        "placeholder": "",
+        "help": ""
+      }
+    },
+    "row19": {
+      "slot1": {
+        "type": 0,
+        "id": "",
+        "label": "",
+        "placeholder": "",
+        "help": ""
+      },
+      "slot2": {
+        "type": 0,
+        "id": "",
+        "label": "",
+        "placeholder": "",
+        "help": ""
+      },
+      "slot3": {
+        "type": 0,
+        "id": "",
+        "label": "",
+        "placeholder": "",
+        "help": ""
+      }
+    },
+    "row20": {
+      "slot1": {
+        "type": 0,
+        "id": "",
+        "label": "",
+        "placeholder": "",
+        "help": ""
+      },
+      "slot2": {
+        "type": 0,
+        "id": "",
+        "label": "",
+        "placeholder": "",
+        "help": ""
+      },
+      "slot3": {
+        "type": 0,
+        "id": "",
+        "label": "",
+        "placeholder": "",
+        "help": ""
+      }
+    },
+    "row21": {
+      "slot1": {
+        "type": 0,
+        "id": "",
+        "label": "",
+        "placeholder": "",
+        "help": ""
+      },
+      "slot2": {
+        "type": 0,
+        "id": "",
+        "label": "",
+        "placeholder": "",
+        "help": ""
+      },
+      "slot3": {
+        "type": 0,
+        "id": "",
+        "label": "",
+        "placeholder": "",
+        "help": ""
+      }
+    }
+  }
