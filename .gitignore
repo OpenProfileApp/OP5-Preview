@@ -403,6 +403,7 @@ package.json
 package-lock.json
 token.txt
 webhook.txt
+webhook_view.txt
 discord_bot_assistant.js
 ca.crt
 ca.key

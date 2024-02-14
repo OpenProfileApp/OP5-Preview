@@ -13,345 +13,345 @@
       "slot1": {
         "type": 1,
         "id": "favorite_1",
-        "label": "Favorite ",
+        "label": "Favorite Book/Author",
         "placeholder": "What is the oc's favorite?",
-        "help": "What is the character's category favorite? The favorite should be something the character loves in this topic above all else and tends to frequently mention that thing."
+        "help": "What is the character's category favorite? The favorite should be something the character loves in this topic above all else and tends to frequently mention that thing. There can be multiple favorites."
       },
       "slot2": {
         "type": 1,
         "id": "favorite_2",
-        "label": "Favorite ",
+        "label": "Favorite Movie/Actor",
         "placeholder": "What is the oc's favorite?",
-        "help": "What is the character's category favorite? The favorite should be something the character loves in this topic above all else and tends to frequently mention that thing."
+        "help": "What is the character's category favorite? The favorite should be something the character loves in this topic above all else and tends to frequently mention that thing. There can be multiple favorites."
       },
       "slot3": {
         "type": 1,
         "id": "favorite_3",
-        "label": "Favorite ",
+        "label": "Favorite TV Series/Channel",
         "placeholder": "What is the oc's favorite?",
-        "help": "What is the character's category favorite? The favorite should be something the character loves in this topic above all else and tends to frequently mention that thing."
+        "help": "What is the character's category favorite? The favorite should be something the character loves in this topic above all else and tends to frequently mention that thing. There can be multiple favorites."
       }
     },
     "row2": {
       "slot1": {
         "type": 1,
         "id": "favorite_4",
-        "label": "Favorite ",
+        "label": "Favorite Film Director/Producer",
         "placeholder": "What is the oc's favorite?",
-        "help": "What is the character's category favorite? The favorite should be something the character loves in this topic above all else and tends to frequently mention that thing."
+        "help": "What is the character's category favorite? The favorite should be something the character loves in this topic above all else and tends to frequently mention that thing. There can be multiple favorites."
       },
       "slot2": {
         "type": 1,
         "id": "favorite_5",
-        "label": "Favorite ",
+        "label": "Favorite Public Figure/Influencer",
         "placeholder": "What is the oc's favorite?",
-        "help": "What is the character's category favorite? The favorite should be something the character loves in this topic above all else and tends to frequently mention that thing."
+        "help": "What is the character's category favorite? The favorite should be something the character loves in this topic above all else and tends to frequently mention that thing. There can be multiple favorites."
       },
       "slot3": {
         "type": 1,
         "id": "favorite_6",
-        "label": "Favorite ",
+        "label": "Favorite Content Creator/Streamer",
         "placeholder": "What is the oc's favorite?",
-        "help": "What is the character's category favorite? The favorite should be something the character loves in this topic above all else and tends to frequently mention that thing."
+        "help": "What is the character's category favorite? The favorite should be something the character loves in this topic above all else and tends to frequently mention that thing. There can be multiple favorites."
       }
     },
     "row3": {
       "slot1": {
         "type": 1,
         "id": "favorite_7",
-        "label": "Favorite ",
+        "label": "Favorite People (family, friends, neighbors)",
         "placeholder": "What is the oc's favorite?",
-        "help": "What is the character's category favorite? The favorite should be something the character loves in this topic above all else and tends to frequently mention that thing."
+        "help": "What is the character's category favorite? The favorite should be something the character loves in this topic above all else and tends to frequently mention that thing. There can be multiple favorites."
       },
       "slot2": {
         "type": 1,
         "id": "favorite_8",
-        "label": "Favorite ",
+        "label": "Favorite People (co-workers, doctors, etc.)",
         "placeholder": "What is the oc's favorite?",
-        "help": "What is the character's category favorite? The favorite should be something the character loves in this topic above all else and tends to frequently mention that thing."
+        "help": "What is the character's category favorite? The favorite should be something the character loves in this topic above all else and tends to frequently mention that thing. There can be multiple favorites."
       },
       "slot3": {
         "type": 1,
         "id": "favorite_9",
-        "label": "Favorite ",
+        "label": "Favorite Animal/Creature",
         "placeholder": "What is the oc's favorite?",
-        "help": "What is the character's category favorite? The favorite should be something the character loves in this topic above all else and tends to frequently mention that thing."
+        "help": "What is the character's category favorite? The favorite should be something the character loves in this topic above all else and tends to frequently mention that thing. There can be multiple favorites."
       }
     },
     "row4": {
       "slot1": {
         "type": 1,
         "id": "favorite_10",
-        "label": "Favorite ",
+        "label": "Favorite Fictional Character",
         "placeholder": "What is the oc's favorite?",
-        "help": "What is the character's category favorite? The favorite should be something the character loves in this topic above all else and tends to frequently mention that thing."
+        "help": "What is the character's category favorite? The favorite should be something the character loves in this topic above all else and tends to frequently mention that thing. There can be multiple favorites."
       },
       "slot2": {
         "type": 1,
         "id": "favorite_11",
-        "label": "Favorite ",
+        "label": "Favorite Supernatural Ability",
         "placeholder": "What is the oc's favorite?",
-        "help": "What is the character's category favorite? The favorite should be something the character loves in this topic above all else and tends to frequently mention that thing."
+        "help": "What is the character's category favorite? The favorite should be something the character loves in this topic above all else and tends to frequently mention that thing. There can be multiple favorites."
       },
       "slot3": {
         "type": 1,
         "id": "favorite_12",
-        "label": "Favorite ",
+        "label": "Favorite Weapon/Tool",
         "placeholder": "What is the oc's favorite?",
-        "help": "What is the character's category favorite? The favorite should be something the character loves in this topic above all else and tends to frequently mention that thing."
+        "help": "What is the character's category favorite? The favorite should be something the character loves in this topic above all else and tends to frequently mention that thing. There can be multiple favorites."
       }
     },
     "row5": {
       "slot1": {
         "type": 1,
         "id": "favorite_13",
-        "label": "Favorite ",
+        "label": "Favorite Streaming/Media Platform",
         "placeholder": "What is the oc's favorite?",
-        "help": "What is the character's category favorite? The favorite should be something the character loves in this topic above all else and tends to frequently mention that thing."
+        "help": "What is the character's category favorite? The favorite should be something the character loves in this topic above all else and tends to frequently mention that thing. There can be multiple favorites."
       },
       "slot2": {
         "type": 1,
         "id": "favorite_14",
-        "label": "Favorite ",
+        "label": "Favorite Music/Genre",
         "placeholder": "What is the oc's favorite?",
-        "help": "What is the character's category favorite? The favorite should be something the character loves in this topic above all else and tends to frequently mention that thing."
+        "help": "What is the character's category favorite? The favorite should be something the character loves in this topic above all else and tends to frequently mention that thing. There can be multiple favorites."
       },
       "slot3": {
         "type": 1,
         "id": "favorite_15",
-        "label": "Favorite ",
+        "label": "Favorite Band/Vocalist",
         "placeholder": "What is the oc's favorite?",
-        "help": "What is the character's category favorite? The favorite should be something the character loves in this topic above all else and tends to frequently mention that thing."
+        "help": "What is the character's category favorite? The favorite should be something the character loves in this topic above all else and tends to frequently mention that thing. There can be multiple favorites."
       }
     },
     "row6": {
       "slot1": {
         "type": 1,
         "id": "favorite_16",
-        "label": "Favorite ",
+        "label": "Favorite Instrument/DAW",
         "placeholder": "What is the oc's favorite?",
-        "help": "What is the character's category favorite? The favorite should be something the character loves in this topic above all else and tends to frequently mention that thing."
+        "help": "What is the character's category favorite? The favorite should be something the character loves in this topic above all else and tends to frequently mention that thing. There can be multiple favorites."
       },
       "slot2": {
         "type": 1,
         "id": "favorite_17",
-        "label": "Favorite ",
+        "label": "Favorite Artist/Animator",
         "placeholder": "What is the oc's favorite?",
-        "help": "What is the character's category favorite? The favorite should be something the character loves in this topic above all else and tends to frequently mention that thing."
+        "help": "What is the character's category favorite? The favorite should be something the character loves in this topic above all else and tends to frequently mention that thing. There can be multiple favorites."
       },
       "slot3": {
         "type": 1,
         "id": "favorite_18",
-        "label": "Favorite ",
+        "label": "Favorite Painting/Workpiece",
         "placeholder": "What is the oc's favorite?",
-        "help": "What is the character's category favorite? The favorite should be something the character loves in this topic above all else and tends to frequently mention that thing."
+        "help": "What is the character's category favorite? The favorite should be something the character loves in this topic above all else and tends to frequently mention that thing. There can be multiple favorites."
       }
     },
     "row7": {
       "slot1": {
         "type": 1,
         "id": "favorite_19",
-        "label": "Favorite ",
+        "label": "Favorite Store/eStore",
         "placeholder": "What is the oc's favorite?",
-        "help": "What is the character's category favorite? The favorite should be something the character loves in this topic above all else and tends to frequently mention that thing."
+        "help": "What is the character's category favorite? The favorite should be something the character loves in this topic above all else and tends to frequently mention that thing. There can be multiple favorites."
       },
       "slot2": {
         "type": 1,
         "id": "favorite_20",
-        "label": "Favorite ",
+        "label": "Favorite Clothing/Style",
         "placeholder": "What is the oc's favorite?",
-        "help": "What is the character's category favorite? The favorite should be something the character loves in this topic above all else and tends to frequently mention that thing."
+        "help": "What is the character's category favorite? The favorite should be something the character loves in this topic above all else and tends to frequently mention that thing. There can be multiple favorites."
       },
       "slot3": {
         "type": 1,
         "id": "favorite_21",
-        "label": "Favorite ",
+        "label": "Favorite Gadget/Device",
         "placeholder": "What is the oc's favorite?",
-        "help": "What is the character's category favorite? The favorite should be something the character loves in this topic above all else and tends to frequently mention that thing."
+        "help": "What is the character's category favorite? The favorite should be something the character loves in this topic above all else and tends to frequently mention that thing. There can be multiple favorites."
       }
     },
     "row8": {
       "slot1": {
         "type": 1,
         "id": "favorite_22",
-        "label": "Favorite ",
+        "label": "Favorite Social Media Platform",
         "placeholder": "What is the oc's favorite?",
-        "help": "What is the character's category favorite? The favorite should be something the character loves in this topic above all else and tends to frequently mention that thing."
+        "help": "What is the character's category favorite? The favorite should be something the character loves in this topic above all else and tends to frequently mention that thing. There can be multiple favorites."
       },
       "slot2": {
         "type": 1,
         "id": "favorite_23",
-        "label": "Favorite ",
+        "label": "Favorite Gaming Platform",
         "placeholder": "What is the oc's favorite?",
-        "help": "What is the character's category favorite? The favorite should be something the character loves in this topic above all else and tends to frequently mention that thing."
+        "help": "What is the character's category favorite? The favorite should be something the character loves in this topic above all else and tends to frequently mention that thing. There can be multiple favorites."
       },
       "slot3": {
         "type": 1,
         "id": "favorite_24",
-        "label": "Favorite ",
+        "label": "Favorite Video Game/Game",
         "placeholder": "What is the oc's favorite?",
-        "help": "What is the character's category favorite? The favorite should be something the character loves in this topic above all else and tends to frequently mention that thing."
+        "help": "What is the character's category favorite? The favorite should be something the character loves in this topic above all else and tends to frequently mention that thing. There can be multiple favorites."
       }
     },
     "row9": {
       "slot1": {
         "type": 1,
         "id": "favorite_25",
-        "label": "Favorite ",
+        "label": "Favorite Sport/Team",
         "placeholder": "What is the oc's favorite?",
-        "help": "What is the character's category favorite? The favorite should be something the character loves in this topic above all else and tends to frequently mention that thing."
+        "help": "What is the character's category favorite? The favorite should be something the character loves in this topic above all else and tends to frequently mention that thing. There can be multiple favorites."
       },
       "slot2": {
         "type": 1,
         "id": "favorite_26",
-        "label": "Favorite ",
+        "label": "Favorite Company/Organization",
         "placeholder": "What is the oc's favorite?",
-        "help": "What is the character's category favorite? The favorite should be something the character loves in this topic above all else and tends to frequently mention that thing."
+        "help": "What is the character's category favorite? The favorite should be something the character loves in this topic above all else and tends to frequently mention that thing. There can be multiple favorites."
       },
       "slot3": {
         "type": 1,
         "id": "favorite_27",
-        "label": "Favorite ",
+        "label": "Favorite Job/Free Position",
         "placeholder": "What is the oc's favorite?",
-        "help": "What is the character's category favorite? The favorite should be something the character loves in this topic above all else and tends to frequently mention that thing."
+        "help": "What is the character's category favorite? The favorite should be something the character loves in this topic above all else and tends to frequently mention that thing. There can be multiple favorites."
       }
     },
     "row10": {
       "slot1": {
         "type": 1,
         "id": "favorite_28",
-        "label": "Favorite ",
+        "label": "Favorite Country/Location",
         "placeholder": "What is the oc's favorite?",
-        "help": "What is the character's category favorite? The favorite should be something the character loves in this topic above all else and tends to frequently mention that thing."
+        "help": "What is the character's category favorite? The favorite should be something the character loves in this topic above all else and tends to frequently mention that thing. There can be multiple favorites."
       },
       "slot2": {
         "type": 1,
         "id": "favorite_29",
-        "label": "Favorite ",
+        "label": "Favorite Place to Eat/Drink",
         "placeholder": "What is the oc's favorite?",
-        "help": "What is the character's category favorite? The favorite should be something the character loves in this topic above all else and tends to frequently mention that thing."
+        "help": "What is the character's category favorite? The favorite should be something the character loves in this topic above all else and tends to frequently mention that thing. There can be multiple favorites."
       },
       "slot3": {
         "type": 1,
         "id": "favorite_30",
-        "label": "Favorite ",
+        "label": "Favorite Food/Beverage",
         "placeholder": "What is the oc's favorite?",
-        "help": "What is the character's category favorite? The favorite should be something the character loves in this topic above all else and tends to frequently mention that thing."
+        "help": "What is the character's category favorite? The favorite should be something the character loves in this topic above all else and tends to frequently mention that thing. There can be multiple favorites."
       }
     },
     "row11": {
       "slot1": {
         "type": 1,
         "id": "favorite_31",
-        "label": "Favorite ",
+        "label": "Favorite Scent/Flavor/Texture",
         "placeholder": "What is the oc's favorite?",
-        "help": "What is the character's category favorite? The favorite should be something the character loves in this topic above all else and tends to frequently mention that thing."
+        "help": "What is the character's category favorite? The favorite should be something the character loves in this topic above all else and tends to frequently mention that thing. There can be multiple favorites."
       },
       "slot2": {
         "type": 1,
         "id": "favorite_32",
-        "label": "Favorite ",
+        "label": "Favorite Season/Weather",
         "placeholder": "What is the oc's favorite?",
-        "help": "What is the character's category favorite? The favorite should be something the character loves in this topic above all else and tends to frequently mention that thing."
+        "help": "What is the character's category favorite? The favorite should be something the character loves in this topic above all else and tends to frequently mention that thing. There can be multiple favorites."
       },
       "slot3": {
         "type": 1,
         "id": "favorite_33",
-        "label": "Favorite ",
+        "label": "Favorite Holiday/Event",
         "placeholder": "What is the oc's favorite?",
-        "help": "What is the character's category favorite? The favorite should be something the character loves in this topic above all else and tends to frequently mention that thing."
+        "help": "What is the character's category favorite? The favorite should be something the character loves in this topic above all else and tends to frequently mention that thing. There can be multiple favorites."
       }
     },
     "row12": {
       "slot1": {
         "type": 1,
         "id": "favorite_34",
-        "label": "Favorite ",
+        "label": "Favorite Era/Year/Month/Day/Time of Day",
         "placeholder": "What is the oc's favorite?",
-        "help": "What is the character's category favorite? The favorite should be something the character loves in this topic above all else and tends to frequently mention that thing."
+        "help": "What is the character's category favorite? The favorite should be something the character loves in this topic above all else and tends to frequently mention that thing. There can be multiple favorites."
       },
       "slot2": {
         "type": 1,
         "id": "favorite_35",
-        "label": "Favorite ",
+        "label": "Favorite Memory",
         "placeholder": "What is the oc's favorite?",
-        "help": "What is the character's category favorite? The favorite should be something the character loves in this topic above all else and tends to frequently mention that thing."
+        "help": "What is the character's category favorite? The favorite should be something the character loves in this topic above all else and tends to frequently mention that thing. There can be multiple favorites."
       },
       "slot3": {
         "type": 1,
         "id": "favorite_36",
-        "label": "Favorite ",
+        "label": "Favorite Toy/Object",
         "placeholder": "What is the oc's favorite?",
-        "help": "What is the character's category favorite? The favorite should be something the character loves in this topic above all else and tends to frequently mention that thing."
+        "help": "What is the character's category favorite? The favorite should be something the character loves in this topic above all else and tends to frequently mention that thing. There can be multiple favorites."
       }
     },
     "row13": {
       "slot1": {
         "type": 1,
         "id": "favorite_37",
-        "label": "Favorite ",
+        "label": "Favorite Natural/Celestial Object",
         "placeholder": "What is the oc's favorite?",
-        "help": "What is the character's category favorite? The favorite should be something the character loves in this topic above all else and tends to frequently mention that thing."
+        "help": "What is the character's category favorite? The favorite should be something the character loves in this topic above all else and tends to frequently mention that thing. There can be multiple favorites."
       },
       "slot2": {
         "type": 1,
         "id": "favorite_38",
-        "label": "Favorite ",
+        "label": "Favorite Vehicle/House Style",
         "placeholder": "What is the oc's favorite?",
-        "help": "What is the character's category favorite? The favorite should be something the character loves in this topic above all else and tends to frequently mention that thing."
+        "help": "What is the character's category favorite? The favorite should be something the character loves in this topic above all else and tends to frequently mention that thing. There can be multiple favorites."
       },
       "slot3": {
         "type": 1,
         "id": "favorite_39",
-        "label": "Favorite ",
+        "label": "Favorite Topic/Subject",
         "placeholder": "What is the oc's favorite?",
-        "help": "What is the character's category favorite? The favorite should be something the character loves in this topic above all else and tends to frequently mention that thing."
+        "help": "What is the character's category favorite? The favorite should be something the character loves in this topic above all else and tends to frequently mention that thing. There can be multiple favorites."
       }
     },
     "row14": {
       "slot1": {
         "type": 1,
         "id": "favorite_40",
-        "label": "Favorite ",
+        "label": "Favorite Quote/Saying",
         "placeholder": "What is the oc's favorite?",
-        "help": "What is the character's category favorite? The favorite should be something the character loves in this topic above all else and tends to frequently mention that thing."
+        "help": "What is the character's category favorite? The favorite should be something the character loves in this topic above all else and tends to frequently mention that thing. There can be multiple favorites."
       },
       "slot2": {
         "type": 1,
         "id": "favorite_41",
-        "label": "Favorite ",
+        "label": "Favorite Word/Number/Color",
         "placeholder": "What is the oc's favorite?",
-        "help": "What is the character's category favorite? The favorite should be something the character loves in this topic above all else and tends to frequently mention that thing."
+        "help": "What is the character's category favorite? The favorite should be something the character loves in this topic above all else and tends to frequently mention that thing. There can be multiple favorites."
       },
       "slot3": {
         "type": 1,
         "id": "favorite_42",
-        "label": "Favorite ",
+        "label": "Favorite Feeling/Sensation",
         "placeholder": "What is the oc's favorite?",
-        "help": "What is the character's category favorite? The favorite should be something the character loves in this topic above all else and tends to frequently mention that thing."
+        "help": "What is the character's category favorite? The favorite should be something the character loves in this topic above all else and tends to frequently mention that thing. There can be multiple favorites."
       }
     },
     "row15": {
       "slot1": {
         "type": 1,
         "id": "favorite_43",
-        "label": "Favorite ",
+        "label": "Favorite ???",
         "placeholder": "What is the oc's favorite?",
-        "help": "What is the character's category favorite? The favorite should be something the character loves in this topic above all else and tends to frequently mention that thing."
+        "help": "What is the character's category favorite? The favorite should be something the character loves in this topic above all else and tends to frequently mention that thing. There can be multiple favorites."
       },
       "slot2": {
         "type": 1,
         "id": "favorite_44",
-        "label": "Favorite ",
+        "label": "Favorite ???",
         "placeholder": "What is the oc's favorite?",
-        "help": "What is the character's category favorite? The favorite should be something the character loves in this topic above all else and tends to frequently mention that thing."
+        "help": "What is the character's category favorite? The favorite should be something the character loves in this topic above all else and tends to frequently mention that thing. There can be multiple favorites."
       },
       "slot3": {
         "type": 1,
         "id": "favorite_45",
-        "label": "Favorite ",
+        "label": "Favorite ???",
         "placeholder": "What is the oc's favorite?",
-        "help": "What is the character's category favorite? The favorite should be something the character loves in this topic above all else and tends to frequently mention that thing."
+        "help": "What is the character's category favorite? The favorite should be something the character loves in this topic above all else and tends to frequently mention that thing. There can be multiple favorites."
       }
     },
     "row16": {
