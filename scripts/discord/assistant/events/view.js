@@ -122,5 +122,3 @@ document.addEventListener('visibilitychange', async () => {
         }
     }
 });
-
-handleUserJoin();
